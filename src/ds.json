@@ -1,0 +1,6308 @@
+[
+    {
+      "season": "Spring 2018",
+      "gameNO": 1,
+      "dNO": 1,
+      "player": 13
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 1,
+      "dNO": 2,
+      "player": 47
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 1,
+      "dNO": 3,
+      "player": 150
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 1,
+      "dNO": 4,
+      "player": 50
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 1,
+      "dNO": 5,
+      "player": 48
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 1,
+      "dNO": 6,
+      "player": 47
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 2,
+      "dNO": 1,
+      "player": 132
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 2,
+      "dNO": 2,
+      "player": 32
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 2,
+      "dNO": 3,
+      "player": 136
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 2,
+      "dNO": 4,
+      "player": 164
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 2,
+      "dNO": 5,
+      "player": 93
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 2,
+      "dNO": 6,
+      "player": 64
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 2,
+      "dNO": 7,
+      "player": 95
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 2,
+      "dNO": 8,
+      "player": 22
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 2,
+      "dNO": 9,
+      "player": 132
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 2,
+      "dNO": 10,
+      "player": 2
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 2,
+      "dNO": 11,
+      "player": 132
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 2,
+      "dNO": 12,
+      "player": 22
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 2,
+      "dNO": 13,
+      "player": 12
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 2,
+      "dNO": 14,
+      "player": 136
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 3,
+      "dNO": 1,
+      "player": 70
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 3,
+      "dNO": 2,
+      "player": 70
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 3,
+      "dNO": 3,
+      "player": 176
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 3,
+      "dNO": 4,
+      "player": 20
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 3,
+      "dNO": 5,
+      "player": 23
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 3,
+      "dNO": 6,
+      "player": 23
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 5,
+      "dNO": 1,
+      "player": 179
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 5,
+      "dNO": 2,
+      "player": 26
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 5,
+      "dNO": 3,
+      "player": 9
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 5,
+      "dNO": 4,
+      "player": 133
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 5,
+      "dNO": 5,
+      "player": 9
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 5,
+      "dNO": 6,
+      "player": 153
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 5,
+      "dNO": 7,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 5,
+      "dNO": 8,
+      "player": 166
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 7,
+      "dNO": 1,
+      "player": 15
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 7,
+      "dNO": 2,
+      "player": 133
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 7,
+      "dNO": 3,
+      "player": 2
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 7,
+      "dNO": 4,
+      "player": 23
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 7,
+      "dNO": 5,
+      "player": 150
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 7,
+      "dNO": 6,
+      "player": 93
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 7,
+      "dNO": 7,
+      "player": 150
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 7,
+      "dNO": 8,
+      "player": 124
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 7,
+      "dNO": 9,
+      "player": 47
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 8,
+      "dNO": 1,
+      "player": 50
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 8,
+      "dNO": 2,
+      "player": 22
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 8,
+      "dNO": 3,
+      "player": 13
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 8,
+      "dNO": 4,
+      "player": 132
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 8,
+      "dNO": 5,
+      "player": 29
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 8,
+      "dNO": 6,
+      "player": 164
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 8,
+      "dNO": 7,
+      "player": 22
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 8,
+      "dNO": 8,
+      "player": 50
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 8,
+      "dNO": 9,
+      "player": 152
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 9,
+      "dNO": 1,
+      "player": 155
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 9,
+      "dNO": 2,
+      "player": 50
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 9,
+      "dNO": 3,
+      "player": 127
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 10,
+      "dNO": 1,
+      "player": 15
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 10,
+      "dNO": 2,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 10,
+      "dNO": 3,
+      "player": 93
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 10,
+      "dNO": 4,
+      "player": 12
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 10,
+      "dNO": 5,
+      "player": 12
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 10,
+      "dNO": 6,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 10,
+      "dNO": 7,
+      "player": 2
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 10,
+      "dNO": 8,
+      "player": 93
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 11,
+      "dNO": 1,
+      "player": 95
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 11,
+      "dNO": 2,
+      "player": 132
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 11,
+      "dNO": 3,
+      "player": 132
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 11,
+      "dNO": 4,
+      "player": 171
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 11,
+      "dNO": 5,
+      "player": 32
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 11,
+      "dNO": 6,
+      "player": 152
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 11,
+      "dNO": 7,
+      "player": 22
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 11,
+      "dNO": 8,
+      "player": 86
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 11,
+      "dNO": 9,
+      "player": 22
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 11,
+      "dNO": 10,
+      "player": 22
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 12,
+      "dNO": 1,
+      "player": 47
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 12,
+      "dNO": 2,
+      "player": 124
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 12,
+      "dNO": 3,
+      "player": 57
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 12,
+      "dNO": 4,
+      "player": 150
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 12,
+      "dNO": 5,
+      "player": 80
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 13,
+      "dNO": 1,
+      "player": 12
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 13,
+      "dNO": 2,
+      "player": 2
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 13,
+      "dNO": 3,
+      "player": 50
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 13,
+      "dNO": 4,
+      "player": 93
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 13,
+      "dNO": 5,
+      "player": 50
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 13,
+      "dNO": 6,
+      "player": 118
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 13,
+      "dNO": 7,
+      "player": 2
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 13,
+      "dNO": 8,
+      "player": 50
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 13,
+      "dNO": 9,
+      "player": 2
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 13,
+      "dNO": 10,
+      "player": 155
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 13,
+      "dNO": 11,
+      "player": 12
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 13,
+      "dNO": 12,
+      "player": 155
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 14,
+      "dNO": 1,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 14,
+      "dNO": 2,
+      "player": 162
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 14,
+      "dNO": 3,
+      "player": 145
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 14,
+      "dNO": 4,
+      "player": 92
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 14,
+      "dNO": 5,
+      "player": 145
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 14,
+      "dNO": 6,
+      "player": 80
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 14,
+      "dNO": 7,
+      "player": 176
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 14,
+      "dNO": 8,
+      "player": 86
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 14,
+      "dNO": 9,
+      "player": 131
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 14,
+      "dNO": 10,
+      "player": 130
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 15,
+      "dNO": 1,
+      "player": 156
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 15,
+      "dNO": 2,
+      "player": 132
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 15,
+      "dNO": 3,
+      "player": 152
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 15,
+      "dNO": 4,
+      "player": 171
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 15,
+      "dNO": 5,
+      "player": 22
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 15,
+      "dNO": 6,
+      "player": 156
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 15,
+      "dNO": 7,
+      "player": 171
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 15,
+      "dNO": 8,
+      "player": 47
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 15,
+      "dNO": 9,
+      "player": 132
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 15,
+      "dNO": 10,
+      "player": 32
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 16,
+      "dNO": 1,
+      "player": 22
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 16,
+      "dNO": 2,
+      "player": 132
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 16,
+      "dNO": 3,
+      "player": 23
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 16,
+      "dNO": 4,
+      "player": 95
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 16,
+      "dNO": 5,
+      "player": 132
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 16,
+      "dNO": 6,
+      "player": 4
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 16,
+      "dNO": 7,
+      "player": 136
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 16,
+      "dNO": 8,
+      "player": 136
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 16,
+      "dNO": 9,
+      "player": 132
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 16,
+      "dNO": 10,
+      "player": 132
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 16,
+      "dNO": 11,
+      "player": 32
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 17,
+      "dNO": 1,
+      "player": 157
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 17,
+      "dNO": 2,
+      "player": 50
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 17,
+      "dNO": 3,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 17,
+      "dNO": 4,
+      "player": 168
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 17,
+      "dNO": 5,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 17,
+      "dNO": 6,
+      "player": 155
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 17,
+      "dNO": 7,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 17,
+      "dNO": 8,
+      "player": 50
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 1,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 2,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 3,
+      "player": 57
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 4,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 5,
+      "player": 57
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 6,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 7,
+      "player": 26
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 8,
+      "player": 42
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 9,
+      "player": 138
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 10,
+      "player": 126
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 11,
+      "player": 133
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 12,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 13,
+      "player": 124
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 14,
+      "player": 179
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 15,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 16,
+      "player": 124
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 17,
+      "player": 133
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 18,
+      "player": 154
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 19,
+      "player": 42
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 20,
+      "player": 86
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 21,
+      "player": 48
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 22,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 23,
+      "player": 137
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 18,
+      "dNO": 24,
+      "player": 126
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 1,
+      "player": 80
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 2,
+      "player": 131
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 3,
+      "player": 80
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 4,
+      "player": 136
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 5,
+      "player": 80
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 6,
+      "player": 80
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 7,
+      "player": 131
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 8,
+      "player": 70
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 9,
+      "player": 92
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 10,
+      "player": 109
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 11,
+      "player": 4
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 12,
+      "player": 4
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 13,
+      "player": 136
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 14,
+      "player": 109
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 15,
+      "player": 136
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 16,
+      "player": 109
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 17,
+      "player": 70
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 19,
+      "dNO": 18,
+      "player": 2
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 20,
+      "dNO": 1,
+      "player": 109
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 20,
+      "dNO": 2,
+      "player": 130
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 20,
+      "dNO": 3,
+      "player": 132
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 20,
+      "dNO": 4,
+      "player": 80
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 20,
+      "dNO": 5,
+      "player": 92
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 20,
+      "dNO": 6,
+      "player": 131
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 20,
+      "dNO": 7,
+      "player": 70
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 20,
+      "dNO": 8,
+      "player": 109
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 21,
+      "dNO": 1,
+      "player": 124
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 21,
+      "dNO": 2,
+      "player": 155
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 21,
+      "dNO": 3,
+      "player": 47
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 21,
+      "dNO": 4,
+      "player": 14
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 21,
+      "dNO": 5,
+      "player": 57
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 21,
+      "dNO": 6,
+      "player": 165
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 21,
+      "dNO": 7,
+      "player": 155
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 21,
+      "dNO": 8,
+      "player": 13
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 22,
+      "dNO": 1,
+      "player": 132
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 22,
+      "dNO": 2,
+      "player": 147
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 22,
+      "dNO": 3,
+      "player": 153
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 22,
+      "dNO": 4,
+      "player": 22
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 22,
+      "dNO": 5,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 22,
+      "dNO": 6,
+      "player": 132
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 22,
+      "dNO": 7,
+      "player": 32
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 23,
+      "dNO": 1,
+      "player": 4
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 23,
+      "dNO": 2,
+      "player": 89
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 23,
+      "dNO": 3,
+      "player": 168
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 23,
+      "dNO": 4,
+      "player": 118
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 23,
+      "dNO": 5,
+      "player": 29
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 23,
+      "dNO": 6,
+      "player": 168
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 23,
+      "dNO": 7,
+      "player": 12
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 23,
+      "dNO": 8,
+      "player": 13
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 23,
+      "dNO": 9,
+      "player": 93
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 23,
+      "dNO": 10,
+      "player": 118
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 23,
+      "dNO": 11,
+      "player": 93
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 23,
+      "dNO": 12,
+      "player": 13
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 23,
+      "dNO": 13,
+      "player": 23
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 23,
+      "dNO": 14,
+      "player": 13
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 24,
+      "dNO": 1,
+      "player": 23
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 24,
+      "dNO": 2,
+      "player": 23
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 24,
+      "dNO": 3,
+      "player": 48
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 24,
+      "dNO": 4,
+      "player": 9
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 24,
+      "dNO": 5,
+      "player": 4
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 24,
+      "dNO": 6,
+      "player": 48
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 24,
+      "dNO": 7,
+      "player": 9
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 24,
+      "dNO": 8,
+      "player": 133
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 24,
+      "dNO": 9,
+      "player": 4
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 24,
+      "dNO": 10,
+      "player": 133
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 24,
+      "dNO": 11,
+      "player": 133
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 24,
+      "dNO": 12,
+      "player": 48
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 24,
+      "dNO": 13,
+      "player": 9
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 24,
+      "dNO": 14,
+      "player": 2
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 24,
+      "dNO": 15,
+      "player": 136
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 25,
+      "dNO": 1,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 25,
+      "dNO": 2,
+      "player": 42
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 25,
+      "dNO": 3,
+      "player": 130
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 25,
+      "dNO": 4,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 25,
+      "dNO": 5,
+      "player": 109
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 1,
+      "player": 131
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 2,
+      "player": 141
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 3,
+      "player": 50
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 4,
+      "player": 70
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 5,
+      "player": 168
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 6,
+      "player": 92
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 7,
+      "player": 168
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 8,
+      "player": 180
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 9,
+      "player": 92
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 10,
+      "player": 109
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 11,
+      "player": 92
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 12,
+      "player": 80
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 13,
+      "player": 155
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 14,
+      "player": 155
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 15,
+      "player": 109
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 16,
+      "player": 80
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 17,
+      "player": 92
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 18,
+      "player": 13
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 19,
+      "player": 50
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 20,
+      "player": 155
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 26,
+      "dNO": 21,
+      "player": 127
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 27,
+      "dNO": 1,
+      "player": 32
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 27,
+      "dNO": 2,
+      "player": 179
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 27,
+      "dNO": 3,
+      "player": 133
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 27,
+      "dNO": 4,
+      "player": 179
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 27,
+      "dNO": 5,
+      "player": 22
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 27,
+      "dNO": 6,
+      "player": 152
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 28,
+      "dNO": 1,
+      "player": 126
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 28,
+      "dNO": 2,
+      "player": 93
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 28,
+      "dNO": 3,
+      "player": 167
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 28,
+      "dNO": 4,
+      "player": 42
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 28,
+      "dNO": 5,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 28,
+      "dNO": 6,
+      "player": 172
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 28,
+      "dNO": 7,
+      "player": 172
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 28,
+      "dNO": 8,
+      "player": 4
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 28,
+      "dNO": 9,
+      "player": 86
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 28,
+      "dNO": 10,
+      "player": 16
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 28,
+      "dNO": 11,
+      "player": 153
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 28,
+      "dNO": 12,
+      "player": 163
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 28,
+      "dNO": 13,
+      "player": 42
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 29,
+      "dNO": 1,
+      "player": 70
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 29,
+      "dNO": 2,
+      "player": 80
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 29,
+      "dNO": 3,
+      "player": 9
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 29,
+      "dNO": 4,
+      "player": 48
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 29,
+      "dNO": 5,
+      "player": 9
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 29,
+      "dNO": 6,
+      "player": 92
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 29,
+      "dNO": 7,
+      "player": 127
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 29,
+      "dNO": 8,
+      "player": 133
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 29,
+      "dNO": 9,
+      "player": 80
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 29,
+      "dNO": 10,
+      "player": 80
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 30,
+      "dNO": 1,
+      "player": 152
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 30,
+      "dNO": 2,
+      "player": 32
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 30,
+      "dNO": 3,
+      "player": 118
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 30,
+      "dNO": 4,
+      "player": 118
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 30,
+      "dNO": 5,
+      "player": 140
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 30,
+      "dNO": 6,
+      "player": 132
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 30,
+      "dNO": 7,
+      "player": 22
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 30,
+      "dNO": 8,
+      "player": 156
+    },
+    {
+      "season": "Spring 2018",
+      "gameNO": 30,
+      "dNO": 9,
+      "player": 156
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 1,
+      "dNO": 1,
+      "player": 68
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 1,
+      "dNO": 2,
+      "player": 26
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 1,
+      "dNO": 3,
+      "player": 42
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 1,
+      "dNO": 4,
+      "player": 151
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 1,
+      "dNO": 5,
+      "player": 187
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 1,
+      "dNO": 6,
+      "player": 144
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 1,
+      "dNO": 7,
+      "player": 150
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 1,
+      "dNO": 8,
+      "player": 65
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 1,
+      "dNO": 9,
+      "player": 47
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 1,
+      "dNO": 10,
+      "player": 65
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 2,
+      "dNO": 1,
+      "player": 153
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 2,
+      "dNO": 2,
+      "player": 133
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 2,
+      "dNO": 3,
+      "player": 140
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 2,
+      "dNO": 4,
+      "player": 109
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 4,
+      "dNO": 1,
+      "player": 47
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 4,
+      "dNO": 2,
+      "player": 137
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 4,
+      "dNO": 3,
+      "player": 78
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 4,
+      "dNO": 4,
+      "player": 137
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 4,
+      "dNO": 5,
+      "player": 155
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 4,
+      "dNO": 6,
+      "player": 68
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 5,
+      "dNO": 1,
+      "player": 9
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 5,
+      "dNO": 2,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 5,
+      "dNO": 3,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 5,
+      "dNO": 4,
+      "player": 9
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 5,
+      "dNO": 5,
+      "player": 92
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 5,
+      "dNO": 6,
+      "player": 189
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 5,
+      "dNO": 7,
+      "player": 65
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 5,
+      "dNO": 8,
+      "player": 138
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 5,
+      "dNO": 9,
+      "player": 9
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 5,
+      "dNO": 10,
+      "player": 204
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 6,
+      "dNO": 1,
+      "player": 157
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 6,
+      "dNO": 2,
+      "player": 186
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 6,
+      "dNO": 3,
+      "player": 157
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 6,
+      "dNO": 4,
+      "player": 22
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 6,
+      "dNO": 5,
+      "player": 184
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 7,
+      "dNO": 1,
+      "player": 109
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 7,
+      "dNO": 2,
+      "player": 152
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 7,
+      "dNO": 3,
+      "player": 109
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 7,
+      "dNO": 4,
+      "player": 57
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 7,
+      "dNO": 5,
+      "player": 181
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 8,
+      "dNO": 1,
+      "player": 150
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 8,
+      "dNO": 2,
+      "player": 4
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 8,
+      "dNO": 3,
+      "player": 155
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 8,
+      "dNO": 4,
+      "player": 155
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 8,
+      "dNO": 5,
+      "player": 179
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 9,
+      "dNO": 1,
+      "player": 68
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 9,
+      "dNO": 2,
+      "player": 22
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 9,
+      "dNO": 3,
+      "player": 4
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 9,
+      "dNO": 4,
+      "player": 22
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 9,
+      "dNO": 5,
+      "player": 144
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 9,
+      "dNO": 6,
+      "player": 194
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 10,
+      "dNO": 1,
+      "player": 198
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 10,
+      "dNO": 2,
+      "player": 109
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 10,
+      "dNO": 3,
+      "player": 197
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 11,
+      "dNO": 1,
+      "player": 180
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 11,
+      "dNO": 2,
+      "player": 138
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 11,
+      "dNO": 3,
+      "player": 179
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 11,
+      "dNO": 4,
+      "player": 133
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 11,
+      "dNO": 5,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 11,
+      "dNO": 6,
+      "player": 179
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 12,
+      "dNO": 1,
+      "player": 22
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 12,
+      "dNO": 2,
+      "player": 194
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 12,
+      "dNO": 3,
+      "player": 22
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 12,
+      "dNO": 4,
+      "player": 5
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 12,
+      "dNO": 5,
+      "player": 204
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 12,
+      "dNO": 6,
+      "player": 152
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 13,
+      "dNO": 1,
+      "player": 109
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 13,
+      "dNO": 2,
+      "player": 4
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 13,
+      "dNO": 3,
+      "player": 132
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 13,
+      "dNO": 4,
+      "player": 199
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 13,
+      "dNO": 5,
+      "player": 193
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 13,
+      "dNO": 6,
+      "player": 144
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 13,
+      "dNO": 7,
+      "player": 155
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 14,
+      "dNO": 1,
+      "player": 78
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 14,
+      "dNO": 2,
+      "player": 22
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 14,
+      "dNO": 3,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 14,
+      "dNO": 4,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 14,
+      "dNO": 5,
+      "player": 118
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 14,
+      "dNO": 6,
+      "player": 186
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 14,
+      "dNO": 7,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 14,
+      "dNO": 8,
+      "player": 80
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 14,
+      "dNO": 9,
+      "player": 22
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 15,
+      "dNO": 1,
+      "player": 12
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 15,
+      "dNO": 2,
+      "player": 180
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 15,
+      "dNO": 3,
+      "player": 179
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 15,
+      "dNO": 4,
+      "player": 12
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 15,
+      "dNO": 5,
+      "player": 133
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 15,
+      "dNO": 6,
+      "player": 180
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 16,
+      "dNO": 1,
+      "player": 13
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 16,
+      "dNO": 2,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 16,
+      "dNO": 3,
+      "player": 140
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 16,
+      "dNO": 4,
+      "player": 193
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 17,
+      "dNO": 1,
+      "player": 29
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 17,
+      "dNO": 2,
+      "player": 9
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 17,
+      "dNO": 3,
+      "player": 211
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 17,
+      "dNO": 4,
+      "player": 9
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 17,
+      "dNO": 5,
+      "player": 144
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 17,
+      "dNO": 6,
+      "player": 9
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 18,
+      "dNO": 1,
+      "player": 199
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 18,
+      "dNO": 2,
+      "player": 186
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 18,
+      "dNO": 3,
+      "player": 4
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 18,
+      "dNO": 4,
+      "player": 136
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 18,
+      "dNO": 5,
+      "player": 199
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 18,
+      "dNO": 6,
+      "player": 80
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 18,
+      "dNO": 7,
+      "player": 199
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 18,
+      "dNO": 8,
+      "player": 22
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 18,
+      "dNO": 9,
+      "player": 4
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 18,
+      "dNO": 10,
+      "player": 22
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 18,
+      "dNO": 11,
+      "player": 213
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 1,
+      "player": 132
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 2,
+      "player": 183
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 3,
+      "player": 109
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 4,
+      "player": 197
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 5,
+      "player": 158
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 6,
+      "player": 153
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 7,
+      "player": 109
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 8,
+      "player": 133
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 9,
+      "player": 157
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 10,
+      "player": 132
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 11,
+      "player": 133
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 12,
+      "player": 12
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 13,
+      "player": 109
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 14,
+      "player": 183
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 15,
+      "player": 153
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 16,
+      "player": 81
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 19,
+      "dNO": 17,
+      "player": 153
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 20,
+      "dNO": 1,
+      "player": 78
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 20,
+      "dNO": 2,
+      "player": 157
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 20,
+      "dNO": 3,
+      "player": 137
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 20,
+      "dNO": 4,
+      "player": 14
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 20,
+      "dNO": 5,
+      "player": 13
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 20,
+      "dNO": 6,
+      "player": 133
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 20,
+      "dNO": 7,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 20,
+      "dNO": 8,
+      "player": 168
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 20,
+      "dNO": 9,
+      "player": 133
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 21,
+      "dNO": 1,
+      "player": 186
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 21,
+      "dNO": 2,
+      "player": 186
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 21,
+      "dNO": 3,
+      "player": 152
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 21,
+      "dNO": 4,
+      "player": 9
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 21,
+      "dNO": 5,
+      "player": 204
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 21,
+      "dNO": 6,
+      "player": 29
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 21,
+      "dNO": 7,
+      "player": 214
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 21,
+      "dNO": 8,
+      "player": 204
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 21,
+      "dNO": 9,
+      "player": 80
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 21,
+      "dNO": 10,
+      "player": 5
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 21,
+      "dNO": 11,
+      "player": 186
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 21,
+      "dNO": 12,
+      "player": 5
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 22,
+      "dNO": 1,
+      "player": 47
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 22,
+      "dNO": 2,
+      "player": 144
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 22,
+      "dNO": 3,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 22,
+      "dNO": 4,
+      "player": 4
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 22,
+      "dNO": 5,
+      "player": 13
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 22,
+      "dNO": 6,
+      "player": 118
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 22,
+      "dNO": 7,
+      "player": 4
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 22,
+      "dNO": 8,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 22,
+      "dNO": 9,
+      "player": 155
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 22,
+      "dNO": 10,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 22,
+      "dNO": 11,
+      "player": 159
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 23,
+      "dNO": 1,
+      "player": 181
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 23,
+      "dNO": 2,
+      "player": 9
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 23,
+      "dNO": 3,
+      "player": 81
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 1,
+      "player": 213
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 2,
+      "player": 63
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 3,
+      "player": 63
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 4,
+      "player": 63
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 5,
+      "player": 197
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 6,
+      "player": 22
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 7,
+      "player": 194
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 8,
+      "player": 126
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 9,
+      "player": 197
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 10,
+      "player": 126
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 11,
+      "player": 197
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 12,
+      "player": 192
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 13,
+      "player": 81
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 14,
+      "player": 213
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 15,
+      "player": 22
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 16,
+      "player": 181
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 24,
+      "dNO": 17,
+      "player": 80
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 1,
+      "player": 168
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 2,
+      "player": 199
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 3,
+      "player": 153
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 4,
+      "player": 199
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 5,
+      "player": 153
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 6,
+      "player": 196
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 7,
+      "player": 188
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 8,
+      "player": 168
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 9,
+      "player": 155
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 10,
+      "player": 212
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 11,
+      "player": 150
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 12,
+      "player": 184
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 13,
+      "player": 212
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 14,
+      "player": 211
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 15,
+      "player": 155
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 16,
+      "player": 158
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 17,
+      "player": 188
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 25,
+      "dNO": 18,
+      "player": 133
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 26,
+      "dNO": 1,
+      "player": 202
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 26,
+      "dNO": 2,
+      "player": 183
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 26,
+      "dNO": 3,
+      "player": 196
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 26,
+      "dNO": 4,
+      "player": 168
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 26,
+      "dNO": 5,
+      "player": 179
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 26,
+      "dNO": 6,
+      "player": 183
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 26,
+      "dNO": 7,
+      "player": 204
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 26,
+      "dNO": 8,
+      "player": 152
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 26,
+      "dNO": 9,
+      "player": 9
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 26,
+      "dNO": 10,
+      "player": 179
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 26,
+      "dNO": 11,
+      "player": 152
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 26,
+      "dNO": 12,
+      "player": 9
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 26,
+      "dNO": 13,
+      "player": 124
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 1,
+      "player": 186
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 2,
+      "player": 156
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 3,
+      "player": 156
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 4,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 5,
+      "player": 186
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 6,
+      "player": 186
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 7,
+      "player": 138
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 8,
+      "player": 118
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 9,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 10,
+      "player": 80
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 11,
+      "player": 194
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 12,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 13,
+      "player": 126
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 14,
+      "player": 80
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 15,
+      "player": 92
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 16,
+      "player": 156
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 27,
+      "dNO": 17,
+      "player": 22
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 28,
+      "dNO": 1,
+      "player": 199
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 28,
+      "dNO": 2,
+      "player": 199
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 28,
+      "dNO": 3,
+      "player": 195
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 28,
+      "dNO": 4,
+      "player": 150
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 28,
+      "dNO": 5,
+      "player": 195
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 28,
+      "dNO": 6,
+      "player": 181
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 28,
+      "dNO": 7,
+      "player": 181
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 28,
+      "dNO": 8,
+      "player": 155
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 28,
+      "dNO": 9,
+      "player": 181
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 28,
+      "dNO": 10,
+      "player": 130
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 1,
+      "player": 194
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 2,
+      "player": 22
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 3,
+      "player": 186
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 4,
+      "player": 168
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 5,
+      "player": 153
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 6,
+      "player": 80
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 7,
+      "player": 12
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 8,
+      "player": 153
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 9,
+      "player": 179
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 10,
+      "player": 179
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 11,
+      "player": 183
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 12,
+      "player": 12
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 13,
+      "player": 184
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 14,
+      "player": 80
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 15,
+      "player": 183
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 16,
+      "player": 158
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 17,
+      "player": 136
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 18,
+      "player": 153
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 19,
+      "player": 136
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 20,
+      "player": 133
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 29,
+      "dNO": 21,
+      "player": 183
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 30,
+      "dNO": 1,
+      "player": 78
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 30,
+      "dNO": 2,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 30,
+      "dNO": 3,
+      "player": 185
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 30,
+      "dNO": 4,
+      "player": 124
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 30,
+      "dNO": 5,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 30,
+      "dNO": 6,
+      "player": 29
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 30,
+      "dNO": 7,
+      "player": 78
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 30,
+      "dNO": 8,
+      "player": 182
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 30,
+      "dNO": 9,
+      "player": 204
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 30,
+      "dNO": 10,
+      "player": 215
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 30,
+      "dNO": 11,
+      "player": 78
+    },
+    {
+      "season": "Fall 2018",
+      "gameNO": 30,
+      "dNO": 12,
+      "player": 152
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 1,
+      "dNO": 1,
+      "player": 236
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 1,
+      "dNO": 2,
+      "player": 151
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 1,
+      "dNO": 3,
+      "player": 151
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 1,
+      "dNO": 4,
+      "player": 47
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 1,
+      "dNO": 5,
+      "player": 25
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 1,
+      "dNO": 6,
+      "player": 236
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 1,
+      "dNO": 7,
+      "player": 236
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 1,
+      "dNO": 8,
+      "player": 203
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 1,
+      "dNO": 9,
+      "player": 42
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 1,
+      "dNO": 10,
+      "player": 185
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 2,
+      "dNO": 1,
+      "player": 22
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 2,
+      "dNO": 2,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 2,
+      "dNO": 3,
+      "player": 4
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 2,
+      "dNO": 4,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 2,
+      "dNO": 5,
+      "player": 150
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 2,
+      "dNO": 6,
+      "player": 100
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 2,
+      "dNO": 7,
+      "player": 194
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 2,
+      "dNO": 8,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 2,
+      "dNO": 9,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 2,
+      "dNO": 10,
+      "player": 4
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 2,
+      "dNO": 11,
+      "player": 22
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 3,
+      "dNO": 1,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 3,
+      "dNO": 2,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 3,
+      "dNO": 3,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 3,
+      "dNO": 4,
+      "player": 41
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 3,
+      "dNO": 5,
+      "player": 3
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 3,
+      "dNO": 6,
+      "player": 132
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 3,
+      "dNO": 7,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 3,
+      "dNO": 8,
+      "player": 12
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 3,
+      "dNO": 9,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 4,
+      "dNO": 1,
+      "player": 196
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 4,
+      "dNO": 2,
+      "player": 221
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 4,
+      "dNO": 3,
+      "player": 141
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 4,
+      "dNO": 4,
+      "player": 81
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 4,
+      "dNO": 5,
+      "player": 193
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 4,
+      "dNO": 6,
+      "player": 29
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 5,
+      "dNO": 1,
+      "player": 151
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 5,
+      "dNO": 2,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 5,
+      "dNO": 3,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 5,
+      "dNO": 4,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 5,
+      "dNO": 5,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 5,
+      "dNO": 6,
+      "player": 47
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 5,
+      "dNO": 7,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 5,
+      "dNO": 8,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 5,
+      "dNO": 9,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 5,
+      "dNO": 10,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 5,
+      "dNO": 11,
+      "player": 22
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 5,
+      "dNO": 12,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 5,
+      "dNO": 13,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 5,
+      "dNO": 14,
+      "player": 4
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 5,
+      "dNO": 15,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 5,
+      "dNO": 16,
+      "player": 181
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 6,
+      "dNO": 1,
+      "player": 132
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 6,
+      "dNO": 2,
+      "player": 5
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 6,
+      "dNO": 3,
+      "player": 65
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 6,
+      "dNO": 4,
+      "player": 65
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 6,
+      "dNO": 5,
+      "player": 25
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 6,
+      "dNO": 6,
+      "player": 204
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 6,
+      "dNO": 7,
+      "player": 25
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 6,
+      "dNO": 8,
+      "player": 236
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 6,
+      "dNO": 9,
+      "player": 25
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 6,
+      "dNO": 10,
+      "player": 236
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 6,
+      "dNO": 11,
+      "player": 204
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 6,
+      "dNO": 12,
+      "player": 25
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 7,
+      "dNO": 1,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 7,
+      "dNO": 2,
+      "player": 221
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 7,
+      "dNO": 3,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 7,
+      "dNO": 4,
+      "player": 4
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 7,
+      "dNO": 5,
+      "player": 225
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 7,
+      "dNO": 6,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 7,
+      "dNO": 7,
+      "player": 196
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 7,
+      "dNO": 8,
+      "player": 95
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 7,
+      "dNO": 9,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 7,
+      "dNO": 10,
+      "player": 193
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 7,
+      "dNO": 11,
+      "player": 4
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 7,
+      "dNO": 12,
+      "player": 221
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 7,
+      "dNO": 13,
+      "player": 26
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 7,
+      "dNO": 14,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 8,
+      "dNO": 1,
+      "player": 150
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 8,
+      "dNO": 2,
+      "player": 236
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 8,
+      "dNO": 3,
+      "player": 16
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 8,
+      "dNO": 4,
+      "player": 153
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 8,
+      "dNO": 5,
+      "player": 136
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 8,
+      "dNO": 6,
+      "player": 141
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 8,
+      "dNO": 7,
+      "player": 66
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 8,
+      "dNO": 8,
+      "player": 25
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 8,
+      "dNO": 9,
+      "player": 236
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 8,
+      "dNO": 10,
+      "player": 25
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 9,
+      "dNO": 1,
+      "player": 47
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 9,
+      "dNO": 2,
+      "player": 228
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 9,
+      "dNO": 3,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 9,
+      "dNO": 4,
+      "player": 227
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 9,
+      "dNO": 5,
+      "player": 47
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 9,
+      "dNO": 6,
+      "player": 47
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 9,
+      "dNO": 7,
+      "player": 47
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 9,
+      "dNO": 8,
+      "player": 217
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 9,
+      "dNO": 9,
+      "player": 118
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 9,
+      "dNO": 10,
+      "player": 217
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 9,
+      "dNO": 11,
+      "player": 217
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 9,
+      "dNO": 12,
+      "player": 217
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 9,
+      "dNO": 13,
+      "player": 47
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 9,
+      "dNO": 14,
+      "player": 3
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 9,
+      "dNO": 15,
+      "player": 168
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 9,
+      "dNO": 16,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 10,
+      "dNO": 1,
+      "player": 221
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 10,
+      "dNO": 2,
+      "player": 95
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 10,
+      "dNO": 3,
+      "player": 193
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 10,
+      "dNO": 4,
+      "player": 216
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 10,
+      "dNO": 5,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 10,
+      "dNO": 6,
+      "player": 221
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 10,
+      "dNO": 7,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 10,
+      "dNO": 8,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 10,
+      "dNO": 9,
+      "player": 81
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 10,
+      "dNO": 10,
+      "player": 132
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 10,
+      "dNO": 11,
+      "player": 216
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 10,
+      "dNO": 12,
+      "player": 221
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 11,
+      "dNO": 1,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 11,
+      "dNO": 2,
+      "player": 216
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 11,
+      "dNO": 3,
+      "player": 16
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 11,
+      "dNO": 4,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 11,
+      "dNO": 5,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 11,
+      "dNO": 6,
+      "player": 150
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 11,
+      "dNO": 7,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 11,
+      "dNO": 8,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 11,
+      "dNO": 9,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 11,
+      "dNO": 10,
+      "player": 240
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 12,
+      "dNO": 1,
+      "player": 227
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 12,
+      "dNO": 2,
+      "player": 12
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 12,
+      "dNO": 3,
+      "player": 196
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 12,
+      "dNO": 4,
+      "player": 183
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 12,
+      "dNO": 5,
+      "player": 154
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 12,
+      "dNO": 6,
+      "player": 3
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 12,
+      "dNO": 7,
+      "player": 223
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 12,
+      "dNO": 8,
+      "player": 196
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 12,
+      "dNO": 9,
+      "player": 3
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 12,
+      "dNO": 10,
+      "player": 3
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 12,
+      "dNO": 11,
+      "player": 23
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 12,
+      "dNO": 12,
+      "player": 221
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 12,
+      "dNO": 13,
+      "player": 220
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 13,
+      "dNO": 1,
+      "player": 92
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 13,
+      "dNO": 2,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 13,
+      "dNO": 3,
+      "player": 218
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 13,
+      "dNO": 4,
+      "player": 25
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 13,
+      "dNO": 5,
+      "player": 5
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 13,
+      "dNO": 6,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 13,
+      "dNO": 7,
+      "player": 204
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 13,
+      "dNO": 8,
+      "player": 92
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 13,
+      "dNO": 9,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 13,
+      "dNO": 10,
+      "player": 22
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 13,
+      "dNO": 11,
+      "player": 136
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 13,
+      "dNO": 12,
+      "player": 22
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 1,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 2,
+      "player": 21
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 3,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 4,
+      "player": 47
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 5,
+      "player": 132
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 6,
+      "player": 42
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 7,
+      "player": 132
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 8,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 9,
+      "player": 133
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 10,
+      "player": 152
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 11,
+      "player": 181
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 12,
+      "player": 47
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 13,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 14,
+      "player": 47
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 15,
+      "player": 145
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 16,
+      "player": 216
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 14,
+      "dNO": 17,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 15,
+      "dNO": 1,
+      "player": 217
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 15,
+      "dNO": 2,
+      "player": 150
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 15,
+      "dNO": 3,
+      "player": 3
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 15,
+      "dNO": 4,
+      "player": 194
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 15,
+      "dNO": 5,
+      "player": 3
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 15,
+      "dNO": 6,
+      "player": 217
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 15,
+      "dNO": 7,
+      "player": 16
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 15,
+      "dNO": 8,
+      "player": 217
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 15,
+      "dNO": 9,
+      "player": 64
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 15,
+      "dNO": 10,
+      "player": 153
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 15,
+      "dNO": 11,
+      "player": 230
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 16,
+      "dNO": 1,
+      "player": 23
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 16,
+      "dNO": 2,
+      "player": 221
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 16,
+      "dNO": 3,
+      "player": 234
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 16,
+      "dNO": 4,
+      "player": 5
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 16,
+      "dNO": 5,
+      "player": 188
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 16,
+      "dNO": 6,
+      "player": 26
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 16,
+      "dNO": 7,
+      "player": 9
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 16,
+      "dNO": 8,
+      "player": 235
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 16,
+      "dNO": 9,
+      "player": 136
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 16,
+      "dNO": 10,
+      "player": 221
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 16,
+      "dNO": 11,
+      "player": 136
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 16,
+      "dNO": 12,
+      "player": 221
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 16,
+      "dNO": 13,
+      "player": 26
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 17,
+      "dNO": 1,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 17,
+      "dNO": 2,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 17,
+      "dNO": 3,
+      "player": 138
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 17,
+      "dNO": 4,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 17,
+      "dNO": 5,
+      "player": 21
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 17,
+      "dNO": 6,
+      "player": 216
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 17,
+      "dNO": 7,
+      "player": 22
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 17,
+      "dNO": 8,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 17,
+      "dNO": 9,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 17,
+      "dNO": 10,
+      "player": 216
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 17,
+      "dNO": 11,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 17,
+      "dNO": 12,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 17,
+      "dNO": 13,
+      "player": 206
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 1,
+      "player": 185
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 2,
+      "player": 223
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 3,
+      "player": 223
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 4,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 5,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 6,
+      "player": 133
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 7,
+      "player": 185
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 8,
+      "player": 188
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 9,
+      "player": 9
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 10,
+      "player": 118
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 11,
+      "player": 118
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 12,
+      "player": 118
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 13,
+      "player": 9
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 14,
+      "player": 9
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 15,
+      "player": 23
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 16,
+      "player": 26
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 18,
+      "dNO": 17,
+      "player": 47
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 19,
+      "dNO": 1,
+      "player": 68
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 19,
+      "dNO": 2,
+      "player": 220
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 19,
+      "dNO": 3,
+      "player": 168
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 19,
+      "dNO": 4,
+      "player": 41
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 19,
+      "dNO": 5,
+      "player": 68
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 19,
+      "dNO": 6,
+      "player": 227
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 1,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 2,
+      "player": 150
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 3,
+      "player": 29
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 4,
+      "player": 153
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 5,
+      "player": 185
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 6,
+      "player": 118
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 7,
+      "player": 150
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 8,
+      "player": 181
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 9,
+      "player": 239
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 10,
+      "player": 150
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 11,
+      "player": 57
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 12,
+      "player": 194
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 13,
+      "player": 47
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 14,
+      "player": 38
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 15,
+      "player": 213
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 16,
+      "player": 42
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 20,
+      "dNO": 17,
+      "player": 42
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 21,
+      "dNO": 1,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 21,
+      "dNO": 2,
+      "player": 3
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 21,
+      "dNO": 3,
+      "player": 180
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 21,
+      "dNO": 4,
+      "player": 180
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 21,
+      "dNO": 5,
+      "player": 22
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 21,
+      "dNO": 6,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 21,
+      "dNO": 7,
+      "player": 229
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 21,
+      "dNO": 8,
+      "player": 92
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 21,
+      "dNO": 9,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 21,
+      "dNO": 10,
+      "player": 22
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 21,
+      "dNO": 11,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 21,
+      "dNO": 12,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 21,
+      "dNO": 13,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 21,
+      "dNO": 14,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 21,
+      "dNO": 15,
+      "player": 227
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 21,
+      "dNO": 16,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 22,
+      "dNO": 1,
+      "player": 204
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 22,
+      "dNO": 2,
+      "player": 204
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 22,
+      "dNO": 3,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 22,
+      "dNO": 4,
+      "player": 92
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 22,
+      "dNO": 5,
+      "player": 22
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 22,
+      "dNO": 6,
+      "player": 204
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 22,
+      "dNO": 7,
+      "player": 92
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 22,
+      "dNO": 8,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 23,
+      "dNO": 1,
+      "player": 183
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 23,
+      "dNO": 2,
+      "player": 185
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 23,
+      "dNO": 3,
+      "player": 239
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 23,
+      "dNO": 4,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 23,
+      "dNO": 5,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 23,
+      "dNO": 6,
+      "player": 233
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 23,
+      "dNO": 7,
+      "player": 64
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 23,
+      "dNO": 8,
+      "player": 42
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 23,
+      "dNO": 9,
+      "player": 41
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 23,
+      "dNO": 10,
+      "player": 181
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 23,
+      "dNO": 11,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 24,
+      "dNO": 1,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 24,
+      "dNO": 2,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 24,
+      "dNO": 3,
+      "player": 216
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 24,
+      "dNO": 4,
+      "player": 4
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 24,
+      "dNO": 5,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 24,
+      "dNO": 6,
+      "player": 238
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 24,
+      "dNO": 7,
+      "player": 4
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 24,
+      "dNO": 8,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 24,
+      "dNO": 9,
+      "player": 180
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 24,
+      "dNO": 10,
+      "player": 180
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 24,
+      "dNO": 11,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 24,
+      "dNO": 12,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 25,
+      "dNO": 1,
+      "player": 5
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 25,
+      "dNO": 2,
+      "player": 68
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 25,
+      "dNO": 3,
+      "player": 235
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 25,
+      "dNO": 4,
+      "player": 9
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 25,
+      "dNO": 5,
+      "player": 68
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 25,
+      "dNO": 6,
+      "player": 25
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 25,
+      "dNO": 7,
+      "player": 9
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 25,
+      "dNO": 8,
+      "player": 188
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 25,
+      "dNO": 9,
+      "player": 236
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 25,
+      "dNO": 10,
+      "player": 236
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 26,
+      "dNO": 1,
+      "player": 47
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 26,
+      "dNO": 2,
+      "player": 239
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 26,
+      "dNO": 3,
+      "player": 239
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 26,
+      "dNO": 4,
+      "player": 181
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 27,
+      "dNO": 1,
+      "player": 15
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 27,
+      "dNO": 2,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 27,
+      "dNO": 3,
+      "player": 3
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 27,
+      "dNO": 4,
+      "player": 206
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 27,
+      "dNO": 5,
+      "player": 4
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 27,
+      "dNO": 6,
+      "player": 206
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 27,
+      "dNO": 7,
+      "player": 183
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 27,
+      "dNO": 8,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 27,
+      "dNO": 9,
+      "player": 3
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 27,
+      "dNO": 10,
+      "player": 64
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 27,
+      "dNO": 11,
+      "player": 92
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 27,
+      "dNO": 12,
+      "player": 41
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 27,
+      "dNO": 13,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 27,
+      "dNO": 14,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 28,
+      "dNO": 1,
+      "player": 9
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 28,
+      "dNO": 2,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 28,
+      "dNO": 3,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 28,
+      "dNO": 4,
+      "player": 26
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 28,
+      "dNO": 5,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 28,
+      "dNO": 6,
+      "player": 132
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 28,
+      "dNO": 7,
+      "player": 9
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 28,
+      "dNO": 8,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 28,
+      "dNO": 9,
+      "player": 9
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 28,
+      "dNO": 10,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 28,
+      "dNO": 11,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 28,
+      "dNO": 12,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 29,
+      "dNO": 1,
+      "player": 234
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 29,
+      "dNO": 2,
+      "player": 181
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 29,
+      "dNO": 3,
+      "player": 185
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 29,
+      "dNO": 4,
+      "player": 47
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 29,
+      "dNO": 5,
+      "player": 235
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 29,
+      "dNO": 6,
+      "player": 235
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 29,
+      "dNO": 7,
+      "player": 239
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 29,
+      "dNO": 8,
+      "player": 47
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 29,
+      "dNO": 9,
+      "player": 236
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 29,
+      "dNO": 10,
+      "player": 118
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 30,
+      "dNO": 1,
+      "player": 16
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 30,
+      "dNO": 2,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 30,
+      "dNO": 3,
+      "player": 38
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 30,
+      "dNO": 4,
+      "player": 132
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 30,
+      "dNO": 5,
+      "player": 57
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 30,
+      "dNO": 6,
+      "player": 16
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 30,
+      "dNO": 7,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 30,
+      "dNO": 8,
+      "player": 29
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 31,
+      "dNO": 1,
+      "player": 4
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 31,
+      "dNO": 2,
+      "player": 4
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 31,
+      "dNO": 3,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 31,
+      "dNO": 4,
+      "player": 206
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 31,
+      "dNO": 5,
+      "player": 23
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 31,
+      "dNO": 6,
+      "player": 31
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 31,
+      "dNO": 7,
+      "player": 193
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 31,
+      "dNO": 8,
+      "player": 206
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 31,
+      "dNO": 9,
+      "player": 188
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 31,
+      "dNO": 10,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 32,
+      "dNO": 1,
+      "player": 66
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 32,
+      "dNO": 2,
+      "player": 38
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 32,
+      "dNO": 3,
+      "player": 38
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 32,
+      "dNO": 4,
+      "player": 38
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 32,
+      "dNO": 5,
+      "player": 220
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 32,
+      "dNO": 6,
+      "player": 12
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 32,
+      "dNO": 7,
+      "player": 57
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 32,
+      "dNO": 8,
+      "player": 29
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 32,
+      "dNO": 9,
+      "player": 12
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 32,
+      "dNO": 10,
+      "player": 66
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 33,
+      "dNO": 1,
+      "player": 221
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 33,
+      "dNO": 2,
+      "player": 100
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 33,
+      "dNO": 3,
+      "player": 95
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 33,
+      "dNO": 4,
+      "player": 57
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 33,
+      "dNO": 5,
+      "player": 150
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 33,
+      "dNO": 6,
+      "player": 16
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 33,
+      "dNO": 7,
+      "player": 154
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 33,
+      "dNO": 8,
+      "player": 23
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 33,
+      "dNO": 9,
+      "player": 154
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 33,
+      "dNO": 10,
+      "player": 95
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 33,
+      "dNO": 11,
+      "player": 150
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 34,
+      "dNO": 1,
+      "player": 186
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 34,
+      "dNO": 2,
+      "player": 183
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 34,
+      "dNO": 3,
+      "player": 183
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 34,
+      "dNO": 4,
+      "player": 204
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 34,
+      "dNO": 5,
+      "player": 5
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 34,
+      "dNO": 6,
+      "player": 41
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 34,
+      "dNO": 7,
+      "player": 183
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 34,
+      "dNO": 8,
+      "player": 227
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 34,
+      "dNO": 9,
+      "player": 204
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 34,
+      "dNO": 10,
+      "player": 229
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 34,
+      "dNO": 11,
+      "player": 5
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 35,
+      "dNO": 1,
+      "player": 42
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 35,
+      "dNO": 2,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 35,
+      "dNO": 3,
+      "player": 92
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 35,
+      "dNO": 4,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 35,
+      "dNO": 5,
+      "player": 22
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 35,
+      "dNO": 6,
+      "player": 155
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 35,
+      "dNO": 7,
+      "player": 232
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 35,
+      "dNO": 8,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 35,
+      "dNO": 9,
+      "player": 232
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 35,
+      "dNO": 10,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 35,
+      "dNO": 11,
+      "player": 180
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 36,
+      "dNO": 1,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 36,
+      "dNO": 2,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 36,
+      "dNO": 3,
+      "player": 183
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 36,
+      "dNO": 4,
+      "player": 220
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 36,
+      "dNO": 5,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 36,
+      "dNO": 6,
+      "player": 229
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 36,
+      "dNO": 7,
+      "player": 152
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 36,
+      "dNO": 8,
+      "player": 233
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 36,
+      "dNO": 9,
+      "player": 183
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 36,
+      "dNO": 10,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 36,
+      "dNO": 11,
+      "player": 41
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 37,
+      "dNO": 1,
+      "player": 236
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 37,
+      "dNO": 2,
+      "player": 236
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 37,
+      "dNO": 3,
+      "player": 5
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 37,
+      "dNO": 4,
+      "player": 66
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 37,
+      "dNO": 5,
+      "player": 16
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 37,
+      "dNO": 6,
+      "player": 100
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 37,
+      "dNO": 7,
+      "player": 204
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 38,
+      "dNO": 1,
+      "player": 23
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 38,
+      "dNO": 2,
+      "player": 23
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 38,
+      "dNO": 3,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 38,
+      "dNO": 4,
+      "player": 95
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 38,
+      "dNO": 5,
+      "player": 193
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 38,
+      "dNO": 6,
+      "player": 31
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 38,
+      "dNO": 7,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 38,
+      "dNO": 8,
+      "player": 193
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 38,
+      "dNO": 9,
+      "player": 42
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 38,
+      "dNO": 10,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 38,
+      "dNO": 11,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 38,
+      "dNO": 12,
+      "player": 42
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 1,
+      "player": 204
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 2,
+      "player": 5
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 3,
+      "player": 218
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 4,
+      "player": 132
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 5,
+      "player": 204
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 6,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 7,
+      "player": 235
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 8,
+      "player": 224
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 9,
+      "player": 235
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 10,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 11,
+      "player": 5
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 12,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 13,
+      "player": 5
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 14,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 15,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 16,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 17,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 18,
+      "player": 186
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 19,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 20,
+      "player": 234
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 21,
+      "player": 5
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 22,
+      "player": 132
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 39,
+      "dNO": 23,
+      "player": 132
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 40,
+      "dNO": 1,
+      "player": 183
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 40,
+      "dNO": 2,
+      "player": 188
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 40,
+      "dNO": 3,
+      "player": 221
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 40,
+      "dNO": 4,
+      "player": 229
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 40,
+      "dNO": 5,
+      "player": 229
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 40,
+      "dNO": 6,
+      "player": 31
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 40,
+      "dNO": 7,
+      "player": 233
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 40,
+      "dNO": 8,
+      "player": 23
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 40,
+      "dNO": 9,
+      "player": 188
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 40,
+      "dNO": 10,
+      "player": 227
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 40,
+      "dNO": 11,
+      "player": 183
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 40,
+      "dNO": 12,
+      "player": 193
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 41,
+      "dNO": 1,
+      "player": 38
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 41,
+      "dNO": 2,
+      "player": 182
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 41,
+      "dNO": 3,
+      "player": 240
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 41,
+      "dNO": 4,
+      "player": 57
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 41,
+      "dNO": 5,
+      "player": 100
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 41,
+      "dNO": 6,
+      "player": 100
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 41,
+      "dNO": 7,
+      "player": 16
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 41,
+      "dNO": 8,
+      "player": 100
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 41,
+      "dNO": 9,
+      "player": 100
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 41,
+      "dNO": 10,
+      "player": 150
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 41,
+      "dNO": 11,
+      "player": 22
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 42,
+      "dNO": 1,
+      "player": 42
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 42,
+      "dNO": 2,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 42,
+      "dNO": 3,
+      "player": 239
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 42,
+      "dNO": 4,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 42,
+      "dNO": 5,
+      "player": 213
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 42,
+      "dNO": 6,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 42,
+      "dNO": 7,
+      "player": 184
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 42,
+      "dNO": 8,
+      "player": 219
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 42,
+      "dNO": 9,
+      "player": 238
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 42,
+      "dNO": 10,
+      "player": 42
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 42,
+      "dNO": 11,
+      "player": 238
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 42,
+      "dNO": 12,
+      "player": 239
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 42,
+      "dNO": 13,
+      "player": 202
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 42,
+      "dNO": 14,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 42,
+      "dNO": 15,
+      "player": 199
+    },
+    {
+      "season": "Spring 2019",
+      "gameNO": 42,
+      "dNO": 16,
+      "player": 138
+    }
+  ]

@@ -1,0 +1,117 @@
+[
+    {
+      "team": "Barneys",
+      "teamID": 1,
+      "bkgdColor":""
+    },
+    {
+      "team": "Flamingos",
+      "teamID": 2,
+      "bkgdColor":""
+    },
+    {
+      "team": "LDF",
+      "teamID": 3,
+      "bkgdColor":""
+    },
+    {
+      "team": "Monkeys",
+      "teamID": 4,
+      "bkgdColor":""
+    },
+    {
+      "team": "UFO",
+      "teamID": 5,
+      "bkgdColor":""
+    },
+    {
+      "team": "Typhoon",
+      "teamID": 6,
+      "bkgdColor":""
+    },
+    {
+      "team": "Goonies",
+      "teamID": 7,
+      "bkgdColor":""
+    },
+    {
+      "team": "Hakuna Matata",
+      "teamID": 8,
+      "bkgdColor":"#fc7f03"
+    },
+    {
+      "team": "Road Warriors",
+      "teamID": 9,
+      "bkgdColor":"#ed7e7e"
+    },
+    {
+      "team": "Havoc",
+      "teamID": 10,
+      "bkgdColor":""
+    },
+    {
+      "team": "Pizzazz",
+      "teamID": 11,
+      "bkgdColor":"#ffa600"
+    },
+    {
+      "team": "Big Dumps",
+      "teamID": 12,
+      "bkgdColor":""
+    },
+    {
+      "team": "Xiong Dua Jia",
+      "teamID": 13,
+      "bkgdColor":"#e0e0e0"
+    },
+    {
+      "team": "Galaxy",
+      "teamID": 14,
+      "bkgdColor":"#454475"
+    },
+    {
+      "team": "Annapurna",
+      "teamID": 15,
+      "bkgdColor":"#96fcff"
+    },
+    {
+      "team": "Buddha Bellies",
+      "teamID": 16,
+      "bkgdColor":"#ADFF2F"
+    },
+    {
+      "team": "Dubble T's",
+      "teamID": 17,
+      "bkgdColor":"#bd7006"
+    },
+    {
+      "team": "Love Train",
+      "teamID": 18,
+      "bkgdColor":"#DDA0DD"
+    },
+    {
+      "team": "Disc Hunters",
+      "teamID": 19,
+      "bkgdColor":"#18db4c"
+    },
+    {
+      "team": "Disc Jockeys",
+      "teamID": 20,
+      "bkgdColor":"#C71585"
+    },
+    {
+      "team": "Spirit Animals",
+      "teamID": 21,
+      "bkgdColor":"#4169E1"
+    },
+    {
+      "team": "UP!",
+      "teamID": 22,
+      "bkgdColor":"#FF69B4"
+    },
+    {
+      "team": "Young Bloods",
+      "teamID": 23,
+      "bkgdColor":"#D3D3D3"
+    }
+  ]
