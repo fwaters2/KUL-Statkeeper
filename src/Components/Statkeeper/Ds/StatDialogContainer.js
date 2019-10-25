@@ -11,7 +11,6 @@ import SingleRoster from "./SingleRoster";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
   return (
     <Typography
       component="div"
@@ -40,6 +39,8 @@ export default function StatDialogContainer(props) {
   const [roster, setRoster] = React.useState([]);
   const [dteam, setDTeam] = React.useState("");
 
+
+  
   const handleTeamChoice = (roster, team) => () => {
     setValue(1);
     setRoster(roster);
