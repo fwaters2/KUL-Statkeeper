@@ -3,7 +3,8 @@ import "./Schedule.json";
 import {
   Grid,
   Button,
-  Typography
+  Typography,
+  Fab
 } from "@material-ui/core";
 import "./vs.svg";
 import "../../Teams.json";
@@ -17,14 +18,21 @@ export default function Games(props) {
   const dateToFilter = "10/19/2019";
   const exampleWeek1Sched = scheduleData.filter(
     game => game.Date === dateToFilter
-  );
+  ).sort((a,b)=>(a.GameNO-b.GameNO));
   const handleClick = game => () => {
     handleGameChoice(game.HomeTeam, game.AwayTeam, game.GameNO);
     setPage("Game");
   };
+  const handleGoalOpen = () =>{
+    setPage("TableView")
+  }
+  const handleDOpen = () =>{
+    setPage("DTableView")
+  }
   return (
     <div>
       <Typography align="center" variant="h4">{dateToFilter}</Typography>
+      <Typography align="center" variant="h6">Choose game to Scorekeep:</Typography>
 
        <Grid container>
        {/* <Grid item xs={6}>
@@ -103,6 +111,7 @@ export default function Games(props) {
               </Grid>
             ))}
         </Grid>
+        {console.log()}
         <Grid container xs={6}>
           {exampleWeek1Sched
             .filter(game => game.Field === 2)
@@ -115,6 +124,36 @@ export default function Games(props) {
             ))}
         </Grid>
       </Grid>
+      <Fab
+          variant="extended"
+          style={{
+            margin: 0,
+            top: "auto",
+            maxWidth: "500px",
+            bottom: 20,
+            right: 20,
+            position: "fixed"
+          }}
+          onClick={handleDOpen}
+        >
+          
+          <Typography>D Data</Typography>
+        </Fab>
+      <Fab
+          variant="extended"
+          style={{
+            margin: 0,
+            top: "auto",
+            maxWidth: "500px",
+            bottom: 80,
+            right: 20,
+            position: "fixed"
+          }}
+          onClick={handleGoalOpen}
+        >
+          
+          <Typography>Goal Data</Typography>
+        </Fab>
     </div>
   );
 }

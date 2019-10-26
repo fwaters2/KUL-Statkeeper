@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Grid, Typography, Fab, Paper } from "@material-ui/core";
+import { Button, Grid, Typography, Fab, Paper, Container } from "@material-ui/core";
 import DColumn from "./Ds/DColumn";
 import GoalColumns from "./Goals/GoalColumns";
 import { Add } from "@material-ui/icons";
@@ -58,7 +58,6 @@ export default function GameContainer(props) {
   const [awayScore, setAwayScore] = React.useState(
     goals.filter(goal => goal.team === gameData.awayTeam).length
   );
-
   const handleGoalOpen = () => {
     setOpenGoal(true);
   };
@@ -82,6 +81,7 @@ export default function GameContainer(props) {
   const handleCloseD = () => {
     setOpenD(false);
   };
+
   React.useEffect(() => {
     const unsubscribe = Firestore.firestore()
       .collection("Goals")
@@ -99,9 +99,7 @@ export default function GameContainer(props) {
   }, []);
 
   return (
-    <div>
-      {console.log("GameData =>" + gameData)}
-      {console.log(gameData)}
+    <Container>
 
       {/* <Scoreboard
         stuff={{
@@ -114,13 +112,18 @@ export default function GameContainer(props) {
         }}
       /> */}
       <Paper>
+      <Typography align='center' variant='h6'>
+          StatSheet
+        </Typography>
+
         <Typography align='center' variant='h4'>
-          StatSheet {gameData.homeTeam} vs {gameData.awayTeam}
+          {gameData.homeTeam} vs {gameData.awayTeam}
         </Typography>
 
         <Grid container spacing={2}>
           <Grid item xs={8}>
             <GoalColumns
+            
               addGoal={addGoal}
               stats={goals}
               teamColors={teamColors}
@@ -191,6 +194,6 @@ export default function GameContainer(props) {
           awayTeam={gameData.awayTeam}
         />
       </Paper>
-    </div>
+    </Container>
   );
 }

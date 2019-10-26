@@ -1,8 +1,8 @@
 import React from "react";
 import Firestore from "../Utils/Firebase";
-import Router from '../Components/Router'
-import "./OfflineData/players.json"
-import "./OfflineData/schedule.json"
+import Router from "../Components/Router";
+import "./OfflineData/players.json";
+import "./OfflineData/schedule.json";
 
 const players = require("./OfflineData/players.json");
 const schedule = require("./OfflineData/schedule.json");
@@ -17,52 +17,60 @@ export default function StateStore() {
     const awayRoster = playerData.filter(player => player.Team === awayTeam);
     setGameData({
       homeTeam: homeTeam,
-      
+
       homeRoster: homeRoster,
       awayTeam: awayTeam,
-     
+
       awayRoster: awayRoster,
-      GameNO:GameNO
+      GameNO: GameNO
     });
   };
 
   React.useEffect(() => {
-    const unsubscribe = 
-    // setSchedule(schedule);
-    // setPlayers(players);
+    const unsubscribe =
+      // setSchedule(schedule);
+      // setPlayers(players);
 
-    //  //change placeholder to newdata
-    //  placeholder.map(x=>
-    // Firestore
-    //   .firestore()
-    //   .collection("placeholder")
-    //   .add(x).then(function() {
-    //     console.log("Document successfully written!");
-    // })
-    // .catch(function(error) {
-    //     console.error("Error writing document: ", error);
-    // }))
+      //  //change placeholder to newdata
+      //  placeholder.map(x=>
+      // Firestore
+      //   .firestore()
+      //   .collection("placeholder")
+      //   .add(x).then(function() {
+      //     console.log("Document successfully written!");
+      // })
+      // .catch(function(error) {
+      //     console.error("Error writing document: ", error);
+      // }))
 
-   //place to take data when it goes live
-    Firestore
-      .firestore()
-      .collection("Schedule")
-      .onSnapshot(snapshot => {
-        const games = snapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
-        }));
-        setSchedule(games);
-      });
-    Firestore
-      .firestore()
+      //place to take data when it goes live
+      Firestore.firestore()
+        .collection("Schedule")
+        .onSnapshot(snapshot => {
+          const games = snapshot.docs.map(doc => ({
+            id: doc.id,
+            ...doc.data()
+          }));
+          setSchedule(games);
+        });
+    Firestore.firestore()
       .collection("Players")
       .onSnapshot(snapshot => {
         const player = snapshot.docs.map(doc => ({
           id: doc.id,
           ...doc.data()
         }));
-        setPlayers(player);
+        setPlayers(
+          player.sort((a, b) => {
+            if (a.Name < b.Name) {
+              return -1;
+            }
+            if (a.Name > b.Name) {
+              return 1;
+            }
+            return 0;
+          })
+        );
       });
 
     return () => unsubscribe;
