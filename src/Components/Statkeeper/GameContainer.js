@@ -155,7 +155,7 @@ export default function GameContainer(props) {
           <Typography>GOAL</Typography>
         </Fab>
 
-        <Button fullWidth onClick={() => setPage("Schedule")}>
+        <Button color='secondary' fullWidth onClick={() => setPage("Schedule")}>
           Back
         </Button>
         {/* <Fab

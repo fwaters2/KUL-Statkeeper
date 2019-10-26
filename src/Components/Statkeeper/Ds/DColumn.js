@@ -9,7 +9,6 @@ import {
 
 export default function DColumn(props) {
   const { stats, teamColors, gameData } = props;
-
   const homeTeamColors = teamColors.find(team=>team.team===gameData.homeTeam).bkgdColor
   const awayTeamColors = teamColors.find(team=>team.team===gameData.awayTeam).bkgdColor
 
