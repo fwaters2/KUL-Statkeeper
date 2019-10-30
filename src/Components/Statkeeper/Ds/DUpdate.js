@@ -10,7 +10,7 @@ import {
   AppBar,
   Grid
 } from "@material-ui/core";
-import DoubleRoster from "./DoubleRoster";
+import SingleRoster from "./SingleRoster";
 import { KeyboardArrowLeft } from "@material-ui/icons";
 import Firestore from "../../../Utils/Firebase";
 
@@ -31,7 +31,7 @@ function TabPanel(props) {
   );
 }
 
-export default function GoalDialogContainer(props) {
+export default function DDialogContainer(props) {
   const {
     gameData,
     onClose,
@@ -40,11 +40,11 @@ export default function GoalDialogContainer(props) {
     rosterAway,
     homeTeam,
     awayTeam,
-    nextGoalNO
+    id,
+    currentD
   } = props;
   const [value, setValue] = React.useState(0);
-  const [assist, setAssist] = React.useState("");
-  const [goal, setGoal] = React.useState("");
+  const [d, setD] = React.useState("");
   const [roster, setRoster] = React.useState([]);
   const [team, setTeam] = React.useState("");
 
@@ -55,31 +55,19 @@ export default function GoalDialogContainer(props) {
   };
   const handleConfirm = () => {
     Firestore.firestore()
-      .collection("Goals")
-      .add({
-        Season: "Fall 2019",
-        GameNO: gameData.GameNO,
-        GoalNo: nextGoalNO,
+      .collection("Ds")
+      .doc(id)
+      .update({
         TeamID: team, //to do
-        Assist: assist, //to do
-        Goal: goal, //to do
-        Time: new Date()
+        D: d, //to do
       });
     onClose();
     setValue(0);
-    setAssist("");
-    setGoal("");
+    setD("");
   };
-  const handleClose = ()=>{
-    onClose()
-    setTeam("")
-    setValue(0);
-    setAssist("")
-    setGoal("")
-  }
 
   return (
-    <Dialog fullWidth onClose={handleClose} open={open}>
+    <Dialog fullWidth onClose={onClose} open={open}>
       <DialogTitle fullWidth>
         <Grid container>
           {value === 1 ? (
@@ -88,7 +76,7 @@ export default function GoalDialogContainer(props) {
             </Grid>
           ) : null}
           <Grid item xs={9}>
-            Goal!
+            Update Goal #{currentD}
           </Grid>
         </Grid>
       </DialogTitle>
@@ -99,16 +87,14 @@ export default function GoalDialogContainer(props) {
         </ButtonGroup>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <DoubleRoster
-          setAssist={setAssist}
-          setGoal={setGoal}
-          assist={assist}
-          goal={goal}
+        <SingleRoster
+          setD={setD}
+          d={d}
           roster={roster}
           setValue={setValue}
         />
       </TabPanel>
-      {assist && goal && assist !== goal ? (
+      {d !== "" ? (
         <AppBar
           style={{
             margin: 0,

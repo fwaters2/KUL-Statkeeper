@@ -1,25 +1,23 @@
-import React from 'react'
-import { List, ListItemText, ListItem } from '@material-ui/core'
+import React from "react";
+import { List, ListItemText, ListItem } from "@material-ui/core";
 
 export default function SingleRoster(props) {
-    const {addD, roster, onClose, setValue, team} = props
+  const { d, setD, roster } = props;
 
-    const handleClick = (player)=>() =>{
-        addD({ dNo: 1,
-            team: team,
-            d: player.Name})
-            onClose()
-            setValue(0)
-
-    }
-
-    return (
-        <List>
-            {roster.map(player=>(
-            <ListItem onClick={handleClick(player)}>
-                <ListItemText primary={player.Name} secondary="#" />
-            </ListItem>
-            ))}
-        </List>
-    )
+  return (
+    <List>
+      {roster.map(player => (
+        <ListItem
+          button
+          selected={player.Name === d}
+          onClick={() => setD(player.Name)}
+        >
+          <ListItemText
+            primary={player.Name}
+            secondary={"#" + player.JerseyNO + " " + player.JerseyName}
+          />
+        </ListItem>
+      ))}
+    </List>
+  );
 }

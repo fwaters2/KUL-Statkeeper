@@ -3,7 +3,7 @@ import { Button, Grid, Typography, Fab, Paper, Container } from "@material-ui/co
 import DColumn from "./Ds/DColumn";
 import GoalColumns from "./Goals/GoalColumns";
 import { Add } from "@material-ui/icons";
-import StatDialogContainer from "./Ds/StatDialogContainer";
+import DDialogContainer from "./Ds/DDialogContainer";
 import GoalDialogContainer from "./Goals/GoalDialogContainer";
 import Scoreboard from "../Scoreboard/Scoreboard";
 import "../../Teams.json";
@@ -48,7 +48,7 @@ const exampleDData = [
 
 export default function GameContainer(props) {
   const { setPage, gameData } = props;
-  const [ds, setDs] = React.useState(exampleDData);
+  const [ds, setDs] = React.useState([]);
   const [goals, setGoals] = React.useState([]);
   const [openGoal, setOpenGoal] = React.useState(false);
   const [openD, setOpenD] = React.useState(false);
@@ -92,7 +92,20 @@ export default function GameContainer(props) {
           ...doc.data()
         }));
         setGoals(goals.sort((a,b)=>(a.GoalNo-b.GoalNo)))
-        console.log(goals)
+      });
+
+    return () => unsubscribe;
+  }, []);
+  React.useEffect(() => {
+    const unsubscribe = Firestore.firestore()
+      .collection("Ds")
+      .where("GameNO", "==", gameData.GameNO)
+      .onSnapshot(snapshot => {
+        const ds = snapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        setDs(ds.sort((a,b)=>(a.DNO-b.DNO)))
       });
 
     return () => unsubscribe;
@@ -130,14 +143,14 @@ export default function GameContainer(props) {
               gameData={gameData}
             />
           </Grid>
-          {/* <Grid item xs={4}>
+          <Grid item xs={4}>
             <DColumn
               addD={addD}
               stats={ds}
               teamColors={teamColors}
               gameData={gameData}
             />
-          </Grid> */}
+          </Grid>
         </Grid>
         <Fab
           variant="extended"
@@ -158,7 +171,7 @@ export default function GameContainer(props) {
         <Button color='secondary' fullWidth onClick={() => setPage("Schedule")}>
           Back
         </Button>
-        {/* <Fab
+        <Fab
           variant="extended"
           style={{
             margin: 0,
@@ -172,11 +185,13 @@ export default function GameContainer(props) {
         >
           <Add fontSize="large" />
           <Typography>D</Typography>
-        </Fab> */}
-        <StatDialogContainer
+        </Fab>
+        <DDialogContainer
+        nextDNO={ds.length+1}
+        gameData={gameData}
           open={openD}
           onClose={handleCloseD}
-          addD={addD}
+     
           rosterHome={gameData.homeRoster}
           rosterAway={gameData.awayRoster}
           homeTeam={gameData.homeTeam}
@@ -185,7 +200,7 @@ export default function GameContainer(props) {
         <GoalDialogContainer
           nextGoalNO={goals.length+1}
           gameData={gameData}
-          addGoal={addGoal}
+          
           open={openGoal}
           onClose={handleCloseGoal}
           rosterHome={gameData.homeRoster}

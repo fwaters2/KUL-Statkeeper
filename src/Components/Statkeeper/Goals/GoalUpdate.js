@@ -36,7 +36,6 @@ export default function GoalDialogContainer(props) {
     gameData,
     onClose,
     open,
-    updateGoal,
     rosterHome,
     rosterAway,
     homeTeam,

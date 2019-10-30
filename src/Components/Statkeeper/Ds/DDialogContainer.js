@@ -10,13 +10,12 @@ import {
   AppBar,
   Grid
 } from "@material-ui/core";
-import DoubleRoster from "./DoubleRoster";
+import SingleRoster from "./SingleRoster";
 import { KeyboardArrowLeft } from "@material-ui/icons";
 import Firestore from "../../../Utils/Firebase";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
   return (
     <Typography
       component="div"
@@ -31,7 +30,7 @@ function TabPanel(props) {
   );
 }
 
-export default function GoalDialogContainer(props) {
+export default function DDialogContainer(props) {
   const {
     gameData,
     onClose,
@@ -40,75 +39,76 @@ export default function GoalDialogContainer(props) {
     rosterAway,
     homeTeam,
     awayTeam,
-    nextGoalNO
+    nextDNO
   } = props;
   const [value, setValue] = React.useState(0);
-  const [assist, setAssist] = React.useState("");
-  const [goal, setGoal] = React.useState("");
+  const [d, setD] = React.useState("")
   const [roster, setRoster] = React.useState([]);
-  const [team, setTeam] = React.useState("");
+  const [dTeam, setDTeam] = React.useState("");
 
-  const handleTeamChoice = team => () => {
+
+  
+  const handleTeamChoice = (roster, team) => () => {
     setValue(1);
-    setRoster(team === "home" ? rosterHome : rosterAway);
-    setTeam(team === "home" ? gameData.homeTeam : gameData.awayTeam);
+    setRoster(roster);
+    setDTeam(team);
   };
+
   const handleConfirm = () => {
     Firestore.firestore()
-      .collection("Goals")
+      .collection("Ds")
       .add({
         Season: "Fall 2019",
         GameNO: gameData.GameNO,
-        GoalNo: nextGoalNO,
-        TeamID: team, //to do
-        Assist: assist, //to do
-        Goal: goal, //to do
+        DNo: nextDNO,
+        TeamID: dTeam, //to do
+        D: d, //to do
         Time: new Date()
       });
     onClose();
     setValue(0);
-    setAssist("");
-    setGoal("");
+    setD("");
   };
   const handleClose = ()=>{
     onClose()
-    setTeam("")
+    setDTeam("")
     setValue(0);
-    setAssist("")
-    setGoal("")
+    setD("")
   }
 
   return (
-    <Dialog fullWidth onClose={handleClose} open={open}>
-      <DialogTitle fullWidth>
-        <Grid container>
+    <Dialog onClose={handleClose} open={open}>
+      <DialogTitle><Grid container>
           {value === 1 ? (
             <Grid item xs={3} onClick={() => setValue(0)}>
               <KeyboardArrowLeft /> Back
             </Grid>
           ) : null}
           <Grid item xs={9}>
-            Goal!
+            D!
           </Grid>
-        </Grid>
-      </DialogTitle>
+        </Grid></DialogTitle>
       <TabPanel value={value} index={0}>
-        <ButtonGroup fullWidth>
-          <Button onClick={handleTeamChoice("home")}>{homeTeam}</Button>
-          <Button onClick={handleTeamChoice("away")}>{awayTeam}</Button>
+        <ButtonGroup>
+          <Button onClick={handleTeamChoice(rosterHome, homeTeam)}>
+            {homeTeam}
+          </Button>
+          <Button onClick={handleTeamChoice(rosterAway, awayTeam)}>
+            {awayTeam}
+          </Button>
         </ButtonGroup>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <DoubleRoster
-          setAssist={setAssist}
-          setGoal={setGoal}
-          assist={assist}
-          goal={goal}
+        <SingleRoster
+          setD={setD}
+          d={d}
           roster={roster}
+          onClose={onClose}
           setValue={setValue}
+          team={dTeam}
         />
       </TabPanel>
-      {assist && goal && assist !== goal ? (
+      {d !=="" ? (
         <AppBar
           style={{
             margin: 0,
