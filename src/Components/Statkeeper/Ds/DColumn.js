@@ -20,6 +20,10 @@ export default function DColumn(props) {
 
   const handleDelete = id => () => {
     Firestore.firestore()
+      .collection("DDisplay")
+      .doc(id)
+      .delete();
+      Firestore.firestore()
       .collection("Ds")
       .doc(id)
       .delete();

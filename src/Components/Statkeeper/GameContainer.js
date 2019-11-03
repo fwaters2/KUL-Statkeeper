@@ -98,7 +98,7 @@ export default function GameContainer(props) {
   }, []);
   React.useEffect(() => {
     const unsubscribe = Firestore.firestore()
-      .collection("Ds")
+      .collection("DDisplay")
       .where("GameNO", "==", gameData.GameNO)
       .onSnapshot(snapshot => {
         const ds = snapshot.docs.map(doc => ({

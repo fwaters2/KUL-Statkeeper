@@ -1,33 +1,82 @@
 import React from "react";
-import { List, ListItemText, ListItem, Grid } from "@material-ui/core";
+import {
+  List,
+  ListItemText,
+  ListItem,
+  Grid,
+  Typography
+} from "@material-ui/core";
 
 export default function DoubleRoster(props) {
-  const { setAssist, setGoal, assist, goal, roster } = props;
+  const {
+    setAssist,
+    setAssistID,
+    setGoal,
+    setGoalID,
+    assist,
+    assistID,
+    goal,
+    goalID,
+    roster,
+    setTeamID
+  } = props;
+  const handleAssist = player=>()=> {
+    setAssist(player.Name);
+    setAssistID(player.PlayerID);
+  };
+  const handleGoal = player=>()=> {
+    setGoal(player.Name);
+    setGoalID(player.PlayerID);
+    setTeamID(player.TeamID)
+  };
+  const handleCallahan = ()=> {
+    setAssist("Callahan");
+    setAssistID(0);
+  };
+
   return (
     <Grid container>
       <Grid item xs={6}>
+        <Typography variant="h6">Assist</Typography>
         <List>
           {roster.map(player => (
             <ListItem
               button
               selected={player.Name === assist}
               variant="contained"
-              onClick={() => setAssist(player.Name)}
+              onClick={handleAssist(player)}
             >
-              <ListItemText primary={player.Name} secondary={"#" + player.JerseyNO +" " +player.JerseyName} />
+              <ListItemText
+                primary={player.Name}
+                secondary={"#" + player.JerseyNO + " " + player.JerseyName}
+              />
             </ListItem>
           ))}
+          <ListItem
+            button
+            selected={assist === "Callahan"}
+            onClick={handleCallahan}
+          >
+            <ListItemText
+              primary="CALLAHAN"
+              secondary="Interception in endzone"
+            />
+          </ListItem>
         </List>
       </Grid>
       <Grid item xs={6}>
+        <Typography variant="h6">Goal</Typography>
         <List>
           {roster.map(player => (
             <ListItem
               button
               selected={player.Name === goal}
-              onClick={() => setGoal(player.Name)}
+              onClick={handleGoal(player)}
             >
-              <ListItemText primary={player.Name} secondary={"#" + player.JerseyNO +" " +player.JerseyName} />
+              <ListItemText
+                primary={player.Name}
+                secondary={"#" + player.JerseyNO + " " + player.JerseyName}
+              />
             </ListItem>
           ))}
         </List>

@@ -15,7 +15,7 @@ const vsLogo = require("./vs.svg");
 
 export default function Games(props) {
   const { scheduleData, setPage, gameData, setGameData, handleGameChoice } = props;
-  const dateToFilter = "10/26/2019";
+  const dateToFilter = "TEST";
   const exampleWeek1Sched = scheduleData.filter(
     game => game.Date === dateToFilter
   ).sort((a,b)=>(a.GameNO-b.GameNO));

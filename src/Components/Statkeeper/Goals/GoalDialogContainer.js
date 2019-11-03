@@ -44,9 +44,12 @@ export default function GoalDialogContainer(props) {
   } = props;
   const [value, setValue] = React.useState(0);
   const [assist, setAssist] = React.useState("");
+  const [assistID, setAssistID] = React.useState("")
   const [goal, setGoal] = React.useState("");
+  const [goalID, setGoalID] = React.useState("")
   const [roster, setRoster] = React.useState([]);
   const [team, setTeam] = React.useState("");
+  const [teamID, setTeamID] = React.useState("")
 
   const handleTeamChoice = team => () => {
     setValue(1);
@@ -55,27 +58,47 @@ export default function GoalDialogContainer(props) {
   };
   const handleConfirm = () => {
     Firestore.firestore()
+      .collection("Points")
+      .add({
+        Season: "Fall 2019",
+        GameNO: gameData.GameNO,
+        GoalNo: nextGoalNO,
+        TeamID: teamID,
+        Assist: assistID,
+        Goal: goalID,
+        Time: Firestore.firestore.FieldValue.serverTimestamp()
+      });
+    Firestore.firestore()
       .collection("Goals")
       .add({
         Season: "Fall 2019",
         GameNO: gameData.GameNO,
         GoalNo: nextGoalNO,
-        TeamID: team, //to do
+        TeamActualID: teamID, //to do
+        TeamID: team,
         Assist: assist, //to do
+        AssistID: assistID,
         Goal: goal, //to do
-        Time: new Date()
+        GoalID: goalID,
+        Time: Firestore.firestore.FieldValue.serverTimestamp()
       });
     onClose();
     setValue(0);
     setAssist("");
+    setAssistID("")
     setGoal("");
+    setGoalID("")
+
   };
   const handleClose = ()=>{
     onClose()
     setTeam("")
+    setTeamID("")
     setValue(0);
-    setAssist("")
-    setGoal("")
+    setAssist("");
+    setAssistID("")
+    setGoal("");
+    setGoalID("")
   }
 
   return (
@@ -101,11 +124,16 @@ export default function GoalDialogContainer(props) {
       <TabPanel value={value} index={1}>
         <DoubleRoster
           setAssist={setAssist}
+          setAssistID={setAssistID}
           setGoal={setGoal}
+          setGoalID={setGoalID}
           assist={assist}
+          assistID={assistID}
           goal={goal}
+          goalID={goalID}
           roster={roster}
           setValue={setValue}
+          setTeamID={setTeamID}
         />
       </TabPanel>
       {assist && goal && assist !== goal ? (

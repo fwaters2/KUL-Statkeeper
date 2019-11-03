@@ -45,7 +45,8 @@ export default function DDialogContainer(props) {
   const [d, setD] = React.useState("")
   const [roster, setRoster] = React.useState([]);
   const [dTeam, setDTeam] = React.useState("");
-
+const [teamID, setTeamID] =React.useState("")
+const [playerID, setPlayerID] = React.useState("")
 
   
   const handleTeamChoice = (roster, team) => () => {
@@ -56,14 +57,24 @@ export default function DDialogContainer(props) {
 
   const handleConfirm = () => {
     Firestore.firestore()
-      .collection("Ds")
+    .collection("Ds")
+    .add({
+      Season: "Fall 2019",
+      GameNO: gameData.GameNO,
+      DNo: nextDNO,
+      TeamID: teamID, 
+      D: playerID, 
+      Time: Firestore.firestore.FieldValue.serverTimestamp()
+    });
+    Firestore.firestore()
+      .collection("DDisplay")
       .add({
         Season: "Fall 2019",
         GameNO: gameData.GameNO,
         DNo: nextDNO,
         TeamID: dTeam, //to do
         D: d, //to do
-        Time: new Date()
+        Time: Firestore.firestore.FieldValue.serverTimestamp()
       });
     onClose();
     setValue(0);
@@ -106,6 +117,8 @@ export default function DDialogContainer(props) {
           onClose={onClose}
           setValue={setValue}
           team={dTeam}
+          setTeamID={setTeamID}
+          setPlayerID={setPlayerID}
         />
       </TabPanel>
       {d !=="" ? (
