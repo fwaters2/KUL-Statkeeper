@@ -42,13 +42,12 @@ export default function DDialogContainer(props) {
     nextDNO
   } = props;
   const [value, setValue] = React.useState(0);
-  const [d, setD] = React.useState("")
+  const [d, setD] = React.useState("");
   const [roster, setRoster] = React.useState([]);
   const [dTeam, setDTeam] = React.useState("");
-const [teamID, setTeamID] =React.useState("")
-const [playerID, setPlayerID] = React.useState("")
+  const [teamID, setTeamID] = React.useState("");
+  const [playerID, setPlayerID] = React.useState("");
 
-  
   const handleTeamChoice = (roster, team) => () => {
     setValue(1);
     setRoster(roster);
@@ -57,15 +56,15 @@ const [playerID, setPlayerID] = React.useState("")
 
   const handleConfirm = () => {
     Firestore.firestore()
-    .collection("Ds")
-    .add({
-      Season: "Fall 2019",
-      GameNO: gameData.GameNO,
-      DNo: nextDNO,
-      TeamID: teamID, 
-      D: playerID, 
-      Time: Firestore.firestore.FieldValue.serverTimestamp()
-    });
+      .collection("Ds")
+      .add({
+        Season: "Fall 2019",
+        GameNO: gameData.GameNO,
+        DNo: nextDNO,
+        TeamID: teamID,
+        D: playerID,
+        Time: Firestore.firestore.FieldValue.serverTimestamp()
+      });
     Firestore.firestore()
       .collection("DDisplay")
       .add({
@@ -80,16 +79,17 @@ const [playerID, setPlayerID] = React.useState("")
     setValue(0);
     setD("");
   };
-  const handleClose = ()=>{
-    onClose()
-    setDTeam("")
+  const handleClose = () => {
+    onClose();
+    setDTeam("");
     setValue(0);
-    setD("")
-  }
+    setD("");
+  };
 
   return (
     <Dialog onClose={handleClose} open={open}>
-      <DialogTitle><Grid container>
+      <DialogTitle>
+        <Grid container>
           {value === 1 ? (
             <Grid item xs={3} onClick={() => setValue(0)}>
               <KeyboardArrowLeft /> Back
@@ -98,7 +98,8 @@ const [playerID, setPlayerID] = React.useState("")
           <Grid item xs={9}>
             D!
           </Grid>
-        </Grid></DialogTitle>
+        </Grid>
+      </DialogTitle>
       <TabPanel value={value} index={0}>
         <ButtonGroup>
           <Button onClick={handleTeamChoice(rosterHome, homeTeam)}>
@@ -121,7 +122,7 @@ const [playerID, setPlayerID] = React.useState("")
           setPlayerID={setPlayerID}
         />
       </TabPanel>
-      {d !=="" ? (
+      {d !== "" ? (
         <AppBar
           style={{
             margin: 0,

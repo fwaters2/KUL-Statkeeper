@@ -14,22 +14,22 @@ export default function DoubleRoster(props) {
     setGoal,
     setGoalID,
     assist,
-    assistID,
+    //assistID,
     goal,
-    goalID,
+    //goalID,
     roster,
     setTeamID
   } = props;
-  const handleAssist = player=>()=> {
+  const handleAssist = player => () => {
     setAssist(player.Name);
     setAssistID(player.PlayerID);
   };
-  const handleGoal = player=>()=> {
+  const handleGoal = player => () => {
     setGoal(player.Name);
     setGoalID(player.PlayerID);
-    setTeamID(player.TeamID)
+    setTeamID(player.TeamID);
   };
-  const handleCallahan = ()=> {
+  const handleCallahan = () => {
     setAssist("Callahan");
     setAssistID(0);
   };
@@ -37,10 +37,17 @@ export default function DoubleRoster(props) {
   return (
     <Grid container>
       <Grid item xs={6}>
-        <Typography variant="h6">Assist</Typography>
+        <Typography
+          variant="h6"
+          align="center"
+          style={{ background: "#283895", color: "white", margin: "0 5px" }}
+        >
+          Assist
+        </Typography>
         <List>
           {roster.map(player => (
             <ListItem
+              key={player.Name}
               button
               selected={player.Name === assist}
               variant="contained"
@@ -65,10 +72,17 @@ export default function DoubleRoster(props) {
         </List>
       </Grid>
       <Grid item xs={6}>
-        <Typography variant="h6">Goal</Typography>
+        <Typography
+          variant="h6"
+          align="center"
+          style={{ background: "#283895", color: "white", margin: "0 5px" }}
+        >
+          Goal
+        </Typography>
         <List>
           {roster.map(player => (
             <ListItem
+              key={player.Name}
               button
               selected={player.Name === goal}
               onClick={handleGoal(player)}

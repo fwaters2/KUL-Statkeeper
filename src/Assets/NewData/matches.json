@@ -1,0 +1,1710 @@
+[
+  {
+    "id": 1,
+    "season_id": 1,
+    "team_home": 3,
+    "team_away": 4,
+    "datetime": "5/14/2016"
+  },
+  {
+    "id": 2,
+    "season_id": 1,
+    "team_home": 1,
+    "team_away": 2,
+    "datetime": "5/14/2016"
+  },
+  {
+    "id": 3,
+    "season_id": 1,
+    "team_home": 5,
+    "team_away": 2,
+    "datetime": "5/14/2016"
+  },
+  {
+    "id": 4,
+    "season_id": 1,
+    "team_home": 3,
+    "team_away": 1,
+    "datetime": "5/14/2016"
+  },
+  {
+    "id": 5,
+    "season_id": 1,
+    "team_home": 5,
+    "team_away": 3,
+    "datetime": "5/14/2016"
+  },
+  {
+    "id": 6,
+    "season_id": 1,
+    "team_home": 1,
+    "team_away": 4,
+    "datetime": "5/14/2016"
+  },
+  {
+    "id": 7,
+    "season_id": 1,
+    "team_home": 1,
+    "team_away": 5,
+    "datetime": "5/28/2016"
+  },
+  {
+    "id": 8,
+    "season_id": 1,
+    "team_home": 2,
+    "team_away": 4,
+    "datetime": "5/28/2016"
+  },
+  {
+    "id": 9,
+    "season_id": 1,
+    "team_home": 4,
+    "team_away": 5,
+    "datetime": "5/28/2016"
+  },
+  {
+    "id": 10,
+    "season_id": 1,
+    "team_home": 2,
+    "team_away": 3,
+    "datetime": "5/28/2016"
+  },
+  {
+    "id": 11,
+    "season_id": 1,
+    "team_home": 4,
+    "team_away": 3,
+    "datetime": "5/28/2016"
+  },
+  {
+    "id": 12,
+    "season_id": 1,
+    "team_home": 1,
+    "team_away": 2,
+    "datetime": "5/28/2016"
+  },
+  {
+    "id": 13,
+    "season_id": 1,
+    "team_home": 5,
+    "team_away": 2,
+    "datetime": "6/18/2016"
+  },
+  {
+    "id": 14,
+    "season_id": 1,
+    "team_home": 1,
+    "team_away": 3,
+    "datetime": "6/18/2016"
+  },
+  {
+    "id": 15,
+    "season_id": 1,
+    "team_home": 3,
+    "team_away": 5,
+    "datetime": "6/18/2016"
+  },
+  {
+    "id": 16,
+    "season_id": 1,
+    "team_home": 4,
+    "team_away": 1,
+    "datetime": "6/18/2016"
+  },
+  {
+    "id": 17,
+    "season_id": 1,
+    "team_home": 4,
+    "team_away": 2,
+    "datetime": "6/18/2016"
+  },
+  {
+    "id": 18,
+    "season_id": 1,
+    "team_home": 1,
+    "team_away": 5,
+    "datetime": "6/18/2016"
+  },
+  {
+    "id": 19,
+    "season_id": 1,
+    "team_home": 4,
+    "team_away": 5,
+    "datetime": "6/18/2016"
+  },
+  {
+    "id": 20,
+    "season_id": 1,
+    "team_home": 3,
+    "team_away": 2,
+    "datetime": "6/18/2016"
+  },
+  {
+    "id": 21,
+    "season_id": 2,
+    "team_home": 4,
+    "team_away": 5,
+    "datetime": "10/15/2016"
+  },
+  {
+    "id": 22,
+    "season_id": 2,
+    "team_home": 2,
+    "team_away": 6,
+    "datetime": "10/15/2016"
+  },
+  {
+    "id": 23,
+    "season_id": 2,
+    "team_home": 2,
+    "team_away": 5,
+    "datetime": "10/15/2016"
+  },
+  {
+    "id": 24,
+    "season_id": 2,
+    "team_home": 1,
+    "team_away": 3,
+    "datetime": "10/15/2016"
+  },
+  {
+    "id": 25,
+    "season_id": 2,
+    "team_home": 3,
+    "team_away": 6,
+    "datetime": "10/15/2016"
+  },
+  {
+    "id": 26,
+    "season_id": 2,
+    "team_home": 1,
+    "team_away": 4,
+    "datetime": "10/15/2016"
+  },
+  {
+    "id": 27,
+    "season_id": 2,
+    "team_home": 2,
+    "team_away": 3,
+    "datetime": "10/15/2016"
+  },
+  {
+    "id": 28,
+    "season_id": 2,
+    "team_home": 5,
+    "team_away": 1,
+    "datetime": "10/15/2016"
+  },
+  {
+    "id": 29,
+    "season_id": 2,
+    "team_home": 4,
+    "team_away": 6,
+    "datetime": "10/29/2016"
+  },
+  {
+    "id": 30,
+    "season_id": 2,
+    "team_home": 1,
+    "team_away": 2,
+    "datetime": "10/29/2016"
+  },
+  {
+    "id": 31,
+    "season_id": 2,
+    "team_home": 5,
+    "team_away": 6,
+    "datetime": "10/29/2016"
+  },
+  {
+    "id": 32,
+    "season_id": 2,
+    "team_home": 4,
+    "team_away": 3,
+    "datetime": "10/29/2016"
+  },
+  {
+    "id": 33,
+    "season_id": 2,
+    "team_home": 4,
+    "team_away": 2,
+    "datetime": "10/29/2016"
+  },
+  {
+    "id": 34,
+    "season_id": 2,
+    "team_home": 5,
+    "team_away": 3,
+    "datetime": "10/29/2016"
+  },
+  {
+    "id": 35,
+    "season_id": 2,
+    "team_home": 1,
+    "team_away": 6,
+    "datetime": "10/29/2016"
+  },
+  {
+    "id": 36,
+    "season_id": 2,
+    "team_home": 4,
+    "team_away": 6,
+    "datetime": "11/12/2016"
+  },
+  {
+    "id": 37,
+    "season_id": 2,
+    "team_home": 4,
+    "team_away": 5,
+    "datetime": "11/12/2016"
+  },
+  {
+    "id": 38,
+    "season_id": 2,
+    "team_home": 2,
+    "team_away": 6,
+    "datetime": "11/12/2016"
+  },
+  {
+    "id": 39,
+    "season_id": 2,
+    "team_home": 5,
+    "team_away": 3,
+    "datetime": "11/12/2016"
+  },
+  {
+    "id": 40,
+    "season_id": 2,
+    "team_home": 1,
+    "team_away": 2,
+    "datetime": "11/12/2016"
+  },
+  {
+    "id": 41,
+    "season_id": 2,
+    "team_home": 5,
+    "team_away": 1,
+    "datetime": "11/12/2016"
+  },
+  {
+    "id": 42,
+    "season_id": 2,
+    "team_home": 3,
+    "team_away": 4,
+    "datetime": "11/12/2016"
+  },
+  {
+    "id": 43,
+    "season_id": 2,
+    "team_home": 3,
+    "team_away": 6,
+    "datetime": "11/26/2016"
+  },
+  {
+    "id": 44,
+    "season_id": 2,
+    "team_home": 2,
+    "team_away": 5,
+    "datetime": "11/26/2016"
+  },
+  {
+    "id": 45,
+    "season_id": 2,
+    "team_home": 2,
+    "team_away": 3,
+    "datetime": "11/26/2016"
+  },
+  {
+    "id": 46,
+    "season_id": 2,
+    "team_home": 1,
+    "team_away": 4,
+    "datetime": "11/26/2016"
+  },
+  {
+    "id": 47,
+    "season_id": 2,
+    "team_home": 5,
+    "team_away": 6,
+    "datetime": "11/26/2016"
+  },
+  {
+    "id": 48,
+    "season_id": 2,
+    "team_home": 1,
+    "team_away": 3,
+    "datetime": "11/26/2016"
+  },
+  {
+    "id": 49,
+    "season_id": 2,
+    "team_home": 4,
+    "team_away": 2,
+    "datetime": "11/26/2016"
+  },
+  {
+    "id": 50,
+    "season_id": 2,
+    "team_home": 1,
+    "team_away": 5,
+    "datetime": "11/26/2016"
+  },
+  {
+    "id": 51,
+    "season_id": 3,
+    "team_home": 3,
+    "team_away": 1,
+    "datetime": "2/12/2017"
+  },
+  {
+    "id": 52,
+    "season_id": 3,
+    "team_home": 4,
+    "team_away": 2,
+    "datetime": "2/12/2017"
+  },
+  {
+    "id": 53,
+    "season_id": 3,
+    "team_home": 5,
+    "team_away": 1,
+    "datetime": "2/12/2017"
+  },
+  {
+    "id": 54,
+    "season_id": 3,
+    "team_home": 6,
+    "team_away": 3,
+    "datetime": "2/12/2017"
+  },
+  {
+    "id": 55,
+    "season_id": 3,
+    "team_home": 1,
+    "team_away": 4,
+    "datetime": "2/12/2017"
+  },
+  {
+    "id": 56,
+    "season_id": 3,
+    "team_home": 5,
+    "team_away": 2,
+    "datetime": ""
+  },
+  {
+    "id": 57,
+    "season_id": 3,
+    "team_home": 6,
+    "team_away": 2,
+    "datetime": ""
+  },
+  {
+    "id": 58,
+    "season_id": 3,
+    "team_home": 4,
+    "team_away": 3,
+    "datetime": ""
+  },
+  {
+    "id": 59,
+    "season_id": 3,
+    "team_home": 5,
+    "team_away": 6,
+    "datetime": ""
+  },
+  {
+    "id": 60,
+    "season_id": 3,
+    "team_home": 2,
+    "team_away": 1,
+    "datetime": ""
+  },
+  {
+    "id": 61,
+    "season_id": 3,
+    "team_home": 1,
+    "team_away": 6,
+    "datetime": ""
+  },
+  {
+    "id": 62,
+    "season_id": 3,
+    "team_home": 5,
+    "team_away": 4,
+    "datetime": "2/19/2017"
+  },
+  {
+    "id": 63,
+    "season_id": 3,
+    "team_home": 2,
+    "team_away": 3,
+    "datetime": ""
+  },
+  {
+    "id": 64,
+    "season_id": 3,
+    "team_home": 5,
+    "team_away": 3,
+    "datetime": ""
+  },
+  {
+    "id": 65,
+    "season_id": 3,
+    "team_home": 6,
+    "team_away": 4,
+    "datetime": ""
+  },
+  {
+    "id": 66,
+    "season_id": 3,
+    "team_home": 4,
+    "team_away": 6,
+    "datetime": ""
+  },
+  {
+    "id": 67,
+    "season_id": 3,
+    "team_home": 2,
+    "team_away": 3,
+    "datetime": "3/4/2017"
+  },
+  {
+    "id": 68,
+    "season_id": 3,
+    "team_home": 5,
+    "team_away": 3,
+    "datetime": "3/4/2017"
+  },
+  {
+    "id": 69,
+    "season_id": 3,
+    "team_home": 1,
+    "team_away": 4,
+    "datetime": "3/4/2017"
+  },
+  {
+    "id": 70,
+    "season_id": 3,
+    "team_home": 1,
+    "team_away": 6,
+    "datetime": ""
+  },
+  {
+    "id": 71,
+    "season_id": 3,
+    "team_home": 5,
+    "team_away": 2,
+    "datetime": ""
+  },
+  {
+    "id": 72,
+    "season_id": 3,
+    "team_home": 4,
+    "team_away": 3,
+    "datetime": ""
+  },
+  {
+    "id": 73,
+    "season_id": 3,
+    "team_home": 2,
+    "team_away": 6,
+    "datetime": ""
+  },
+  {
+    "id": 74,
+    "season_id": 3,
+    "team_home": 1,
+    "team_away": 5,
+    "datetime": ""
+  },
+  {
+    "id": 75,
+    "season_id": 3,
+    "team_home": 6,
+    "team_away": 3,
+    "datetime": ""
+  },
+  {
+    "id": 76,
+    "season_id": 3,
+    "team_home": 1,
+    "team_away": 3,
+    "datetime": ""
+  },
+  {
+    "id": 77,
+    "season_id": 3,
+    "team_home": 6,
+    "team_away": 5,
+    "datetime": ""
+  },
+  {
+    "id": 78,
+    "season_id": 3,
+    "team_home": 4,
+    "team_away": 2,
+    "datetime": ""
+  },
+  {
+    "id": 79,
+    "season_id": 3,
+    "team_home": 1,
+    "team_away": 2,
+    "datetime": ""
+  },
+  {
+    "id": 80,
+    "season_id": 3,
+    "team_home": 4,
+    "team_away": 5,
+    "datetime": ""
+  },
+  {
+    "id": 81,
+    "season_id": 4,
+    "team_home": 2,
+    "team_away": 6,
+    "datetime": ""
+  },
+  {
+    "id": 82,
+    "season_id": 4,
+    "team_home": 5,
+    "team_away": 1,
+    "datetime": ""
+  },
+  {
+    "id": 83,
+    "season_id": 4,
+    "team_home": 5,
+    "team_away": 4,
+    "datetime": ""
+  },
+  {
+    "id": 84,
+    "season_id": 4,
+    "team_home": 6,
+    "team_away": 1,
+    "datetime": ""
+  },
+  {
+    "id": 85,
+    "season_id": 4,
+    "team_home": 2,
+    "team_away": 4,
+    "datetime": ""
+  },
+  {
+    "id": 86,
+    "season_id": 4,
+    "team_home": 6,
+    "team_away": 5,
+    "datetime": ""
+  },
+  {
+    "id": 87,
+    "season_id": 4,
+    "team_home": 1,
+    "team_away": 4,
+    "datetime": ""
+  },
+  {
+    "id": 88,
+    "season_id": 4,
+    "team_home": 2,
+    "team_away": 1,
+    "datetime": ""
+  },
+  {
+    "id": 89,
+    "season_id": 4,
+    "team_home": 4,
+    "team_away": 6,
+    "datetime": ""
+  },
+  {
+    "id": 90,
+    "season_id": 4,
+    "team_home": 2,
+    "team_away": 5,
+    "datetime": "11/4/2017 16:00:00"
+  },
+  {
+    "id": 91,
+    "season_id": 4,
+    "team_home": 2,
+    "team_away": 6,
+    "datetime": ""
+  },
+  {
+    "id": 92,
+    "season_id": 4,
+    "team_home": 5,
+    "team_away": 1,
+    "datetime": ""
+  },
+  {
+    "id": 93,
+    "season_id": 4,
+    "team_home": 4,
+    "team_away": 5,
+    "datetime": ""
+  },
+  {
+    "id": 94,
+    "season_id": 4,
+    "team_home": 6,
+    "team_away": 1,
+    "datetime": ""
+  },
+  {
+    "id": 95,
+    "season_id": 4,
+    "team_home": 2,
+    "team_away": 4,
+    "datetime": ""
+  },
+  {
+    "id": 96,
+    "season_id": 4,
+    "team_home": 6,
+    "team_away": 5,
+    "datetime": "11/25/2017"
+  },
+  {
+    "id": 97,
+    "season_id": 4,
+    "team_home": 4,
+    "team_away": 1,
+    "datetime": "11/25/2017"
+  },
+  {
+    "id": 98,
+    "season_id": 4,
+    "team_home": 2,
+    "team_away": 1,
+    "datetime": "11/25/2017"
+  },
+  {
+    "id": 99,
+    "season_id": 4,
+    "team_home": 6,
+    "team_away": 4,
+    "datetime": "11/25/2017"
+  },
+  {
+    "id": 100,
+    "season_id": 4,
+    "team_home": 2,
+    "team_away": 5,
+    "datetime": "11/25/2017"
+  },
+  {
+    "id": 101,
+    "season_id": 5,
+    "team_home": 5,
+    "team_away": 6,
+    "datetime": "3/24/2018 13:00:00"
+  },
+  {
+    "id": 102,
+    "season_id": 5,
+    "team_home": 8,
+    "team_away": 7,
+    "datetime": "3/24/2018 13:00:00"
+  },
+  {
+    "id": 103,
+    "season_id": 5,
+    "team_home": 4,
+    "team_away": 7,
+    "datetime": "3/24/2018 14:00:00"
+  },
+  {
+    "id": 104,
+    "season_id": 5,
+    "team_home": 5,
+    "team_away": 2,
+    "datetime": "3/24/2018 14:00:00"
+  },
+  {
+    "id": 105,
+    "season_id": 5,
+    "team_home": 6,
+    "team_away": 2,
+    "datetime": "3/24/2018 15:00:00"
+  },
+  {
+    "id": 106,
+    "season_id": 5,
+    "team_home": 4,
+    "team_away": 8,
+    "datetime": "3/24/2018 15:00:00"
+  },
+  {
+    "id": 107,
+    "season_id": 5,
+    "team_home": 6,
+    "team_away": 7,
+    "datetime": "3/24/2018 16:00:00"
+  },
+  {
+    "id": 108,
+    "season_id": 5,
+    "team_home": 8,
+    "team_away": 5,
+    "datetime": "3/24/2018 16:00:00"
+  },
+  {
+    "id": 109,
+    "season_id": 5,
+    "team_home": 5,
+    "team_away": 4,
+    "datetime": ""
+  },
+  {
+    "id": 110,
+    "season_id": 5,
+    "team_home": 7,
+    "team_away": 2,
+    "datetime": ""
+  },
+  {
+    "id": 111,
+    "season_id": 5,
+    "team_home": 8,
+    "team_away": 2,
+    "datetime": ""
+  },
+  {
+    "id": 112,
+    "season_id": 5,
+    "team_home": 4,
+    "team_away": 6,
+    "datetime": ""
+  },
+  {
+    "id": 113,
+    "season_id": 5,
+    "team_home": 5,
+    "team_away": 7,
+    "datetime": ""
+  },
+  {
+    "id": 114,
+    "season_id": 5,
+    "team_home": 4,
+    "team_away": 2,
+    "datetime": ""
+  },
+  {
+    "id": 115,
+    "season_id": 5,
+    "team_home": 6,
+    "team_away": 8,
+    "datetime": ""
+  },
+  {
+    "id": 116,
+    "season_id": 5,
+    "team_home": 7,
+    "team_away": 8,
+    "datetime": ""
+  },
+  {
+    "id": 117,
+    "season_id": 5,
+    "team_home": 5,
+    "team_away": 2,
+    "datetime": ""
+  },
+  {
+    "id": 118,
+    "season_id": 5,
+    "team_home": 2,
+    "team_away": 6,
+    "datetime": ""
+  },
+  {
+    "id": 119,
+    "season_id": 5,
+    "team_home": 4,
+    "team_away": 7,
+    "datetime": ""
+  },
+  {
+    "id": 120,
+    "season_id": 5,
+    "team_home": 4,
+    "team_away": 8,
+    "datetime": ""
+  },
+  {
+    "id": 121,
+    "season_id": 5,
+    "team_home": 5,
+    "team_away": 6,
+    "datetime": ""
+  },
+  {
+    "id": 122,
+    "season_id": 5,
+    "team_home": 8,
+    "team_away": 2,
+    "datetime": ""
+  },
+  {
+    "id": 123,
+    "season_id": 5,
+    "team_home": 5,
+    "team_away": 7,
+    "datetime": ""
+  },
+  {
+    "id": 124,
+    "season_id": 5,
+    "team_home": 7,
+    "team_away": 6,
+    "datetime": ""
+  },
+  {
+    "id": 125,
+    "season_id": 5,
+    "team_home": 4,
+    "team_away": 2,
+    "datetime": ""
+  },
+  {
+    "id": 126,
+    "season_id": 5,
+    "team_home": 5,
+    "team_away": 4,
+    "datetime": ""
+  },
+  {
+    "id": 127,
+    "season_id": 5,
+    "team_home": 8,
+    "team_away": 6,
+    "datetime": ""
+  },
+  {
+    "id": 128,
+    "season_id": 5,
+    "team_home": 7,
+    "team_away": 2,
+    "datetime": ""
+  },
+  {
+    "id": 129,
+    "season_id": 5,
+    "team_home": 4,
+    "team_away": 6,
+    "datetime": ""
+  },
+  {
+    "id": 130,
+    "season_id": 5,
+    "team_home": 8,
+    "team_away": 5,
+    "datetime": ""
+  },
+  {
+    "id": 131,
+    "season_id": 6,
+    "team_home": 9,
+    "team_away": 12,
+    "datetime": "9/8/2018"
+  },
+  {
+    "id": 132,
+    "season_id": 6,
+    "team_home": 11,
+    "team_away": 10,
+    "datetime": "9/8/2018"
+  },
+  {
+    "id": 133,
+    "season_id": 6,
+    "team_home": 8,
+    "team_away": 11,
+    "datetime": "9/8/2018"
+  },
+  {
+    "id": 134,
+    "season_id": 6,
+    "team_home": 13,
+    "team_away": 12,
+    "datetime": "9/8/2018"
+  },
+  {
+    "id": 135,
+    "season_id": 6,
+    "team_home": 13,
+    "team_away": 9,
+    "datetime": "9/8/2018"
+  },
+  {
+    "id": 136,
+    "season_id": 6,
+    "team_home": 8,
+    "team_away": 10,
+    "datetime": "9/8/2018"
+  },
+  {
+    "id": 137,
+    "season_id": 6,
+    "team_home": 11,
+    "team_away": 9,
+    "datetime": "9/15/2018"
+  },
+  {
+    "id": 138,
+    "season_id": 6,
+    "team_home": 12,
+    "team_away": 10,
+    "datetime": "9/15/2018"
+  },
+  {
+    "id": 139,
+    "season_id": 6,
+    "team_home": 12,
+    "team_away": 8,
+    "datetime": "9/15/2018"
+  },
+  {
+    "id": 140,
+    "season_id": 6,
+    "team_home": 11,
+    "team_away": 13,
+    "datetime": "9/15/2018"
+  },
+  {
+    "id": 141,
+    "season_id": 6,
+    "team_home": 10,
+    "team_away": 13,
+    "datetime": "9/15/2018"
+  },
+  {
+    "id": 142,
+    "season_id": 6,
+    "team_home": 8,
+    "team_away": 9,
+    "datetime": "9/15/2018"
+  },
+  {
+    "id": 143,
+    "season_id": 6,
+    "team_home": 12,
+    "team_away": 11,
+    "datetime": "9/15/2018"
+  },
+  {
+    "id": 144,
+    "season_id": 6,
+    "team_home": 13,
+    "team_away": 8,
+    "datetime": "9/15/2018"
+  },
+  {
+    "id": 145,
+    "season_id": 6,
+    "team_home": 10,
+    "team_away": 9,
+    "datetime": "9/15/2018"
+  },
+  {
+    "id": 146,
+    "season_id": 6,
+    "team_home": 13,
+    "team_away": 11,
+    "datetime": "9/29/2018"
+  },
+  {
+    "id": 147,
+    "season_id": 6,
+    "team_home": 12,
+    "team_away": 9,
+    "datetime": "9/29/2018"
+  },
+  {
+    "id": 148,
+    "season_id": 6,
+    "team_home": 11,
+    "team_away": 10,
+    "datetime": "9/29/2018"
+  },
+  {
+    "id": 149,
+    "season_id": 6,
+    "team_home": 12,
+    "team_away": 8,
+    "datetime": "9/29/2018"
+  },
+  {
+    "id": 150,
+    "season_id": 6,
+    "team_home": 10,
+    "team_away": 13,
+    "datetime": "9/29/2018"
+  },
+  {
+    "id": 151,
+    "season_id": 6,
+    "team_home": 9,
+    "team_away": 8,
+    "datetime": "9/29/2018"
+  },
+  {
+    "id": 152,
+    "season_id": 6,
+    "team_home": 12,
+    "team_away": 13,
+    "datetime": "9/29/2018"
+  },
+  {
+    "id": 153,
+    "season_id": 6,
+    "team_home": 9,
+    "team_away": 11,
+    "datetime": "9/29/2018"
+  },
+  {
+    "id": 154,
+    "season_id": 6,
+    "team_home": 8,
+    "team_away": 11,
+    "datetime": "10/6/2018"
+  },
+  {
+    "id": 155,
+    "season_id": 6,
+    "team_home": 12,
+    "team_away": 10,
+    "datetime": "10/6/2018"
+  },
+  {
+    "id": 156,
+    "season_id": 6,
+    "team_home": 9,
+    "team_away": 10,
+    "datetime": "10/6/2018"
+  },
+  {
+    "id": 157,
+    "season_id": 6,
+    "team_home": 8,
+    "team_away": 13,
+    "datetime": "10/6/2018"
+  },
+  {
+    "id": 158,
+    "season_id": 6,
+    "team_home": 12,
+    "team_away": 11,
+    "datetime": "10/6/2018"
+  },
+  {
+    "id": 159,
+    "season_id": 6,
+    "team_home": 10,
+    "team_away": 8,
+    "datetime": "10/6/2018"
+  },
+  {
+    "id": 160,
+    "season_id": 6,
+    "team_home": 13,
+    "team_away": 9,
+    "datetime": "10/6/2018"
+  },
+  {
+    "id": 161,
+    "season_id": 7,
+    "team_home": 16,
+    "team_away": 19,
+    "datetime": "3/16/2019"
+  },
+  {
+    "id": 162,
+    "season_id": 7,
+    "team_home": 17,
+    "team_away": 14,
+    "datetime": "3/16/2019"
+  },
+  {
+    "id": 163,
+    "season_id": 7,
+    "team_home": 9,
+    "team_away": 18,
+    "datetime": "3/16/2019"
+  },
+  {
+    "id": 164,
+    "season_id": 7,
+    "team_home": 14,
+    "team_away": 15,
+    "datetime": "3/16/2019"
+  },
+  {
+    "id": 165,
+    "season_id": 7,
+    "team_home": 17,
+    "team_away": 19,
+    "datetime": "3/16/2019"
+  },
+  {
+    "id": 166,
+    "season_id": 7,
+    "team_home": 16,
+    "team_away": 9,
+    "datetime": "3/16/2019"
+  },
+  {
+    "id": 167,
+    "season_id": 7,
+    "team_home": 17,
+    "team_away": 15,
+    "datetime": "3/16/2019"
+  },
+  {
+    "id": 168,
+    "season_id": 7,
+    "team_home": 14,
+    "team_away": 16,
+    "datetime": "3/16/2019"
+  },
+  {
+    "id": 169,
+    "season_id": 7,
+    "team_home": 19,
+    "team_away": 18,
+    "datetime": "3/16/2019"
+  },
+  {
+    "id": 170,
+    "season_id": 7,
+    "team_home": 9,
+    "team_away": 15,
+    "datetime": "3/16/2019"
+  },
+  {
+    "id": 171,
+    "season_id": 7,
+    "team_home": 9,
+    "team_away": 14,
+    "datetime": "3/23/2019"
+  },
+  {
+    "id": 172,
+    "season_id": 7,
+    "team_home": 18,
+    "team_away": 15,
+    "datetime": "3/23/2019"
+  },
+  {
+    "id": 173,
+    "season_id": 7,
+    "team_home": 17,
+    "team_away": 16,
+    "datetime": "3/23/2019"
+  },
+  {
+    "id": 174,
+    "season_id": 7,
+    "team_home": 9,
+    "team_away": 19,
+    "datetime": "3/23/2019"
+  },
+  {
+    "id": 175,
+    "season_id": 7,
+    "team_home": 18,
+    "team_away": 14,
+    "datetime": "3/23/2019"
+  },
+  {
+    "id": 176,
+    "season_id": 7,
+    "team_home": 16,
+    "team_away": 15,
+    "datetime": "3/23/2019"
+  },
+  {
+    "id": 177,
+    "season_id": 7,
+    "team_home": 17,
+    "team_away": 9,
+    "datetime": "3/23/2019"
+  },
+  {
+    "id": 178,
+    "season_id": 7,
+    "team_home": 15,
+    "team_away": 19,
+    "datetime": "3/23/2019"
+  },
+  {
+    "id": 179,
+    "season_id": 7,
+    "team_home": 16,
+    "team_away": 18,
+    "datetime": "3/23/2019"
+  },
+  {
+    "id": 180,
+    "season_id": 7,
+    "team_home": 14,
+    "team_away": 19,
+    "datetime": "3/23/2019"
+  },
+  {
+    "id": 181,
+    "season_id": 7,
+    "team_home": 17,
+    "team_away": 18,
+    "datetime": "3/23/2019"
+  },
+  {
+    "id": 182,
+    "season_id": 7,
+    "team_home": 16,
+    "team_away": 17,
+    "datetime": "4/13/2019"
+  },
+  {
+    "id": 183,
+    "season_id": 7,
+    "team_home": 18,
+    "team_away": 19,
+    "datetime": "4/13/2019"
+  },
+  {
+    "id": 184,
+    "season_id": 7,
+    "team_home": 17,
+    "team_away": 9,
+    "datetime": "4/13/2019"
+  },
+  {
+    "id": 185,
+    "season_id": 7,
+    "team_home": 16,
+    "team_away": 15,
+    "datetime": "4/13/2019"
+  },
+  {
+    "id": 186,
+    "season_id": 7,
+    "team_home": 14,
+    "team_away": 19,
+    "datetime": "4/13/2019"
+  },
+  {
+    "id": 187,
+    "season_id": 7,
+    "team_home": 17,
+    "team_away": 18,
+    "datetime": "4/13/2019"
+  },
+  {
+    "id": 188,
+    "season_id": 7,
+    "team_home": 9,
+    "team_away": 15,
+    "datetime": "4/13/2019"
+  },
+  {
+    "id": 189,
+    "season_id": 7,
+    "team_home": 16,
+    "team_away": 19,
+    "datetime": "4/13/2019"
+  },
+  {
+    "id": 190,
+    "season_id": 7,
+    "team_home": 14,
+    "team_away": 9,
+    "datetime": "4/13/2019"
+  },
+  {
+    "id": 191,
+    "season_id": 7,
+    "team_home": 17,
+    "team_away": 15,
+    "datetime": "4/13/2019"
+  },
+  {
+    "id": 192,
+    "season_id": 7,
+    "team_home": 14,
+    "team_away": 18,
+    "datetime": "4/13/2019"
+  },
+  {
+    "id": 193,
+    "season_id": 7,
+    "team_home": 14,
+    "team_away": 15,
+    "datetime": "4/20/2019"
+  },
+  {
+    "id": 194,
+    "season_id": 7,
+    "team_home": 16,
+    "team_away": 18,
+    "datetime": "4/20/2019"
+  },
+  {
+    "id": 195,
+    "season_id": 7,
+    "team_home": 17,
+    "team_away": 19,
+    "datetime": "4/20/2019"
+  },
+  {
+    "id": 196,
+    "season_id": 7,
+    "team_home": 9,
+    "team_away": 18,
+    "datetime": "4/20/2019"
+  },
+  {
+    "id": 197,
+    "season_id": 7,
+    "team_home": 14,
+    "team_away": 16,
+    "datetime": "4/20/2019"
+  },
+  {
+    "id": 198,
+    "season_id": 7,
+    "team_home": 19,
+    "team_away": 15,
+    "datetime": "4/20/2019"
+  },
+  {
+    "id": 199,
+    "season_id": 7,
+    "team_home": 9,
+    "team_away": 16,
+    "datetime": "4/20/2019"
+  },
+  {
+    "id": 200,
+    "season_id": 7,
+    "team_home": 15,
+    "team_away": 18,
+    "datetime": "4/20/2019"
+  },
+  {
+    "id": 201,
+    "season_id": 7,
+    "team_home": 14,
+    "team_away": 17,
+    "datetime": "4/20/2019"
+  },
+  {
+    "id": 202,
+    "season_id": 7,
+    "team_home": 9,
+    "team_away": 19,
+    "datetime": "4/20/2019"
+  },
+  {
+    "id": 203,
+    "season_id": 8,
+    "team_home": 21,
+    "team_away": 20,
+    "datetime": "10/19/2019"
+  },
+  {
+    "id": 204,
+    "season_id": 8,
+    "team_home": 12,
+    "team_away": 14,
+    "datetime": "10/19/2019"
+  },
+  {
+    "id": 205,
+    "season_id": 8,
+    "team_home": 22,
+    "team_away": 23,
+    "datetime": "10/19/2019"
+  },
+  {
+    "id": 206,
+    "season_id": 8,
+    "team_home": 14,
+    "team_away": 8,
+    "datetime": "10/19/2019"
+  },
+  {
+    "id": 207,
+    "season_id": 8,
+    "team_home": 21,
+    "team_away": 12,
+    "datetime": "10/19/2019"
+  },
+  {
+    "id": 208,
+    "season_id": 8,
+    "team_home": 20,
+    "team_away": 23,
+    "datetime": "10/19/2019"
+  },
+  {
+    "id": 209,
+    "season_id": 8,
+    "team_home": 21,
+    "team_away": 22,
+    "datetime": "10/19/2019"
+  },
+  {
+    "id": 210,
+    "season_id": 8,
+    "team_home": 14,
+    "team_away": 22,
+    "datetime": "10/19/2019"
+  },
+  {
+    "id": 211,
+    "season_id": 8,
+    "team_home": 20,
+    "team_away": 8,
+    "datetime": "10/19/2019"
+  },
+  {
+    "id": 212,
+    "season_id": 8,
+    "team_home": 12,
+    "team_away": 8,
+    "datetime": "10/19/2019"
+  },
+  {
+    "id": 213,
+    "season_id": 8,
+    "team_home": 21,
+    "team_away": 23,
+    "datetime": "10/19/2019"
+  },
+  {
+    "id": 214,
+    "season_id": 8,
+    "team_home": 22,
+    "team_away": 12,
+    "datetime": "10/26/2019"
+  },
+  {
+    "id": 215,
+    "season_id": 8,
+    "team_home": 23,
+    "team_away": 8,
+    "datetime": "10/26/2019"
+  },
+  {
+    "id": 216,
+    "season_id": 8,
+    "team_home": 21,
+    "team_away": 14,
+    "datetime": "10/26/2019"
+  },
+  {
+    "id": 217,
+    "season_id": 8,
+    "team_home": 12,
+    "team_away": 20,
+    "datetime": "10/26/2019"
+  },
+  {
+    "id": 218,
+    "season_id": 8,
+    "team_home": 23,
+    "team_away": 14,
+    "datetime": "10/26/2019"
+  },
+  {
+    "id": 219,
+    "season_id": 8,
+    "team_home": 22,
+    "team_away": 8,
+    "datetime": "10/26/2019"
+  },
+  {
+    "id": 220,
+    "season_id": 8,
+    "team_home": 22,
+    "team_away": 20,
+    "datetime": "10/26/2019"
+  },
+  {
+    "id": 221,
+    "season_id": 8,
+    "team_home": 23,
+    "team_away": 12,
+    "datetime": "10/26/2019"
+  },
+  {
+    "id": 222,
+    "season_id": 8,
+    "team_home": 21,
+    "team_away": 8,
+    "datetime": "10/26/2019"
+  },
+  {
+    "id": 223,
+    "season_id": 8,
+    "team_home": 14,
+    "team_away": 20,
+    "datetime": "10/26/2019"
+  },
+  {
+    "id": 224,
+    "season_id": 8,
+    "team_home": 12,
+    "team_away": 8,
+    "datetime": "2019-11-16T04:30:00.000Z"
+  },
+  {
+    "id": 225,
+    "season_id": 8,
+    "team_home": 20,
+    "team_away": 22,
+    "datetime": "2019-11-16T04:30:00.000Z"
+  },
+  {
+    "id": 226,
+    "season_id": 8,
+    "team_home": 23,
+    "team_away": 14,
+    "datetime": "2019-11-16T05:20:00.000Z"
+  },
+  {
+    "id": 227,
+    "season_id": 8,
+    "team_home": 22,
+    "team_away": 21,
+    "datetime": "2019-11-16T05:20:00.000Z"
+  },
+  {
+    "id": 228,
+    "season_id": 8,
+    "team_home": 8,
+    "team_away": 20,
+    "datetime": "2019-11-16T06:10:00.000Z"
+  },
+  {
+    "id": 229,
+    "season_id": 8,
+    "team_home": 14,
+    "team_away": 12,
+    "datetime": "2019-11-16T06:10:00.000Z"
+  },
+  {
+    "id": 230,
+    "season_id": 8,
+    "team_home": 23,
+    "team_away": 8,
+    "datetime": "2019-11-16T07:00:00.000Z"
+  },
+  {
+    "id": 231,
+    "season_id": 8,
+    "team_home": 23,
+    "team_away": 22,
+    "datetime": "2019-11-16T07:50:00.000Z"
+  },
+  {
+    "id": 232,
+    "season_id": 8,
+    "team_home": 12,
+    "team_away": 21,
+    "datetime": "2019-11-16T07:50:00.000Z"
+  },
+  {
+    "id": 233,
+    "season_id": 8,
+    "team_home": 20,
+    "team_away": 21,
+    "datetime": "2019-11-16T08:40:00.000Z"
+  },
+  {
+    "id": 234,
+    "season_id": 8,
+    "team_home": 8,
+    "team_away": 14,
+    "datetime": "2019-11-16T08:40:00.000Z"
+  },
+  {
+    "id": 235,
+    "season_id": 8,
+    "team_home": 23,
+    "team_away": 20,
+    "datetime": "2019-11-23T05:00:00.000Z"
+  },
+  {
+    "id": 236,
+    "season_id": 8,
+    "team_home": 14,
+    "team_away": 21,
+    "datetime": "2019-11-23T05:00:00.000Z"
+  },
+  {
+    "id": 237,
+    "season_id": 8,
+    "team_home": 8,
+    "team_away": 22,
+    "datetime": "2019-11-23T05:50:00.000Z"
+  },
+  {
+    "id": 238,
+    "season_id": 8,
+    "team_home": 20,
+    "team_away": 12,
+    "datetime": "2019-11-23T05:50:00.000Z"
+  },
+  {
+    "id": 239,
+    "season_id": 8,
+    "team_home": 22,
+    "team_away": 14,
+    "datetime": "2019-11-23T06:40:00.000Z"
+  },
+  {
+    "id": 240,
+    "season_id": 8,
+    "team_home": 21,
+    "team_away": 23,
+    "datetime": "2019-11-23T06:40:00.000Z"
+  },
+  {
+    "id": 241,
+    "season_id": 8,
+    "team_home": 23,
+    "team_away": 12,
+    "datetime": "2019-11-23T07:30:00.000Z"
+  },
+  {
+    "id": 242,
+    "season_id": 8,
+    "team_home": 20,
+    "team_away": 14,
+    "datetime": "2019-11-23T07:30:00.000Z"
+  },
+  {
+    "id": 243,
+    "season_id": 8,
+    "team_home": 21,
+    "team_away": 8,
+    "datetime": "2019-11-23T08:20:00.000Z"
+  },
+  {
+    "id": 244,
+    "season_id": 8,
+    "team_home": 12,
+    "team_away": 22,
+    "datetime": "2019-11-23T08:20:00.000Z"
+  }
+]

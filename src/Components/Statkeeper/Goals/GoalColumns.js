@@ -5,12 +5,18 @@ import {
   TableBody,
   TableHead,
   TableCell,
-  Button
+  IconButton
 } from "@material-ui/core";
+import ClearIcon from "@material-ui/icons/Clear";
 import Firestore from "../../../Utils/Firebase";
 import GoalUpdate from "./GoalUpdate";
+import { Edit } from "@material-ui/icons";
 export default function GoalColumns(props) {
-  const { stats, teamColors, gameData } = props;
+  const {
+    stats,
+    //teamColors,
+    gameData
+  } = props;
   const [updateDialog, toggleUpdateDialog] = React.useState(false);
   const [updateID, setUpdateID] = React.useState("");
   const [currentGoal, setCurrentGoal] = React.useState(0);
@@ -28,12 +34,12 @@ export default function GoalColumns(props) {
   const closeUpdateDialog = () => {
     toggleUpdateDialog(false);
   };
-  const homeTeamColors = teamColors.find(
-    team => team.team === gameData.homeTeam
-  ).bkgdColor;
-  const awayTeamColors = teamColors.find(
-    team => team.team === gameData.awayTeam
-  ).bkgdColor;
+  // const homeTeamColors = teamColors.find(
+  //   team => team.team === gameData.homeTeam
+  // ).bkgdColor;
+  // const awayTeamColors = teamColors.find(
+  //   team => team.team === gameData.awayTeam
+  // ).bkgdColor;
 
   return (
     <div>
@@ -44,36 +50,37 @@ export default function GoalColumns(props) {
             <TableCell>Team</TableCell>
             <TableCell>Assist</TableCell>
             <TableCell>Goal</TableCell>
+            <TableCell></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {stats.map((stat, index) => (
             <TableRow
-
-            // style={
-            //   stat.team === gameData.homeTeam
-            //     ? { backgroundColor: homeTeamColors }
-            //     : { backgroundColor: awayTeamColors }
-            // }
+              key={stat.GoalNo}
+              // style={
+              //   stat.team === gameData.homeTeam
+              //     ? { backgroundColor: homeTeamColors }
+              //     : { backgroundColor: awayTeamColors }
+              // }
             >
               <TableCell>{index + 1}</TableCell>
               <TableCell>{stat.TeamID}</TableCell>
               <TableCell>{stat.Assist}</TableCell>
               <TableCell>{stat.Goal}</TableCell>
               {index + 1 === stats.length ? (
-                <TableCell>
-                  <Button color="secondary" onClick={handleDelete(stat.id)}>
-                    Delete
-                  </Button>
+                <TableCell padding="none">
+                  <IconButton color="secondary" onClick={handleDelete(stat.id)}>
+                    <ClearIcon />
+                  </IconButton>
                 </TableCell>
               ) : (
-                <TableCell>
-                  <Button
+                <TableCell padding="none">
+                  <IconButton
                     color="primary"
                     onClick={toggleGoalDialog(stat.id, index + 1)}
                   >
-                    Update
-                  </Button>
+                    <Edit />
+                  </IconButton>
                 </TableCell>
               )}
             </TableRow>

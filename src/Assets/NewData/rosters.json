@@ -1,0 +1,3042 @@
+[
+    {
+      "season_id": 1,
+      "team_id": 4,
+      "player_id": 37
+    },
+    {
+      "season_id": 1,
+      "team_id": 3,
+      "player_id": 24
+    },
+    {
+      "season_id": 1,
+      "team_id": 1,
+      "player_id": 53
+    },
+    {
+      "season_id": 1,
+      "team_id": 4,
+      "player_id": 52
+    },
+    {
+      "season_id": 1,
+      "team_id": 2,
+      "player_id": 51
+    },
+    {
+      "season_id": 1,
+      "team_id": 4,
+      "player_id": 50
+    },
+    {
+      "season_id": 1,
+      "team_id": 2,
+      "player_id": 48
+    },
+    {
+      "season_id": 1,
+      "team_id": 3,
+      "player_id": 47
+    },
+    {
+      "season_id": 1,
+      "team_id": 2,
+      "player_id": 45
+    },
+    {
+      "season_id": 1,
+      "team_id": 2,
+      "player_id": 42
+    },
+    {
+      "season_id": 1,
+      "team_id": 3,
+      "player_id": 40
+    },
+    {
+      "season_id": 1,
+      "team_id": 4,
+      "player_id": 38
+    },
+    {
+      "season_id": 1,
+      "team_id": 3,
+      "player_id": 36
+    },
+    {
+      "season_id": 1,
+      "team_id": 1,
+      "player_id": 35
+    },
+    {
+      "season_id": 1,
+      "team_id": 1,
+      "player_id": 34
+    },
+    {
+      "season_id": 1,
+      "team_id": 4,
+      "player_id": 33
+    },
+    {
+      "season_id": 1,
+      "team_id": 4,
+      "player_id": 32
+    },
+    {
+      "season_id": 1,
+      "team_id": 4,
+      "player_id": 31
+    },
+    {
+      "season_id": 1,
+      "team_id": 1,
+      "player_id": 30
+    },
+    {
+      "season_id": 1,
+      "team_id": 5,
+      "player_id": 29
+    },
+    {
+      "season_id": 1,
+      "team_id": 5,
+      "player_id": 28
+    },
+    {
+      "season_id": 1,
+      "team_id": 3,
+      "player_id": 27
+    },
+    {
+      "season_id": 1,
+      "team_id": 2,
+      "player_id": 26
+    },
+    {
+      "season_id": 1,
+      "team_id": 3,
+      "player_id": 25
+    },
+    {
+      "season_id": 1,
+      "team_id": 1,
+      "player_id": 23
+    },
+    {
+      "season_id": 1,
+      "team_id": 5,
+      "player_id": 22
+    },
+    {
+      "season_id": 1,
+      "team_id": 1,
+      "player_id": 21
+    },
+    {
+      "season_id": 1,
+      "team_id": 3,
+      "player_id": 20
+    },
+    {
+      "season_id": 1,
+      "team_id": 3,
+      "player_id": 19
+    },
+    {
+      "season_id": 1,
+      "team_id": 3,
+      "player_id": 18
+    },
+    {
+      "season_id": 1,
+      "team_id": 5,
+      "player_id": 17
+    },
+    {
+      "season_id": 1,
+      "team_id": 5,
+      "player_id": 16
+    },
+    {
+      "season_id": 1,
+      "team_id": 3,
+      "player_id": 15
+    },
+    {
+      "season_id": 1,
+      "team_id": 2,
+      "player_id": 14
+    },
+    {
+      "season_id": 1,
+      "team_id": 1,
+      "player_id": 13
+    },
+    {
+      "season_id": 1,
+      "team_id": 5,
+      "player_id": 12
+    },
+    {
+      "season_id": 1,
+      "team_id": 2,
+      "player_id": 11
+    },
+    {
+      "season_id": 1,
+      "team_id": 2,
+      "player_id": 10
+    },
+    {
+      "season_id": 1,
+      "team_id": 2,
+      "player_id": 9
+    },
+    {
+      "season_id": 1,
+      "team_id": 3,
+      "player_id": 8
+    },
+    {
+      "season_id": 1,
+      "team_id": 5,
+      "player_id": 7
+    },
+    {
+      "season_id": 1,
+      "team_id": 5,
+      "player_id": 6
+    },
+    {
+      "season_id": 1,
+      "team_id": 1,
+      "player_id": 5
+    },
+    {
+      "season_id": 1,
+      "team_id": 1,
+      "player_id": 4
+    },
+    {
+      "season_id": 1,
+      "team_id": 4,
+      "player_id": 3
+    },
+    {
+      "season_id": 1,
+      "team_id": 4,
+      "player_id": 2
+    },
+    {
+      "season_id": 1,
+      "team_id": 4,
+      "player_id": 1
+    },
+    {
+      "season_id": 2,
+      "team_id": 2,
+      "player_id": 64
+    },
+    {
+      "season_id": 2,
+      "team_id": 4,
+      "player_id": 109
+    },
+    {
+      "season_id": 2,
+      "team_id": 4,
+      "player_id": 37
+    },
+    {
+      "season_id": 2,
+      "team_id": "",
+      "player_id": 63
+    },
+    {
+      "season_id": 2,
+      "team_id": 5,
+      "player_id": 92
+    },
+    {
+      "season_id": 2,
+      "team_id": "",
+      "player_id": 59
+    },
+    {
+      "season_id": 2,
+      "team_id": 2,
+      "player_id": 62
+    },
+    {
+      "season_id": 2,
+      "team_id": 4,
+      "player_id": 69
+    },
+    {
+      "season_id": 2,
+      "team_id": "",
+      "player_id": "盧柏佑 elai, f"
+    },
+    {
+      "season_id": 2,
+      "team_id": "",
+      "player_id": 76
+    },
+    {
+      "season_id": 2,
+      "team_id": "",
+      "player_id": "林以恩 (Lja)"
+    },
+    {
+      "season_id": 2,
+      "team_id": 3,
+      "player_id": 75
+    },
+    {
+      "season_id": 2,
+      "team_id": "",
+      "player_id": "張家瑋 ELai,f"
+    },
+    {
+      "season_id": 2,
+      "team_id": 6,
+      "player_id": 87
+    },
+    {
+      "season_id": 2,
+      "team_id": "",
+      "player_id": "劉千瑈 (Zoe Liu)"
+    },
+    {
+      "season_id": 2,
+      "team_id": 5,
+      "player_id": 91
+    },
+    {
+      "season_id": 2,
+      "team_id": 4,
+      "player_id": 90
+    },
+    {
+      "season_id": 2,
+      "team_id": 6,
+      "player_id": 89
+    },
+    {
+      "season_id": 2,
+      "team_id": 6,
+      "player_id": 88
+    },
+    {
+      "season_id": 2,
+      "team_id": 2,
+      "player_id": 86
+    },
+    {
+      "season_id": 2,
+      "team_id": 6,
+      "player_id": 85
+    },
+    {
+      "season_id": 2,
+      "team_id": 6,
+      "player_id": 83
+    },
+    {
+      "season_id": 2,
+      "team_id": 6,
+      "player_id": 82
+    },
+    {
+      "season_id": 2,
+      "team_id": 6,
+      "player_id": 81
+    },
+    {
+      "season_id": 2,
+      "team_id": 6,
+      "player_id": 80
+    },
+    {
+      "season_id": 2,
+      "team_id": 6,
+      "player_id": 79
+    },
+    {
+      "season_id": 2,
+      "team_id": 6,
+      "player_id": 78
+    },
+    {
+      "season_id": 2,
+      "team_id": 6,
+      "player_id": 77
+    },
+    {
+      "season_id": 2,
+      "team_id": 3,
+      "player_id": 74
+    },
+    {
+      "season_id": 2,
+      "team_id": 3,
+      "player_id": 73
+    },
+    {
+      "season_id": 2,
+      "team_id": 3,
+      "player_id": 72
+    },
+    {
+      "season_id": 2,
+      "team_id": 3,
+      "player_id": 71
+    },
+    {
+      "season_id": 2,
+      "team_id": 4,
+      "player_id": 68
+    },
+    {
+      "season_id": 2,
+      "team_id": 4,
+      "player_id": 67
+    },
+    {
+      "season_id": 2,
+      "team_id": 5,
+      "player_id": 66
+    },
+    {
+      "season_id": 2,
+      "team_id": 4,
+      "player_id": 65
+    },
+    {
+      "season_id": 2,
+      "team_id": 2,
+      "player_id": 61
+    },
+    {
+      "season_id": 2,
+      "team_id": 1,
+      "player_id": 60
+    },
+    {
+      "season_id": 2,
+      "team_id": 1,
+      "player_id": 58
+    },
+    {
+      "season_id": 2,
+      "team_id": 1,
+      "player_id": 57
+    },
+    {
+      "season_id": 2,
+      "team_id": 1,
+      "player_id": 56
+    },
+    {
+      "season_id": 2,
+      "team_id": 1,
+      "player_id": 55
+    },
+    {
+      "season_id": 2,
+      "team_id": 1,
+      "player_id": 54
+    },
+    {
+      "season_id": 2,
+      "team_id": 1,
+      "player_id": 53
+    },
+    {
+      "season_id": 2,
+      "team_id": 4,
+      "player_id": 52
+    },
+    {
+      "season_id": 2,
+      "team_id": 2,
+      "player_id": 51
+    },
+    {
+      "season_id": 2,
+      "team_id": 4,
+      "player_id": 50
+    },
+    {
+      "season_id": 2,
+      "team_id": 5,
+      "player_id": 49
+    },
+    {
+      "season_id": 2,
+      "team_id": 2,
+      "player_id": 48
+    },
+    {
+      "season_id": 2,
+      "team_id": 3,
+      "player_id": 47
+    },
+    {
+      "season_id": 2,
+      "team_id": 2,
+      "player_id": 42
+    },
+    {
+      "season_id": 2,
+      "team_id": 3,
+      "player_id": 40
+    },
+    {
+      "season_id": 2,
+      "team_id": 4,
+      "player_id": 38
+    },
+    {
+      "season_id": 2,
+      "team_id": 1,
+      "player_id": 35
+    },
+    {
+      "season_id": 2,
+      "team_id": 4,
+      "player_id": 33
+    },
+    {
+      "season_id": 2,
+      "team_id": 4,
+      "player_id": 32
+    },
+    {
+      "season_id": 2,
+      "team_id": 4,
+      "player_id": 31
+    },
+    {
+      "season_id": 2,
+      "team_id": 5,
+      "player_id": 29
+    },
+    {
+      "season_id": 2,
+      "team_id": 5,
+      "player_id": 28
+    },
+    {
+      "season_id": 2,
+      "team_id": 2,
+      "player_id": 26
+    },
+    {
+      "season_id": 2,
+      "team_id": 3,
+      "player_id": 25
+    },
+    {
+      "season_id": 2,
+      "team_id": 5,
+      "player_id": 22
+    },
+    {
+      "season_id": 2,
+      "team_id": 1,
+      "player_id": 21
+    },
+    {
+      "season_id": 2,
+      "team_id": 3,
+      "player_id": 20
+    },
+    {
+      "season_id": 2,
+      "team_id": 3,
+      "player_id": 19
+    },
+    {
+      "season_id": 2,
+      "team_id": 5,
+      "player_id": 17
+    },
+    {
+      "season_id": 2,
+      "team_id": 5,
+      "player_id": 16
+    },
+    {
+      "season_id": 2,
+      "team_id": 3,
+      "player_id": 15
+    },
+    {
+      "season_id": 2,
+      "team_id": 2,
+      "player_id": 14
+    },
+    {
+      "season_id": 2,
+      "team_id": 1,
+      "player_id": 13
+    },
+    {
+      "season_id": 2,
+      "team_id": 5,
+      "player_id": 12
+    },
+    {
+      "season_id": 2,
+      "team_id": 2,
+      "player_id": 11
+    },
+    {
+      "season_id": 2,
+      "team_id": 2,
+      "player_id": 9
+    },
+    {
+      "season_id": 2,
+      "team_id": 5,
+      "player_id": 7
+    },
+    {
+      "season_id": 2,
+      "team_id": 5,
+      "player_id": 6
+    },
+    {
+      "season_id": 2,
+      "team_id": 1,
+      "player_id": 5
+    },
+    {
+      "season_id": 2,
+      "team_id": 4,
+      "player_id": 3
+    },
+    {
+      "season_id": 3,
+      "team_id": 5,
+      "player_id": 64
+    },
+    {
+      "season_id": 3,
+      "team_id": 5,
+      "player_id": 105
+    },
+    {
+      "season_id": 3,
+      "team_id": 5,
+      "player_id": 109
+    },
+    {
+      "season_id": 3,
+      "team_id": 4,
+      "player_id": 102
+    },
+    {
+      "season_id": 3,
+      "team_id": 2,
+      "player_id": 92
+    },
+    {
+      "season_id": 3,
+      "team_id": "",
+      "player_id": 59
+    },
+    {
+      "season_id": 3,
+      "team_id": 1,
+      "player_id": 99
+    },
+    {
+      "season_id": 3,
+      "team_id": 2,
+      "player_id": 98
+    },
+    {
+      "season_id": 3,
+      "team_id": 2,
+      "player_id": 103
+    },
+    {
+      "season_id": 3,
+      "team_id": 6,
+      "player_id": 115
+    },
+    {
+      "season_id": 3,
+      "team_id": 6,
+      "player_id": 114
+    },
+    {
+      "season_id": 3,
+      "team_id": 1,
+      "player_id": 113
+    },
+    {
+      "season_id": 3,
+      "team_id": 3,
+      "player_id": 111
+    },
+    {
+      "season_id": 3,
+      "team_id": 6,
+      "player_id": 110
+    },
+    {
+      "season_id": 3,
+      "team_id": 1,
+      "player_id": 108
+    },
+    {
+      "season_id": 3,
+      "team_id": 5,
+      "player_id": 105
+    },
+    {
+      "season_id": 3,
+      "team_id": 2,
+      "player_id": 104
+    },
+    {
+      "season_id": 3,
+      "team_id": 2,
+      "player_id": 101
+    },
+    {
+      "season_id": 3,
+      "team_id": 3,
+      "player_id": 100
+    },
+    {
+      "season_id": 3,
+      "team_id": 3,
+      "player_id": 97
+    },
+    {
+      "season_id": 3,
+      "team_id": 1,
+      "player_id": 96
+    },
+    {
+      "season_id": 3,
+      "team_id": 4,
+      "player_id": 95
+    },
+    {
+      "season_id": 3,
+      "team_id": 3,
+      "player_id": 94
+    },
+    {
+      "season_id": 3,
+      "team_id": 2,
+      "player_id": 93
+    },
+    {
+      "season_id": 3,
+      "team_id": 4,
+      "player_id": 90
+    },
+    {
+      "season_id": 3,
+      "team_id": 3,
+      "player_id": 89
+    },
+    {
+      "season_id": 3,
+      "team_id": 5,
+      "player_id": 88
+    },
+    {
+      "season_id": 3,
+      "team_id": 2,
+      "player_id": 85
+    },
+    {
+      "season_id": 3,
+      "team_id": 6,
+      "player_id": 83
+    },
+    {
+      "season_id": 3,
+      "team_id": 6,
+      "player_id": 82
+    },
+    {
+      "season_id": 3,
+      "team_id": 4,
+      "player_id": 81
+    },
+    {
+      "season_id": 3,
+      "team_id": 3,
+      "player_id": 80
+    },
+    {
+      "season_id": 3,
+      "team_id": 6,
+      "player_id": 78
+    },
+    {
+      "season_id": 3,
+      "team_id": 6,
+      "player_id": 77
+    },
+    {
+      "season_id": 3,
+      "team_id": 4,
+      "player_id": 68
+    },
+    {
+      "season_id": 3,
+      "team_id": 4,
+      "player_id": 67
+    },
+    {
+      "season_id": 3,
+      "team_id": 5,
+      "player_id": 66
+    },
+    {
+      "season_id": 3,
+      "team_id": 4,
+      "player_id": 65
+    },
+    {
+      "season_id": 3,
+      "team_id": 3,
+      "player_id": 61
+    },
+    {
+      "season_id": 3,
+      "team_id": 1,
+      "player_id": 57
+    },
+    {
+      "season_id": 3,
+      "team_id": 5,
+      "player_id": 56
+    },
+    {
+      "season_id": 3,
+      "team_id": 1,
+      "player_id": 53
+    },
+    {
+      "season_id": 3,
+      "team_id": 2,
+      "player_id": 51
+    },
+    {
+      "season_id": 3,
+      "team_id": 6,
+      "player_id": 50
+    },
+    {
+      "season_id": 3,
+      "team_id": 4,
+      "player_id": 48
+    },
+    {
+      "season_id": 3,
+      "team_id": 5,
+      "player_id": 47
+    },
+    {
+      "season_id": 3,
+      "team_id": 6,
+      "player_id": 44
+    },
+    {
+      "season_id": 3,
+      "team_id": 4,
+      "player_id": 42
+    },
+    {
+      "season_id": 3,
+      "team_id": 6,
+      "player_id": 41
+    },
+    {
+      "season_id": 3,
+      "team_id": 3,
+      "player_id": 40
+    },
+    {
+      "season_id": 3,
+      "team_id": 6,
+      "player_id": 38
+    },
+    {
+      "season_id": 3,
+      "team_id": 3,
+      "player_id": 35
+    },
+    {
+      "season_id": 3,
+      "team_id": 2,
+      "player_id": 33
+    },
+    {
+      "season_id": 3,
+      "team_id": 5,
+      "player_id": 31
+    },
+    {
+      "season_id": 3,
+      "team_id": 4,
+      "player_id": 29
+    },
+    {
+      "season_id": 3,
+      "team_id": 6,
+      "player_id": 26
+    },
+    {
+      "season_id": 3,
+      "team_id": 3,
+      "player_id": 25
+    },
+    {
+      "season_id": 3,
+      "team_id": 5,
+      "player_id": 22
+    },
+    {
+      "season_id": 3,
+      "team_id": 4,
+      "player_id": 21
+    },
+    {
+      "season_id": 3,
+      "team_id": 3,
+      "player_id": 20
+    },
+    {
+      "season_id": 3,
+      "team_id": 5,
+      "player_id": 17
+    },
+    {
+      "season_id": 3,
+      "team_id": 5,
+      "player_id": 16
+    },
+    {
+      "season_id": 3,
+      "team_id": 1,
+      "player_id": 15
+    },
+    {
+      "season_id": 3,
+      "team_id": 2,
+      "player_id": 14
+    },
+    {
+      "season_id": 3,
+      "team_id": 1,
+      "player_id": 13
+    },
+    {
+      "season_id": 3,
+      "team_id": 1,
+      "player_id": 12
+    },
+    {
+      "season_id": 3,
+      "team_id": 5,
+      "player_id": 4
+    },
+    {
+      "season_id": 3,
+      "team_id": 4,
+      "player_id": 3
+    },
+    {
+      "season_id": 4,
+      "team_id": 4,
+      "player_id": 133
+    },
+    {
+      "season_id": 4,
+      "team_id": 6,
+      "player_id": 127
+    },
+    {
+      "season_id": 4,
+      "team_id": 2,
+      "player_id": 89
+    },
+    {
+      "season_id": 4,
+      "team_id": 4,
+      "player_id": 151
+    },
+    {
+      "season_id": 4,
+      "team_id": 6,
+      "player_id": 43
+    },
+    {
+      "season_id": 4,
+      "team_id": 4,
+      "player_id": 65
+    },
+    {
+      "season_id": 4,
+      "team_id": 1,
+      "player_id": 138
+    },
+    {
+      "season_id": 4,
+      "team_id": 5,
+      "player_id": 130
+    },
+    {
+      "season_id": 4,
+      "team_id": 4,
+      "player_id": 147
+    },
+    {
+      "season_id": 4,
+      "team_id": 4,
+      "player_id": 16
+    },
+    {
+      "season_id": 4,
+      "team_id": 6,
+      "player_id": 80
+    },
+    {
+      "season_id": 4,
+      "team_id": 1,
+      "player_id": 140
+    },
+    {
+      "season_id": 4,
+      "team_id": 4,
+      "player_id": 134
+    },
+    {
+      "season_id": 4,
+      "team_id": 2,
+      "player_id": 53
+    },
+    {
+      "season_id": 4,
+      "team_id": 6,
+      "player_id": 35
+    },
+    {
+      "season_id": 4,
+      "team_id": 6,
+      "player_id": 137
+    },
+    {
+      "season_id": 4,
+      "team_id": 1,
+      "player_id": 50
+    },
+    {
+      "season_id": 4,
+      "team_id": 2,
+      "player_id": 81
+    },
+    {
+      "season_id": 4,
+      "team_id": 2,
+      "player_id": 150
+    },
+    {
+      "season_id": 4,
+      "team_id": 5,
+      "player_id": 136
+    },
+    {
+      "season_id": 4,
+      "team_id": 5,
+      "player_id": 142
+    },
+    {
+      "season_id": 4,
+      "team_id": 2,
+      "player_id": 12
+    },
+    {
+      "season_id": 4,
+      "team_id": 5,
+      "player_id": 95
+    },
+    {
+      "season_id": 4,
+      "team_id": 1,
+      "player_id": 3
+    },
+    {
+      "season_id": 4,
+      "team_id": 1,
+      "player_id": 113
+    },
+    {
+      "season_id": 4,
+      "team_id": 6,
+      "player_id": 13
+    },
+    {
+      "season_id": 4,
+      "team_id": 4,
+      "player_id": 141
+    },
+    {
+      "season_id": 4,
+      "team_id": 6,
+      "player_id": 143
+    },
+    {
+      "season_id": 4,
+      "team_id": 1,
+      "player_id": 145
+    },
+    {
+      "season_id": 4,
+      "team_id": 1,
+      "player_id": 110
+    },
+    {
+      "season_id": 4,
+      "team_id": 4,
+      "player_id": 29
+    },
+    {
+      "season_id": 4,
+      "team_id": 1,
+      "player_id": 139
+    },
+    {
+      "season_id": 4,
+      "team_id": 6,
+      "player_id": 93
+    },
+    {
+      "season_id": 4,
+      "team_id": 4,
+      "player_id": 126
+    },
+    {
+      "season_id": 4,
+      "team_id": 2,
+      "player_id": 4
+    },
+    {
+      "season_id": 4,
+      "team_id": 1,
+      "player_id": 135
+    },
+    {
+      "season_id": 4,
+      "team_id": 6,
+      "player_id": 128
+    },
+    {
+      "season_id": 4,
+      "team_id": 1,
+      "player_id": 124
+    },
+    {
+      "season_id": 4,
+      "team_id": 6,
+      "player_id": 131
+    },
+    {
+      "season_id": 4,
+      "team_id": 6,
+      "player_id": 146
+    },
+    {
+      "season_id": 4,
+      "team_id": 6,
+      "player_id": 144
+    },
+    {
+      "season_id": 4,
+      "team_id": 2,
+      "player_id": 14
+    },
+    {
+      "season_id": 4,
+      "team_id": 6,
+      "player_id": 32
+    },
+    {
+      "season_id": 4,
+      "team_id": 5,
+      "player_id": 148
+    },
+    {
+      "season_id": 4,
+      "team_id": 4,
+      "player_id": 132
+    },
+    {
+      "season_id": 4,
+      "team_id": 5,
+      "player_id": 48
+    },
+    {
+      "season_id": 4,
+      "team_id": 2,
+      "player_id": 42
+    },
+    {
+      "season_id": 4,
+      "team_id": 1,
+      "player_id": 118
+    },
+    {
+      "season_id": 4,
+      "team_id": 2,
+      "player_id": 9
+    },
+    {
+      "season_id": 4,
+      "team_id": 4,
+      "player_id": 26
+    },
+    {
+      "season_id": 4,
+      "team_id": 2,
+      "player_id": 51
+    },
+    {
+      "season_id": 4,
+      "team_id": 5,
+      "player_id": 56
+    },
+    {
+      "season_id": 4,
+      "team_id": 2,
+      "player_id": 86
+    },
+    {
+      "season_id": 4,
+      "team_id": 4,
+      "player_id": 125
+    },
+    {
+      "season_id": 4,
+      "team_id": 4,
+      "player_id": 129
+    },
+    {
+      "season_id": 4,
+      "team_id": 1,
+      "player_id": 57
+    },
+    {
+      "season_id": 4,
+      "team_id": 5,
+      "player_id": 121
+    },
+    {
+      "season_id": 4,
+      "team_id": 5,
+      "player_id": 68
+    },
+    {
+      "season_id": 4,
+      "team_id": 5,
+      "player_id": 122
+    },
+    {
+      "season_id": 4,
+      "team_id": 5,
+      "player_id": 152
+    },
+    {
+      "season_id": 4,
+      "team_id": 1,
+      "player_id": 62
+    },
+    {
+      "season_id": 4,
+      "team_id": 5,
+      "player_id": 101
+    },
+    {
+      "season_id": 4,
+      "team_id": 5,
+      "player_id": 123
+    },
+    {
+      "season_id": 4,
+      "team_id": 4,
+      "player_id": 92
+    },
+    {
+      "season_id": 4,
+      "team_id": 2,
+      "player_id": 109
+    },
+    {
+      "season_id": 4,
+      "team_id": 5,
+      "player_id": 149
+    },
+    {
+      "season_id": 5,
+      "team_id": 6,
+      "player_id": 133
+    },
+    {
+      "season_id": 5,
+      "team_id": 4,
+      "player_id": 127
+    },
+    {
+      "season_id": 5,
+      "team_id": 5,
+      "player_id": 165
+    },
+    {
+      "season_id": 5,
+      "team_id": 5,
+      "player_id": 175
+    },
+    {
+      "season_id": 5,
+      "team_id": 8,
+      "player_id": 151
+    },
+    {
+      "season_id": 5,
+      "team_id": 6,
+      "player_id": 158
+    },
+    {
+      "season_id": 5,
+      "team_id": 6,
+      "player_id": 138
+    },
+    {
+      "season_id": 5,
+      "team_id": 2,
+      "player_id": 160
+    },
+    {
+      "season_id": 5,
+      "team_id": 2,
+      "player_id": 177
+    },
+    {
+      "season_id": 5,
+      "team_id": 7,
+      "player_id": 15
+    },
+    {
+      "season_id": 5,
+      "team_id": 2,
+      "player_id": 153
+    },
+    {
+      "season_id": 5,
+      "team_id": 8,
+      "player_id": 22
+    },
+    {
+      "season_id": 5,
+      "team_id": 7,
+      "player_id": 104
+    },
+    {
+      "season_id": 5,
+      "team_id": 8,
+      "player_id": 147
+    },
+    {
+      "season_id": 5,
+      "team_id": 7,
+      "player_id": 20
+    },
+    {
+      "season_id": 5,
+      "team_id": 2,
+      "player_id": 16
+    },
+    {
+      "season_id": 5,
+      "team_id": 4,
+      "player_id": 80
+    },
+    {
+      "season_id": 5,
+      "team_id": 5,
+      "player_id": 140
+    },
+    {
+      "season_id": 5,
+      "team_id": 2,
+      "player_id": 172
+    },
+    {
+      "season_id": 5,
+      "team_id": 6,
+      "player_id": 47
+    },
+    {
+      "season_id": 5,
+      "team_id": 2,
+      "player_id": 137
+    },
+    {
+      "season_id": 5,
+      "team_id": 5,
+      "player_id": 50
+    },
+    {
+      "season_id": 5,
+      "team_id": 7,
+      "player_id": 23
+    },
+    {
+      "season_id": 5,
+      "team_id": 6,
+      "player_id": 150
+    },
+    {
+      "season_id": 5,
+      "team_id": 7,
+      "player_id": 136
+    },
+    {
+      "season_id": 5,
+      "team_id": 7,
+      "player_id": 12
+    },
+    {
+      "season_id": 5,
+      "team_id": 8,
+      "player_id": 95
+    },
+    {
+      "season_id": 5,
+      "team_id": 4,
+      "player_id": 176
+    },
+    {
+      "season_id": 5,
+      "team_id": 4,
+      "player_id": 180
+    },
+    {
+      "season_id": 5,
+      "team_id": 5,
+      "player_id": 13
+    },
+    {
+      "season_id": 5,
+      "team_id": 5,
+      "player_id": 141
+    },
+    {
+      "season_id": 5,
+      "team_id": 2,
+      "player_id": 145
+    },
+    {
+      "season_id": 5,
+      "team_id": 8,
+      "player_id": 156
+    },
+    {
+      "season_id": 5,
+      "team_id": 8,
+      "player_id": 152
+    },
+    {
+      "season_id": 5,
+      "team_id": 7,
+      "player_id": 167
+    },
+    {
+      "season_id": 5,
+      "team_id": 5,
+      "player_id": 29
+    },
+    {
+      "season_id": 5,
+      "team_id": 5,
+      "player_id": 157
+    },
+    {
+      "season_id": 5,
+      "team_id": 6,
+      "player_id": 166
+    },
+    {
+      "season_id": 5,
+      "team_id": 4,
+      "player_id": 169
+    },
+    {
+      "season_id": 5,
+      "team_id": 7,
+      "player_id": 93
+    },
+    {
+      "season_id": 5,
+      "team_id": 4,
+      "player_id": 174
+    },
+    {
+      "season_id": 5,
+      "team_id": 2,
+      "player_id": 126
+    },
+    {
+      "season_id": 5,
+      "team_id": 7,
+      "player_id": 173
+    },
+    {
+      "season_id": 5,
+      "team_id": 7,
+      "player_id": 2
+    },
+    {
+      "season_id": 5,
+      "team_id": 7,
+      "player_id": 4
+    },
+    {
+      "season_id": 5,
+      "team_id": 7,
+      "player_id": 89
+    },
+    {
+      "season_id": 5,
+      "team_id": 6,
+      "player_id": 124
+    },
+    {
+      "season_id": 5,
+      "team_id": 6,
+      "player_id": 154
+    },
+    {
+      "season_id": 5,
+      "team_id": 4,
+      "player_id": 109
+    },
+    {
+      "season_id": 5,
+      "team_id": 4,
+      "player_id": 131
+    },
+    {
+      "season_id": 5,
+      "team_id": 6,
+      "player_id": 57
+    },
+    {
+      "season_id": 5,
+      "team_id": 5,
+      "player_id": 168
+    },
+    {
+      "season_id": 5,
+      "team_id": 6,
+      "player_id": 146
+    },
+    {
+      "season_id": 5,
+      "team_id": 7,
+      "player_id": 144
+    },
+    {
+      "season_id": 5,
+      "team_id": 5,
+      "player_id": 14
+    },
+    {
+      "season_id": 5,
+      "team_id": 8,
+      "player_id": 32
+    },
+    {
+      "season_id": 5,
+      "team_id": 8,
+      "player_id": 132
+    },
+    {
+      "season_id": 5,
+      "team_id": 6,
+      "player_id": 48
+    },
+    {
+      "season_id": 5,
+      "team_id": 2,
+      "player_id": 42
+    },
+    {
+      "season_id": 5,
+      "team_id": 5,
+      "player_id": 118
+    },
+    {
+      "season_id": 5,
+      "team_id": 6,
+      "player_id": 9
+    },
+    {
+      "season_id": 5,
+      "team_id": 2,
+      "player_id": 178
+    },
+    {
+      "season_id": 5,
+      "team_id": 2,
+      "player_id": 26
+    },
+    {
+      "season_id": 5,
+      "team_id": 8,
+      "player_id": 171
+    },
+    {
+      "season_id": 5,
+      "team_id": 6,
+      "player_id": 179
+    },
+    {
+      "season_id": 5,
+      "team_id": 2,
+      "player_id": 86
+    },
+    {
+      "season_id": 5,
+      "team_id": 8,
+      "player_id": 164
+    },
+    {
+      "season_id": 5,
+      "team_id": 5,
+      "player_id": 155
+    },
+    {
+      "season_id": 5,
+      "team_id": 4,
+      "player_id": 162
+    },
+    {
+      "season_id": 5,
+      "team_id": 8,
+      "player_id": 161
+    },
+    {
+      "season_id": 5,
+      "team_id": 2,
+      "player_id": 163
+    },
+    {
+      "season_id": 5,
+      "team_id": 4,
+      "player_id": 70
+    },
+    {
+      "season_id": 5,
+      "team_id": 4,
+      "player_id": 130
+    },
+    {
+      "season_id": 5,
+      "team_id": 4,
+      "player_id": 92
+    },
+    {
+      "season_id": 5,
+      "team_id": 8,
+      "player_id": 64
+    },
+    {
+      "season_id": 5,
+      "team_id": 7,
+      "player_id": 5
+    },
+    {
+      "season_id": 6,
+      "team_id": 12,
+      "player_id": 4
+    },
+    {
+      "season_id": 6,
+      "team_id": 9,
+      "player_id": 9
+    },
+    {
+      "season_id": 6,
+      "team_id": 10,
+      "player_id": 12
+    },
+    {
+      "season_id": 6,
+      "team_id": 13,
+      "player_id": 13
+    },
+    {
+      "season_id": 6,
+      "team_id": 13,
+      "player_id": 14
+    },
+    {
+      "season_id": 6,
+      "team_id": 13,
+      "player_id": 15
+    },
+    {
+      "season_id": 6,
+      "team_id": 8,
+      "player_id": 22
+    },
+    {
+      "season_id": 6,
+      "team_id": 9,
+      "player_id": 26
+    },
+    {
+      "season_id": 6,
+      "team_id": 9,
+      "player_id": 29
+    },
+    {
+      "season_id": 6,
+      "team_id": 9,
+      "player_id": 31
+    },
+    {
+      "season_id": 6,
+      "team_id": 9,
+      "player_id": 42
+    },
+    {
+      "season_id": 6,
+      "team_id": 12,
+      "player_id": 47
+    },
+    {
+      "season_id": 6,
+      "team_id": 13,
+      "player_id": 50
+    },
+    {
+      "season_id": 6,
+      "team_id": 11,
+      "player_id": 57
+    },
+    {
+      "season_id": 6,
+      "team_id": 11,
+      "player_id": 63
+    },
+    {
+      "season_id": 6,
+      "team_id": 13,
+      "player_id": 64
+    },
+    {
+      "season_id": 6,
+      "team_id": 9,
+      "player_id": 65
+    },
+    {
+      "season_id": 6,
+      "team_id": 8,
+      "player_id": 66
+    },
+    {
+      "season_id": 6,
+      "team_id": 12,
+      "player_id": 68
+    },
+    {
+      "season_id": 6,
+      "team_id": 13,
+      "player_id": 78
+    },
+    {
+      "season_id": 6,
+      "team_id": 8,
+      "player_id": 80
+    },
+    {
+      "season_id": 6,
+      "team_id": 11,
+      "player_id": 81
+    },
+    {
+      "season_id": 6,
+      "team_id": 8,
+      "player_id": 86
+    },
+    {
+      "season_id": 6,
+      "team_id": 13,
+      "player_id": 92
+    },
+    {
+      "season_id": 6,
+      "team_id": 11,
+      "player_id": 109
+    },
+    {
+      "season_id": 6,
+      "team_id": 12,
+      "player_id": 114
+    },
+    {
+      "season_id": 6,
+      "team_id": 13,
+      "player_id": 118
+    },
+    {
+      "season_id": 6,
+      "team_id": 9,
+      "player_id": 124
+    },
+    {
+      "season_id": 6,
+      "team_id": 8,
+      "player_id": 126
+    },
+    {
+      "season_id": 6,
+      "team_id": 12,
+      "player_id": 130
+    },
+    {
+      "season_id": 6,
+      "team_id": 11,
+      "player_id": 132
+    },
+    {
+      "season_id": 6,
+      "team_id": 10,
+      "player_id": 133
+    },
+    {
+      "season_id": 6,
+      "team_id": 8,
+      "player_id": 136
+    },
+    {
+      "season_id": 6,
+      "team_id": 13,
+      "player_id": 137
+    },
+    {
+      "season_id": 6,
+      "team_id": 13,
+      "player_id": 138
+    },
+    {
+      "season_id": 6,
+      "team_id": 11,
+      "player_id": 140
+    },
+    {
+      "season_id": 6,
+      "team_id": 12,
+      "player_id": 144
+    },
+    {
+      "season_id": 6,
+      "team_id": 11,
+      "player_id": 147
+    },
+    {
+      "season_id": 6,
+      "team_id": 12,
+      "player_id": 150
+    },
+    {
+      "season_id": 6,
+      "team_id": 12,
+      "player_id": 151
+    },
+    {
+      "season_id": 6,
+      "team_id": 9,
+      "player_id": 152
+    },
+    {
+      "season_id": 6,
+      "team_id": 10,
+      "player_id": 153
+    },
+    {
+      "season_id": 6,
+      "team_id": 9,
+      "player_id": 154
+    },
+    {
+      "season_id": 6,
+      "team_id": 12,
+      "player_id": 155
+    },
+    {
+      "season_id": 6,
+      "team_id": 8,
+      "player_id": 156
+    },
+    {
+      "season_id": 6,
+      "team_id": 10,
+      "player_id": 157
+    },
+    {
+      "season_id": 6,
+      "team_id": 10,
+      "player_id": 158
+    },
+    {
+      "season_id": 6,
+      "team_id": 12,
+      "player_id": 159
+    },
+    {
+      "season_id": 6,
+      "team_id": 8,
+      "player_id": 160
+    },
+    {
+      "season_id": 6,
+      "team_id": 10,
+      "player_id": 168
+    },
+    {
+      "season_id": 6,
+      "team_id": 10,
+      "player_id": 179
+    },
+    {
+      "season_id": 6,
+      "team_id": 10,
+      "player_id": 180
+    },
+    {
+      "season_id": 6,
+      "team_id": 11,
+      "player_id": 181
+    },
+    {
+      "season_id": 6,
+      "team_id": 13,
+      "player_id": 182
+    },
+    {
+      "season_id": 6,
+      "team_id": 10,
+      "player_id": 183
+    },
+    {
+      "season_id": 6,
+      "team_id": 10,
+      "player_id": 184
+    },
+    {
+      "season_id": 6,
+      "team_id": 13,
+      "player_id": 185
+    },
+    {
+      "season_id": 6,
+      "team_id": 8,
+      "player_id": 186
+    },
+    {
+      "season_id": 6,
+      "team_id": 9,
+      "player_id": 187
+    },
+    {
+      "season_id": 6,
+      "team_id": 12,
+      "player_id": 188
+    },
+    {
+      "season_id": 6,
+      "team_id": 9,
+      "player_id": 189
+    },
+    {
+      "season_id": 6,
+      "team_id": 11,
+      "player_id": 190
+    },
+    {
+      "season_id": 6,
+      "team_id": 10,
+      "player_id": 191
+    },
+    {
+      "season_id": 6,
+      "team_id": 8,
+      "player_id": 192
+    },
+    {
+      "season_id": 6,
+      "team_id": 11,
+      "player_id": 193
+    },
+    {
+      "season_id": 6,
+      "team_id": 8,
+      "player_id": 194
+    },
+    {
+      "season_id": 6,
+      "team_id": 11,
+      "player_id": 195
+    },
+    {
+      "season_id": 6,
+      "team_id": 10,
+      "player_id": 196
+    },
+    {
+      "season_id": 6,
+      "team_id": 11,
+      "player_id": 197
+    },
+    {
+      "season_id": 6,
+      "team_id": 13,
+      "player_id": 198
+    },
+    {
+      "season_id": 6,
+      "team_id": 12,
+      "player_id": 199
+    },
+    {
+      "season_id": 6,
+      "team_id": 8,
+      "player_id": 200
+    },
+    {
+      "season_id": 6,
+      "team_id": 8,
+      "player_id": 201
+    },
+    {
+      "season_id": 6,
+      "team_id": 10,
+      "player_id": 202
+    },
+    {
+      "season_id": 6,
+      "team_id": 8,
+      "player_id": 203
+    },
+    {
+      "season_id": 6,
+      "team_id": 9,
+      "player_id": 204
+    },
+    {
+      "season_id": 6,
+      "team_id": 9,
+      "player_id": 205
+    },
+    {
+      "season_id": 6,
+      "team_id": 13,
+      "player_id": 206
+    },
+    {
+      "season_id": 6,
+      "team_id": 11,
+      "player_id": 207
+    },
+    {
+      "season_id": 6,
+      "team_id": 10,
+      "player_id": 208
+    },
+    {
+      "season_id": 6,
+      "team_id": 11,
+      "player_id": 209
+    },
+    {
+      "season_id": 6,
+      "team_id": 11,
+      "player_id": 210
+    },
+    {
+      "season_id": 6,
+      "team_id": 12,
+      "player_id": 211
+    },
+    {
+      "season_id": 6,
+      "team_id": 9,
+      "player_id": 5
+    },
+    {
+      "season_id": 6,
+      "team_id": 12,
+      "player_id": 212
+    },
+    {
+      "season_id": 6,
+      "team_id": 8,
+      "player_id": 213
+    },
+    {
+      "season_id": 6,
+      "team_id": 9,
+      "player_id": 214
+    },
+    {
+      "season_id": 6,
+      "team_id": 9,
+      "player_id": 215
+    },
+    {
+      "season_id": 7,
+      "team_id": 14,
+      "player_id": 150
+    },
+    {
+      "season_id": 7,
+      "team_id": 16,
+      "player_id": 204
+    },
+    {
+      "season_id": 7,
+      "team_id": 17,
+      "player_id": 22
+    },
+    {
+      "season_id": 7,
+      "team_id": 18,
+      "player_id": 12
+    },
+    {
+      "season_id": 7,
+      "team_id": 19,
+      "player_id": 47
+    },
+    {
+      "season_id": 7,
+      "team_id": 15,
+      "player_id": 95
+    },
+    {
+      "season_id": 7,
+      "team_id": 9,
+      "player_id": 219
+    },
+    {
+      "season_id": 7,
+      "team_id": 9,
+      "player_id": 21
+    },
+    {
+      "season_id": 7,
+      "team_id": 15,
+      "player_id": 9
+    },
+    {
+      "season_id": 7,
+      "team_id": 19,
+      "player_id": 151
+    },
+    {
+      "season_id": 7,
+      "team_id": 18,
+      "player_id": 64
+    },
+    {
+      "season_id": 7,
+      "team_id": 17,
+      "player_id": 92
+    },
+    {
+      "season_id": 7,
+      "team_id": 16,
+      "player_id": 68
+    },
+    {
+      "season_id": 7,
+      "team_id": 14,
+      "player_id": 57
+    },
+    {
+      "season_id": 7,
+      "team_id": 14,
+      "player_id": 29
+    },
+    {
+      "season_id": 7,
+      "team_id": 16,
+      "player_id": 136
+    },
+    {
+      "season_id": 7,
+      "team_id": 17,
+      "player_id": 155
+    },
+    {
+      "season_id": 7,
+      "team_id": 18,
+      "player_id": 168
+    },
+    {
+      "season_id": 7,
+      "team_id": 19,
+      "player_id": 181
+    },
+    {
+      "season_id": 7,
+      "team_id": 15,
+      "player_id": 31
+    },
+    {
+      "season_id": 7,
+      "team_id": 9,
+      "player_id": 199
+    },
+    {
+      "season_id": 7,
+      "team_id": 9,
+      "player_id": 132
+    },
+    {
+      "season_id": 7,
+      "team_id": 15,
+      "player_id": 26
+    },
+    {
+      "season_id": 7,
+      "team_id": 19,
+      "player_id": 42
+    },
+    {
+      "season_id": 7,
+      "team_id": 18,
+      "player_id": 229
+    },
+    {
+      "season_id": 7,
+      "team_id": 17,
+      "player_id": 182
+    },
+    {
+      "season_id": 7,
+      "team_id": 16,
+      "player_id": 235
+    },
+    {
+      "season_id": 7,
+      "team_id": 14,
+      "player_id": 38
+    },
+    {
+      "season_id": 7,
+      "team_id": 14,
+      "player_id": 194
+    },
+    {
+      "season_id": 7,
+      "team_id": 16,
+      "player_id": 218
+    },
+    {
+      "season_id": 7,
+      "team_id": 17,
+      "player_id": 4
+    },
+    {
+      "season_id": 7,
+      "team_id": 18,
+      "player_id": 183
+    },
+    {
+      "season_id": 7,
+      "team_id": 19,
+      "player_id": 133
+    },
+    {
+      "season_id": 7,
+      "team_id": 15,
+      "player_id": 196
+    },
+    {
+      "season_id": 7,
+      "team_id": 9,
+      "player_id": 14
+    },
+    {
+      "season_id": 7,
+      "team_id": 9,
+      "player_id": 152
+    },
+    {
+      "season_id": 7,
+      "team_id": 15,
+      "player_id": 188
+    },
+    {
+      "season_id": 7,
+      "team_id": 19,
+      "player_id": 184
+    },
+    {
+      "season_id": 7,
+      "team_id": 18,
+      "player_id": 217
+    },
+    {
+      "season_id": 7,
+      "team_id": 17,
+      "player_id": 206
+    },
+    {
+      "season_id": 7,
+      "team_id": 16,
+      "player_id": 186
+    },
+    {
+      "season_id": 7,
+      "team_id": 14,
+      "player_id": 66
+    },
+    {
+      "season_id": 7,
+      "team_id": 14,
+      "player_id": 100
+    },
+    {
+      "season_id": 7,
+      "team_id": 16,
+      "player_id": 5
+    },
+    {
+      "season_id": 7,
+      "team_id": 17,
+      "player_id": 180
+    },
+    {
+      "season_id": 7,
+      "team_id": 18,
+      "player_id": 228
+    },
+    {
+      "season_id": 7,
+      "team_id": 19,
+      "player_id": 185
+    },
+    {
+      "season_id": 7,
+      "team_id": 15,
+      "player_id": 154
+    },
+    {
+      "season_id": 7,
+      "team_id": 9,
+      "player_id": 202
+    },
+    {
+      "season_id": 7,
+      "team_id": 9,
+      "player_id": 138
+    },
+    {
+      "season_id": 7,
+      "team_id": 15,
+      "player_id": 81
+    },
+    {
+      "season_id": 7,
+      "team_id": 19,
+      "player_id": 147
+    },
+    {
+      "season_id": 7,
+      "team_id": 18,
+      "player_id": 220
+    },
+    {
+      "season_id": 7,
+      "team_id": 17,
+      "player_id": 226
+    },
+    {
+      "season_id": 7,
+      "team_id": 16,
+      "player_id": 65
+    },
+    {
+      "season_id": 7,
+      "team_id": 14,
+      "player_id": 153
+    },
+    {
+      "season_id": 7,
+      "team_id": 14,
+      "player_id": 141
+    },
+    {
+      "season_id": 7,
+      "team_id": 16,
+      "player_id": 25
+    },
+    {
+      "season_id": 7,
+      "team_id": 17,
+      "player_id": 225
+    },
+    {
+      "season_id": 7,
+      "team_id": 18,
+      "player_id": 41
+    },
+    {
+      "season_id": 7,
+      "team_id": 19,
+      "player_id": 213
+    },
+    {
+      "season_id": 7,
+      "team_id": 15,
+      "player_id": 221
+    },
+    {
+      "season_id": 7,
+      "team_id": 9,
+      "player_id": 130
+    },
+    {
+      "season_id": 7,
+      "team_id": 9,
+      "player_id": 216
+    },
+    {
+      "season_id": 7,
+      "team_id": 15,
+      "player_id": 193
+    },
+    {
+      "season_id": 7,
+      "team_id": 19,
+      "player_id": 145
+    },
+    {
+      "season_id": 7,
+      "team_id": 18,
+      "player_id": 15
+    },
+    {
+      "season_id": 7,
+      "team_id": 17,
+      "player_id": 207
+    },
+    {
+      "season_id": 7,
+      "team_id": 16,
+      "player_id": 203
+    },
+    {
+      "season_id": 7,
+      "team_id": 14,
+      "player_id": 159
+    },
+    {
+      "season_id": 7,
+      "team_id": 14,
+      "player_id": 230
+    },
+    {
+      "season_id": 7,
+      "team_id": 16,
+      "player_id": 222
+    },
+    {
+      "season_id": 7,
+      "team_id": 17,
+      "player_id": 50
+    },
+    {
+      "season_id": 7,
+      "team_id": 18,
+      "player_id": 227
+    },
+    {
+      "season_id": 7,
+      "team_id": 19,
+      "player_id": 118
+    },
+    {
+      "season_id": 7,
+      "team_id": 15,
+      "player_id": 223
+    },
+    {
+      "season_id": 7,
+      "team_id": 9,
+      "player_id": 160
+    },
+    {
+      "season_id": 7,
+      "team_id": 9,
+      "player_id": 224
+    },
+    {
+      "season_id": 7,
+      "team_id": 18,
+      "player_id": 3
+    },
+    {
+      "season_id": 7,
+      "team_id": 15,
+      "player_id": 23
+    },
+    {
+      "season_id": 7,
+      "team_id": 17,
+      "player_id": 13
+    },
+    {
+      "season_id": 7,
+      "team_id": 14,
+      "player_id": 16
+    },
+    {
+      "season_id": 7,
+      "team_id": 16,
+      "player_id": 236
+    },
+    {
+      "season_id": 7,
+      "team_id": 15,
+      "player_id": 237
+    },
+    {
+      "season_id": 7,
+      "team_id": 18,
+      "player_id": 233
+    },
+    {
+      "season_id": 7,
+      "team_id": 17,
+      "player_id": 232
+    },
+    {
+      "season_id": 7,
+      "team_id": 19,
+      "player_id": 231
+    },
+    {
+      "season_id": 7,
+      "team_id": 16,
+      "player_id": 234
+    },
+    {
+      "season_id": 7,
+      "team_id": 9,
+      "player_id": 238
+    },
+    {
+      "season_id": 7,
+      "team_id": 19,
+      "player_id": 239
+    },
+    {
+      "season_id": 7,
+      "team_id": 14,
+      "player_id": 240
+    },
+    {
+      "season_id": 8,
+      "team_id": 12,
+      "player_id": 213
+    },
+    {
+      "season_id": 8,
+      "team_id": 12,
+      "player_id": 66
+    },
+    {
+      "season_id": 8,
+      "team_id": 12,
+      "player_id": 246
+    },
+    {
+      "season_id": 8,
+      "team_id": 12,
+      "player_id": 241
+    },
+    {
+      "season_id": 8,
+      "team_id": 12,
+      "player_id": 154
+    },
+    {
+      "season_id": 8,
+      "team_id": 12,
+      "player_id": 16
+    },
+    {
+      "season_id": 8,
+      "team_id": 12,
+      "player_id": 50
+    },
+    {
+      "season_id": 8,
+      "team_id": 12,
+      "player_id": 118
+    },
+    {
+      "season_id": 8,
+      "team_id": 12,
+      "player_id": 226
+    },
+    {
+      "season_id": 8,
+      "team_id": 12,
+      "player_id": 239
+    },
+    {
+      "season_id": 8,
+      "team_id": 12,
+      "player_id": 247
+    },
+    {
+      "season_id": 8,
+      "team_id": 12,
+      "player_id": 31
+    },
+    {
+      "season_id": 8,
+      "team_id": 20,
+      "player_id": 152
+    },
+    {
+      "season_id": 8,
+      "team_id": 20,
+      "player_id": 153
+    },
+    {
+      "season_id": 8,
+      "team_id": 20,
+      "player_id": 219
+    },
+    {
+      "season_id": 8,
+      "team_id": 20,
+      "player_id": 229
+    },
+    {
+      "season_id": 8,
+      "team_id": 20,
+      "player_id": 126
+    },
+    {
+      "season_id": 8,
+      "team_id": 20,
+      "player_id": 256
+    },
+    {
+      "season_id": 8,
+      "team_id": 20,
+      "player_id": 234
+    },
+    {
+      "season_id": 8,
+      "team_id": 20,
+      "player_id": 253
+    },
+    {
+      "season_id": 8,
+      "team_id": 20,
+      "player_id": 244
+    },
+    {
+      "season_id": 8,
+      "team_id": 20,
+      "player_id": 268
+    },
+    {
+      "season_id": 8,
+      "team_id": 20,
+      "player_id": 132
+    },
+    {
+      "season_id": 8,
+      "team_id": 20,
+      "player_id": 218
+    },
+    {
+      "season_id": 8,
+      "team_id": 14,
+      "player_id": 184
+    },
+    {
+      "season_id": 8,
+      "team_id": 14,
+      "player_id": 216
+    },
+    {
+      "season_id": 8,
+      "team_id": 14,
+      "player_id": 233
+    },
+    {
+      "season_id": 8,
+      "team_id": 14,
+      "player_id": 254
+    },
+    {
+      "season_id": 8,
+      "team_id": 14,
+      "player_id": 243
+    },
+    {
+      "season_id": 8,
+      "team_id": 14,
+      "player_id": 240
+    },
+    {
+      "season_id": 8,
+      "team_id": 14,
+      "player_id": 68
+    },
+    {
+      "season_id": 8,
+      "team_id": 14,
+      "player_id": 25
+    },
+    {
+      "season_id": 8,
+      "team_id": 14,
+      "player_id": 155
+    },
+    {
+      "season_id": 8,
+      "team_id": 14,
+      "player_id": 249
+    },
+    {
+      "season_id": 8,
+      "team_id": 14,
+      "player_id": 160
+    },
+    {
+      "season_id": 8,
+      "team_id": 14,
+      "player_id": 3
+    },
+    {
+      "season_id": 8,
+      "team_id": 8,
+      "player_id": 4
+    },
+    {
+      "season_id": 8,
+      "team_id": 8,
+      "player_id": 124
+    },
+    {
+      "season_id": 8,
+      "team_id": 8,
+      "player_id": 236
+    },
+    {
+      "season_id": 8,
+      "team_id": 8,
+      "player_id": 147
+    },
+    {
+      "season_id": 8,
+      "team_id": 8,
+      "player_id": 194
+    },
+    {
+      "season_id": 8,
+      "team_id": 8,
+      "player_id": 42
+    },
+    {
+      "season_id": 8,
+      "team_id": 8,
+      "player_id": 250
+    },
+    {
+      "season_id": 8,
+      "team_id": 8,
+      "player_id": 138
+    },
+    {
+      "season_id": 8,
+      "team_id": 8,
+      "player_id": 47
+    },
+    {
+      "season_id": 8,
+      "team_id": 8,
+      "player_id": 38
+    },
+    {
+      "season_id": 8,
+      "team_id": 8,
+      "player_id": 190
+    },
+    {
+      "season_id": 8,
+      "team_id": 8,
+      "player_id": 248
+    },
+    {
+      "season_id": 8,
+      "team_id": 21,
+      "player_id": 24
+    },
+    {
+      "season_id": 8,
+      "team_id": 21,
+      "player_id": 181
+    },
+    {
+      "season_id": 8,
+      "team_id": 21,
+      "player_id": 223
+    },
+    {
+      "season_id": 8,
+      "team_id": 21,
+      "player_id": 227
+    },
+    {
+      "season_id": 8,
+      "team_id": 21,
+      "player_id": 242
+    },
+    {
+      "season_id": 8,
+      "team_id": 21,
+      "player_id": 29
+    },
+    {
+      "season_id": 8,
+      "team_id": 21,
+      "player_id": 221
+    },
+    {
+      "season_id": 8,
+      "team_id": 21,
+      "player_id": 204
+    },
+    {
+      "season_id": 8,
+      "team_id": 21,
+      "player_id": 81
+    },
+    {
+      "season_id": 8,
+      "team_id": 21,
+      "player_id": 185
+    },
+    {
+      "season_id": 8,
+      "team_id": 21,
+      "player_id": 95
+    },
+    {
+      "season_id": 8,
+      "team_id": 21,
+      "player_id": 188
+    },
+    {
+      "season_id": 8,
+      "team_id": 22,
+      "player_id": 206
+    },
+    {
+      "season_id": 8,
+      "team_id": 22,
+      "player_id": 109
+    },
+    {
+      "season_id": 8,
+      "team_id": 22,
+      "player_id": 130
+    },
+    {
+      "season_id": 8,
+      "team_id": 22,
+      "player_id": 235
+    },
+    {
+      "season_id": 8,
+      "team_id": 22,
+      "player_id": 183
+    },
+    {
+      "season_id": 8,
+      "team_id": 22,
+      "player_id": 252
+    },
+    {
+      "season_id": 8,
+      "team_id": 22,
+      "player_id": 238
+    },
+    {
+      "season_id": 8,
+      "team_id": 22,
+      "player_id": 14
+    },
+    {
+      "season_id": 8,
+      "team_id": 22,
+      "player_id": 57
+    },
+    {
+      "season_id": 8,
+      "team_id": 22,
+      "player_id": 133
+    },
+    {
+      "season_id": 8,
+      "team_id": 22,
+      "player_id": 258
+    },
+    {
+      "season_id": 8,
+      "team_id": 22,
+      "player_id": 251
+    },
+    {
+      "season_id": 8,
+      "team_id": 23,
+      "player_id": 12
+    },
+    {
+      "season_id": 8,
+      "team_id": 23,
+      "player_id": 137
+    },
+    {
+      "season_id": 8,
+      "team_id": 23,
+      "player_id": 167
+    },
+    {
+      "season_id": 8,
+      "team_id": 23,
+      "player_id": 214
+    },
+    {
+      "season_id": 8,
+      "team_id": 23,
+      "player_id": 207
+    },
+    {
+      "season_id": 8,
+      "team_id": 23,
+      "player_id": 255
+    },
+    {
+      "season_id": 8,
+      "team_id": 23,
+      "player_id": 245
+    },
+    {
+      "season_id": 8,
+      "team_id": 23,
+      "player_id": 217
+    },
+    {
+      "season_id": 8,
+      "team_id": 23,
+      "player_id": 100
+    },
+    {
+      "season_id": 8,
+      "team_id": 23,
+      "player_id": 228
+    },
+    {
+      "season_id": 8,
+      "team_id": 23,
+      "player_id": 182
+    },
+    {
+      "season_id": 8,
+      "team_id": 23,
+      "player_id": 21
+    },
+    {
+      "season_id": 8,
+      "team_id": 21,
+      "player_id": 257
+    },
+    {
+      "season_id": 8,
+      "team_id": 23,
+      "player_id": 261
+    },
+    {
+      "season_id": 8,
+      "team_id": 14,
+      "player_id": 260
+    },
+    {
+      "season_id": 8,
+      "team_id": 22,
+      "player_id": 266
+    },
+    {
+      "season_id": 8,
+      "team_id": 20,
+      "player_id": 265
+    },
+    {
+      "season_id": 8,
+      "team_id": 23,
+      "player_id": 267
+    },
+    {
+      "season_id": 8,
+      "team_id": 12,
+      "player_id": 264
+    },
+    {
+      "season_id": 8,
+      "team_id": 8,
+      "player_id": 262
+    },
+    {
+      "season_id": 8,
+      "team_id": 21,
+      "player_id": 259
+    },
+    {
+      "season_id": 8,
+      "team_id": 14,
+      "player_id": 269
+    },
+    {
+      "season_id": 8,
+      "team_id": 12,
+      "player_id": 270
+    }
+  ]

@@ -1,11 +1,11 @@
 import React from "react";
 import Firestore from "../Utils/Firebase";
 import Router from "../Components/Router";
-import "./OfflineData/players.json";
-import "./OfflineData/schedule.json";
+//import "./OfflineData/players.json";
+//import "./OfflineData/schedule.json";
 
-const players = require("./OfflineData/players.json");
-const schedule = require("./OfflineData/schedule.json");
+//const players = require("./OfflineData/players.json");
+//const schedule = require("./OfflineData/schedule.json");
 
 export default function StateStore() {
   const [scheduleData, setSchedule] = React.useState([]);

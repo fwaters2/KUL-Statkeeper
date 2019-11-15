@@ -40,16 +40,17 @@ export default function GoalDialogContainer(props) {
     rosterAway,
     homeTeam,
     awayTeam,
-    nextGoalNO
+    nextGoalNO,
+    updateScoreboard
   } = props;
   const [value, setValue] = React.useState(0);
   const [assist, setAssist] = React.useState("");
-  const [assistID, setAssistID] = React.useState("")
+  const [assistID, setAssistID] = React.useState("");
   const [goal, setGoal] = React.useState("");
-  const [goalID, setGoalID] = React.useState("")
+  const [goalID, setGoalID] = React.useState("");
   const [roster, setRoster] = React.useState([]);
   const [team, setTeam] = React.useState("");
-  const [teamID, setTeamID] = React.useState("")
+  const [teamID, setTeamID] = React.useState("");
 
   const handleTeamChoice = team => () => {
     setValue(1);
@@ -85,25 +86,25 @@ export default function GoalDialogContainer(props) {
     onClose();
     setValue(0);
     setAssist("");
-    setAssistID("")
+    setAssistID("");
     setGoal("");
-    setGoalID("")
-
+    setGoalID("");
+    updateScoreboard();
   };
-  const handleClose = ()=>{
-    onClose()
-    setTeam("")
-    setTeamID("")
+  const handleClose = () => {
+    onClose();
+    setTeam("");
+    setTeamID("");
     setValue(0);
     setAssist("");
-    setAssistID("")
+    setAssistID("");
     setGoal("");
-    setGoalID("")
-  }
+    setGoalID("");
+  };
 
   return (
     <Dialog fullWidth onClose={handleClose} open={open}>
-      <DialogTitle fullWidth>
+      <DialogTitle>
         <Grid container>
           {value === 1 ? (
             <Grid item xs={3} onClick={() => setValue(0)}>
@@ -146,7 +147,13 @@ export default function GoalDialogContainer(props) {
           }}
         >
           <DialogActions>
-            <Button fullWidth onClick={handleConfirm}>
+            <Button
+              fullWidth
+              onClick={handleConfirm}
+              variant="contained"
+              color="secondary"
+              style={{ height: "80px" }}
+            >
               Confirm
             </Button>
           </DialogActions>
