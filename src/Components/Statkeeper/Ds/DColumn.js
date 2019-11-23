@@ -72,7 +72,17 @@ export default function DColumn(props) {
               //}
             >
               <TableCell>{index + 1}</TableCell>
-              <TableCell>{stat.D}</TableCell>
+              <TableCell>
+                {" "}
+                {"#"}
+                {
+                  (
+                    gameData.awayRoster.find(x => x.Name === stat.D) ||
+                    gameData.homeRoster.find(x => x.Name === stat.D)
+                  ).JerseyNO
+                }{" "}
+                {stat.D}
+              </TableCell>
               {index + 1 === stats.length ? (
                 <TableCell padding="none">
                   {/* <Button color="secondary" onClick={handleDelete(stat.id)}>

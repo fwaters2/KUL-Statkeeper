@@ -16,7 +16,7 @@ export default function Games(props) {
     //setGameData,
     handleGameChoice
   } = props;
-  const dateToFilter = "11/16/2019";
+  const dateToFilter = "11/23/2019";
   const exampleWeek1Sched = scheduleData
     .filter(game => game.Date === dateToFilter)
     .sort((a, b) => a.GameNO - b.GameNO);

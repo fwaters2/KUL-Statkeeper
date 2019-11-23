@@ -65,8 +65,29 @@ export default function GoalColumns(props) {
             >
               <TableCell>{index + 1}</TableCell>
               <TableCell>{stat.TeamID}</TableCell>
-              <TableCell>{stat.Assist}</TableCell>
-              <TableCell>{stat.Goal}</TableCell>
+              <TableCell>
+                {"#"}
+                {
+                  (
+                    gameData.awayRoster.find(
+                      x => x.PlayerID === stat.AssistID
+                    ) ||
+                    gameData.homeRoster.find(x => x.PlayerID === stat.AssistID)
+                  ).JerseyNO
+                }{" "}
+                {stat.Assist}
+              </TableCell>
+              <TableCell>
+                {" "}
+                {"#"}
+                {
+                  (
+                    gameData.awayRoster.find(x => x.PlayerID === stat.GoalID) ||
+                    gameData.homeRoster.find(x => x.PlayerID === stat.GoalID)
+                  ).JerseyNO
+                }{" "}
+                {stat.Goal}
+              </TableCell>
               {index + 1 === stats.length ? (
                 <TableCell padding="none">
                   <IconButton color="secondary" onClick={handleDelete(stat.id)}>

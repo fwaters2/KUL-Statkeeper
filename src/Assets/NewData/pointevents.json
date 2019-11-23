@@ -17830,5 +17830,863 @@
     "point_id": 2972,
     "pointevent_type_id": 1,
     "player_id": 3
+  },
+  {
+    "id": 2973,
+    "point_id": 2973,
+    "point_event_type": 1,
+    "player_id": 4
+  },
+  {
+    "id": 2974,
+    "point_id": 2974,
+    "point_event_type": 1,
+    "player_id": 4
+  },
+  {
+    "id": 2975,
+    "point_id": 2975,
+    "point_event_type": 1,
+    "player_id": 213
+  },
+  {
+    "id": 2976,
+    "point_id": 2976,
+    "point_event_type": 1,
+    "player_id": 4
+  },
+  {
+    "id": 2977,
+    "point_id": 2977,
+    "point_event_type": 1,
+    "player_id": 42
+  },
+  {
+    "id": 2978,
+    "point_id": 2978,
+    "point_event_type": 1,
+    "player_id": 236
+  },
+  {
+    "id": 2979,
+    "point_id": 2979,
+    "point_event_type": 1,
+    "player_id": 31
+  },
+  {
+    "id": 2980,
+    "point_id": 2980,
+    "point_event_type": 1,
+    "player_id": 31
+  },
+  {
+    "id": 2981,
+    "point_id": 2981,
+    "point_event_type": 1,
+    "player_id": 4
+  },
+  {
+    "id": 2982,
+    "point_id": 2982,
+    "point_event_type": 1,
+    "player_id": 4
+  },
+  {
+    "id": 2983,
+    "point_id": 2983,
+    "point_event_type": 1,
+    "player_id": 57
+  },
+  {
+    "id": 2984,
+    "point_id": 2984,
+    "point_event_type": 1,
+    "player_id": 256
+  },
+  {
+    "id": 2985,
+    "point_id": 2985,
+    "point_event_type": 1,
+    "player_id": 14
+  },
+  {
+    "id": 2986,
+    "point_id": 2986,
+    "point_event_type": 1,
+    "player_id": 256
+  },
+  {
+    "id": 2987,
+    "point_id": 2987,
+    "point_event_type": 1,
+    "player_id": 132
+  },
+  {
+    "id": 2988,
+    "point_id": 2988,
+    "point_event_type": 1,
+    "player_id": 253
+  },
+  {
+    "id": 2989,
+    "point_id": 2989,
+    "point_event_type": 1,
+    "player_id": 57
+  },
+  {
+    "id": 2990,
+    "point_id": 2990,
+    "point_event_type": 1,
+    "player_id": 253
+  },
+  {
+    "id": 2991,
+    "point_id": 2991,
+    "point_event_type": 1,
+    "player_id": 153
+  },
+  {
+    "id": 2992,
+    "point_id": 2992,
+    "point_event_type": 1,
+    "player_id": 256
+  },
+  {
+    "id": 2993,
+    "point_id": 2993,
+    "point_event_type": 1,
+    "player_id": 253
+  },
+  {
+    "id": 2994,
+    "point_id": 2994,
+    "point_event_type": 1,
+    "player_id": 253
+  },
+  {
+    "id": 2995,
+    "point_id": 2995,
+    "point_event_type": 1,
+    "player_id": 253
+  },
+  {
+    "id": 2996,
+    "point_id": 2996,
+    "point_event_type": 1,
+    "player_id": 253
+  },
+  {
+    "id": 2997,
+    "point_id": 2997,
+    "point_event_type": 1,
+    "player_id": 183
+  },
+  {
+    "id": 2998,
+    "point_id": 2998,
+    "point_event_type": 1,
+    "player_id": 267
+  },
+  {
+    "id": 2999,
+    "point_id": 2999,
+    "point_event_type": 1,
+    "player_id": 3
+  },
+  {
+    "id": 3000,
+    "point_id": 3000,
+    "point_event_type": 1,
+    "player_id": 100
+  },
+  {
+    "id": 3001,
+    "point_id": 3001,
+    "point_event_type": 1,
+    "player_id": 214
+  },
+  {
+    "id": 3002,
+    "point_id": 3002,
+    "point_event_type": 1,
+    "player_id": 25
+  },
+  {
+    "id": 3003,
+    "point_id": 3003,
+    "point_event_type": 1,
+    "player_id": 155
+  },
+  {
+    "id": 3004,
+    "point_id": 3004,
+    "point_event_type": 1,
+    "player_id": 25
+  },
+  {
+    "id": 3005,
+    "point_id": 3005,
+    "point_event_type": 1,
+    "player_id": 3
+  },
+  {
+    "id": 3006,
+    "point_id": 3006,
+    "point_event_type": 1,
+    "player_id": 182
+  },
+  {
+    "id": 3007,
+    "point_id": 3007,
+    "point_event_type": 1,
+    "player_id": 261
+  },
+  {
+    "id": 3008,
+    "point_id": 3008,
+    "point_event_type": 1,
+    "player_id": 3
+  },
+  {
+    "id": 3009,
+    "point_id": 3009,
+    "point_event_type": 1,
+    "player_id": 257
+  },
+  {
+    "id": 3010,
+    "point_id": 3010,
+    "point_event_type": 1,
+    "player_id": 183
+  },
+  {
+    "id": 3011,
+    "point_id": 3011,
+    "point_event_type": 1,
+    "player_id": 257
+  },
+  {
+    "id": 3012,
+    "point_id": 3012,
+    "point_event_type": 1,
+    "player_id": 57
+  },
+  {
+    "id": 3013,
+    "point_id": 3013,
+    "point_event_type": 1,
+    "player_id": 29
+  },
+  {
+    "id": 3014,
+    "point_id": 3014,
+    "point_event_type": 1,
+    "player_id": 14
+  },
+  {
+    "id": 3015,
+    "point_id": 3015,
+    "point_event_type": 1,
+    "player_id": 183
+  },
+  {
+    "id": 3016,
+    "point_id": 3016,
+    "point_event_type": 1,
+    "player_id": 204
+  },
+  {
+    "id": 3017,
+    "point_id": 3017,
+    "point_event_type": 1,
+    "player_id": 183
+  },
+  {
+    "id": 3018,
+    "point_id": 3018,
+    "point_event_type": 1,
+    "player_id": 14
+  },
+  {
+    "id": 3019,
+    "point_id": 3019,
+    "point_event_type": 1,
+    "player_id": 132
+  },
+  {
+    "id": 3020,
+    "point_id": 3020,
+    "point_event_type": 1,
+    "player_id": 236
+  },
+  {
+    "id": 3021,
+    "point_id": 3021,
+    "point_event_type": 1,
+    "player_id": 153
+  },
+  {
+    "id": 3022,
+    "point_id": 3022,
+    "point_event_type": 1,
+    "player_id": 132
+  },
+  {
+    "id": 3023,
+    "point_id": 3023,
+    "point_event_type": 1,
+    "player_id": 236
+  },
+  {
+    "id": 3024,
+    "point_id": 3024,
+    "point_event_type": 1,
+    "player_id": 42
+  },
+  {
+    "id": 3025,
+    "point_id": 3025,
+    "point_event_type": 1,
+    "player_id": 236
+  },
+  {
+    "id": 3026,
+    "point_id": 3026,
+    "point_event_type": 1,
+    "player_id": 4
+  },
+  {
+    "id": 3027,
+    "point_id": 3027,
+    "point_event_type": 1,
+    "player_id": 4
+  },
+  {
+    "id": 3028,
+    "point_id": 3028,
+    "point_event_type": 1,
+    "player_id": 132
+  },
+  {
+    "id": 3029,
+    "point_id": 3029,
+    "point_event_type": 1,
+    "player_id": 236
+  },
+  {
+    "id": 3030,
+    "point_id": 3030,
+    "point_event_type": 1,
+    "player_id": 132
+  },
+  {
+    "id": 3031,
+    "point_id": 3031,
+    "point_event_type": 1,
+    "player_id": 236
+  },
+  {
+    "id": 3032,
+    "point_id": 3032,
+    "point_event_type": 1,
+    "player_id": 256
+  },
+  {
+    "id": 3033,
+    "point_id": 3033,
+    "point_event_type": 1,
+    "player_id": 68
+  },
+  {
+    "id": 3034,
+    "point_id": 3034,
+    "point_event_type": 1,
+    "player_id": 154
+  },
+  {
+    "id": 3035,
+    "point_id": 3035,
+    "point_event_type": 1,
+    "player_id": 3
+  },
+  {
+    "id": 3036,
+    "point_id": 3036,
+    "point_event_type": 1,
+    "player_id": 25
+  },
+  {
+    "id": 3037,
+    "point_id": 3037,
+    "point_event_type": 1,
+    "player_id": 216
+  },
+  {
+    "id": 3038,
+    "point_id": 3038,
+    "point_event_type": 1,
+    "player_id": 216
+  },
+  {
+    "id": 3039,
+    "point_id": 3039,
+    "point_event_type": 1,
+    "player_id": 3
+  },
+  {
+    "id": 3040,
+    "point_id": 3040,
+    "point_event_type": 1,
+    "player_id": 3
+  },
+  {
+    "id": 3041,
+    "point_id": 3041,
+    "point_event_type": 1,
+    "player_id": 216
+  },
+  {
+    "id": 3042,
+    "point_id": 3042,
+    "point_event_type": 1,
+    "player_id": 16
+  },
+  {
+    "id": 3043,
+    "point_id": 3043,
+    "point_event_type": 1,
+    "player_id": 155
+  },
+  {
+    "id": 3044,
+    "point_id": 3044,
+    "point_event_type": 1,
+    "player_id": 3
+  },
+  {
+    "id": 3045,
+    "point_id": 3045,
+    "point_event_type": 1,
+    "player_id": 3
+  },
+  {
+    "id": 3046,
+    "point_id": 3046,
+    "point_event_type": 1,
+    "player_id": 261
+  },
+  {
+    "id": 3047,
+    "point_id": 3047,
+    "point_event_type": 1,
+    "player_id": 236
+  },
+  {
+    "id": 3048,
+    "point_id": 3048,
+    "point_event_type": 1,
+    "player_id": 42
+  },
+  {
+    "id": 3049,
+    "point_id": 3049,
+    "point_event_type": 1,
+    "player_id": 42
+  },
+  {
+    "id": 3050,
+    "point_id": 3050,
+    "point_event_type": 1,
+    "player_id": 267
+  },
+  {
+    "id": 3051,
+    "point_id": 3051,
+    "point_event_type": 1,
+    "player_id": 207
+  },
+  {
+    "id": 3052,
+    "point_id": 3052,
+    "point_event_type": 1,
+    "player_id": 4
+  },
+  {
+    "id": 3053,
+    "point_id": 3053,
+    "point_event_type": 1,
+    "player_id": 182
+  },
+  {
+    "id": 3054,
+    "point_id": 3054,
+    "point_event_type": 1,
+    "player_id": 207
+  },
+  {
+    "id": 3055,
+    "point_id": 3055,
+    "point_event_type": 1,
+    "player_id": 4
+  },
+  {
+    "id": 3056,
+    "point_id": 3056,
+    "point_event_type": 1,
+    "player_id": 267
+  },
+  {
+    "id": 3057,
+    "point_id": 3057,
+    "point_event_type": 1,
+    "player_id": 267
+  },
+  {
+    "id": 3058,
+    "point_id": 3058,
+    "point_event_type": 1,
+    "player_id": 182
+  },
+  {
+    "id": 3059,
+    "point_id": 3059,
+    "point_event_type": 1,
+    "player_id": 267
+  },
+  {
+    "id": 3060,
+    "point_id": 3060,
+    "point_event_type": 1,
+    "player_id": 57
+  },
+  {
+    "id": 3061,
+    "point_id": 3061,
+    "point_event_type": 1,
+    "player_id": 267
+  },
+  {
+    "id": 3062,
+    "point_id": 3062,
+    "point_event_type": 1,
+    "player_id": 267
+  },
+  {
+    "id": 3063,
+    "point_id": 3063,
+    "point_event_type": 1,
+    "player_id": 183
+  },
+  {
+    "id": 3064,
+    "point_id": 3064,
+    "point_event_type": 1,
+    "player_id": 182
+  },
+  {
+    "id": 3065,
+    "point_id": 3065,
+    "point_event_type": 1,
+    "player_id": 267
+  },
+  {
+    "id": 3066,
+    "point_id": 3066,
+    "point_event_type": 1,
+    "player_id": 182
+  },
+  {
+    "id": 3067,
+    "point_id": 3067,
+    "point_event_type": 1,
+    "player_id": 57
+  },
+  {
+    "id": 3068,
+    "point_id": 3068,
+    "point_event_type": 1,
+    "player_id": 109
+  },
+  {
+    "id": 3069,
+    "point_id": 3069,
+    "point_event_type": 1,
+    "player_id": 261
+  },
+  {
+    "id": 3070,
+    "point_id": 3070,
+    "point_event_type": 1,
+    "player_id": 109
+  },
+  {
+    "id": 3071,
+    "point_id": 3071,
+    "point_event_type": 1,
+    "player_id": 235
+  },
+  {
+    "id": 3072,
+    "point_id": 3072,
+    "point_event_type": 1,
+    "player_id": 267
+  },
+  {
+    "id": 3073,
+    "point_id": 3073,
+    "point_event_type": 1,
+    "player_id": 100
+  },
+  {
+    "id": 3074,
+    "point_id": 3074,
+    "point_event_type": 1,
+    "player_id": 204
+  },
+  {
+    "id": 3075,
+    "point_id": 3075,
+    "point_event_type": 1,
+    "player_id": 95
+  },
+  {
+    "id": 3076,
+    "point_id": 3076,
+    "point_event_type": 1,
+    "player_id": 16
+  },
+  {
+    "id": 3077,
+    "point_id": 3077,
+    "point_event_type": 1,
+    "player_id": 16
+  },
+  {
+    "id": 3078,
+    "point_id": 3078,
+    "point_event_type": 1,
+    "player_id": 16
+  },
+  {
+    "id": 3079,
+    "point_id": 3079,
+    "point_event_type": 1,
+    "player_id": 188
+  },
+  {
+    "id": 3080,
+    "point_id": 3080,
+    "point_event_type": 1,
+    "player_id": 204
+  },
+  {
+    "id": 3081,
+    "point_id": 3081,
+    "point_event_type": 1,
+    "player_id": 31
+  },
+  {
+    "id": 3082,
+    "point_id": 3082,
+    "point_event_type": 1,
+    "player_id": 16
+  },
+  {
+    "id": 3083,
+    "point_id": 3083,
+    "point_event_type": 1,
+    "player_id": 118
+  },
+  {
+    "id": 3084,
+    "point_id": 3084,
+    "point_event_type": 1,
+    "player_id": 213
+  },
+  {
+    "id": 3085,
+    "point_id": 3085,
+    "point_event_type": 1,
+    "player_id": 153
+  },
+  {
+    "id": 3086,
+    "point_id": 3086,
+    "point_event_type": 1,
+    "player_id": 257
+  },
+  {
+    "id": 3087,
+    "point_id": 3087,
+    "point_event_type": 1,
+    "player_id": 153
+  },
+  {
+    "id": 3088,
+    "point_id": 3088,
+    "point_event_type": 1,
+    "player_id": 257
+  },
+  {
+    "id": 3089,
+    "point_id": 3089,
+    "point_event_type": 1,
+    "player_id": 227
+  },
+  {
+    "id": 3090,
+    "point_id": 3090,
+    "point_event_type": 1,
+    "player_id": 204
+  },
+  {
+    "id": 3091,
+    "point_id": 3091,
+    "point_event_type": 1,
+    "player_id": 219
+  },
+  {
+    "id": 3092,
+    "point_id": 3092,
+    "point_event_type": 1,
+    "player_id": 132
+  },
+  {
+    "id": 3093,
+    "point_id": 3093,
+    "point_event_type": 1,
+    "player_id": 153
+  },
+  {
+    "id": 3094,
+    "point_id": 3094,
+    "point_event_type": 1,
+    "player_id": 219
+  },
+  {
+    "id": 3095,
+    "point_id": 3095,
+    "point_event_type": 1,
+    "player_id": 95
+  },
+  {
+    "id": 3096,
+    "point_id": 3096,
+    "point_event_type": 1,
+    "player_id": 204
+  },
+  {
+    "id": 3097,
+    "point_id": 3097,
+    "point_event_type": 1,
+    "player_id": 153
+  },
+  {
+    "id": 3098,
+    "point_id": 3098,
+    "point_event_type": 1,
+    "player_id": 204
+  },
+  {
+    "id": 3099,
+    "point_id": 3099,
+    "point_event_type": 1,
+    "player_id": 95
+  },
+  {
+    "id": 3100,
+    "point_id": 3100,
+    "point_event_type": 1,
+    "player_id": 219
+  },
+  {
+    "id": 3101,
+    "point_id": 3101,
+    "point_event_type": 1,
+    "player_id": 257
+  },
+  {
+    "id": 3102,
+    "point_id": 3102,
+    "point_event_type": 1,
+    "player_id": 216
+  },
+  {
+    "id": 3103,
+    "point_id": 3103,
+    "point_event_type": 1,
+    "player_id": 3
+  },
+  {
+    "id": 3104,
+    "point_id": 3104,
+    "point_event_type": 1,
+    "player_id": 216
+  },
+  {
+    "id": 3105,
+    "point_id": 3105,
+    "point_event_type": 1,
+    "player_id": 124
+  },
+  {
+    "id": 3106,
+    "point_id": 3106,
+    "point_event_type": 1,
+    "player_id": 42
+  },
+  {
+    "id": 3107,
+    "point_id": 3107,
+    "point_event_type": 1,
+    "player_id": 25
+  },
+  {
+    "id": 3108,
+    "point_id": 3108,
+    "point_event_type": 1,
+    "player_id": 25
+  },
+  {
+    "id": 3109,
+    "point_id": 3109,
+    "point_event_type": 1,
+    "player_id": 155
+  },
+  {
+    "id": 3110,
+    "point_id": 3110,
+    "point_event_type": 1,
+    "player_id": 68
+  },
+  {
+    "id": 3111,
+    "point_id": 3111,
+    "point_event_type": 1,
+    "player_id": 25
+  },
+  {
+    "id": 3112,
+    "point_id": 3112,
+    "point_event_type": 1,
+    "player_id": 3
+  },
+  {
+    "id": 3113,
+    "point_id": 3113,
+    "point_event_type": 1,
+    "player_id": 124
+  },
+  {
+    "id": 3114,
+    "point_id": 3114,
+    "point_event_type": 1,
+    "player_id": 4
+  },
+  {
+    "id": 3115,
+    "point_id": 3115,
+    "point_event_type": 1,
+    "player_id": 4
   }
 ]
