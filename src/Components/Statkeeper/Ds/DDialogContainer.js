@@ -55,18 +55,28 @@ export default function DDialogContainer(props) {
   };
 
   const handleConfirm = () => {
+    // Firestore.firestore()
+    //   .collection("Ds")
+    //   .add({
+    //     Season: "Fall 2019",
+    //     GameNO: gameData.GameNO,
+    //     DNo: nextDNO,
+    //     TeamID: teamID,
+    //     D: playerID,
+    //     Time: Firestore.firestore.FieldValue.serverTimestamp()
+    //   });
+    // Firestore.firestore()
+    //   .collection("DDisplay")
+    //   .add({
+    //     Season: "Fall 2019",
+    //     GameNO: gameData.GameNO,
+    //     DNo: nextDNO,
+    //     TeamID: dTeam, //to do
+    //     D: d, //to do
+    //     Time: Firestore.firestore.FieldValue.serverTimestamp()
+    //   });
     Firestore.firestore()
-      .collection("Ds")
-      .add({
-        Season: "Fall 2019",
-        GameNO: gameData.GameNO,
-        DNo: nextDNO,
-        TeamID: teamID,
-        D: playerID,
-        Time: Firestore.firestore.FieldValue.serverTimestamp()
-      });
-    Firestore.firestore()
-      .collection("DDisplay")
+      .collection("PlayoffDs")
       .add({
         Season: "Fall 2019",
         GameNO: gameData.GameNO,
@@ -132,7 +142,13 @@ export default function DDialogContainer(props) {
           }}
         >
           <DialogActions>
-            <Button fullWidth onClick={handleConfirm}>
+            <Button
+              fullWidth
+              onClick={handleConfirm}
+              variant="contained"
+              color="secondary"
+              style={{ height: "80px" }}
+            >
               Confirm
             </Button>
           </DialogActions>

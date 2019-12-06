@@ -1,6 +1,8 @@
 import React from "react";
 import Firestore from "../Utils/Firebase";
 import Router from "../Components/Router";
+import PlayoffSched from "./PlayoffsSched.json";
+import PlayoffContainer from "../Components/Statkeeper/PlayoffContainer";
 //import "./OfflineData/players.json";
 //import "./OfflineData/schedule.json";
 
@@ -8,44 +10,40 @@ import Router from "../Components/Router";
 //const schedule = require("./OfflineData/schedule.json");
 
 export default function StateStore() {
-  const [scheduleData, setSchedule] = React.useState([]);
+  const [scheduleData, setSchedule] = React.useState(PlayoffSched);
   const [playerData, setPlayers] = React.useState([]);
   const [gameData, setGameData] = React.useState({});
 
-  const handleGameChoice = (homeTeam, awayTeam, GameNO) => {
+  const handleGameChoice = (homeTeam, awayTeam, GameNO, title, id) => {
     const homeRoster = playerData.filter(player => player.Team === homeTeam);
     const awayRoster = playerData.filter(player => player.Team === awayTeam);
     setGameData({
+      title: title,
       homeTeam: homeTeam,
 
       homeRoster: homeRoster,
       awayTeam: awayTeam,
 
       awayRoster: awayRoster,
-      GameNO: GameNO
+      GameNO: GameNO,
+      id: id
     });
   };
-
+  //switched for playoffs
   React.useEffect(() => {
     const unsubscribe =
-      // setSchedule(schedule);
-      // setPlayers(players);
+      //Firestore.firestore()
+      //     .collection("Schedule")
+      //     .onSnapshot(snapshot => {
+      //       const games = snapshot.docs.map(doc => ({
+      //         id: doc.id,
+      //         ...doc.data()
+      //       }));
+      //       setSchedule(games);
+      //     });
 
-      //  //change placeholder to newdata
-      //  placeholder.map(x=>
-      // Firestore
-      //   .firestore()
-      //   .collection("placeholder")
-      //   .add(x).then(function() {
-      //     console.log("Document successfully written!");
-      // })
-      // .catch(function(error) {
-      //     console.error("Error writing document: ", error);
-      // }))
-
-      //place to take data when it goes live
       Firestore.firestore()
-        .collection("Schedule")
+        .collection("PlayoffSched")
         .onSnapshot(snapshot => {
           const games = snapshot.docs.map(doc => ({
             id: doc.id,
@@ -74,7 +72,7 @@ export default function StateStore() {
       });
 
     return () => unsubscribe;
-  }, []);
+  }, [gameData]);
   return (
     <Router
       scheduleData={scheduleData}

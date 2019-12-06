@@ -143,7 +143,6 @@ export default function Games(props) {
                 </Grid>
               ))}
           </Grid>
-          {console.log()}
           <Grid container item xs={6}>
             {exampleWeek1Sched
               .filter(game => game.Field === 2)

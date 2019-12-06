@@ -64,12 +64,12 @@ export default function GoalDialogContainer(props) {
     // });
     console.log(gameData);
     Firestore.firestore()
-      .collection("Goals")
+      .collection("PlayoffGoals")
       .doc(id)
       .update({
         TeamID: team, //to do
         Assist: assist, //to do
-        Goal: goal, //to do
+        Goal: goal //to do
       });
     onClose();
     setValue(0);

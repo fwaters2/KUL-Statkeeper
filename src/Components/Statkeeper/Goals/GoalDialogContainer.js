@@ -58,19 +58,33 @@ export default function GoalDialogContainer(props) {
     setTeam(team === "home" ? gameData.homeTeam : gameData.awayTeam);
   };
   const handleConfirm = () => {
+    // Firestore.firestore()
+    //   .collection("Points")
+    //   .add({
+    //     Season: "Fall 2019",
+    //     GameNO: gameData.GameNO,
+    //     GoalNo: nextGoalNO,
+    //     TeamID: teamID,
+    //     Assist: assistID,
+    //     Goal: goalID,
+    //     Time: Firestore.firestore.FieldValue.serverTimestamp()
+    //   });
+    // Firestore.firestore()
+    //   .collection("Goals")
+    //   .add({
+    //     Season: "Fall 2019",
+    //     GameNO: gameData.GameNO,
+    //     GoalNo: nextGoalNO,
+    //     TeamActualID: teamID, //to do
+    //     TeamID: team,
+    //     Assist: assist, //to do
+    //     AssistID: assistID,
+    //     Goal: goal, //to do
+    //     GoalID: goalID,
+    //     Time: Firestore.firestore.FieldValue.serverTimestamp()
+    //   });
     Firestore.firestore()
-      .collection("Points")
-      .add({
-        Season: "Fall 2019",
-        GameNO: gameData.GameNO,
-        GoalNo: nextGoalNO,
-        TeamID: teamID,
-        Assist: assistID,
-        Goal: goalID,
-        Time: Firestore.firestore.FieldValue.serverTimestamp()
-      });
-    Firestore.firestore()
-      .collection("Goals")
+      .collection("PlayoffGoals")
       .add({
         Season: "Fall 2019",
         GameNO: gameData.GameNO,

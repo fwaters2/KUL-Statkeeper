@@ -23,11 +23,13 @@ export default function DoubleRoster(props) {
   const handleAssist = player => () => {
     setAssist(player.Name);
     setAssistID(player.PlayerID);
+    console.log(player);
   };
   const handleGoal = player => () => {
     setGoal(player.Name);
     setGoalID(player.PlayerID);
     setTeamID(player.TeamID);
+    console.log(player);
   };
   const handleCallahan = () => {
     setAssist("Callahan");

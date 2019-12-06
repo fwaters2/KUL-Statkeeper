@@ -55,11 +55,11 @@ export default function DDialogContainer(props) {
   };
   const handleConfirm = () => {
     Firestore.firestore()
-      .collection("Ds")
+      .collection("PlayoffDs")
       .doc(id)
       .update({
         TeamID: team, //to do
-        D: d, //to do
+        D: d //to do
       });
     onClose();
     setValue(0);
@@ -87,12 +87,7 @@ export default function DDialogContainer(props) {
         </ButtonGroup>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <SingleRoster
-          setD={setD}
-          d={d}
-          roster={roster}
-          setValue={setValue}
-        />
+        <SingleRoster setD={setD} d={d} roster={roster} setValue={setValue} />
       </TabPanel>
       {d !== "" ? (
         <AppBar
