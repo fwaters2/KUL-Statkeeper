@@ -25,13 +25,13 @@ export default function DColumn(props) {
 
   const handleDelete = id => () => {
     Firestore.firestore()
-      .collection("DDisplay")
+      .collection("PlayoffDs")
       .doc(id)
       .delete();
-    Firestore.firestore()
-      .collection("Ds")
-      .doc(id)
-      .delete();
+    // Firestore.firestore()
+    //   .collection("Ds")
+    //   .doc(id)
+    //   .delete();
   };
 
   // const homeTeamColors = teamColors.find(

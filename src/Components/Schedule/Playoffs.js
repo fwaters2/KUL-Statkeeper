@@ -101,7 +101,7 @@ export default function Playoffs(props) {
             {exampleWeek1Sched
               .filter(game => game.title === "KUL Championship")
               .map(game => (
-                <Grid item key={game.GameNo} xs={12} style={{ margin: "10px" }}>
+                <Grid item key={game.title} xs={12} style={{ margin: "10px" }}>
                   <Button
                     fullWidth
                     onClick={handleClick(game)}

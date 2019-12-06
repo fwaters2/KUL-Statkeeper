@@ -202,6 +202,16 @@ export default function GameContainer(props) {
             </Paper>
           </Grid>
         </Grid>
+
+        <Button
+          variant="contained"
+          color="secondary"
+          fullWidth
+          onClick={() => setPage("Schedule")}
+          style={{ marginBottom: "90px", marginTop: "5px" }}
+        >
+          Back
+        </Button>
         <Fab
           variant="extended"
           style={{
@@ -217,16 +227,6 @@ export default function GameContainer(props) {
           <Add fontSize="large" />
           <Typography>GOAL</Typography>
         </Fab>
-
-        <Button
-          variant="contained"
-          color="secondary"
-          fullWidth
-          onClick={() => setPage("Schedule")}
-          style={{ marginBottom: "90px", marginTop: "5px" }}
-        >
-          Back
-        </Button>
         <Fab
           variant="extended"
           style={{

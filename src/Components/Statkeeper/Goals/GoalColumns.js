@@ -22,7 +22,7 @@ export default function GoalColumns(props) {
   const [currentGoal, setCurrentGoal] = React.useState(0);
   const handleDelete = id => () => {
     Firestore.firestore()
-      .collection("Goals")
+      .collection("PlayoffGoals")
       .doc(id)
       .delete();
   };

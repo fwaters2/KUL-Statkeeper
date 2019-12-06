@@ -35,8 +35,8 @@ export default function PlayoffContainer(props) {
   const [awayScore, setAwayScore] = React.useState(
     goals.filter(goal => goal.team === gameData.awayTeam).length
   );
-  const realHomeTeam = gameData.homeTeam ? gameData.homeTeam : newHomeTeam;
-  const realAwayTeam = gameData.awayTeam ? gameData.awayTeam : newAwayTeam;
+  //const realHomeTeam = gameData.homeTeam ? gameData.homeTeam : newHomeTeam;
+  //const realAwayTeam = gameData.awayTeam ? gameData.awayTeam : newAwayTeam;
   const handleGoalOpen = () => {
     setOpenGoal(true);
   };
@@ -46,17 +46,18 @@ export default function PlayoffContainer(props) {
   const addD = newD => {
     setDs([...ds, newD]);
   };
-  const handleTeamUpdate = () => {};
+  //const handleTeamUpdate = () => {};
   const PlayoffHomeSelect = e => {
     return (
       <Select
         value={newHomeTeam}
-        onChange={e =>
+        onChange={e => {
           Firestore.firestore()
             .collection("PlayoffSched")
             .doc(gameData.id)
-            .update({ HomeTeam: e.target.value })
-        }
+            .update({ HomeTeam: e.target.value });
+          setPage("Schedule");
+        }}
         autoWidth
         style={{ background: "lightGray", minWidth: "150px" }}
       >
@@ -77,12 +78,13 @@ export default function PlayoffContainer(props) {
     return (
       <Select
         value={newAwayTeam}
-        onChange={e =>
+        onChange={e => {
           Firestore.firestore()
             .collection("PlayoffSched")
             .doc(gameData.id)
-            .update({ AwayTeam: e.target.value })
-        }
+            .update({ AwayTeam: e.target.value });
+          setPage("Schedule");
+        }}
         autoWidth
         style={{ background: "lightGray", minWidth: "150px" }}
       >
@@ -217,6 +219,16 @@ export default function PlayoffContainer(props) {
             </Paper>
           </Grid>
         </Grid>
+
+        <Button
+          variant="contained"
+          color="secondary"
+          fullWidth
+          onClick={() => setPage("Schedule")}
+          style={{ marginBottom: "90px", marginTop: "5px" }}
+        >
+          Back
+        </Button>
         <Fab
           variant="extended"
           style={{
@@ -232,16 +244,6 @@ export default function PlayoffContainer(props) {
           <Add fontSize="large" />
           <Typography>GOAL</Typography>
         </Fab>
-
-        <Button
-          variant="contained"
-          color="secondary"
-          fullWidth
-          onClick={() => setPage("Schedule")}
-          style={{ marginBottom: "90px", marginTop: "5px" }}
-        >
-          Back
-        </Button>
         <Fab
           variant="extended"
           style={{
