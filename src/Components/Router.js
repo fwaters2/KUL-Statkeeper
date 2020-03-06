@@ -1,10 +1,8 @@
 import React from "react";
-import Games from "./Schedule/Games";
-import GameContainer from "./Statkeeper/GameContainer";
 import TableView from "./Backend/TableView";
 import DTableView from "./Backend/DTableView";
-import Playoffs from "./Schedule/Playoffs";
 import PlayoffContainer from "./Statkeeper/PlayoffContainer";
+import ScheduleContainer from "./Schedule/ScheduleContainer";
 
 export default function Router(props) {
   const { scheduleData, gameData, setGameData, handleGameChoice } = props;
@@ -13,7 +11,7 @@ export default function Router(props) {
     case "Schedule":
       return (
         //Switch back to 'Games' next season
-        <Playoffs
+        <ScheduleContainer
           scheduleData={scheduleData}
           setPage={setPage}
           gameData={gameData}
