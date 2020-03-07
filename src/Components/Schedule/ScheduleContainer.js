@@ -1,6 +1,6 @@
 import React from "react";
 import Playoffs from "./Playoffs";
-import { Paper, Grid, Box } from "@material-ui/core";
+import { Paper, Box } from "@material-ui/core";
 import UserSpeedDial from "../UserSpeedDial";
 import Title from "./Title";
 import ScheduleSubtitle from "./ScheduleSubtitle";
@@ -36,7 +36,7 @@ export default function ScheduleContainer(props) {
           currentWeek={{ week: "Week 2", date: "April 11th" }}
         />
         <Box mt="1em">
-          <SchedTable />
+          <SchedTable {...props} />
           {/* <Playoffs {...props} /> */}
         </Box>
       </Paper>

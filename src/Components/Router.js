@@ -3,6 +3,7 @@ import TableView from "./Backend/TableView";
 import DTableView from "./Backend/DTableView";
 import PlayoffContainer from "./Statkeeper/PlayoffContainer";
 import ScheduleContainer from "./Schedule/ScheduleContainer";
+import StatkeeperContainer from "./Statkeeper/StatKeeperContainer";
 
 export default function Router(props) {
   const { scheduleData, gameData, setGameData, handleGameChoice } = props;
@@ -20,7 +21,7 @@ export default function Router(props) {
         />
       );
     case "Game":
-      return <PlayoffContainer gameData={gameData} setPage={setPage} />;
+      return <StatkeeperContainer gameData={gameData} setPage={setPage} />;
     case "TableView":
       return <TableView setPage={setPage} />;
     case "DTableView":

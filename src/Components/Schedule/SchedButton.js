@@ -2,11 +2,22 @@ import React from "react";
 import { Button, Grid, Typography } from "@material-ui/core";
 
 export default function SchedButton(props) {
-  const { data } = props;
+  const { data, setPage, handleGameChoice } = props;
+
+  const handleClick = () => {
+    handleGameChoice(
+      data.homeTeamData.name,
+      data.awayTeamData.name,
+      12, //Game number
+      `home vs away`, //title?
+      data.id
+    );
+    setPage("Game");
+  };
   return (
     <Button
       fullWidth
-      //onClick={handleClick(game)}
+      onClick={handleClick}
       variant="contained"
       color="primary"
       style={{

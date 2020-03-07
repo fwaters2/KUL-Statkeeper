@@ -4,9 +4,8 @@ import SchedButton from "./SchedButton";
 import firebase2 from "../../Utils/Firebase2";
 import moment from "moment";
 
-export default function SchedTable() {
-  const [currentMatches, setCurrentMatches] = React.useState([]);
-  const [currentTeams, setCurrentTeams] = React.useState([]);
+export default function SchedTable(props) {
+  const { setPage, handleGameChoice } = props;
   const [currentDay, setCurrentDay] = React.useState(null);
   const [currentTimes, setCurrentTimes] = React.useState([]);
   const [data, setData] = React.useState([]);
@@ -21,7 +20,7 @@ export default function SchedTable() {
       .get()
       .then(querySnapshot => {
         querySnapshot.forEach(doc => {
-          matches = [...matches, doc.data()];
+          matches = [...matches, { id: doc.id, ...doc.data() }];
         });
         return matches;
       });
@@ -45,8 +44,21 @@ export default function SchedTable() {
     Promise.all([getMatches, getTeams])
       .then(values => {
         let betterMatchData = values[0].map(game => ({
+          id: game.id,
           day: moment(game.datetime.toDate()).format("MMMM Do YYYY"),
           time: moment(game.datetime.toDate()).format("LT"),
+          homeTeamData: {
+            id: game.team_home,
+            name: values[1][game.team_home].team,
+            colorPrimary: values[1][game.team_home].colorPrimary,
+            colorSecondary: values[1][game.team_home].colorSecondary
+          },
+          awayTeamData: {
+            id: game.team_away,
+            name: values[1][game.team_away].team,
+            colorPrimary: values[1][game.team_away].colorPrimary,
+            colorSecondary: values[1][game.team_away].colorSecondary
+          },
           teamHome: values[1][game.team_home].team,
           teamAway: values[1][game.team_away].team,
           homeColorPrimary: values[1][game.team_home].colorPrimary,
@@ -84,7 +96,14 @@ export default function SchedTable() {
                   .filter(x => x.day === currentDay && x.time === time)
                   .map(match => (
                     <TableCell style={{ width: "50%" }}>
-                      <SchedButton data={match} />
+                      {/*match data includs
+                      id, day, time, teamhome, teamaway, colors
+                      */}
+                      <SchedButton
+                        data={match}
+                        setPage={setPage}
+                        handleGameChoice={handleGameChoice}
+                      />
                     </TableCell>
                   ))}
               </TableRow>
