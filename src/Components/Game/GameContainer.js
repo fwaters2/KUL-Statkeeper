@@ -1,29 +1,38 @@
 import React from "react";
-import {
-  Button,
-  Grid,
-  Typography,
-  Fab,
-  Paper,
-  Container
-} from "@material-ui/core";
+import { Button, Grid, Paper, Container } from "@material-ui/core";
 import DColumn from "./Ds/DColumn";
 import GoalColumns from "./Goals/GoalColumns";
-import { Add } from "@material-ui/icons";
 import DDialogContainer from "./Ds/DDialogContainer";
-import GoalDialogContainer from "./Goals/GoalDialogContainer";
-import Scoreboard from "../Scoreboard/Scoreboard";
+import GoalDialogContainer from "./Goals/Index";
+import Scoreboard from "./Scoreboard/Index.js";
 import "../../Teams.json";
-import Firestore from "../../Utils/Firebase";
 import UserSpeedDial from "../UserSpeedDial";
+import GameContext from "../../Assets/GameContext";
 
 const teamColors = require("../../Teams.json");
 
 export default function StatkeeperContainer(props) {
+  const gameData = React.useContext(GameContext);
   const { setPage } = props;
-  const [gameData, setGameData] = React.useState(props.gameData);
-  const [ds, setDs] = React.useState([]);
-  const [goals, setGoals] = React.useState([]);
+  //const [gameData, setGameData] = React.useState(props.gameData);
+  const [ds, setDs] = React.useState([
+    {
+      DNo: 7,
+      GameNO: 9,
+      Player: 47,
+      Season: "Spring 2019"
+    }
+  ]);
+  const [goals, setGoals] = React.useState([
+    {
+      Assist: "John Kearle",
+      GameNO: 2,
+      Goal: "Suzy",
+      GoalNo: 1,
+      Season: "Fall 2019",
+      TeamId: "DiscLex3ia"
+    }
+  ]);
   const [openGoal, setOpenGoal] = React.useState(false);
   const [openD, setOpenD] = React.useState(false);
 
@@ -43,24 +52,6 @@ export default function StatkeeperContainer(props) {
     setDs([...ds, newD]);
   };
 
-  const title = () => {
-    return (
-      <React.Fragment>
-        <Typography align="center" variant="h5">
-          {gameData.title}
-        </Typography>
-        <Typography align="center" variant="h4">
-          {gameData.homeTeam}
-        </Typography>
-        <Typography align="center" variant="h6">
-          vs
-        </Typography>
-        <Typography align="center" variant="h4">
-          {gameData.awayTeam}
-        </Typography>
-      </React.Fragment>
-    );
-  };
   const updateScoreboard = () => {
     setHomeScore(
       goals.filter(goal => goal.TeamID === gameData.homeTeam).length
@@ -76,40 +67,40 @@ export default function StatkeeperContainer(props) {
     setOpenD(false);
   };
 
-  React.useEffect(() => {
-    const unsubscribe = Firestore.firestore()
-      .collection("PlayoffGoals")
-      .where("GameNO", "==", gameData.GameNO)
-      .onSnapshot(snapshot => {
-        const goals = snapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
-        }));
-        setGoals(goals.sort((a, b) => a.GoalNo - b.GoalNo));
-        setHomeScore(
-          goals.filter(goal => goal.TeamID === gameData.homeTeam).length
-        );
-        setAwayScore(
-          goals.filter(goal => goal.TeamID === gameData.awayTeam).length
-        );
-      });
+  // React.useEffect(() => {
+  //   const unsubscribe = Firestore.firestore()
+  //     .collection("PlayoffGoals")
+  //     .where("GameNO", "==", gameData.GameNO)
+  //     .onSnapshot(snapshot => {
+  //       const goals = snapshot.docs.map(doc => ({
+  //         id: doc.id,
+  //         ...doc.data()
+  //       }));
+  //       setGoals(goals.sort((a, b) => a.GoalNo - b.GoalNo));
+  //       setHomeScore(
+  //         goals.filter(goal => goal.TeamID === gameData.homeTeam).length
+  //       );
+  //       setAwayScore(
+  //         goals.filter(goal => goal.TeamID === gameData.awayTeam).length
+  //       );
+  //     });
 
-    return () => unsubscribe;
-  }, []);
-  React.useEffect(() => {
-    const unsubscribe = Firestore.firestore()
-      .collection("PlayoffDs")
-      .where("GameNO", "==", gameData.GameNO)
-      .onSnapshot(snapshot => {
-        const ds = snapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
-        }));
-        setDs(ds.sort((a, b) => a.DNO - b.DNO));
-      });
+  //   return () => unsubscribe;
+  // }, []);
+  // React.useEffect(() => {
+  //   const unsubscribe = Firestore.firestore()
+  //     .collection("PlayoffDs")
+  //     .where("GameNO", "==", gameData.GameNO)
+  //     .onSnapshot(snapshot => {
+  //       const ds = snapshot.docs.map(doc => ({
+  //         id: doc.id,
+  //         ...doc.data()
+  //       }));
+  //       setDs(ds.sort((a, b) => a.DNO - b.DNO));
+  //     });
 
-    return () => unsubscribe;
-  }, []);
+  //   return () => unsubscribe;
+  // }, []);
 
   return (
     <div
@@ -129,32 +120,28 @@ export default function StatkeeperContainer(props) {
         }}
       >
         <Scoreboard
-          title={title}
           stuff={{
             homeScore: homeScore,
             awayScore: awayScore,
             time: "12:34",
-            half: "2",
-            AwayTeam: gameData.awayTeam,
-            HomeTeam: gameData.homeTeam
+            half: "2"
           }}
         />
         <Grid style={{ flex: 1 }} container spacing={2}>
           <Grid item xs={8}>
             <Paper style={{ height: "100%", overflow: "auto" }}>
-              <GoalColumns
+              {/* <GoalColumns
                 stats={goals}
                 teamColors={teamColors}
                 gameData={gameData}
-              />
+              /> */}
             </Paper>
           </Grid>
           <Grid item xs={4}>
             <Paper style={{ height: "100%", overflow: "auto" }}>
               <DColumn
-                addD={addD}
+                //addD={addD}
                 stats={ds}
-                teamColors={teamColors}
                 gameData={gameData}
               />
             </Paper>
@@ -162,7 +149,6 @@ export default function StatkeeperContainer(props) {
         </Grid>
 
         <Button
-          variant="outlined"
           color="secondary"
           onClick={() => setPage("Schedule")}
           style={{ marginBottom: "90px", marginTop: "5px" }}
@@ -175,7 +161,7 @@ export default function StatkeeperContainer(props) {
             { title: "D", action: handleDOpen }
           ]}
         />
-        <DDialogContainer
+        {/* <DDialogContainer
           nextDNO={ds.length + 1}
           gameData={gameData}
           open={openD}
@@ -195,7 +181,7 @@ export default function StatkeeperContainer(props) {
           homeTeam={gameData.homeTeam}
           awayTeam={gameData.awayTeam}
           updateScoreboard={updateScoreboard}
-        />
+        /> */}
       </Container>
     </div>
   );

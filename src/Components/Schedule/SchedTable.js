@@ -77,7 +77,7 @@ export default function SchedTable(props) {
         ).sort();
         setCurrentTimes(uniqueTimes);
 
-        console.log("uniqueTimes", uniqueTimes);
+        //console.log("uniqueTimes", uniqueTimes);
         setData(betterMatchData);
         toggleLoading(false);
       })
@@ -91,11 +91,11 @@ export default function SchedTable(props) {
           ? null
           : currentTimes.map(time => (
               <TableRow>
-                <TableCell>{time}</TableCell>
+                <TableCell style={{ borderBottom: "none" }}>{time}</TableCell>
                 {data
                   .filter(x => x.day === currentDay && x.time === time)
                   .map(match => (
-                    <TableCell style={{ width: "50%" }}>
+                    <TableCell style={{ width: "50%", borderBottom: "none" }}>
                       {/*match data includs
                       id, day, time, teamhome, teamaway, colors
                       */}

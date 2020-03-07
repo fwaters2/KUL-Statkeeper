@@ -2,7 +2,7 @@ import React from "react";
 import { AppBar, Toolbar, Grid, Typography } from "@material-ui/core";
 
 export default function ScheduleSubtitle(props) {
-  const { currentSeason, currentWeek } = props;
+  const { currentWeek } = props;
   return (
     <AppBar
       position="static"
