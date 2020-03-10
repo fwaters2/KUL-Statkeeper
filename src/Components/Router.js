@@ -1,31 +1,23 @@
 import React from "react";
 import TableView from "./Backend/TableView";
 import DTableView from "./Backend/DTableView";
-//import PlayoffContainer from "./Statkeeper/PlayoffContainer";
 import ScheduleContainer from "./Schedule/ScheduleContainer";
 import GameContainer from "./Game/GameContainer";
+import GameContext from "../Assets/GameContext";
 
-export default function Router(props) {
-  const { scheduleData, gameData, setGameData, handleGameChoice } = props;
-  const [page, setPage] = React.useState("Schedule");
+export default function Router() {
+  const MatchContext = React.useContext(GameContext);
+  const { page } = MatchContext;
+
   switch (page) {
     case "Schedule":
-      return (
-        //Switch back to 'Games' next season
-        <ScheduleContainer
-          scheduleData={scheduleData}
-          setPage={setPage}
-          gameData={gameData}
-          setGameData={setGameData}
-          handleGameChoice={handleGameChoice}
-        />
-      );
+      return <ScheduleContainer />;
     case "Game":
-      return <GameContainer gameData={gameData} setPage={setPage} />;
+      return <GameContainer />;
     case "TableView":
-      return <TableView setPage={setPage} />;
+      return <TableView />;
     case "DTableView":
-      return <DTableView setPage={setPage} />;
+      return <DTableView />;
     default:
       return <div>Page not found: Yell at Forrest</div>;
   }

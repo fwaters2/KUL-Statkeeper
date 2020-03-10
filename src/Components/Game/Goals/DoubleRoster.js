@@ -4,35 +4,21 @@ import {
   ListItemText,
   ListItem,
   Grid,
-  Typography
+  Typography,
+  ListItemAvatar,
+  Avatar
 } from "@material-ui/core";
 
 export default function DoubleRoster(props) {
-  const {
-    setAssist,
-    setAssistID,
-    setGoal,
-    setGoalID,
-
-    assist,
-    goal,
-    roster,
-    setTeamID
-  } = props;
+  const { setAssist, setGoal, assist, goal, roster } = props;
   const handleAssist = player => () => {
-    setAssist(player.Name);
-    setAssistID(player.PlayerID);
-    console.log(player);
+    setAssist(player.player);
   };
   const handleGoal = player => () => {
-    setGoal(player.Name);
-    setGoalID(player.PlayerID);
-    setTeamID(player.TeamID);
-    console.log(player);
+    setGoal(player.player);
   };
   const handleCallahan = () => {
     setAssist("Callahan");
-    setAssistID(0);
   };
 
   return (
@@ -46,16 +32,19 @@ export default function DoubleRoster(props) {
           Assist
         </Typography>
         <List>
-          {roster.map(player => (
+          {roster.map(x => (
             <ListItem
-              key={player.Name}
+              key={x.player}
               button
-              selected={player.Name === assist}
+              selected={x.player === assist}
               variant="contained"
-              onClick={handleAssist(player)}
+              onClick={handleAssist(x)}
             >
+              <ListItemAvatar>
+                <Avatar alt={x.player} src={x.photo} />
+              </ListItemAvatar>
               <ListItemText
-                primary={player.Name}
+                primary={x.player}
                 //secondary={"#" + player.JerseyNO + " " + player.JerseyName}
               />
             </ListItem>
@@ -81,15 +70,18 @@ export default function DoubleRoster(props) {
           Goal
         </Typography>
         <List>
-          {roster.map(player => (
+          {roster.map(x => (
             <ListItem
-              key={player.Name}
+              key={x.player}
               button
-              selected={player.Name === goal}
-              onClick={handleGoal(player)}
+              selected={x.player === goal}
+              onClick={handleGoal(x)}
             >
+              <ListItemAvatar>
+                <Avatar alt={x.player} src={x.photo} />
+              </ListItemAvatar>
               <ListItemText
-                primary={player.Name}
+                primary={x.player}
                 //secondary={"#" + player.JerseyNO + " " + player.JerseyName}
               />
             </ListItem>

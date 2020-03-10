@@ -8,32 +8,11 @@ import {
   Typography,
   IconButton
 } from "@material-ui/core";
-import DUpdate from "./DUpdate";
-import Firestore from "../../../Utils/Firebase";
 import ClearIcon from "@material-ui/icons/Clear";
 import { Edit } from "@material-ui/icons";
 
 export default function DColumn(props) {
-  const { stats, gameData } = props;
-  const [updateDialog, toggleUpdateDialog] = React.useState(false);
-  const [updateID, setUpdateID] = React.useState("");
-  const [currentD, setCurrentD] = React.useState(0);
-
-  const handleDelete = id => () => {
-    Firestore.firestore()
-      .collection("PlayoffDs")
-      .doc(id)
-      .delete();
-  };
-
-  const toggleDDialog = (id, DNO) => () => {
-    setCurrentD(DNO);
-    setUpdateID(id);
-    toggleUpdateDialog(!updateDialog);
-  };
-  const closeUpdateDialog = () => {
-    toggleUpdateDialog(false);
-  };
+  const { ds, chooseDIdToUpdate, handleDDelete } = props;
 
   return (
     <div>
@@ -46,33 +25,22 @@ export default function DColumn(props) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {stats.map((stat, index) => (
-            <TableRow key={stat.D} hover>
+          {ds.map((d, index) => (
+            <TableRow
+              key={index}
+              style={{ backgroundColor: d.teamColor + "66" }}
+            >
               <TableCell>{index + 1}</TableCell>
-              <TableCell>
-                {" "}
-                {"#"}
-                {"Steve"}
-                {/* {
-                  (
-                    gameData.awayRoster.find(x => x.Name === stat.D) ||
-                    gameData.homeRoster.find(x => x.Name === stat.D)
-                  ).JerseyNO
-                }{" "} */}
-                {stat.D}
-              </TableCell>
-              {index + 1 === stats.length ? (
+              <TableCell>{d.D}</TableCell>
+              {index + 1 === ds.length ? (
                 <TableCell padding="none">
-                  <IconButton color="secondary" onClick={handleDelete(stat.id)}>
+                  <IconButton color="secondary" onClick={handleDDelete(d.id)}>
                     <ClearIcon />
                   </IconButton>
                 </TableCell>
               ) : (
                 <TableCell padding="none">
-                  <IconButton
-                    color="primary"
-                    onClick={toggleDDialog(stat.id, index + 1)}
-                  >
+                  <IconButton color="primary" onClick={chooseDIdToUpdate(d.id)}>
                     <Edit />
                   </IconButton>
                 </TableCell>
@@ -89,17 +57,6 @@ export default function DColumn(props) {
           </TableRow>
         </TableBody>
       </Table>
-      <DUpdate
-        id={updateID}
-        currentD={currentD}
-        gameData={gameData}
-        open={updateDialog}
-        onClose={closeUpdateDialog}
-        rosterHome={gameData.homeRoster}
-        rosterAway={gameData.awayRoster}
-        homeTeam={gameData.homeTeam}
-        awayTeam={gameData.awayTeam}
-      />
     </div>
   );
 }

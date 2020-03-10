@@ -3,20 +3,11 @@ import { Button, Grid, Typography } from "@material-ui/core";
 import GameContext from "../../Assets/GameContext";
 
 export default function SchedButton(props) {
-  const { setMatchData } = React.useContext(GameContext);
-  const { data, setPage, handleGameChoice } = props;
+  const { setMatchData, setPage } = React.useContext(GameContext);
+  const { data } = props;
 
   const handleClick = () => {
     setMatchData(data);
-    // handleGameChoice(
-    //   data.homeTeamData.name,
-    //   data.awayTeamData.name,
-    //   12, //Game number
-    //   `home vs away`, //title?
-    //   data.id,
-    //   data
-    // );
-    //console.log("context test", gameData);
     setPage("Game");
   };
   return (
@@ -31,7 +22,7 @@ export default function SchedButton(props) {
         borderRadius: "16px",
         border: "2px lightgrey",
         boxShadow: "0 0 5px 3px black",
-        background: `linear-gradient(155deg, ${data.homeColorPrimary}99  50%, ${data.awayColorPrimary}99 50%)`
+        background: `linear-gradient(155deg, ${data.homeTeamData.colorPrimary}99  50%, ${data.awayTeamData.colorPrimary}99 50%)`
       }}
     >
       <Grid container direction="column">
@@ -43,7 +34,7 @@ export default function SchedButton(props) {
               fontWeight: "bolder"
             }}
           >
-            {data.teamHome}
+            {data.homeTeamData.name}
           </Typography>
         </Grid>
         <Grid item>
@@ -51,7 +42,7 @@ export default function SchedButton(props) {
             align="right"
             style={{ color: "black", fontWeight: "bolder" }}
           >
-            {data.teamAway}
+            {data.awayTeamData.name}
           </Typography>
         </Grid>
       </Grid>

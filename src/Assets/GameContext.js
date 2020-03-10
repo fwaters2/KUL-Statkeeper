@@ -2,7 +2,7 @@ import React from "react";
 const GameContext = React.createContext(null);
 export default GameContext;
 
-//          id: game.id,
+//           id: game.id,
 //           day: moment(game.datetime.toDate()).format("MMMM Do YYYY"),
 //           time: moment(game.datetime.toDate()).format("LT"),
 //           homeTeamData: {

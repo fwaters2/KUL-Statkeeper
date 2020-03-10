@@ -8,38 +8,10 @@ import {
   IconButton
 } from "@material-ui/core";
 import ClearIcon from "@material-ui/icons/Clear";
-import Firestore from "../../../Utils/Firebase";
-import GoalUpdate from "./GoalUpdate";
 import { Edit } from "@material-ui/icons";
+
 export default function GoalColumns(props) {
-  const {
-    stats,
-    //teamColors,
-    gameData
-  } = props;
-  const [updateDialog, toggleUpdateDialog] = React.useState(false);
-  const [updateID, setUpdateID] = React.useState("");
-  const [currentGoal, setCurrentGoal] = React.useState(0);
-  const handleDelete = id => () => {
-    Firestore.firestore()
-      .collection("PlayoffGoals")
-      .doc(id)
-      .delete();
-  };
-  const toggleGoalDialog = (id, GoalNO) => () => {
-    setCurrentGoal(GoalNO);
-    setUpdateID(id);
-    toggleUpdateDialog(!updateDialog);
-  };
-  const closeUpdateDialog = () => {
-    toggleUpdateDialog(false);
-  };
-  // const homeTeamColors = teamColors.find(
-  //   team => team.team === gameData.homeTeam
-  // ).bkgdColor;
-  // const awayTeamColors = teamColors.find(
-  //   team => team.team === gameData.awayTeam
-  // ).bkgdColor;
+  const { points, choosePointIdToUpdate, handlePointDelete } = props;
 
   return (
     <div>
@@ -47,50 +19,26 @@ export default function GoalColumns(props) {
         <TableHead>
           <TableRow>
             <TableCell>#</TableCell>
-            <TableCell>Team</TableCell>
             <TableCell>Assist</TableCell>
             <TableCell>Goal</TableCell>
             <TableCell></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {stats.map((stat, index) => (
+          {points.map((goal, index) => (
             <TableRow
-              key={stat.GoalNo}
-              // style={
-              //   stat.team === gameData.homeTeam
-              //     ? { backgroundColor: homeTeamColors }
-              //     : { backgroundColor: awayTeamColors }
-              // }
+              key={index}
+              style={{ backgroundColor: goal.teamColor + "66" }}
             >
               <TableCell>{index + 1}</TableCell>
-              <TableCell>{stat.TeamID}</TableCell>
-              <TableCell>
-                {"#"}
-                {
-                  (
-                    gameData.awayRoster.find(
-                      x => x.PlayerID === stat.AssistID
-                    ) ||
-                    gameData.homeRoster.find(x => x.PlayerID === stat.AssistID)
-                  ).JerseyNO
-                }{" "}
-                {stat.Assist}
-              </TableCell>
-              <TableCell>
-                {" "}
-                {"#"}
-                {
-                  (
-                    gameData.awayRoster.find(x => x.PlayerID === stat.GoalID) ||
-                    gameData.homeRoster.find(x => x.PlayerID === stat.GoalID)
-                  ).JerseyNO
-                }{" "}
-                {stat.Goal}
-              </TableCell>
-              {index + 1 === stats.length ? (
+              <TableCell>{goal.Assist}</TableCell>
+              <TableCell>{goal.Goal}</TableCell>
+              {index + 1 === points.length ? (
                 <TableCell padding="none">
-                  <IconButton color="secondary" onClick={handleDelete(stat.id)}>
+                  <IconButton
+                    color="secondary"
+                    onClick={handlePointDelete(goal.id)}
+                  >
                     <ClearIcon />
                   </IconButton>
                 </TableCell>
@@ -98,7 +46,7 @@ export default function GoalColumns(props) {
                 <TableCell padding="none">
                   <IconButton
                     color="primary"
-                    onClick={toggleGoalDialog(stat.id, index + 1)}
+                    onClick={choosePointIdToUpdate(goal.id)}
                   >
                     <Edit />
                   </IconButton>
@@ -108,17 +56,6 @@ export default function GoalColumns(props) {
           ))}
         </TableBody>
       </Table>
-      <GoalUpdate
-        id={updateID}
-        currentGoal={currentGoal}
-        gameData={gameData}
-        open={updateDialog}
-        onClose={closeUpdateDialog}
-        rosterHome={gameData.homeRoster}
-        rosterAway={gameData.awayRoster}
-        homeTeam={gameData.homeTeam}
-        awayTeam={gameData.awayTeam}
-      />
     </div>
   );
 }

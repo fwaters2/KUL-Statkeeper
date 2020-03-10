@@ -12,7 +12,8 @@ import {
 } from "@material-ui/core";
 import SingleRoster from "./SingleRoster";
 import { KeyboardArrowLeft } from "@material-ui/icons";
-import Firestore from "../../../Utils/Firebase";
+import firebase2 from "../../../Utils/Firebase2";
+import GameContext from "../../../Assets/GameContext";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -31,85 +32,86 @@ function TabPanel(props) {
 }
 
 export default function DDialogContainer(props) {
+  const MatchContext = React.useContext(GameContext);
   const {
-    gameData,
-    onClose,
-    open,
-    rosterHome,
-    rosterAway,
-    homeTeam,
-    awayTeam,
-    nextDNO
-  } = props;
-  const [value, setValue] = React.useState(0);
+    name: homeTeam,
+    roster: rosterHome,
+    colorPrimary: homeColor
+  } = MatchContext.matchData.homeTeamData;
+  const {
+    name: awayTeam,
+    roster: rosterAway,
+    colorPrimary: awayColor
+  } = MatchContext.matchData.awayTeamData;
+
+  const { onClose, open, dIdToUpdate } = props;
   const [d, setD] = React.useState("");
   const [roster, setRoster] = React.useState([]);
-  const [dTeam, setDTeam] = React.useState("");
-  const [teamID, setTeamID] = React.useState("");
-  const [playerID, setPlayerID] = React.useState("");
+  const [team, setTeam] = React.useState(null);
+  const [color, setColor] = React.useState("");
 
-  const handleTeamChoice = (roster, team) => () => {
-    setValue(1);
-    setRoster(roster);
-    setDTeam(team);
+  const handleTeamChoice = team => () => {
+    setRoster(team === homeTeam ? rosterHome : rosterAway);
+    setTeam(team === homeTeam ? homeTeam : awayTeam);
+    setColor(team === homeTeam ? homeColor : awayColor);
   };
-
   const handleConfirm = () => {
-    Firestore.firestore()
-      .collection("PlayoffDs")
-      .add({
-        Season: "Fall 2019",
-        GameNO: gameData.GameNO,
-        DNo: nextDNO,
-        TeamID: dTeam, //to do
-        D: d, //to do
-        Time: Firestore.firestore.FieldValue.serverTimestamp()
-      });
+    const dbRef = firebase2.firestore().collection("dsScorekeeper");
+    dIdToUpdate === null
+      ? dbRef.add({
+          matchId: MatchContext.matchData.id,
+          teamColor: color,
+          D: d,
+          timestamp: new Date()
+        })
+      : dbRef.doc(dIdToUpdate).update({ teamColor: color, D: d });
     onClose();
-    setValue(0);
-    setD("");
+    setTeam(null);
+    setD(null);
   };
   const handleClose = () => {
     onClose();
-    setDTeam("");
-    setValue(0);
-    setD("");
+    setTeam(null);
+    setD(null);
   };
 
   return (
     <Dialog onClose={handleClose} open={open}>
       <DialogTitle>
         <Grid container>
-          {value === 1 ? (
-            <Grid item xs={3} onClick={() => setValue(0)}>
+          {team ? (
+            <Grid item xs={3} onClick={() => setTeam(null)}>
               <KeyboardArrowLeft /> Back
             </Grid>
           ) : null}
           <Grid item xs={9}>
-            D!
+            {dIdToUpdate ? "Update D" : team + "D!"}
           </Grid>
         </Grid>
       </DialogTitle>
-      <TabPanel value={value} index={0}>
+      <TabPanel value={team === null ? 0 : 1} index={0}>
         <ButtonGroup>
-          <Button onClick={handleTeamChoice(rosterHome, homeTeam)}>
+          <Button
+            style={{ backgroundColor: homeColor + "66" }}
+            onClick={handleTeamChoice(homeTeam)}
+          >
             {homeTeam}
           </Button>
-          <Button onClick={handleTeamChoice(rosterAway, awayTeam)}>
+          <Button
+            style={{ backgroundColor: awayColor + "66" }}
+            onClick={handleTeamChoice(awayTeam)}
+          >
             {awayTeam}
           </Button>
         </ButtonGroup>
       </TabPanel>
-      <TabPanel value={value} index={1}>
+      <TabPanel value={team === null ? 0 : 1} index={1}>
         <SingleRoster
           setD={setD}
           d={d}
           roster={roster}
           onClose={onClose}
-          setValue={setValue}
-          team={dTeam}
-          setTeamID={setTeamID}
-          setPlayerID={setPlayerID}
+          team={team}
         />
       </TabPanel>
       {d !== "" ? (
