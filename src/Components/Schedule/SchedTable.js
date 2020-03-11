@@ -11,61 +11,59 @@ export default function SchedTable(props) {
   const [data, setData] = React.useState([]);
   const [isLoading, toggleLoading] = React.useState(true);
 
-  React.useEffect(() => {
-    let matches = [];
+  function getFirebaseArray(name) {
+    let newArray = [];
 
-    const getMatches = firebase2
+    return firebase2
       .firestore()
-      .collection("matches")
+      .collection(name)
       .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
-          matches = [...matches, { id: doc.id, ...doc.data() }];
+      .then(docs => {
+        console.groupCollapsed(name);
+        docs.forEach(doc => {
+          newArray = [...newArray, { id: doc.id, ...doc.data() }];
+          console.count(name);
         });
-        return matches;
+        console.groupEnd();
+        return newArray;
       });
-    let teamData = {};
-    const getTeams = firebase2
+  }
+
+  function getFirebaseObject(name) {
+    let objectData = {};
+    return firebase2
       .firestore()
-      .collection("teams")
+      .collection(name)
       .get()
       .then(querySnapshot => {
+        console.groupCollapsed(name);
         querySnapshot.forEach(doc => {
-          teamData = {
-            ...teamData,
-            [doc.id]: {
-              team: doc.data().name,
-              colorPrimary: doc.data().colorPrimary,
-              colorSecondary: doc.data().colorSecondary
-            }
+          objectData = {
+            ...objectData,
+            [doc.id]: doc.data()
           };
+          console.count(name);
         });
-        return teamData;
+        console.groupEnd();
+        return objectData;
       });
-    let rosterData = [];
-    const getRosters = firebase2
-      .firestore()
-      .collection("rosters")
-      .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
-          rosterData = [
-            ...rosterData,
-            {
-              teamId: doc.data().team_id,
-              playerId: doc.data().player_id
-            }
-          ];
-        });
-        return rosterData;
-      });
+  }
+
+  React.useEffect(() => {
+    const getMatches = getFirebaseArray("matches");
+
+    const getTeams = getFirebaseObject("teams");
+
+    const getRosters = getFirebaseArray("rosters");
 
     let playerData = {};
+
     const getPlayerData = firebase2
       .firestore()
       .collection("players")
       .get()
       .then(querySnapshot => {
+        console.groupCollapsed("Players");
         querySnapshot.forEach(doc => {
           playerData = {
             ...playerData,
@@ -77,46 +75,14 @@ export default function SchedTable(props) {
               chName: doc.data().ch_name
             }
           };
+          console.count("players");
         });
+        console.groupEnd();
         return playerData;
       });
-    let points = [];
-    const getPoints = firebase2
-      .firestore()
-      .collection("pointsScorekeeper")
-      .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
-          points = [
-            ...points,
-            {
-              id: doc.id,
-              teamColor: doc.data().team_id,
-              Assist: doc.data().Assist,
-              Goal: doc.data().Goal
-            }
-          ];
-        });
-        return points;
-      });
-    let ds = [];
-    const getDs = firebase2
-      .firestore()
-      .collection("dsScoreKeeper")
-      .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
-          ds = [
-            ...ds,
-            {
-              id: doc.id,
-              teamColor: doc.data().team_id,
-              d: doc.data().Assist
-            }
-          ];
-        });
-        return points;
-      });
+
+    const getPoints = getFirebaseArray("pointsScorekeeper");
+    const getDs = getFirebaseArray("dsScoreKeeper");
 
     Promise.all([
       getMatches,
@@ -133,21 +99,21 @@ export default function SchedTable(props) {
           time: moment(game.datetime.toDate()).format("LT"),
           homeTeamData: {
             id: game.team_home,
-            name: values[1][game.team_home].team,
+            name: values[1][game.team_home].name,
             colorPrimary: values[1][game.team_home].colorPrimary,
             colorSecondary: values[1][game.team_home].colorSecondary,
             roster: values[2]
-              .filter(x => x.teamId === game.team_home)
-              .map(y => values[3][y.playerId])
+              .filter(x => x.team_id === game.team_home)
+              .map(y => values[3][y.player_id])
           },
           awayTeamData: {
             id: game.team_away,
-            name: values[1][game.team_away].team,
+            name: values[1][game.team_away].name,
             colorPrimary: values[1][game.team_away].colorPrimary,
             colorSecondary: values[1][game.team_away].colorSecondary,
             roster: values[2]
-              .filter(x => x.teamId === game.team_away)
-              .map(y => values[3][y.playerId])
+              .filter(x => x.team_id === game.team_away)
+              .map(y => values[3][y.player_id])
           },
           points: values[4],
           ds: values[5]
@@ -162,8 +128,6 @@ export default function SchedTable(props) {
           )
         ).sort();
         setCurrentTimes(uniqueTimes);
-
-        //console.log("uniqueTimes", uniqueTimes);
 
         setData(betterMatchData);
         toggleLoading(false);
@@ -187,6 +151,7 @@ export default function SchedTable(props) {
                 >
                   {time}
                 </TableCell>
+
                 {data
                   .filter(x => x.day === currentDay && x.time === time)
                   .map(match => (

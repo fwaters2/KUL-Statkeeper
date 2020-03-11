@@ -3,9 +3,8 @@ import { Button, Grid, Paper, Container } from "@material-ui/core";
 import DColumn from "./Ds/DColumn";
 import GoalColumns from "./Goals/GoalColumns";
 import DDialogContainer from "./Ds/DDialogContainer";
-import GoalDialogContainer from "./Goals/Index";
+import GoalDialogContainer from "./Goals/GoalDialogContainer";
 import Scoreboard from "./Scoreboard/Index.js";
-import "../../Teams.json";
 import UserSpeedDial from "../UserSpeedDial";
 import GameContext from "../../Assets/GameContext";
 import Firestore from "../../Utils/Firebase2";
@@ -47,9 +46,7 @@ export default function StatkeeperContainer() {
       .onSnapshot(querySnapshot => {
         const goals = querySnapshot.docs.map(doc => ({
           id: doc.id,
-          teamColor: doc.data().teamColor,
-          Assist: doc.data().Assist,
-          Goal: doc.data().Goal
+          ...doc.data()
         }));
         setPoints(goals);
       });

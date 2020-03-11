@@ -16,10 +16,4 @@ export default GameContext;
 //             name: values[1][game.team_away].team,
 //             colorPrimary: values[1][game.team_away].colorPrimary,
 //             colorSecondary: values[1][game.team_away].colorSecondary
-//           },
-//           teamHome: values[1][game.team_home].team,
-//           teamAway: values[1][game.team_away].team,
-//           homeColorPrimary: values[1][game.team_home].colorPrimary,
-//           homeColorSecondary: values[1][game.team_home].colorSecondary,
-//           awayColorPrimary: values[1][game.team_away].colorPrimary,
-//           awayColorSecondary: values[1][game.team_away].colorSecondary
+//           }

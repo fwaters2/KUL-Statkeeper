@@ -2,6 +2,7 @@ import React from "react";
 import "./Scoreboard.css";
 import Title from "./Title";
 import GameContext from "../../../Assets/GameContext";
+import Timer from "./Timer";
 //import Timer2 from "../Statkeeper/Timer2";
 
 export default function ScoreboardContainer(props) {
@@ -27,6 +28,7 @@ export default function ScoreboardContainer(props) {
         </div>
         <div className="Panel Center-Panel">
           <Title title={title} homeTeam={homeTeam} awayTeam={awayTeam} />
+          <Timer />
           {/* <Timer2 />
           {/* <div className="HalfSection">
             <div className="Digit Half Border">{stuff.half}</div>

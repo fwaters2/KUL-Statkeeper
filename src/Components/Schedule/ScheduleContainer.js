@@ -1,20 +1,10 @@
 import React from "react";
-//import Playoffs from "./Playoffs";
 import { Paper, Box } from "@material-ui/core";
-import UserSpeedDial from "../UserSpeedDial";
 import Title from "./Title";
 import ScheduleSubtitle from "./ScheduleSubtitle";
 import SchedTable from "./SchedTable";
 
 export default function ScheduleContainer(props) {
-  const { setPage } = props;
-
-  const handleGoalOpen = () => {
-    setPage("TableView");
-  };
-  const handleDOpen = () => {
-    setPage("DTableView");
-  };
   return (
     <div
       id="root"
@@ -37,15 +27,8 @@ export default function ScheduleContainer(props) {
         />
         <Box mt="1em">
           <SchedTable {...props} />
-          {/* <Playoffs {...props} /> */}
         </Box>
       </Paper>
-      <UserSpeedDial
-        options={[
-          { title: "Ds", action: handleDOpen },
-          { title: "Goals", action: handleGoalOpen }
-        ]}
-      />
     </div>
   );
 }
