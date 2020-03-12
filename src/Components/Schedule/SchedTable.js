@@ -5,8 +5,7 @@ import firebase2 from "../../Utils/Firebase2";
 import moment from "moment";
 
 export default function SchedTable(props) {
-  const { setPage, handleGameChoice } = props;
-  const [currentDay, setCurrentDay] = React.useState(null);
+  const { setUniqueDates, currentDate } = props;
   const [currentTimes, setCurrentTimes] = React.useState([]);
   const [data, setData] = React.useState([]);
   const [isLoading, toggleLoading] = React.useState(true);
@@ -81,50 +80,57 @@ export default function SchedTable(props) {
         return playerData;
       });
 
-    //const getPoints = getFirebaseArray("pointsScorekeeper");
-    //const getDs = getFirebaseArray("dsScoreKeeper");
-
-    Promise.all([
-      getMatches,
-      getTeams,
-      getRosters,
-      getPlayerData
-      //getPoints,
-      // getDs
-    ])
+    Promise.all([getMatches, getTeams, getRosters, getPlayerData])
       .then(values => {
-        let betterMatchData = values[0].map(game => ({
-          id: game.id,
-          day: moment(game.datetime.toDate()).format("MMMM Do YYYY"),
-          time: moment(game.datetime.toDate()).format("LT"),
-          homeTeamData: {
-            id: game.team_home,
-            name: values[1][game.team_home].name,
-            colorPrimary: values[1][game.team_home].colorPrimary,
-            colorSecondary: values[1][game.team_home].colorSecondary,
-            roster: values[2]
-              .filter(x => x.team_id === game.team_home)
-              .map(y => values[3][y.player_id])
-          },
-          awayTeamData: {
-            id: game.team_away,
-            name: values[1][game.team_away].name,
-            colorPrimary: values[1][game.team_away].colorPrimary,
-            colorSecondary: values[1][game.team_away].colorSecondary,
-            roster: values[2]
-              .filter(x => x.team_id === game.team_away)
-              .map(y => values[3][y.player_id])
-          }
-          //points: values[4],
-          // ds: values[5]
-        }));
+        let uniqueDates = Array.from(
+          new Set(
+            values[0].map(x =>
+              moment(x.datetime.toDate()).format("MMMM Do YYYY")
+            )
+          )
+        );
+        setUniqueDates(uniqueDates);
+        let dateIWant = currentDate.date;
+
+        let betterMatchData = values[0]
+          .filter(
+            x =>
+              moment(x.datetime.toDate()).format("MMMM Do YYYY") === dateIWant
+          )
+          .map(game => ({
+            id: game.id,
+            day: moment(game.datetime.toDate()).format("MMMM Do YYYY"),
+            time: moment(game.datetime.toDate()).format("LT"),
+            homeTeamData: {
+              id: game.team_home,
+              name: values[1][game.team_home].name,
+              colorPrimary: values[1][game.team_home].colorPrimary,
+              colorSecondary: values[1][game.team_home].colorSecondary,
+              roster: values[2]
+                .filter(x => x.team_id === game.team_home)
+                .map(y => values[3][y.player_id])
+            },
+            awayTeamData: {
+              id: game.team_away,
+              name: values[1][game.team_away].name,
+              colorPrimary: values[1][game.team_away].colorPrimary,
+              colorSecondary: values[1][game.team_away].colorSecondary,
+              roster: values[2]
+                .filter(x => x.team_id === game.team_away)
+                .map(y => values[3][y.player_id])
+            }
+          }));
+        //setUniqueDates(Array.from(new Set(betterMatchData.map(x => x.day))))
         //let uniqueDates = Array.from(new Set(betterMatchData.map(x => x.day)));
-        let uniqueDates = Array.from(new Set(betterMatchData.map(x => x.day)));
-        let dateIWant = uniqueDates[1];
-        setCurrentDay(dateIWant);
+        // let uniqueDates = Array.from(new Set(betterMatchData.map(x => x.day)));
+        // setUniqueDates(uniqueDates);
+        // let dateIWant = currentDate.date;
+        // setCurrentDay(dateIWant);
         let uniqueTimes = Array.from(
           new Set(
-            betterMatchData.filter(y => y.day === dateIWant).map(x => x.time)
+            betterMatchData
+              //.filter(y => y.day === dateIWant)
+              .map(x => x.time)
           )
         ).sort();
         setCurrentTimes(uniqueTimes);
@@ -133,7 +139,7 @@ export default function SchedTable(props) {
         toggleLoading(false);
       })
       .catch(x => console.log("error", x));
-  }, []);
+  }, [currentDate]);
 
   return (
     <Table>
@@ -153,20 +159,13 @@ export default function SchedTable(props) {
                 </TableCell>
 
                 {data
-                  .filter(x => x.day === currentDay && x.time === time)
+                  .filter(x => x.day === currentDate.date && x.time === time)
                   .map(match => (
                     <TableCell
                       key={match.id}
                       style={{ width: "50%", borderBottom: "none" }}
                     >
-                      {/*match data includs
-                      id, day, time, teamhome, teamaway, colors
-                      */}
-                      <SchedButton
-                        data={match}
-                        setPage={setPage}
-                        handleGameChoice={handleGameChoice}
-                      />
+                      <SchedButton data={match} />
                     </TableCell>
                   ))}
               </TableRow>

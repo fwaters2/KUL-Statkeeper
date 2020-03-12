@@ -112,14 +112,12 @@ export default function GoalDialogContainer(props) {
         pointDBRef
           .doc(docRef.id)
           .set(newPointDB)
-          .then(() => console.log("set new point db"))
           .catch(error => console.log(error));
         assistDBRef
           .add(newAssistDB)
           .then(assistRef =>
             pointUIRef.doc(docRef.id).update({ assistDBref: assistRef.id })
           )
-          .then(() => console.log("set point event"))
           .catch(error => console.log(error));
       });
     };
