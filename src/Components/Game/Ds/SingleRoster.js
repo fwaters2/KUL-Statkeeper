@@ -16,6 +16,7 @@ export default function SingleRoster(props) {
     <List>
       {roster.map(player => (
         <ListItem
+          key={player.player}
           button
           selected={player.player === d}
           onClick={handleD(player)}

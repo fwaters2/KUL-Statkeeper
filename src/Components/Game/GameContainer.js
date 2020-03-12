@@ -9,7 +9,7 @@ import UserSpeedDial from "../UserSpeedDial";
 import GameContext from "../../Assets/GameContext";
 import Firestore from "../../Utils/Firebase2";
 
-export default function StatkeeperContainer() {
+export default function GameContainer() {
   //Data
   const gameData = React.useContext(GameContext);
   const { setPage, matchData } = gameData;
@@ -37,34 +37,26 @@ export default function StatkeeperContainer() {
   //Firestore References
   const pointsRef = Firestore.firestore().collection("pointsScorekeeper");
   const dRef = Firestore.firestore().collection("dsScorekeeper");
+  const byTimestamp = (a, b) => a.timestamp.toDate() - b.timestamp.toDate();
+  React.useEffect(() => {
+    pointsRef.where("matchId", "==", matchData.id).onSnapshot(querySnapshot => {
+      var dbPoints = [];
+      querySnapshot.forEach(doc => {
+        dbPoints.push({ id: doc.id, ...doc.data() });
+      });
 
-  //Import Stats
-  React.useEffect(() => {
-    const unsubscribe = pointsRef
-      .where("matchId", "==", matchData.id)
-      .orderBy("timestamp")
-      .onSnapshot(querySnapshot => {
-        const goals = querySnapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
-        }));
-        setPoints(goals);
+      setPoints(dbPoints);
+    });
+    dRef.where("matchId", "==", matchData.id).onSnapshot(querySnapshot => {
+      var dbDs = [];
+      querySnapshot.forEach(doc => {
+        dbDs.push({ id: doc.id, ...doc.data() });
+        //dbDs = dbDs.sort(byTimeStamp);
       });
-    return unsubscribe;
-  }, [matchData.id, pointsRef]);
-  React.useEffect(() => {
-    const unsubscribe = dRef
-      .where("matchId", "==", matchData.id)
-      .orderBy("timestamp")
-      .onSnapshot(querySnapshot => {
-        const ds = querySnapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
-        }));
-        setDs(ds);
-      });
-    return unsubscribe;
-  }, [matchData.id, dRef]);
+      setDs(dbDs);
+    });
+    //Import Stats
+  }, [matchData.id]);
 
   //Point Manipulation
   const choosePointIdToUpdate = id => () => {
@@ -138,7 +130,7 @@ export default function StatkeeperContainer() {
           <Grid item xs={8}>
             <Paper style={{ height: "100%", overflow: "auto" }}>
               <GoalColumns
-                points={points}
+                points={points.sort(byTimestamp)}
                 handlePointDelete={handlePointDelete}
                 choosePointIdToUpdate={choosePointIdToUpdate}
               />
@@ -147,7 +139,7 @@ export default function StatkeeperContainer() {
           <Grid item xs={4}>
             <Paper style={{ height: "100%", overflow: "auto" }}>
               <DColumn
-                ds={ds}
+                ds={ds.sort(byTimestamp)}
                 handleDDelete={handleDDelete}
                 chooseDIdToUpdate={chooseDIdToUpdate}
               />

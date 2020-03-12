@@ -81,16 +81,16 @@ export default function SchedTable(props) {
         return playerData;
       });
 
-    const getPoints = getFirebaseArray("pointsScorekeeper");
-    const getDs = getFirebaseArray("dsScoreKeeper");
+    //const getPoints = getFirebaseArray("pointsScorekeeper");
+    //const getDs = getFirebaseArray("dsScoreKeeper");
 
     Promise.all([
       getMatches,
       getTeams,
       getRosters,
-      getPlayerData,
-      getPoints,
-      getDs
+      getPlayerData
+      //getPoints,
+      // getDs
     ])
       .then(values => {
         let betterMatchData = values[0].map(game => ({
@@ -114,9 +114,9 @@ export default function SchedTable(props) {
             roster: values[2]
               .filter(x => x.team_id === game.team_away)
               .map(y => values[3][y.player_id])
-          },
-          points: values[4],
-          ds: values[5]
+          }
+          //points: values[4],
+          // ds: values[5]
         }));
         //let uniqueDates = Array.from(new Set(betterMatchData.map(x => x.day)));
         let uniqueDates = Array.from(new Set(betterMatchData.map(x => x.day)));
