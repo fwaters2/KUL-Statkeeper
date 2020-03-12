@@ -12,7 +12,9 @@ import { Edit } from "@material-ui/icons";
 
 export default function GoalColumns(props) {
   const { points, choosePointIdToUpdate, handlePointDelete } = props;
-
+  const handleUpdate = goal => () => {
+    choosePointIdToUpdate(goal);
+  };
   return (
     <div>
       <Table>
@@ -44,10 +46,7 @@ export default function GoalColumns(props) {
                 </TableCell>
               ) : (
                 <TableCell padding="none">
-                  <IconButton
-                    color="primary"
-                    onClick={choosePointIdToUpdate(goal.id)}
-                  >
+                  <IconButton color="primary" onClick={handleUpdate(goal)}>
                     <Edit />
                   </IconButton>
                 </TableCell>

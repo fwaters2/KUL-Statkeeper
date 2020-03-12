@@ -8,9 +8,10 @@ import {
 } from "@material-ui/core";
 
 export default function SingleRoster(props) {
-  const { d, setD, roster } = props;
+  const { d, setD, roster, setPlayerID } = props;
   const handleD = player => () => {
     setD(player.player);
+    setPlayerID(player.id);
   };
   return (
     <List>

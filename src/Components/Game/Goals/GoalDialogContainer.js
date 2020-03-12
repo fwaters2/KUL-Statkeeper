@@ -45,44 +45,92 @@ export default function GoalDialogContainer(props) {
     colorPrimary: awayColor
   } = MatchContext.matchData.awayTeamData;
 
-  const { onClose, open, updateScoreboard, pointIdToUpdate } = props;
+  const { onClose, open, pointIdToUpdate, assistIdToUpdate } = props;
   const [assist, setAssist] = React.useState("");
   const [goal, setGoal] = React.useState("");
   const [roster, setRoster] = React.useState([]);
   const [team, setTeam] = React.useState(null);
   const [color, setColor] = React.useState("");
+  const [playerGoalId, setPlayerGoalId] = React.useState(null);
+  const [playerAssistId, setPlayerAssistId] = React.useState(null);
 
   const handleTeamChoice = team => () => {
     setRoster(team === homeTeam ? rosterHome : rosterAway);
     setTeam(team === homeTeam ? homeTeam : awayTeam);
     setColor(team === homeTeam ? homeColor : awayColor);
   };
-
-  const handleConfirm = () => {
-    const pointRef = firebase2.firestore().collection("pointsScorekeeper");
-    pointIdToUpdate === null
-      ? pointRef.add({
-          matchId: MatchContext.matchData.id,
-          teamColor: color,
-          Assist: assist,
-          Goal: goal,
-          timestamp: new Date()
-        })
-      : pointRef.doc(pointIdToUpdate).update({
-          teamColor: color,
-          Assist: assist,
-          Goal: goal
-        });
-    onClose();
-    setAssist("");
-    setGoal("");
-    updateScoreboard();
-  };
   const handleClose = () => {
+    setPlayerAssistId(null);
+    setPlayerGoalId(null);
     onClose();
     setTeam(null);
     setAssist("");
     setGoal("");
+  };
+  const handleConfirm = () => {
+    const pointUIRef = firebase2.firestore().collection("pointsScorekeeper");
+
+    //UI data
+    const newPointUI = {
+      matchId: MatchContext.matchData.id,
+      teamColor: color,
+      Assist: assist,
+      Goal: goal,
+      timestamp: new Date()
+    };
+    const updatePointUI = {
+      teamColor: color,
+      Assist: assist,
+      Goal: goal
+    };
+    //Database Data
+    //Goals
+    const pointDBRef = firebase2.firestore().collection("points");
+    const newPointDB = {
+      matchId: MatchContext.matchData.id,
+      playerId: playerGoalId,
+      timestamp: new Date()
+    };
+    const updatePointDB = {
+      matchId: MatchContext.matchData.id,
+      playerId: playerGoalId
+    };
+    //Assists
+    const assistDBRef = firebase2.firestore().collection("pointEvents");
+
+    const updateAssistDB = {
+      playerId: playerAssistId
+    };
+
+    const addPoint = () => {
+      pointUIRef.add(newPointUI).then(docRef => {
+        const newAssistDB = {
+          pointId: docRef.id,
+          playerId: playerAssistId,
+          pointEventTypeId: "bUTPkFdC7KFTW7FfLOuh"
+        };
+        pointDBRef
+          .doc(docRef.id)
+          .set(newPointDB)
+          .then(() => console.log("set new point db"))
+          .catch(error => console.log(error));
+        assistDBRef
+          .add(newAssistDB)
+          .then(assistRef =>
+            pointUIRef.doc(docRef.id).update({ assistDBref: assistRef.id })
+          )
+          .then(() => console.log("set point event"))
+          .catch(error => console.log(error));
+      });
+    };
+    const updatePoint = () => {
+      pointUIRef.doc(pointIdToUpdate).update(updatePointUI);
+      pointDBRef.doc(pointIdToUpdate).update(updatePointDB);
+      assistDBRef.doc(assistIdToUpdate).update(updateAssistDB);
+    };
+
+    pointIdToUpdate === null ? addPoint() : updatePoint();
+    handleClose();
   };
 
   return (
@@ -102,19 +150,26 @@ export default function GoalDialogContainer(props) {
       <TabPanel value={team === null ? 0 : 1} index={0}>
         <ButtonGroup fullWidth>
           <Button
-            style={{ backgroundColor: homeColor + "66" }}
+            style={{
+              backgroundColor: homeColor + "66",
+              minWidth: "200px"
+            }}
             onClick={handleTeamChoice(homeTeam)}
           >
             {homeTeam}
           </Button>
           <Button
-            style={{ backgroundColor: awayColor + "66" }}
+            style={{
+              backgroundColor: awayColor + "66",
+              minWidth: "200px"
+            }}
             onClick={handleTeamChoice(awayTeam)}
           >
             {awayTeam}
           </Button>
         </ButtonGroup>
       </TabPanel>
+
       <TabPanel value={team === null ? 0 : 1} index={1}>
         <DoubleRoster
           setAssist={setAssist}
@@ -122,7 +177,8 @@ export default function GoalDialogContainer(props) {
           assist={assist}
           goal={goal}
           roster={roster}
-          team={team}
+          setPlayerGoalId={setPlayerGoalId}
+          setPlayerAssistId={setPlayerAssistId}
         />
       </TabPanel>
       {assist && goal && assist !== goal ? (

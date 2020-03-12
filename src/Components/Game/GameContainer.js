@@ -20,6 +20,7 @@ export default function GameContainer() {
   const [isPointDialogOpen, togglePointDialog] = React.useState(false);
   const [isDDialogOpen, toggleDDialog] = React.useState(false);
   const [pointIdToUpdate, setPointIdToUpdate] = React.useState(null);
+  const [assistIdToUpdate, setAssistIdToUpdate] = React.useState(null);
   const [dIdToUpdate, setDIdToUpdate] = React.useState(null);
 
   //Scoreboard Manipulation
@@ -39,14 +40,8 @@ export default function GameContainer() {
   const dRef = Firestore.firestore().collection("dsScorekeeper");
   const byTimestamp = (a, b) => a.timestamp.toDate() - b.timestamp.toDate();
   React.useEffect(() => {
-    pointsRef.where("matchId", "==", matchData.id).onSnapshot(querySnapshot => {
-      var dbPoints = [];
-      querySnapshot.forEach(doc => {
-        dbPoints.push({ id: doc.id, ...doc.data() });
-      });
+    //Import Stats
 
-      setPoints(dbPoints);
-    });
     dRef.where("matchId", "==", matchData.id).onSnapshot(querySnapshot => {
       var dbDs = [];
       querySnapshot.forEach(doc => {
@@ -55,16 +50,36 @@ export default function GameContainer() {
       });
       setDs(dbDs);
     });
-    //Import Stats
-  }, [matchData.id]);
+    pointsRef.where("matchId", "==", matchData.id).onSnapshot(querySnapshot => {
+      var dbPoints = [];
+      querySnapshot.forEach(doc => {
+        dbPoints.push({ id: doc.id, ...doc.data() });
+      });
+      //update Scoreboard
+      const newHomeScore = dbPoints.filter(
+        point => point.teamColor === matchData.homeTeamData.colorPrimary
+      ).length;
+      const newAwayScore = dbPoints.filter(
+        point => point.teamColor === matchData.awayTeamData.colorPrimary
+      ).length;
+      setHomeScore(newHomeScore);
+      setAwayScore(newAwayScore);
+      setPoints(dbPoints);
+    });
+  }, []);
 
   //Point Manipulation
-  const choosePointIdToUpdate = id => () => {
-    setPointIdToUpdate(id);
+  const choosePointIdToUpdate = goal => {
+    setPointIdToUpdate(goal.id);
+    setAssistIdToUpdate(goal.assistDBref);
     togglePointDialog(true);
   };
 
   const handlePointDelete = id => () => {
+    Firestore.firestore()
+      .collection("points")
+      .doc(id)
+      .delete();
     pointsRef.doc(id).delete();
     togglePointDialog(false);
   };
@@ -76,6 +91,10 @@ export default function GameContainer() {
   };
 
   const handleDDelete = id => () => {
+    Firestore.firestore()
+      .collection("matchevents")
+      .doc(id)
+      .delete();
     dRef.doc(id).delete();
     toggleDDialog(false);
   };
@@ -86,19 +105,6 @@ export default function GameContainer() {
   const handleCloseD = () => {
     setDIdToUpdate(null);
     toggleDDialog(false);
-  };
-
-  const updateScoreboard = () => {
-    setHomeScore(
-      points.filter(
-        point => point.teamColor === matchData.homeTeamData.colorPrimary
-      ).length
-    );
-    setAwayScore(
-      points.filter(
-        point => point.teamColor === matchData.awayTeamData.colorPrimary
-      ).length
-    );
   };
 
   return (
@@ -121,9 +127,7 @@ export default function GameContainer() {
         <Scoreboard
           stuff={{
             homeScore: homeScore,
-            awayScore: awayScore,
-            time: "12:34",
-            half: "2"
+            awayScore: awayScore
           }}
         />
         <Grid style={{ flex: 1 }} container spacing={2}>
@@ -169,7 +173,7 @@ export default function GameContainer() {
           open={isPointDialogOpen}
           onClose={handleClosePoint}
           pointIdToUpdate={pointIdToUpdate}
-          updateScoreboard={updateScoreboard}
+          assistIdToUpdate={assistIdToUpdate}
         />
       </Container>
     </div>

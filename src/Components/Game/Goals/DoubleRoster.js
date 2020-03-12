@@ -10,12 +10,22 @@ import {
 } from "@material-ui/core";
 
 export default function DoubleRoster(props) {
-  const { setAssist, setGoal, assist, goal, roster } = props;
+  const {
+    setAssist,
+    setGoal,
+    assist,
+    goal,
+    roster,
+    setPlayerGoalId,
+    setPlayerAssistId
+  } = props;
   const handleAssist = player => () => {
     setAssist(player.player);
+    setPlayerAssistId(player.id);
   };
   const handleGoal = player => () => {
     setGoal(player.player);
+    setPlayerGoalId(player.id);
   };
   const handleCallahan = () => {
     setAssist("Callahan");

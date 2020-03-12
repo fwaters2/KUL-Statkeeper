@@ -49,30 +49,52 @@ export default function DDialogContainer(props) {
   const [roster, setRoster] = React.useState([]);
   const [team, setTeam] = React.useState(null);
   const [color, setColor] = React.useState("");
+  const [playerID, setPlayerID] = React.useState(null);
 
   const handleTeamChoice = team => () => {
     setRoster(team === homeTeam ? rosterHome : rosterAway);
     setTeam(team === homeTeam ? homeTeam : awayTeam);
     setColor(team === homeTeam ? homeColor : awayColor);
   };
-  const handleConfirm = () => {
-    const dbRef = firebase2.firestore().collection("dsScorekeeper");
-    dIdToUpdate === null
-      ? dbRef.add({
-          matchId: MatchContext.matchData.id,
-          teamColor: color,
-          D: d,
-          timestamp: new Date()
-        })
-      : dbRef.doc(dIdToUpdate).update({ teamColor: color, D: d });
-    onClose();
-    setTeam(null);
-    setD(null);
-  };
   const handleClose = () => {
     onClose();
     setTeam(null);
     setD(null);
+    setPlayerID(null);
+  };
+
+  const handleConfirm = () => {
+    const dUIRef = firebase2.firestore().collection("dsScorekeeper");
+    const newDUI = {
+      matchId: MatchContext.matchData.id,
+      teamColor: color,
+      D: d,
+      timestamp: new Date()
+    };
+    const updateDUI = { teamColor: color, D: d };
+
+    const dDBRef = firebase2.firestore().collection("matchevents");
+    const newDDB = {
+      matchID: MatchContext.matchData.id,
+      matchEventType: "CBW4Mh0k0BFqVK05WPjS",
+      playerID,
+      timestamp: new Date()
+    };
+
+    const updateDDB = {
+      playerID
+    };
+
+    const addData = () => {
+      dUIRef.add(newDUI).then(docRef => dDBRef.doc(docRef.id).set(newDDB));
+    };
+    const updateData = () => {
+      dUIRef.doc(dIdToUpdate).update(updateDUI);
+      dDBRef.doc(dIdToUpdate).update(updateDDB);
+    };
+
+    dIdToUpdate === null ? addData() : updateData();
+    handleClose();
   };
 
   return (
@@ -92,13 +114,13 @@ export default function DDialogContainer(props) {
       <TabPanel value={team === null ? 0 : 1} index={0}>
         <ButtonGroup>
           <Button
-            style={{ backgroundColor: homeColor + "66" }}
+            style={{ backgroundColor: homeColor + "66", minWidth: "200px" }}
             onClick={handleTeamChoice(homeTeam)}
           >
             {homeTeam}
           </Button>
           <Button
-            style={{ backgroundColor: awayColor + "66" }}
+            style={{ backgroundColor: awayColor + "66", minWidth: "200px" }}
             onClick={handleTeamChoice(awayTeam)}
           >
             {awayTeam}
@@ -110,8 +132,7 @@ export default function DDialogContainer(props) {
           setD={setD}
           d={d}
           roster={roster}
-          onClose={onClose}
-          team={team}
+          setPlayerID={setPlayerID}
         />
       </TabPanel>
       {d !== "" ? (

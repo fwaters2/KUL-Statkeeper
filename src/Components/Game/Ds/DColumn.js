@@ -12,7 +12,7 @@ import ClearIcon from "@material-ui/icons/Clear";
 import { Edit } from "@material-ui/icons";
 
 export default function DColumn(props) {
-  const { ds, chooseDIdToUpdate, handleDDelete } = props;
+  const { ds, chooseDIdToUpdate, handleDDelete, playerID, setPlayerID } = props;
 
   return (
     <div>

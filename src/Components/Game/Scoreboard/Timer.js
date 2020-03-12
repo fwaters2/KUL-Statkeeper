@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import moment from "moment";
+import { Button } from "@material-ui/core";
 
 export default function Timer(props) {
   const [isTimeoutClockDisplayed, toggleTimeoutClock] = useState(false);
   const [count, setCount] = useState(0);
-  const [timeout, setTimeout] = useState(35);
+  const [timeout, setTimeout] = useState(120);
   const [isPaused, togglePaused] = useState(true);
 
   useInterval(
@@ -39,7 +40,6 @@ export default function Timer(props) {
   //   togglePaused(!isPaused);
   //};
   function handleReset() {
-    console.log("handleResetfiring");
     togglePaused(true);
     setCount(0);
     setTimeout(120);
@@ -50,16 +50,17 @@ export default function Timer(props) {
     <div
       style={{ display: "flex", width: "100%", justifyContent: "space-evenly" }}
     >
-      <button
+      <Button
+        variant="contained"
         style={{
           borderRadius: "8px",
-          minWidth: "100px",
+          width: "100px",
           visibility: isTimeoutClockDisplayed ? "hidden" : "visible"
         }}
         onClick={handleStartStop}
       >
         {isPaused ? "Start" : "Stop"}
-      </button>
+      </Button>
 
       {isTimeoutClockDisplayed ? (
         <div style={{ flex: 1, textAlign: "center" }}>
@@ -93,8 +94,9 @@ export default function Timer(props) {
             .format("mm:ss")}
         </h1>
       )}
-      <button
-        style={{ borderRadius: "8px", minWidth: "100px" }}
+      <Button
+        variant="contained"
+        style={{ borderRadius: "8px", width: "100px" }}
         onClick={() =>
           isPaused
             ? handleReset()
@@ -108,7 +110,7 @@ export default function Timer(props) {
           : isTimeoutClockDisplayed
           ? "Finish early"
           : "2min timeout"}
-      </button>
+      </Button>
     </div>
   );
 }
