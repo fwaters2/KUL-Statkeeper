@@ -95,7 +95,7 @@ exports.addAssist = functions.firestore
       });
   });
 
-exports.deleteGoal = functions.firestore
+exports.deleteAssist = functions.firestore
   .document("pointsScorekeeper/{pointId}")
   .onDelete((change, parameter) => {
     const { playerAssistd } = change.data();
@@ -113,7 +113,7 @@ exports.deleteGoal = functions.firestore
       });
   });
 
-exports.updateGoal = functions.firestore
+exports.updateAssist = functions.firestore
   .document("pointsScorekeeper/{pointId}")
   .onUpdate((change, parameter) => {
     const prevAssist = change.before.data().playerAssistd;
@@ -165,7 +165,7 @@ exports.addD = functions.firestore
       });
   });
 
-exports.deleteGoal = functions.firestore
+exports.deleteD = functions.firestore
   .document("dsScorekeeper/{pointId}")
   .onDelete((change, parameter) => {
     const { playerId } = change.data();
@@ -183,7 +183,7 @@ exports.deleteGoal = functions.firestore
       });
   });
 
-exports.updateGoal = functions.firestore
+exports.updateD = functions.firestore
   .document("dsScorekeeper/{pointId}")
   .onUpdate((change, parameter) => {
     const prevD = change.before.data().playerId;
