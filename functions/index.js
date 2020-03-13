@@ -8,15 +8,16 @@ const increment = admin.firestore.FieldValue.increment(1);
 const decrement = admin.firestore.FieldValue.increment(-1);
 
 exports.addGoal = functions.firestore
-  .document("pointsScorekeeper/{pointId}")
+  .document("points/{pointId}")
   .onCreate(change => {
-    const { playerGoalId } = change.data();
+    const { playerId } = change.data();
     return db
       .collection("seasonStats")
-      .doc(playerGoalId)
+      .doc(playerId)
       .set(
         {
-          goals: increment
+          goals: increment,
+          points: increment
         },
         { merge: true }
       )
@@ -26,15 +27,16 @@ exports.addGoal = functions.firestore
   });
 
 exports.deleteGoal = functions.firestore
-  .document("pointsScorekeeper/{pointId}")
+  .document("points/{pointId}")
   .onDelete(change => {
-    const { playerGoalId } = change.data();
+    const { playerId } = change.data();
     return db
       .collection("seasonStats")
-      .doc(playerGoalId)
+      .doc(playerId)
       .set(
         {
-          goals: decrement
+          goals: decrement,
+          points: decrement
         },
         { merge: true }
       )
@@ -44,17 +46,18 @@ exports.deleteGoal = functions.firestore
   });
 
 exports.updateGoal = functions.firestore
-  .document("pointsScorekeeper/{pointId}")
+  .document("points/{pointId}")
   .onUpdate(change => {
-    const prevPlayer = change.before.data().playerGoalId;
-    const newGoal = change.after.data().playerGoalId;
+    const prevPlayer = change.before.data().playerId;
+    const newGoal = change.after.data().playerId;
 
     const deleteGoal = db
       .collection("seasonStats")
       .doc(prevPlayer)
       .set(
         {
-          goals: decrement
+          goals: decrement,
+          points: decrement
         },
         { merge: true }
       );
@@ -64,7 +67,8 @@ exports.updateGoal = functions.firestore
       .doc(newGoal)
       .set(
         {
-          goals: increment
+          goals: increment,
+          points: increment
         },
         { merge: true }
       );
@@ -75,15 +79,16 @@ exports.updateGoal = functions.firestore
   });
 
 exports.addAssist = functions.firestore
-  .document("pointsScorekeeper/{pointId}")
+  .document("pointEvents/{pointId}")
   .onCreate(change => {
-    const { playerAssistId } = change.data();
+    const { playerId } = change.data();
     return db
       .collection("seasonStats")
-      .doc(playerAssistId)
+      .doc(playerId)
       .set(
         {
-          assists: increment
+          assists: increment,
+          points: increment
         },
         { merge: true }
       )
@@ -93,15 +98,16 @@ exports.addAssist = functions.firestore
   });
 
 exports.deleteAssist = functions.firestore
-  .document("pointsScorekeeper/{pointId}")
+  .document("pointEvents/{pointId}")
   .onDelete(change => {
-    const { playerAssistId } = change.data();
+    const { playerId } = change.data();
     return db
       .collection("seasonStats")
-      .doc(playerAssistId)
+      .doc(playerId)
       .set(
         {
-          assists: decrement
+          assists: decrement,
+          points: decrement
         },
         { merge: true }
       )
@@ -111,17 +117,18 @@ exports.deleteAssist = functions.firestore
   });
 
 exports.updateAssist = functions.firestore
-  .document("pointsScorekeeper/{pointId}")
+  .document("pointEvents/{pointId}")
   .onUpdate(change => {
-    const prevAssist = change.before.data().playerAssistId;
-    const newAssist = change.after.data().playerAssistId;
+    const prevAssist = change.before.data().playerId;
+    const newAssist = change.after.data().playerId;
 
     const deleteAssist = db
       .collection("seasonStats")
       .doc(prevAssist)
       .set(
         {
-          assists: decrement
+          assists: decrement,
+          points: decrement
         },
         { merge: true }
       );
@@ -131,7 +138,8 @@ exports.updateAssist = functions.firestore
       .doc(newAssist)
       .set(
         {
-          assists: increment
+          assists: increment,
+          points: increment
         },
         { merge: true }
       );
@@ -144,15 +152,17 @@ exports.updateAssist = functions.firestore
   });
 
 exports.addD = functions.firestore
-  .document("dsScorekeeper/{pointId}")
+  .document("matchEvents/{pointId}")
   .onCreate(change => {
     const { playerId } = change.data();
+    console.log("d player Id", playerId);
     return db
       .collection("seasonStats")
       .doc(playerId)
       .set(
         {
-          ds: increment
+          ds: increment,
+          points: increment
         },
         { merge: true }
       )
@@ -162,7 +172,7 @@ exports.addD = functions.firestore
   });
 
 exports.deleteD = functions.firestore
-  .document("dsScorekeeper/{pointId}")
+  .document("matchEvents/{pointId}")
   .onDelete(change => {
     const { playerId } = change.data();
     return db
@@ -170,7 +180,8 @@ exports.deleteD = functions.firestore
       .doc(playerId)
       .set(
         {
-          ds: decrement
+          ds: decrement,
+          points: decrement
         },
         { merge: true }
       )
@@ -180,7 +191,7 @@ exports.deleteD = functions.firestore
   });
 
 exports.updateD = functions.firestore
-  .document("dsScorekeeper/{pointId}")
+  .document("matchEvents/{pointId}")
   .onUpdate(change => {
     const prevD = change.before.data().playerId;
     const newD = change.after.data().playerId;
@@ -190,7 +201,8 @@ exports.updateD = functions.firestore
       .doc(prevD)
       .set(
         {
-          ds: decrement
+          ds: decrement,
+          points: decrement
         },
         { merge: true }
       );
@@ -200,7 +212,8 @@ exports.updateD = functions.firestore
       .doc(newD)
       .set(
         {
-          ds: increment
+          ds: increment,
+          points: increment
         },
         { merge: true }
       );
@@ -211,3 +224,28 @@ exports.updateD = functions.firestore
       })
       .catch(error => console.log(error));
   });
+
+// exports.addPlayerInfo = functions.firestore
+//   .document("seasonStats/{playerId}")
+//   .onCreate(change => {
+//     const playerId = change.id;
+
+//     return db
+//       .firestore()
+//       .collection("users")
+//       .doc(playerId)
+//       .get()
+//       .then(doc => {
+//         const displayName = doc.data().firstName + " " + doc.data().lastName;
+//         const gender = doc.data().gender;
+
+//         change.after.ref.set(
+//           {
+//             displayName, //playerName
+//             //team: "placeholder for team",
+//             gender
+//           },
+//           { merge: true }
+//         );
+//       });
+//   });

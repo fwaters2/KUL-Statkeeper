@@ -15,6 +15,7 @@ export default function SingleRoster(props) {
   };
   return (
     <List>
+      {console.log("roster", roster)}
       {roster.map(player => (
         <ListItem
           key={player.player}

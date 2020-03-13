@@ -77,6 +77,12 @@ export default function GameContainer() {
 
   const handlePointDelete = id => () => {
     Firestore.firestore()
+      .collection("pointEvents")
+      .doc(id)
+      .delete();
+    pointsRef.doc(id).delete();
+    togglePointDialog(false);
+    Firestore.firestore()
       .collection("points")
       .doc(id)
       .delete();
@@ -92,7 +98,7 @@ export default function GameContainer() {
 
   const handleDDelete = id => () => {
     Firestore.firestore()
-      .collection("matchevents")
+      .collection("matchEvents")
       .doc(id)
       .delete();
     dRef.doc(id).delete();

@@ -1,9 +1,10 @@
 import React from "react";
-import { Paper, Box } from "@material-ui/core";
+import { Paper, Box, Button } from "@material-ui/core";
 import Title from "./Title";
 import ScheduleSubtitle from "./ScheduleSubtitle";
 import SchedTable from "./SchedTable";
 import moment from "moment";
+import firebase2 from "../../Utils/Firebase2";
 
 export default function ScheduleContainer() {
   const [uniqueDates, setUniqueDates] = React.useState([]);
@@ -11,6 +12,26 @@ export default function ScheduleContainer() {
     weekNum: 1,
     date: moment("3/28/2020").format("MMMM Do YYYY")
   });
+  const handleFULLRESET = () => {
+    const db = firebase2.firestore();
+    console.log("HandlingFULLRESET");
+    const collectionsToDelete = [
+      "pointsScorekeeper",
+      "matchEvents",
+      "dsScorekeeper",
+      "pointEvents",
+      "points",
+      "seasonStats"
+    ];
+    const myPromises = collectionsToDelete.map(x =>
+      db
+        .collection(x)
+        .get()
+        .then(docs => docs.forEach(doc => doc.ref.delete()))
+        .catch(error => console.log(error))
+    );
+    return Promise.all(myPromises);
+  };
   return (
     <div
       id="root"
@@ -44,6 +65,16 @@ export default function ScheduleContainer() {
           />
         </Box>
       </Paper>
+      {process.env.NODE_ENV === "development" ? (
+        <Button
+          variant="contained"
+          onClick={handleFULLRESET}
+          fullWidth
+          style={{ background: "darkRed" }}
+        >
+          FULL RESET
+        </Button>
+      ) : null}
     </div>
   );
 }

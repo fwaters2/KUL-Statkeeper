@@ -74,7 +74,7 @@ export default function DDialogContainer(props) {
     };
     const updateDUI = { teamColor: color, D: d, playerId };
 
-    const dDBRef = firebase2.firestore().collection("matchevents");
+    const dDBRef = firebase2.firestore().collection("matchEvents");
     const newDDB = {
       matchID: MatchContext.matchData.id,
       matchEventType: "CBW4Mh0k0BFqVK05WPjS",
@@ -87,7 +87,9 @@ export default function DDialogContainer(props) {
     };
 
     const addData = () => {
-      dUIRef.add(newDUI).then(docRef => dDBRef.doc(docRef.id).set(newDDB));
+      console.log("dId on button press", newDDB.playerId);
+      dUIRef.add(newDUI).then(docRef => dUIRef.doc(docRef.id).set(newDUI));
+      dDBRef.add(newDDB).then(docRef => dDBRef.doc(docRef.id).set(newDDB));
     };
     const updateData = () => {
       dUIRef.doc(dIdToUpdate).update(updateDUI);
