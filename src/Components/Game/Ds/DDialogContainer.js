@@ -72,7 +72,7 @@ export default function DDialogContainer(props) {
       playerId,
       timestamp: new Date()
     };
-    const updateDUI = { teamColor: color, D: d };
+    const updateDUI = { teamColor: color, D: d, playerId };
 
     const dDBRef = firebase2.firestore().collection("matchevents");
     const newDDB = {

@@ -9,7 +9,7 @@ const decrement = admin.firestore.FieldValue.increment(-1);
 
 exports.addGoal = functions.firestore
   .document("pointsScorekeeper/{pointId}")
-  .onCreate((change, parameter) => {
+  .onCreate(change => {
     const { playerGoalId } = change.data();
     return db
       .collection("seasonStats")
@@ -27,7 +27,7 @@ exports.addGoal = functions.firestore
 
 exports.deleteGoal = functions.firestore
   .document("pointsScorekeeper/{pointId}")
-  .onDelete((change, parameter) => {
+  .onDelete(change => {
     const { playerGoalId } = change.data();
     return db
       .collection("seasonStats")
@@ -45,41 +45,38 @@ exports.deleteGoal = functions.firestore
 
 exports.updateGoal = functions.firestore
   .document("pointsScorekeeper/{pointId}")
-  .onUpdate((change, parameter) => {
+  .onUpdate(change => {
     const prevPlayer = change.before.data().playerGoalId;
     const newGoal = change.after.data().playerGoalId;
 
-    function addRemove() {
-      db.collection("seasonStats")
-        .doc(prevPlayer)
-        .set(
-          {
-            goals: decrement
-          },
-          { merge: true }
-        )
-        .catch(function(error) {
-          console.log("Error getting documents: ", error);
-        });
-      db.collection("seasonStats")
-        .doc(newGoal)
-        .set(
-          {
-            goals: increment
-          },
-          { merge: true }
-        )
-        .catch(function(error) {
-          console.log("Error getting documents: ", error);
-        });
-    }
+    const deleteGoal = db
+      .collection("seasonStats")
+      .doc(prevPlayer)
+      .set(
+        {
+          goals: decrement
+        },
+        { merge: true }
+      );
 
-    return addRemove();
+    const addGoal = db
+      .collection("seasonStats")
+      .doc(newGoal)
+      .set(
+        {
+          goals: increment
+        },
+        { merge: true }
+      );
+
+    return Promise.all([deleteGoal, addGoal])
+      .then(() => console.log("Goal Updated!"))
+      .catch(error => console.log(error));
   });
 
 exports.addAssist = functions.firestore
   .document("pointsScorekeeper/{pointId}")
-  .onCreate((change, parameter) => {
+  .onCreate(change => {
     const { playerAssistId } = change.data();
     return db
       .collection("seasonStats")
@@ -97,11 +94,11 @@ exports.addAssist = functions.firestore
 
 exports.deleteAssist = functions.firestore
   .document("pointsScorekeeper/{pointId}")
-  .onDelete((change, parameter) => {
-    const { playerAssistd } = change.data();
+  .onDelete(change => {
+    const { playerAssistId } = change.data();
     return db
       .collection("seasonStats")
-      .doc(playerAssistd)
+      .doc(playerAssistId)
       .set(
         {
           assists: decrement
@@ -115,41 +112,40 @@ exports.deleteAssist = functions.firestore
 
 exports.updateAssist = functions.firestore
   .document("pointsScorekeeper/{pointId}")
-  .onUpdate((change, parameter) => {
-    const prevAssist = change.before.data().playerAssistd;
+  .onUpdate(change => {
+    const prevAssist = change.before.data().playerAssistId;
     const newAssist = change.after.data().playerAssistId;
 
-    function addRemove() {
-      db.collection("seasonStats")
-        .doc(prevAssist)
-        .set(
-          {
-            assists: decrement
-          },
-          { merge: true }
-        )
-        .catch(function(error) {
-          console.log("Error getting documents: ", error);
-        });
-      db.collection("seasonStats")
-        .doc(newAssist)
-        .set(
-          {
-            assists: increment
-          },
-          { merge: true }
-        )
-        .catch(function(error) {
-          console.log("Error getting documents: ", error);
-        });
-    }
+    const deleteAssist = db
+      .collection("seasonStats")
+      .doc(prevAssist)
+      .set(
+        {
+          assists: decrement
+        },
+        { merge: true }
+      );
 
-    return addRemove();
+    const addAssist = db
+      .collection("seasonStats")
+      .doc(newAssist)
+      .set(
+        {
+          assists: increment
+        },
+        { merge: true }
+      );
+
+    return Promise.all([deleteAssist, addAssist])
+      .then(() => {
+        console.log("Assist updated!");
+      })
+      .catch(error => console.log(error));
   });
 
 exports.addD = functions.firestore
   .document("dsScorekeeper/{pointId}")
-  .onCreate((change, parameter) => {
+  .onCreate(change => {
     const { playerId } = change.data();
     return db
       .collection("seasonStats")
@@ -167,7 +163,7 @@ exports.addD = functions.firestore
 
 exports.deleteD = functions.firestore
   .document("dsScorekeeper/{pointId}")
-  .onDelete((change, parameter) => {
+  .onDelete(change => {
     const { playerId } = change.data();
     return db
       .collection("seasonStats")
@@ -185,34 +181,33 @@ exports.deleteD = functions.firestore
 
 exports.updateD = functions.firestore
   .document("dsScorekeeper/{pointId}")
-  .onUpdate((change, parameter) => {
+  .onUpdate(change => {
     const prevD = change.before.data().playerId;
     const newD = change.after.data().playerId;
 
-    function addRemove() {
-      db.collection("seasonStats")
-        .doc(prevD)
-        .set(
-          {
-            ds: decrement
-          },
-          { merge: true }
-        )
-        .catch(function(error) {
-          console.log("Error getting documents: ", error);
-        });
-      db.collection("seasonStats")
-        .doc(newD)
-        .set(
-          {
-            ds: increment
-          },
-          { merge: true }
-        )
-        .catch(function(error) {
-          console.log("Error getting documents: ", error);
-        });
-    }
+    const deleteD = db
+      .collection("seasonStats")
+      .doc(prevD)
+      .set(
+        {
+          ds: decrement
+        },
+        { merge: true }
+      );
 
-    return addRemove();
+    const addD = db
+      .collection("seasonStats")
+      .doc(newD)
+      .set(
+        {
+          ds: increment
+        },
+        { merge: true }
+      );
+
+    return Promise.all([deleteD, addD])
+      .then(() => {
+        console.log("D updated!");
+      })
+      .catch(error => console.log(error));
   });
