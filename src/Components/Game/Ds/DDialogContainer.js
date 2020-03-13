@@ -49,7 +49,7 @@ export default function DDialogContainer(props) {
   const [roster, setRoster] = React.useState([]);
   const [team, setTeam] = React.useState(null);
   const [color, setColor] = React.useState("");
-  const [playerID, setPlayerID] = React.useState(null);
+  const [playerId, setPlayerId] = React.useState(null);
 
   const handleTeamChoice = team => () => {
     setRoster(team === homeTeam ? rosterHome : rosterAway);
@@ -60,7 +60,7 @@ export default function DDialogContainer(props) {
     onClose();
     setTeam(null);
     setD(null);
-    setPlayerID(null);
+    setPlayerId(null);
   };
 
   const handleConfirm = () => {
@@ -69,6 +69,7 @@ export default function DDialogContainer(props) {
       matchId: MatchContext.matchData.id,
       teamColor: color,
       D: d,
+      playerId,
       timestamp: new Date()
     };
     const updateDUI = { teamColor: color, D: d };
@@ -77,12 +78,12 @@ export default function DDialogContainer(props) {
     const newDDB = {
       matchID: MatchContext.matchData.id,
       matchEventType: "CBW4Mh0k0BFqVK05WPjS",
-      playerID,
+      playerId,
       timestamp: new Date()
     };
 
     const updateDDB = {
-      playerID
+      playerId
     };
 
     const addData = () => {
@@ -132,7 +133,7 @@ export default function DDialogContainer(props) {
           setD={setD}
           d={d}
           roster={roster}
-          setPlayerID={setPlayerID}
+          setPlayerId={setPlayerId}
         />
       </TabPanel>
       {d !== "" ? (

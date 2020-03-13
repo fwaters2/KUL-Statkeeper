@@ -14,8 +14,6 @@ import DoubleRoster from "./DoubleRoster";
 import { KeyboardArrowLeft } from "@material-ui/icons";
 import firebase2 from "../../../Utils/Firebase2";
 import GameContext from "../../../Assets/GameContext";
-import * as admin from "firebase-admin";
-var firestore = admin.firestore();
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -108,14 +106,6 @@ export default function GoalDialogContainer(props) {
       playerId: playerAssistId
     };
     const addPoint = () => {
-      const increment = firestore.firestore.FieldValue.increment(1);
-      const decrement = firestore.firestore.FieldValue.increment(-1);
-      const playerStatsRef = firebase2.firestore().collection("playerStats");
-      const pointBatch = firebase2.firestore().batch();
-      playerStatsRef
-        .doc(playerGoalId)
-        .set({ goals: increment }, { merge: true });
-
       pointUIRef.add(newPointUI).then(docRef => {
         const newAssistDB = {
           pointId: docRef.id,
