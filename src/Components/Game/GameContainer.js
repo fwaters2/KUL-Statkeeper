@@ -116,7 +116,7 @@ export default function GameContainer() {
   return (
     <div
       style={{
-        height: "100vh",
+        minHeight: "100vh",
         background: "#283895",
         display: "flex",
         flexDirection: "column"
