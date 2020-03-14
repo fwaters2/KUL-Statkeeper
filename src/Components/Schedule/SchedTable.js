@@ -69,6 +69,8 @@ export default function SchedTable(props) {
             [doc.id]: {
               id: doc.id,
               player: `${doc.data().first_name} ${doc.data().last_name}`,
+              jerseyNum: doc.data().jerseyNum,
+              jerseyBack: doc.data().jerseyBack,
               nickname: doc.data().nickname,
               photo: doc.data().photo,
               chName: doc.data().ch_name

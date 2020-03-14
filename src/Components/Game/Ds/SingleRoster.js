@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  List,
-  ListItemText,
-  ListItem,
-  ListItemAvatar,
-  Avatar
-} from "@material-ui/core";
+import RosterList from "../RosterList";
 
 export default function SingleRoster(props) {
   const { d, setD, roster, setPlayerId } = props;
@@ -13,25 +7,5 @@ export default function SingleRoster(props) {
     setD(player.player);
     setPlayerId(player.id);
   };
-  return (
-    <List>
-      {console.log("roster", roster)}
-      {roster.map(player => (
-        <ListItem
-          key={player.player}
-          button
-          selected={player.player === d}
-          onClick={handleD(player)}
-        >
-          <ListItemAvatar>
-            <Avatar alt={player.player} src={player.photo} />
-          </ListItemAvatar>
-          <ListItemText
-            primary={player.player}
-            //secondary={"#" + player.JerseyNO + " " + player.JerseyName}
-          />
-        </ListItem>
-      ))}
-    </List>
-  );
+  return <RosterList title="D" handleStat={handleD} roster={roster} stat={d} />;
 }

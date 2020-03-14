@@ -1,14 +1,6 @@
 import React from "react";
-import {
-  List,
-  ListItemText,
-  ListItem,
-  Grid,
-  Typography,
-  ListItemAvatar,
-  Avatar,
-  Box
-} from "@material-ui/core";
+import { Grid, Box } from "@material-ui/core";
+import RosterList from "../RosterList";
 
 export default function DoubleRoster(props) {
   const {
@@ -36,42 +28,13 @@ export default function DoubleRoster(props) {
     <Grid container>
       <Grid item xs={6}>
         <Box style={{ borderRight: "1px solid black" }}>
-          <Typography
-            variant="h6"
-            align="center"
-            style={{ background: "#283895", color: "white", margin: "0 5px" }}
-          >
-            Assist
-          </Typography>
-          <List>
-            {roster.map(x => (
-              <ListItem
-                key={x.player}
-                button
-                selected={x.player === assist}
-                variant="contained"
-                onClick={handleAssist(x)}
-              >
-                <ListItemAvatar>
-                  <Avatar alt={x.player} src={x.photo} />
-                </ListItemAvatar>
-                <ListItemText
-                  primary={x.player}
-                  //secondary={"#" + player.JerseyNO + " " + player.JerseyName}
-                />
-              </ListItem>
-            ))}
-            <ListItem
-              button
-              selected={assist === "Callahan"}
-              onClick={handleCallahan}
-            >
-              <ListItemText
-                primary="CALLAHAN"
-                secondary="Interception in endzone"
-              />
-            </ListItem>
-          </List>
+          <RosterList
+            title="Assist"
+            handleStat={handleAssist}
+            roster={roster}
+            stat={assist}
+            handleCallahan={handleCallahan}
+          />
         </Box>
       </Grid>
       <Grid item xs={6}>
@@ -82,31 +45,13 @@ export default function DoubleRoster(props) {
             height: "100%"
           }}
         >
-          <Typography
-            variant="h6"
-            align="center"
-            style={{ background: "#283895", color: "white", margin: "0 5px" }}
-          >
-            Goal
-          </Typography>
-          <List>
-            {roster.map(x => (
-              <ListItem
-                key={x.player}
-                button
-                selected={x.player === goal}
-                onClick={handleGoal(x)}
-              >
-                <ListItemAvatar>
-                  <Avatar alt={x.player} src={x.photo} />
-                </ListItemAvatar>
-                <ListItemText
-                  primary={x.player}
-                  //secondary={"#" + player.JerseyNO + " " + player.JerseyName}
-                />
-              </ListItem>
-            ))}
-          </List>
+          <RosterList
+            title="Goal"
+            handleStat={handleGoal}
+            roster={roster}
+            stat={goal}
+            handleCallahan={handleCallahan}
+          />
         </Box>
       </Grid>
     </Grid>
