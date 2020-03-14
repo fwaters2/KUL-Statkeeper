@@ -1,5 +1,16 @@
 import React from "react";
-import { Button, Grid, Paper, Container } from "@material-ui/core";
+import {
+  Button,
+  Grid,
+  Paper,
+  Container,
+  TableContainer,
+  Table,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody
+} from "@material-ui/core";
 import DColumn from "./Ds/DColumn";
 import GoalColumns from "./Goals/GoalColumns";
 import DDialogContainer from "./Ds/DDialogContainer";
@@ -116,72 +127,75 @@ export default function GameContainer() {
   return (
     <div
       style={{
-        minHeight: "100vh",
-        background: "#283895",
+        height: "calc(100vh - 40px)",
         display: "flex",
-        flexDirection: "column"
+        background: "#283895",
+        padding: 20
       }}
     >
-      <Container
-        style={{
-          flex: 1,
-          display: "flex",
-          flexDirection: "column",
-          marginTop: "10px"
-        }}
-      >
-        <Scoreboard
-          stuff={{
-            homeScore: homeScore,
-            awayScore: awayScore
-          }}
-        />
-        <Grid style={{ flex: 1 }} container spacing={2}>
-          <Grid item xs={8}>
-            <Paper style={{ height: "100%", overflow: "auto" }}>
-              <GoalColumns
-                points={points.sort(byTimestamp)}
-                handlePointDelete={handlePointDelete}
-                choosePointIdToUpdate={choosePointIdToUpdate}
-              />
+      <Grid spacing={5} container direction="column" wrap="nowrap">
+        <Grid item>
+          <Scoreboard
+            stuff={{
+              homeScore: homeScore,
+              awayScore: awayScore
+            }}
+          />
+        </Grid>
+        <Grid
+          xs
+          item
+          container
+          justify="center"
+          style={{ height: "10px" }} //NO IDEA WHY THIS WORKS, but if you remove it all hell breaks lose with the scrollable content
+        >
+          <Grid item xs={7} style={{ height: "100%" }}>
+            <Paper style={{ height: "100%" }}>
+              <TableContainer style={{ height: "100%" }}>
+                <GoalColumns
+                  points={points.sort(byTimestamp)}
+                  handlePointDelete={handlePointDelete}
+                  choosePointIdToUpdate={choosePointIdToUpdate}
+                />
+              </TableContainer>
             </Paper>
           </Grid>
-          <Grid item xs={4}>
-            <Paper style={{ height: "100%", overflow: "auto" }}>
-              <DColumn
-                ds={ds.sort(byTimestamp)}
-                handleDDelete={handleDDelete}
-                chooseDIdToUpdate={chooseDIdToUpdate}
-              />
+          <Grid item xs={5} style={{ height: "100%" }}>
+            <Paper style={{ height: "100%" }}>
+              <TableContainer style={{ height: "100%" }}>
+                <DColumn
+                  ds={ds.sort(byTimestamp)}
+                  handleDDelete={handleDDelete}
+                  chooseDIdToUpdate={chooseDIdToUpdate}
+                />
+              </TableContainer>
             </Paper>
           </Grid>
         </Grid>
 
-        <Button
-          color="secondary"
-          onClick={() => setPage("Schedule")}
-          style={{ marginBottom: "90px", marginTop: "5px" }}
-        >
-          Back
-        </Button>
-        <UserSpeedDial
-          options={[
-            { title: "Goal", action: () => togglePointDialog(true) },
-            { title: "D", action: () => toggleDDialog(true) }
-          ]}
-        />
-        <DDialogContainer
-          open={isDDialogOpen}
-          onClose={handleCloseD}
-          dIdToUpdate={dIdToUpdate}
-        />
-        <GoalDialogContainer
-          open={isPointDialogOpen}
-          onClose={handleClosePoint}
-          pointIdToUpdate={pointIdToUpdate}
-          assistIdToUpdate={assistIdToUpdate}
-        />
-      </Container>
+        <Grid item>
+          <Button color="secondary" onClick={() => setPage("Schedule")}>
+            Back
+          </Button>
+        </Grid>
+      </Grid>
+      <UserSpeedDial
+        options={[
+          { title: "Goal", action: () => togglePointDialog(true) },
+          { title: "D", action: () => toggleDDialog(true) }
+        ]}
+      />
+      <DDialogContainer
+        open={isDDialogOpen}
+        onClose={handleCloseD}
+        dIdToUpdate={dIdToUpdate}
+      />
+      <GoalDialogContainer
+        open={isPointDialogOpen}
+        onClose={handleClosePoint}
+        pointIdToUpdate={pointIdToUpdate}
+        assistIdToUpdate={assistIdToUpdate}
+      />
     </div>
   );
 }
