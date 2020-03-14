@@ -6,7 +6,8 @@ import {
   Grid,
   Typography,
   ListItemAvatar,
-  Avatar
+  Avatar,
+  Box
 } from "@material-ui/core";
 
 export default function DoubleRoster(props) {
@@ -34,69 +35,79 @@ export default function DoubleRoster(props) {
   return (
     <Grid container>
       <Grid item xs={6}>
-        <Typography
-          variant="h6"
-          align="center"
-          style={{ background: "#283895", color: "white", margin: "0 5px" }}
-        >
-          Assist
-        </Typography>
-        <List>
-          {roster.map(x => (
+        <Box style={{ borderRight: "1px solid black" }}>
+          <Typography
+            variant="h6"
+            align="center"
+            style={{ background: "#283895", color: "white", margin: "0 5px" }}
+          >
+            Assist
+          </Typography>
+          <List>
+            {roster.map(x => (
+              <ListItem
+                key={x.player}
+                button
+                selected={x.player === assist}
+                variant="contained"
+                onClick={handleAssist(x)}
+              >
+                <ListItemAvatar>
+                  <Avatar alt={x.player} src={x.photo} />
+                </ListItemAvatar>
+                <ListItemText
+                  primary={x.player}
+                  //secondary={"#" + player.JerseyNO + " " + player.JerseyName}
+                />
+              </ListItem>
+            ))}
             <ListItem
-              key={x.player}
               button
-              selected={x.player === assist}
-              variant="contained"
-              onClick={handleAssist(x)}
+              selected={assist === "Callahan"}
+              onClick={handleCallahan}
             >
-              <ListItemAvatar>
-                <Avatar alt={x.player} src={x.photo} />
-              </ListItemAvatar>
               <ListItemText
-                primary={x.player}
-                //secondary={"#" + player.JerseyNO + " " + player.JerseyName}
+                primary="CALLAHAN"
+                secondary="Interception in endzone"
               />
             </ListItem>
-          ))}
-          <ListItem
-            button
-            selected={assist === "Callahan"}
-            onClick={handleCallahan}
-          >
-            <ListItemText
-              primary="CALLAHAN"
-              secondary="Interception in endzone"
-            />
-          </ListItem>
-        </List>
+          </List>
+        </Box>
       </Grid>
       <Grid item xs={6}>
-        <Typography
-          variant="h6"
-          align="center"
-          style={{ background: "#283895", color: "white", margin: "0 5px" }}
+        <Box
+          style={{
+            borderLeft: "1px solid black",
+
+            height: "100%"
+          }}
         >
-          Goal
-        </Typography>
-        <List>
-          {roster.map(x => (
-            <ListItem
-              key={x.player}
-              button
-              selected={x.player === goal}
-              onClick={handleGoal(x)}
-            >
-              <ListItemAvatar>
-                <Avatar alt={x.player} src={x.photo} />
-              </ListItemAvatar>
-              <ListItemText
-                primary={x.player}
-                //secondary={"#" + player.JerseyNO + " " + player.JerseyName}
-              />
-            </ListItem>
-          ))}
-        </List>
+          <Typography
+            variant="h6"
+            align="center"
+            style={{ background: "#283895", color: "white", margin: "0 5px" }}
+          >
+            Goal
+          </Typography>
+          <List>
+            {roster.map(x => (
+              <ListItem
+                key={x.player}
+                button
+                selected={x.player === goal}
+                onClick={handleGoal(x)}
+              >
+                <ListItemAvatar>
+                  <Avatar alt={x.player} src={x.photo} />
+                </ListItemAvatar>
+                <ListItemText
+                  primary={x.player}
+                  //secondary={"#" + player.JerseyNO + " " + player.JerseyName}
+                />
+              </ListItem>
+            ))}
+          </List>
+        </Box>
       </Grid>
     </Grid>
   );

@@ -153,6 +153,7 @@ export default function GoalDialogContainer(props) {
         <ButtonGroup fullWidth>
           <Button
             style={{
+              padding: "2em 0",
               backgroundColor: homeColor + "66",
               minWidth: "200px"
             }}
@@ -162,6 +163,7 @@ export default function GoalDialogContainer(props) {
           </Button>
           <Button
             style={{
+              padding: "2em 0",
               backgroundColor: awayColor + "66",
               minWidth: "200px"
             }}
@@ -197,8 +199,11 @@ export default function GoalDialogContainer(props) {
               fullWidth
               onClick={handleConfirm}
               variant="contained"
-              color="secondary"
-              style={{ height: "80px" }}
+              style={{
+                height: "80px",
+                backgroundColor: "#DF3E40",
+                color: "white"
+              }}
             >
               Confirm
             </Button>

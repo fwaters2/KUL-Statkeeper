@@ -110,20 +110,28 @@ export default function DDialogContainer(props) {
             </Grid>
           ) : null}
           <Grid item xs={9}>
-            {dIdToUpdate ? "Update D" : team + "D!"}
+            {team === null ? null : dIdToUpdate ? "Update D" : team + " D!"}
           </Grid>
         </Grid>
       </DialogTitle>
       <TabPanel value={team === null ? 0 : 1} index={0}>
         <ButtonGroup>
           <Button
-            style={{ backgroundColor: homeColor + "66", minWidth: "200px" }}
+            style={{
+              backgroundColor: homeColor + "66",
+              minWidth: "200px",
+              padding: "2em 0"
+            }}
             onClick={handleTeamChoice(homeTeam)}
           >
             {homeTeam}
           </Button>
           <Button
-            style={{ backgroundColor: awayColor + "66", minWidth: "200px" }}
+            style={{
+              backgroundColor: awayColor + "66",
+              minWidth: "200px",
+              padding: "2em 0"
+            }}
             onClick={handleTeamChoice(awayTeam)}
           >
             {awayTeam}
@@ -152,8 +160,11 @@ export default function DDialogContainer(props) {
               fullWidth
               onClick={handleConfirm}
               variant="contained"
-              color="secondary"
-              style={{ height: "80px" }}
+              style={{
+                height: "80px",
+                backgroundColor: "#DF3E40",
+                color: "white"
+              }}
             >
               Confirm
             </Button>

@@ -9,7 +9,8 @@ import {
   TableHead,
   TableRow,
   TableCell,
-  TableBody
+  TableBody,
+  Fab
 } from "@material-ui/core";
 import DColumn from "./Ds/DColumn";
 import GoalColumns from "./Goals/GoalColumns";
@@ -19,6 +20,7 @@ import Scoreboard from "./Scoreboard/Index.js";
 import UserSpeedDial from "../UserSpeedDial";
 import GameContext from "../../Assets/GameContext";
 import Firestore from "../../Utils/Firebase2";
+import { ArrowLeft, Add } from "@material-ui/icons";
 
 export default function GameContainer() {
   //Data
@@ -134,6 +136,20 @@ export default function GameContainer() {
       }}
     >
       <Grid spacing={5} container direction="column" wrap="nowrap">
+        <Grid item style={{ paddingBottom: 0 }}>
+          <Fab
+            variant="extended"
+            style={{
+              backgroundColor: "#DF3E40",
+              paddingBottom: 0,
+              marginBottom: 0
+            }}
+            onClick={() => setPage("Schedule")}
+          >
+            <ArrowLeft />
+            Back to Schedule
+          </Fab>
+        </Grid>
         <Grid item>
           <Scoreboard
             stuff={{
@@ -146,11 +162,24 @@ export default function GameContainer() {
           xs
           item
           container
-          justify="center"
           style={{ height: "10px" }} //NO IDEA WHY THIS WORKS, but if you remove it all hell breaks lose with the scrollable content
         >
-          <Grid item xs={7} style={{ height: "100%" }}>
-            <Paper style={{ height: "100%" }}>
+          <Grid
+            item
+            xs={7}
+            style={{ height: "100%" }}
+            container
+            justify="center"
+            spacing={0}
+          >
+            <Paper
+              style={{
+                height: "85%",
+                width: "100%",
+                padding: "0 1em",
+                margin: "0 1em"
+              }}
+            >
               <TableContainer style={{ height: "100%" }}>
                 <GoalColumns
                   points={points.sort(byTimestamp)}
@@ -159,9 +188,36 @@ export default function GameContainer() {
                 />
               </TableContainer>
             </Paper>
+            <Button
+              variant="contained"
+              style={{
+                width: "85%",
+                backgroundColor: "#DF3E40",
+                color: "white"
+              }}
+              size="large"
+              onClick={() => togglePointDialog(true)}
+              startIcon={<Add />}
+            >
+              Add Goal
+            </Button>
           </Grid>
-          <Grid item xs={5} style={{ height: "100%" }}>
-            <Paper style={{ height: "100%" }}>
+          <Grid
+            item
+            xs={5}
+            style={{ height: "100%" }}
+            container
+            justify="center"
+            spacing={0}
+          >
+            <Paper
+              style={{
+                height: "85%",
+                width: "100%",
+                padding: "0 1em",
+                margin: "0 1em"
+              }}
+            >
               <TableContainer style={{ height: "100%" }}>
                 <DColumn
                   ds={ds.sort(byTimestamp)}
@@ -170,21 +226,23 @@ export default function GameContainer() {
                 />
               </TableContainer>
             </Paper>
+            <Button
+              variant="contained"
+              style={{
+                width: "85%",
+                backgroundColor: "#DF3E40",
+                color: "white"
+              }}
+              size="large"
+              onClick={() => toggleDDialog(true)}
+              startIcon={<Add />}
+            >
+              Add D
+            </Button>
           </Grid>
         </Grid>
-
-        <Grid item>
-          <Button color="secondary" onClick={() => setPage("Schedule")}>
-            Back
-          </Button>
-        </Grid>
       </Grid>
-      <UserSpeedDial
-        options={[
-          { title: "Goal", action: () => togglePointDialog(true) },
-          { title: "D", action: () => toggleDDialog(true) }
-        ]}
-      />
+
       <DDialogContainer
         open={isDDialogOpen}
         onClose={handleCloseD}
