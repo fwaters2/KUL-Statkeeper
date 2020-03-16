@@ -10,6 +10,11 @@ import {
 
 export default function RosterList(props) {
   const { title, handleStat, roster, stat, handleCallahan } = props;
+
+  const byJerseyNum = (a, b) => {
+    return a.jerseyNum - b.jerseyNum;
+  };
+
   return (
     <>
       <Typography
@@ -20,7 +25,7 @@ export default function RosterList(props) {
         {title}
       </Typography>
       <List>
-        {roster.map(x => (
+        {roster.sort(byJerseyNum).map(x => (
           <ListItem
             key={x.player}
             button
@@ -33,9 +38,9 @@ export default function RosterList(props) {
             </ListItemAvatar>
             <ListItemText
               primary={x.player}
-              secondary={`${x.jerseyNum ? "#" + x.jerseyNum : ""} ${
-                x.jerseyBack
-              }`}
+              secondary={`${
+                x.jerseyNum !== undefined ? "#" + x.jerseyNum : ""
+              } ${x.jerseyBack}`}
             />
           </ListItem>
         ))}
