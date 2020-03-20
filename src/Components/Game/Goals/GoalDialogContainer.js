@@ -110,7 +110,9 @@ export default function GoalDialogContainer(props) {
         const newAssistDB = {
           pointId: docRef.id,
           playerId: playerAssistId,
-          pointEventTypeId: "bUTPkFdC7KFTW7FfLOuh"
+          matchId: MatchContext.matchData.id,
+          pointEventTypeId: "bUTPkFdC7KFTW7FfLOuh",
+          timestamp: new Date()
         };
         pointDBRef
           .doc(docRef.id)

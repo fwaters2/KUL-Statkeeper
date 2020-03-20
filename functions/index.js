@@ -68,382 +68,151 @@ function updateFantasyPoints(operation, userToUpdate, timeframe, thisCategory) {
     { merge: true }
   );
   return Promise.all([setSubscore, setTotal, setWeekTotal, setCategoryTotal])
-    .then(console.log("updated relevat scores"))
+    .then(console.log("updated relevant scores"))
     .catch(error => console.log(error));
 }
 
+function handleFantasy(event, categories) {
+  //defines how we'd go about getting the correct picks (to be used later)
+  function getPicksAffected(player, timeframe) {
+    const fantasyPicksQuery = db
+      .collection("fantasyPicks")
+      .where("playerId", "==", player)
+      .where("weekId", "==", timeframe);
+
+    return fantasyPicksQuery.where("category", "in", categories).get();
+  }
+
+  //ADDING
+  const weDidntHaveDataBefore = !event.before.exists;
+  if (weDidntHaveDataBefore) {
+    //then this is a new document
+    const { playerId, matchID } = event.after.data();
+    const deadlineId = deriveWeekId(matchID);
+
+    return getPicksAffected(playerId, deadlineId)
+      .then(docs => {
+        //now we need to increment each one of these docs
+        return docs.forEach(doc => {
+          const { userId, category } = doc.data();
+          updateFantasyPoints(increment, userId, deadlineId, category);
+          //updating fantasyuser collections
+        });
+      })
+      .catch(function(error) {
+        console.log("Error adding documents: ", error);
+      });
+  }
+
+  //DELETING
+  const newDataDoesntExist = !event.after.exists;
+  if (newDataDoesntExist) {
+    //the statkeeper deleted that stat
+    const { matchID } = event.before.data();
+    const deadlineId = deriveWeekId(matchID);
+    const deletedPlayerId = event.before.data().playerId;
+
+    return getPicksAffected(deletedPlayerId, deadlineId)
+      .then(docs => {
+        //now we need to decrement each one of these docs
+        return docs.forEach(doc => {
+          const { userId, category } = doc.data();
+          updateFantasyPoints(decrement, userId, deadlineId, category);
+        });
+      })
+      .catch(function(error) {
+        console.log("Error deleting documents: ", error);
+      });
+  } else {
+    //UPDATING
+    const { playerId, matchID } = event.after.data();
+    const deadlineId = deriveWeekId(matchID);
+    const deletedPlayerId = event.before.data().playerId;
+    return Promise.all([
+      getPicksAffected(playerId, deadlineId),
+      getPicksAffected(deletedPlayerId, deadlineId)
+    ])
+      .then(docs => {
+        //now we need to decrement each one of these docs
+        docs[0].forEach(doc => {
+          const { userId, category } = doc.data();
+          updateFantasyPoints(increment, userId, deadlineId, category);
+        });
+        docs[1].forEach(doc => {
+          const { userId, category } = doc.data();
+          updateFantasyPoints(decrement, userId, deadlineId, category);
+        });
+      })
+      .catch(function(error) {
+        console.log("Error updating documents: ", error);
+      });
+  }
+}
+
+const goalCategories = ["goalsF", "goalsM", "rookieF", "rookieM"];
+exports.handleFantasyGoals = functions.firestore
+  .document("points/{pointId}")
+  .onWrite(event => handleFantasy(event, goalCategories));
+
+const assistCategories = ["assistsF", "assistsM", "rookieF", "rookieM"];
+exports.handleFantasyAssists = functions.firestore
+  .document("pointEvents/{pointEventsId}")
+  .onWrite(event => handleFantasy(event, assistCategories));
+
+const dCategories = ["dsF", "dsM", "rookieF", "rookieM"];
 exports.handleFantasyDs = functions.firestore
   .document("matchEvents/{matchEventsId}")
-  .onWrite(event => {
-    //what categories will be affected by any changes to this collection?
-    const categories = ["dsF", "dsM", "rookieF", "rookieM"];
+  .onWrite(event => handleFantasy(event, dCategories));
 
-    //defines how we'd go about getting the correct picks (to be used later)
-    function getPicksAffected(player, timeframe) {
-      const fantasyPicksQuery = db
-        .collection("fantasyPicks")
-        .where("playerId", "==", player)
-        .where("weekId", "==", timeframe);
+function handleStat(event, stat) {
+  const seasonTableRef = db.collection("seasonStat");
+  function updatePlayersStats(player, operation) {
+    return seasonTableRef.doc(player).set(
+      {
+        [stat]: operation,
+        points: operation
+      },
+      { merge: true }
+    );
+  }
+  //ADDING
+  const weDidntHaveDataBefore = !event.before.exists;
+  if (weDidntHaveDataBefore) {
+    const { playerId } = event.after.data();
 
-      return fantasyPicksQuery.where("category", "in", categories).get();
-    }
-
-    //ADDING
-    const weDidntHaveDataBefore = !event.before.exists;
-    if (weDidntHaveDataBefore) {
-      //then this is a new document
-      const { playerId, matchID } = event.after.data();
-      const deadlineId = deriveWeekId(matchID);
-
-      return getPicksAffected(playerId, deadlineId)
-        .then(docs => {
-          //now we need to increment each one of these docs
-          return docs.forEach(doc => {
-            const { userId, category } = doc.data();
-            updateFantasyPoints(increment, userId, deadlineId, category);
-            //updating fantasyuser collections
-          });
-        })
-        .catch(function(error) {
-          console.log("Error adding documents: ", error);
-        });
-    }
-
-    //DELETING
-    const newDataDoesntExist = !event.after.exists;
-    if (newDataDoesntExist) {
-      //the statkeeper deleted that stat
-      const { matchID } = event.before.data();
-      const deadlineId = deriveWeekId(matchID);
-      const deletedPlayerId = event.before.data().playerId;
-
-      return getPicksAffected(deletedPlayerId, deadlineId)
-        .then(docs => {
-          //now we need to decrement each one of these docs
-          return docs.forEach(doc => {
-            const { userId, category } = doc.data();
-            updateFantasyPoints(decrement, userId, deadlineId, category);
-          });
-        })
-        .catch(function(error) {
-          console.log("Error deleting documents: ", error);
-        });
-    } else {
-      //UPDATING
-      const { playerId, matchID } = event.after.data();
-      const deadlineId = deriveWeekId(matchID);
-      const deletedPlayerId = event.before.data().playerId;
-      return Promise.all([
-        getPicksAffected(playerId, deadlineId),
-        getPicksAffected(deletedPlayerId, deadlineId)
-      ])
-        .then(docs => {
-          //now we need to decrement each one of these docs
-          docs[0].forEach(doc => {
-            const { userId, category } = doc.data();
-            updateFantasyPoints(increment, userId, deadlineId, category);
-          });
-          docs[1].forEach(doc => {
-            const { userId, category } = doc.data();
-            updateFantasyPoints(decrement, userId, deadlineId, category);
-          });
-        })
-        .catch(function(error) {
-          console.log("Error updating documents: ", error);
-        });
-    }
-
-    //Step 2: get all Fantasy picks affected by update
-  });
-// exports.addFantasyPtFromStatkeeperD = functions.firestore
-// .document("matchEvents/{matchEventsId}")
-// .onCreate(change => {
-//   //Step 1: Grab info from trigger
-//   const { playerId, matchID } = change.data();
-//   const deadlineId = deriveWeekId(matchID);
-//   //Step 2: get approptiate picks
-//   console.log("without trigger", deadlineId);
-//   return db
-//     .collection("fantasyPicks")
-//     .where("playerId", "==", playerId)
-//     .where("weekId", "==", deadlineId)
-//     .where("category", "in", ["dsF","dsM","rookieF","rookieM"])
-//     .get()
-//     .then(docs => {
-//       //now we need to increment each one of these docs
-//       docs.forEach(doc => {
-//         const { userId, weekId, category } = doc.data();
-
-//         //creating document for subscore collection
-//         const subscoreId = userId + weekId;
-//         db.collection("fantasySubscores")
-//           .doc(subscoreId)
-//           .set(
-//             {
-//               deadline: weekId,
-//               subscore: increment,
-//               userId
-//             },
-//             { merge: true }
-//           )
-//           .then(console.log("added subscore"))
-//           .catch(error => console.log(error));
-//         //updating fantasyuser collections
-//         const userDocRef = db.collection("fantasyUsers").doc(userId);
-//         userDocRef.set({ total: increment }, { merge: true });
-
-//         const weekDocRef = userDocRef.collection("deadlines").doc(weekId);
-//         weekDocRef.set({ subTotal: increment }, { merge: true });
-
-//         const categoryDocRef = weekDocRef.collection("picks").doc(category);
-//         categoryDocRef.set({ pts: increment }, { merge: true });
-//       });
-//     })
-
-//     .catch(function(error) {
-//       console.log("Error getting documents: ", error);
-//     });
-// });
-
-exports.addGoal = functions.firestore
-  .document("points/{pointId}")
-  .onCreate(change => {
-    const { playerId } = change.data();
-    return db
-      .collection("seasonStats")
-      .doc(playerId)
-      .set(
-        {
-          goals: increment,
-          points: increment
-        },
-        { merge: true }
-      )
-      .catch(function(error) {
+    return updatePlayersStats(playerId, increment)
+      .then(console.log(stat + " Added"))
+      .catch(error => {
         console.log("Error getting documents: ", error);
       });
-  });
-
-exports.deleteGoal = functions.firestore
-  .document("points/{pointId}")
-  .onDelete(change => {
-    const { playerId } = change.data();
-    return db
-      .collection("seasonStats")
-      .doc(playerId)
-      .set(
-        {
-          goals: decrement,
-          points: decrement
-        },
-        { merge: true }
-      )
-      .catch(function(error) {
+  }
+  const newDataDoesntExist = !event.after.exists;
+  if (newDataDoesntExist) {
+    const { playerId } = event.before.data();
+    return updatePlayersStats(playerId, decrement)
+      .then(console.log(stat + "  Deleted"))
+      .catch(error => {
         console.log("Error getting documents: ", error);
       });
-  });
-
-exports.updateGoal = functions.firestore
-  .document("points/{pointId}")
-  .onUpdate(change => {
-    const prevPlayer = change.before.data().playerId;
-    const newGoal = change.after.data().playerId;
-
-    const deleteGoal = db
-      .collection("seasonStats")
-      .doc(prevPlayer)
-      .set(
-        {
-          goals: decrement,
-          points: decrement
-        },
-        { merge: true }
-      );
-
-    const addGoal = db
-      .collection("seasonStats")
-      .doc(newGoal)
-      .set(
-        {
-          goals: increment,
-          points: increment
-        },
-        { merge: true }
-      );
-
-    return Promise.all([deleteGoal, addGoal])
-      .then(() => console.log("Goal Updated!"))
+  } else {
+    const playerToDeduct = event.before.data().playerId;
+    const playerToAdd = event.after.data().playerId;
+    return Promise.all([
+      updatePlayersStats(playerToDeduct, decrement),
+      updatePlayersStats(playerToAdd, increment)
+    ])
+      .then(console.log("updated " + stat + " in Table"))
       .catch(error => console.log(error));
-  });
+  }
+}
+exports.handleGoals = functions.firestore
+  .document("points/{pointId}")
+  .onWrite(event => handleStat(event, "goals"));
 
-exports.addAssist = functions.firestore
-  .document("pointEvents/{pointId}")
-  .onCreate(change => {
-    const { playerId } = change.data();
-    return db
-      .collection("seasonStats")
-      .doc(playerId)
-      .set(
-        {
-          assists: increment,
-          points: increment
-        },
-        { merge: true }
-      )
-      .catch(function(error) {
-        console.log("Error getting documents: ", error);
-      });
-  });
+exports.handleAssists = functions.firestore
+  .document("points/{pointId}")
+  .onWrite(event => handleStat(event, "assists"));
 
-exports.deleteAssist = functions.firestore
-  .document("pointEvents/{pointId}")
-  .onDelete(change => {
-    const { playerId } = change.data();
-    return db
-      .collection("seasonStats")
-      .doc(playerId)
-      .set(
-        {
-          assists: decrement,
-          points: decrement
-        },
-        { merge: true }
-      )
-      .catch(function(error) {
-        console.log("Error getting documents: ", error);
-      });
-  });
-
-exports.updateAssist = functions.firestore
-  .document("pointEvents/{pointId}")
-  .onUpdate(change => {
-    const prevAssist = change.before.data().playerId;
-    const newAssist = change.after.data().playerId;
-
-    const deleteAssist = db
-      .collection("seasonStats")
-      .doc(prevAssist)
-      .set(
-        {
-          assists: decrement,
-          points: decrement
-        },
-        { merge: true }
-      );
-
-    const addAssist = db
-      .collection("seasonStats")
-      .doc(newAssist)
-      .set(
-        {
-          assists: increment,
-          points: increment
-        },
-        { merge: true }
-      );
-
-    return Promise.all([deleteAssist, addAssist])
-      .then(() => {
-        console.log("Assist updated!");
-      })
-      .catch(error => console.log(error));
-  });
-
-exports.addD = functions.firestore
-  .document("matchEvents/{pointId}")
-  .onCreate(change => {
-    const { playerId } = change.data();
-    console.log("d player Id", playerId);
-    return db
-      .collection("seasonStats")
-      .doc(playerId)
-      .set(
-        {
-          ds: increment,
-          points: increment
-        },
-        { merge: true }
-      )
-      .catch(function(error) {
-        console.log("Error getting documents: ", error);
-      });
-  });
-
-exports.deleteD = functions.firestore
-  .document("matchEvents/{pointId}")
-  .onDelete(change => {
-    const { playerId } = change.data();
-    return db
-      .collection("seasonStats")
-      .doc(playerId)
-      .set(
-        {
-          ds: decrement,
-          points: decrement
-        },
-        { merge: true }
-      )
-      .catch(function(error) {
-        console.log("Error getting documents: ", error);
-      });
-  });
-
-exports.updateD = functions.firestore
-  .document("matchEvents/{pointId}")
-  .onUpdate(change => {
-    const prevD = change.before.data().playerId;
-    const newD = change.after.data().playerId;
-
-    const deleteD = db
-      .collection("seasonStats")
-      .doc(prevD)
-      .set(
-        {
-          ds: decrement,
-          points: decrement
-        },
-        { merge: true }
-      );
-
-    const addD = db
-      .collection("seasonStats")
-      .doc(newD)
-      .set(
-        {
-          ds: increment,
-          points: increment
-        },
-        { merge: true }
-      );
-
-    return Promise.all([deleteD, addD])
-      .then(() => {
-        console.log("D updated!");
-      })
-      .catch(error => console.log(error));
-  });
-
-// exports.addPlayerInfo = functions.firestore
-//   .document("seasonStats/{playerId}")
-//   .onCreate(change => {
-//     const playerId = change.id;
-
-//     return db
-//       .firestore()
-//       .collection("users")
-//       .doc(playerId)
-//       .get()
-//       .then(doc => {
-//         const displayName = doc.data().firstName + " " + doc.data().lastName;
-//         const gender = doc.data().gender;
-
-//         change.after.ref.set(
-//           {
-//             displayName, //playerName
-//             //team: "placeholder for team",
-//             gender
-//           },
-//           { merge: true }
-//         );
-//       });
-//   });
+exports.handleDs = functions.firestore
+  .document("points/{pointId}")
+  .onWrite(event => handleStat(event, "ds"));
