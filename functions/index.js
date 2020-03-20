@@ -46,67 +46,164 @@ function deriveWeekId(grabWeekId) {
   const filterResult = theDifferentWeeks.filter(x =>
     x.matchIds.includes(grabWeekId)
   );
-  console.log(
-    "selfquery",
-    theDifferentWeeks,
-    "variable:",
-    grabWeekId,
-    "query",
-    theDifferentWeeks[1].matchIds
-  );
-  console.log("filterResult", filterResult);
   return filterResult[0].id;
 }
 
-exports.addFantasyD = functions.firestore
+function updateFantasyPoints(operation, userToUpdate, timeframe, thisCategory) {
+  const subscoreId = userToUpdate + timeframe;
+  const subscoreRef = db.collection("fantasySubscores").doc(subscoreId);
+  const userDocRef = db.collection("fantasyUsers").doc(userToUpdate);
+  const weekDocRef = userDocRef.collection("deadlines").doc(timeframe);
+  const categoryDocRef = weekDocRef.collection("picks").doc(thisCategory);
+
+  const setSubscore = subscoreRef.set(
+    { deadline: timeframe, subscore: operation, userToUpdate },
+    { merge: true }
+  );
+
+  const setTotal = userDocRef.set({ total: operation }, { merge: true });
+  const setWeekTotal = weekDocRef.set({ subTotal: operation }, { merge: true });
+  const setCategoryTotal = categoryDocRef.set(
+    { pts: operation },
+    { merge: true }
+  );
+  return Promise.all([setSubscore, setTotal, setWeekTotal, setCategoryTotal])
+    .then(console.log("updated relevat scores"))
+    .catch(error => console.log(error));
+}
+
+exports.handleFantasyDs = functions.firestore
   .document("matchEvents/{matchEventsId}")
-  .onCreate(change => {
-    //Step 1: Grab info from trigger
-    const { playerId, matchID } = change.data();
-    const deadlineId = deriveWeekId(matchID);
-    //Step 2: get approptiate picks
-    console.log("without trigger", deadlineId);
-    return db
-      .collection("fantasyPicks")
-      .where("playerId", "==", playerId)
-      .where("weekId", "==", deadlineId)
-      .where("category", "==", "dsF") //to do add dsM,rookies
-      .get()
-      .then(docs => {
-        //now we need to increment each one of these docs
-        docs.forEach(doc => {
-          const { userId, weekId, category } = doc.data();
+  .onWrite(event => {
+    //what categories will be affected by any changes to this collection?
+    const categories = ["dsF", "dsM", "rookieF", "rookieM"];
 
-          //creating document for subscore collection
-          const subscoreId = userId + weekId;
-          db.collection("fantasySubscores")
-            .doc(subscoreId)
-            .set(
-              {
-                deadline: weekId,
-                subscore: increment,
-                userId
-              },
-              { merge: true }
-            )
-            .then(console.log("added subscore"))
-            .catch(error => console.log(error));
-          //updating fantasyuser collections
-          const userDocRef = db.collection("fantasyUsers").doc(userId);
-          userDocRef.set({ total: increment }, { merge: true });
+    //defines how we'd go about getting the correct picks (to be used later)
+    function getPicksAffected(player, timeframe) {
+      const fantasyPicksQuery = db
+        .collection("fantasyPicks")
+        .where("playerId", "==", player)
+        .where("weekId", "==", timeframe);
 
-          const weekDocRef = userDocRef.collection("deadlines").doc(weekId);
-          weekDocRef.set({ subTotal: increment }, { merge: true });
+      return fantasyPicksQuery.where("category", "in", categories).get();
+    }
 
-          const categoryDocRef = weekDocRef.collection("picks").doc(category);
-          categoryDocRef.set({ pts: increment }, { merge: true });
+    //ADDING
+    const weDidntHaveDataBefore = !event.before.exists;
+    if (weDidntHaveDataBefore) {
+      //then this is a new document
+      const { playerId, matchID } = event.after.data();
+      const deadlineId = deriveWeekId(matchID);
+
+      return getPicksAffected(playerId, deadlineId)
+        .then(docs => {
+          //now we need to increment each one of these docs
+          return docs.forEach(doc => {
+            const { userId, category } = doc.data();
+            updateFantasyPoints(increment, userId, deadlineId, category);
+            //updating fantasyuser collections
+          });
+        })
+        .catch(function(error) {
+          console.log("Error adding documents: ", error);
         });
-      })
+    }
 
-      .catch(function(error) {
-        console.log("Error getting documents: ", error);
-      });
+    //DELETING
+    const newDataDoesntExist = !event.after.exists;
+    if (newDataDoesntExist) {
+      //the statkeeper deleted that stat
+      const { matchID } = event.before.data();
+      const deadlineId = deriveWeekId(matchID);
+      const deletedPlayerId = event.before.data().playerId;
+
+      return getPicksAffected(deletedPlayerId, deadlineId)
+        .then(docs => {
+          //now we need to decrement each one of these docs
+          return docs.forEach(doc => {
+            const { userId, category } = doc.data();
+            updateFantasyPoints(decrement, userId, deadlineId, category);
+          });
+        })
+        .catch(function(error) {
+          console.log("Error deleting documents: ", error);
+        });
+    } else {
+      //UPDATING
+      const { playerId, matchID } = event.after.data();
+      const deadlineId = deriveWeekId(matchID);
+      const deletedPlayerId = event.before.data().playerId;
+      return Promise.all([
+        getPicksAffected(playerId, deadlineId),
+        getPicksAffected(deletedPlayerId, deadlineId)
+      ])
+        .then(docs => {
+          //now we need to decrement each one of these docs
+          docs[0].forEach(doc => {
+            const { userId, category } = doc.data();
+            updateFantasyPoints(increment, userId, deadlineId, category);
+          });
+          docs[1].forEach(doc => {
+            const { userId, category } = doc.data();
+            updateFantasyPoints(decrement, userId, deadlineId, category);
+          });
+        })
+        .catch(function(error) {
+          console.log("Error updating documents: ", error);
+        });
+    }
+
+    //Step 2: get all Fantasy picks affected by update
   });
+// exports.addFantasyPtFromStatkeeperD = functions.firestore
+// .document("matchEvents/{matchEventsId}")
+// .onCreate(change => {
+//   //Step 1: Grab info from trigger
+//   const { playerId, matchID } = change.data();
+//   const deadlineId = deriveWeekId(matchID);
+//   //Step 2: get approptiate picks
+//   console.log("without trigger", deadlineId);
+//   return db
+//     .collection("fantasyPicks")
+//     .where("playerId", "==", playerId)
+//     .where("weekId", "==", deadlineId)
+//     .where("category", "in", ["dsF","dsM","rookieF","rookieM"])
+//     .get()
+//     .then(docs => {
+//       //now we need to increment each one of these docs
+//       docs.forEach(doc => {
+//         const { userId, weekId, category } = doc.data();
+
+//         //creating document for subscore collection
+//         const subscoreId = userId + weekId;
+//         db.collection("fantasySubscores")
+//           .doc(subscoreId)
+//           .set(
+//             {
+//               deadline: weekId,
+//               subscore: increment,
+//               userId
+//             },
+//             { merge: true }
+//           )
+//           .then(console.log("added subscore"))
+//           .catch(error => console.log(error));
+//         //updating fantasyuser collections
+//         const userDocRef = db.collection("fantasyUsers").doc(userId);
+//         userDocRef.set({ total: increment }, { merge: true });
+
+//         const weekDocRef = userDocRef.collection("deadlines").doc(weekId);
+//         weekDocRef.set({ subTotal: increment }, { merge: true });
+
+//         const categoryDocRef = weekDocRef.collection("picks").doc(category);
+//         categoryDocRef.set({ pts: increment }, { merge: true });
+//       });
+//     })
+
+//     .catch(function(error) {
+//       console.log("Error getting documents: ", error);
+//     });
+// });
 
 exports.addGoal = functions.firestore
   .document("points/{pointId}")
