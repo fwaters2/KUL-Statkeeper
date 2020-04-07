@@ -10,7 +10,7 @@ import {
   TableRow,
   TableCell,
   TableBody,
-  Fab
+  Fab,
 } from "@material-ui/core";
 import DColumn from "./Ds/DColumn";
 import GoalColumns from "./Goals/GoalColumns";
@@ -39,12 +39,12 @@ export default function GameContainer() {
   //Scoreboard Manipulation
   const [homeScore, setHomeScore] = React.useState(
     points.filter(
-      point => point.teamColor === matchData.homeTeamData.colorPrimary
+      (point) => point.teamColor === matchData.homeTeamData.colorPrimary
     ).length
   );
   const [awayScore, setAwayScore] = React.useState(
     points.filter(
-      point => point.teamColor === matchData.awayTeamData.colorPrimary
+      (point) => point.teamColor === matchData.awayTeamData.colorPrimary
     ).length
   );
 
@@ -55,66 +55,70 @@ export default function GameContainer() {
   React.useEffect(() => {
     //Import Stats
 
-    dRef.where("matchId", "==", matchData.id).onSnapshot(querySnapshot => {
+    dRef.where("matchId", "==", matchData.id).onSnapshot((querySnapshot) => {
       var dbDs = [];
-      querySnapshot.forEach(doc => {
+      querySnapshot.forEach((doc) => {
         dbDs.push({ id: doc.id, ...doc.data() });
         //dbDs = dbDs.sort(byTimeStamp);
       });
       setDs(dbDs);
     });
-    pointsRef.where("matchId", "==", matchData.id).onSnapshot(querySnapshot => {
-      var dbPoints = [];
-      querySnapshot.forEach(doc => {
-        dbPoints.push({ id: doc.id, ...doc.data() });
+    pointsRef
+      .where("matchId", "==", matchData.id)
+      .onSnapshot((querySnapshot) => {
+        var dbPoints = [];
+        querySnapshot.forEach((doc) => {
+          dbPoints.push({ id: doc.id, ...doc.data() });
+        });
+        //update Scoreboard
+        const newHomeScore = dbPoints.filter(
+          (point) => point.teamColor === matchData.homeTeamData.colorPrimary
+        ).length;
+        const newAwayScore = dbPoints.filter(
+          (point) => point.teamColor === matchData.awayTeamData.colorPrimary
+        ).length;
+        setHomeScore(newHomeScore);
+        setAwayScore(newAwayScore);
+        setPoints(dbPoints);
       });
-      //update Scoreboard
-      const newHomeScore = dbPoints.filter(
-        point => point.teamColor === matchData.homeTeamData.colorPrimary
-      ).length;
-      const newAwayScore = dbPoints.filter(
-        point => point.teamColor === matchData.awayTeamData.colorPrimary
-      ).length;
-      setHomeScore(newHomeScore);
-      setAwayScore(newAwayScore);
-      setPoints(dbPoints);
-    });
   }, []);
 
   //Point Manipulation
-  const choosePointIdToUpdate = goal => {
+  const choosePointIdToUpdate = (goal) => {
     setPointIdToUpdate(goal.id);
     setAssistIdToUpdate(goal.assistDBref);
     togglePointDialog(true);
   };
 
-  const handlePointDelete = id => () => {
-    Firestore.firestore()
-      .collection("pointEvents")
-      .doc(id)
-      .delete();
+  const handlePointDelete = (id, assistDBref) => () => {
+    console.log("trying to delete this record", assistDBref);
+    Firestore.firestore().collection("pointEvents").doc(assistDBref).delete();
+    console.log("trying to delete this record", assistDBref);
     pointsRef.doc(id).delete();
     togglePointDialog(false);
-    Firestore.firestore()
-      .collection("points")
-      .doc(id)
-      .delete();
+    Firestore.firestore().collection("points").doc(id).delete();
     pointsRef.doc(id).delete();
     togglePointDialog(false);
   };
 
   //D Manipulation
-  const chooseDIdToUpdate = id => () => {
+  const chooseDIdToUpdate = (id) => () => {
     setDIdToUpdate(id);
     toggleDDialog(true);
   };
 
-  const handleDDelete = id => () => {
+  const handleDDelete = (id) => () => {
     Firestore.firestore()
       .collection("matchEvents")
       .doc(id)
-      .delete();
-    dRef.doc(id).delete();
+      .delete()
+      .then(console.log("matchEvents d delete"))
+      .catch((error) => console.log(error));
+    dRef
+      .doc(id)
+      .delete()
+      .then(console.log("ui d delete"))
+      .catch((error) => console.log(error));
     toggleDDialog(false);
   };
   const handleClosePoint = () => {
@@ -132,7 +136,7 @@ export default function GameContainer() {
         height: "calc(100vh - 40px)",
         display: "flex",
         background: "#283895",
-        padding: 20
+        padding: 20,
       }}
     >
       <Grid spacing={5} container direction="column" wrap="nowrap">
@@ -142,7 +146,7 @@ export default function GameContainer() {
             style={{
               backgroundColor: "#DF3E40",
               paddingBottom: 0,
-              marginBottom: 0
+              marginBottom: 0,
             }}
             onClick={() => setPage("Schedule")}
           >
@@ -154,7 +158,7 @@ export default function GameContainer() {
           <Scoreboard
             stuff={{
               homeScore: homeScore,
-              awayScore: awayScore
+              awayScore: awayScore,
             }}
           />
         </Grid>
@@ -177,7 +181,7 @@ export default function GameContainer() {
                 height: "85%",
                 width: "100%",
                 padding: "0 1em",
-                margin: "0 1em"
+                margin: "0 1em",
               }}
             >
               <TableContainer style={{ height: "100%" }}>
@@ -193,7 +197,7 @@ export default function GameContainer() {
               style={{
                 width: "85%",
                 backgroundColor: "#DF3E40",
-                color: "white"
+                color: "white",
               }}
               size="large"
               onClick={() => togglePointDialog(true)}
@@ -215,7 +219,7 @@ export default function GameContainer() {
                 height: "85%",
                 width: "100%",
                 padding: "0 1em",
-                margin: "0 1em"
+                margin: "0 1em",
               }}
             >
               <TableContainer style={{ height: "100%" }}>
@@ -231,7 +235,7 @@ export default function GameContainer() {
               style={{
                 width: "85%",
                 backgroundColor: "#DF3E40",
-                color: "white"
+                color: "white",
               }}
               size="large"
               onClick={() => toggleDDialog(true)}

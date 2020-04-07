@@ -10,27 +10,32 @@ export default function ScheduleContainer() {
   const [uniqueDates, setUniqueDates] = React.useState([]);
   const [currentDate, setCurrentDate] = React.useState({
     weekNum: 1,
-    date: moment("3/28/2020").format("MMMM Do YYYY")
+    date: moment("3/28/2020").format("MMMM Do YYYY"),
   });
   const handleFULLRESET = () => {
     const db = firebase2.firestore();
     console.log("HandlingFULLRESET");
     const collectionsToDelete = [
+      "fantasyUsers",
+      "fantasySubscores",
+      "fantasyPicks",
       "pointsScorekeeper",
       "matchEvents",
       "dsScorekeeper",
       "pointEvents",
       "points",
-      "seasonStats"
+      "seasonStats",
     ];
-    const myPromises = collectionsToDelete.map(x =>
+    const myPromises = collectionsToDelete.map((x) =>
       db
         .collection(x)
         .get()
-        .then(docs => docs.forEach(doc => doc.ref.delete()))
-        .catch(error => console.log(error))
+        .then((docs) => docs.forEach((doc) => doc.ref.delete()))
+        .catch((error) => console.log(error))
     );
-    return Promise.all(myPromises);
+    return Promise.all(myPromises)
+      .then(alert("database wiped"))
+      .catch((error) => console.log(error));
   };
   return (
     <div
@@ -40,7 +45,7 @@ export default function ScheduleContainer() {
         background: "#283895",
         color: "white",
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
       }}
     >
       <Title currentSeason={"Spring 2020"} />
@@ -55,7 +60,7 @@ export default function ScheduleContainer() {
           currentSeason={"Spring 2020"}
           currentWeek={{
             week: `Week ${currentDate.weekNum}`,
-            date: moment(currentDate.date).format("MMM Do")
+            date: moment(currentDate.date).format("MMM Do"),
           }}
         />
         <Box mt="1em">

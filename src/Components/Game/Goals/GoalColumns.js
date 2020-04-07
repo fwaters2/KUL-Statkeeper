@@ -6,14 +6,14 @@ import {
   TableHead,
   TableCell,
   IconButton,
-  TableContainer
+  TableContainer,
 } from "@material-ui/core";
 import ClearIcon from "@material-ui/icons/Clear";
 import { Edit } from "@material-ui/icons";
 
 export default function GoalColumns(props) {
   const { points, choosePointIdToUpdate, handlePointDelete } = props;
-  const handleUpdate = goal => () => {
+  const handleUpdate = (goal) => () => {
     choosePointIdToUpdate(goal);
   };
   return (
@@ -39,7 +39,7 @@ export default function GoalColumns(props) {
               <TableCell padding="none">
                 <IconButton
                   color="secondary"
-                  onClick={handlePointDelete(goal.id)}
+                  onClick={handlePointDelete(goal.id, goal.assistDBref)}
                 >
                   <ClearIcon />
                 </IconButton>

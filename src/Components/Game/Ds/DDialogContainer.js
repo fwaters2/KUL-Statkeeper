@@ -76,7 +76,7 @@ export default function DDialogContainer(props) {
 
     const dDBRef = firebase2.firestore().collection("matchEvents");
     const newDDB = {
-      matchID: MatchContext.matchData.id,
+      matchId: MatchContext.matchData.id,
       matchEventType: "CBW4Mh0k0BFqVK05WPjS",
       playerId,
       timestamp: new Date()
@@ -88,8 +88,18 @@ export default function DDialogContainer(props) {
 
     const addData = () => {
       console.log("dId on button press", newDDB.playerId);
-      dUIRef.add(newDUI).then(docRef => dUIRef.doc(docRef.id).set(newDUI));
-      dDBRef.add(newDDB).then(docRef => dDBRef.doc(docRef.id).set(newDDB));
+
+      dDBRef
+        .add(newDDB)
+        .then(docRef =>
+          dUIRef
+            .doc(docRef.id)
+            .set(newDUI)
+            .then(console.log("Set dUI doc with same id as db doc"))
+            .catch(error => console.log(error))
+        )
+        .then(console.log("added db Ds doc"))
+        .catch(error => console.log(error));
     };
     const updateData = () => {
       dUIRef.doc(dIdToUpdate).update(updateDUI);

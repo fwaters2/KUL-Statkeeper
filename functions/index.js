@@ -18,7 +18,7 @@ function deriveWeekId(grabWeekId) {
     "11DSqA0DP4DB804maDI4",
     "BfWIm7v0vV2Tn90eFRQk",
     "3EHYJ5yPET7UuBw8KEkP",
-    "AFNQQw64zjzhSqxPEKl3"
+    "AFNQQw64zjzhSqxPEKl3",
   ];
   const week2Ids = [
     "DJ4Mv3nC7PRdldmFkAEJ",
@@ -31,7 +31,7 @@ function deriveWeekId(grabWeekId) {
     "JTfFF2XLIdkjrx2K5I0x",
     "xrWkzcM96gFqh56RoUow",
     "AxsS1UlCLrxYFZEydemB",
-    "iZGGClk1uSA5nhy7rMXK"
+    "iZGGClk1uSA5nhy7rMXK",
   ];
   const week3Ids = [];
   const week4Ids = [];
@@ -41,9 +41,9 @@ function deriveWeekId(grabWeekId) {
     { id: "bCfgLs0voveSpwrZNJYT", matchIds: week2Ids },
     { id: "A34XCpBjQ3XKsaHXHVWL", matchIds: week3Ids },
     { id: "lItofLYvkDj9THti2R60", matchIds: week4Ids },
-    { id: "chZebvikPqgLzF2OrxBZ", matchIds: finalsIds }
+    { id: "chZebvikPqgLzF2OrxBZ", matchIds: finalsIds },
   ];
-  const filterResult = theDifferentWeeks.filter(x =>
+  const filterResult = theDifferentWeeks.filter((x) =>
     x.matchIds.includes(grabWeekId)
   );
   return filterResult[0].id;
@@ -69,7 +69,7 @@ function updateFantasyPoints(operation, userToUpdate, timeframe, thisCategory) {
   );
   return Promise.all([setSubscore, setTotal, setWeekTotal, setCategoryTotal])
     .then(console.log("updated relevant scores"))
-    .catch(error => console.log(error));
+    .catch((error) => console.log(error));
 }
 
 function handleFantasy(event, categories) {
@@ -87,93 +87,113 @@ function handleFantasy(event, categories) {
   const weDidntHaveDataBefore = !event.before.exists;
   if (weDidntHaveDataBefore) {
     //then this is a new document
-    const { playerId, matchID } = event.after.data();
-    const deadlineId = deriveWeekId(matchID);
+    const { playerId, matchId } = event.after.data();
+    const deadlineId = deriveWeekId(matchId);
 
     return getPicksAffected(playerId, deadlineId)
-      .then(docs => {
+      .then((docs) => {
         //now we need to increment each one of these docs
-        return docs.forEach(doc => {
+        return docs.forEach((doc) => {
           const { userId, category } = doc.data();
           updateFantasyPoints(increment, userId, deadlineId, category);
           //updating fantasyuser collections
         });
       })
-      .catch(function(error) {
+      .then(console.log("added a point to " + categories.join(", ")))
+      .catch(function (error) {
         console.log("Error adding documents: ", error);
       });
   }
 
   //DELETING
   const newDataDoesntExist = !event.after.exists;
+  console.log("delete boolean returns true", newDataDoesntExist);
   if (newDataDoesntExist) {
     //the statkeeper deleted that stat
-    const { matchID } = event.before.data();
-    const deadlineId = deriveWeekId(matchID);
+    const { matchId } = event.before.data();
+    const deadlineId = deriveWeekId(matchId);
     const deletedPlayerId = event.before.data().playerId;
 
     return getPicksAffected(deletedPlayerId, deadlineId)
-      .then(docs => {
+      .then((docs) => {
         //now we need to decrement each one of these docs
-        return docs.forEach(doc => {
+        return docs.forEach((doc) => {
           const { userId, category } = doc.data();
           updateFantasyPoints(decrement, userId, deadlineId, category);
         });
       })
-      .catch(function(error) {
+      .then(console.log("took a point from " + categories.join(", ")))
+      .catch(function (error) {
         console.log("Error deleting documents: ", error);
       });
   } else {
     //UPDATING
-    const { playerId, matchID } = event.after.data();
-    const deadlineId = deriveWeekId(matchID);
+    const { playerId, matchId } = event.after.data();
+    const deadlineId = deriveWeekId(matchId);
     const deletedPlayerId = event.before.data().playerId;
     return Promise.all([
       getPicksAffected(playerId, deadlineId),
-      getPicksAffected(deletedPlayerId, deadlineId)
+      getPicksAffected(deletedPlayerId, deadlineId),
     ])
-      .then(docs => {
+      .then((docs) => {
         //now we need to decrement each one of these docs
-        docs[0].forEach(doc => {
+        docs[0].forEach((doc) => {
           const { userId, category } = doc.data();
           updateFantasyPoints(increment, userId, deadlineId, category);
         });
-        docs[1].forEach(doc => {
+        docs[1].forEach((doc) => {
           const { userId, category } = doc.data();
           updateFantasyPoints(decrement, userId, deadlineId, category);
         });
       })
-      .catch(function(error) {
+      .then(console.log("updated " + categories.join(", ")))
+      .catch(function (error) {
         console.log("Error updating documents: ", error);
       });
   }
 }
 
-const goalCategories = ["goalsF", "goalsM", "rookieF", "rookieM"];
-exports.handleFantasyGoals = functions.firestore
-  .document("points/{pointId}")
-  .onWrite(event => handleFantasy(event, goalCategories));
-
-const assistCategories = ["assistsF", "assistsM", "rookieF", "rookieM"];
-exports.handleFantasyAssists = functions.firestore
-  .document("pointEvents/{pointEventsId}")
-  .onWrite(event => handleFantasy(event, assistCategories));
-
-const dCategories = ["dsF", "dsM", "rookieF", "rookieM"];
-exports.handleFantasyDs = functions.firestore
-  .document("matchEvents/{matchEventsId}")
-  .onWrite(event => handleFantasy(event, dCategories));
-
 function handleStat(event, stat) {
-  const seasonTableRef = db.collection("seasonStat");
+  const seasonTableRef = db.collection("seasonStats");
+
+  function getPlayerData(player) {
+    return db
+      .collection("players")
+      .doc(player)
+      .get()
+      .then((doc) => {
+        let { isRookie, gender, first_name, last_name, teamId } = doc.data();
+        let name = `${first_name} ${last_name}`;
+        return { name, isRookie, gender, teamId };
+      })
+      .then((data) =>
+        db
+          .collection("teams")
+          .doc(data.teamId)
+          .get()
+          .then((doc) => {
+            return { ...data, team: doc.data().name };
+          })
+      )
+      .catch((error) => console.log(error));
+  }
+
   function updatePlayersStats(player, operation) {
-    return seasonTableRef.doc(player).set(
-      {
-        [stat]: operation,
-        points: operation
-      },
-      { merge: true }
-    );
+    return getPlayerData(player).then((data) => {
+      const { name, team, gender, isRookie } = data;
+
+      return seasonTableRef.doc(player).set(
+        {
+          name,
+          team,
+          gender,
+          isRookie,
+          [stat]: operation,
+          points: operation,
+        },
+        { merge: true }
+      );
+    });
   }
   //ADDING
   const weDidntHaveDataBefore = !event.before.exists;
@@ -182,7 +202,7 @@ function handleStat(event, stat) {
 
     return updatePlayersStats(playerId, increment)
       .then(console.log(stat + " Added"))
-      .catch(error => {
+      .catch((error) => {
         console.log("Error getting documents: ", error);
       });
   }
@@ -191,7 +211,7 @@ function handleStat(event, stat) {
     const { playerId } = event.before.data();
     return updatePlayersStats(playerId, decrement)
       .then(console.log(stat + "  Deleted"))
-      .catch(error => {
+      .catch((error) => {
         console.log("Error getting documents: ", error);
       });
   } else {
@@ -199,20 +219,42 @@ function handleStat(event, stat) {
     const playerToAdd = event.after.data().playerId;
     return Promise.all([
       updatePlayersStats(playerToDeduct, decrement),
-      updatePlayersStats(playerToAdd, increment)
+      updatePlayersStats(playerToAdd, increment),
     ])
       .then(console.log("updated " + stat + " in Table"))
-      .catch(error => console.log(error));
+      .catch((error) => console.log(error));
   }
 }
-exports.handleGoals = functions.firestore
-  .document("points/{pointId}")
-  .onWrite(event => handleStat(event, "goals"));
+const shared = ["rookieF", "rookieM"];
 
-exports.handleAssists = functions.firestore
-  .document("points/{pointId}")
-  .onWrite(event => handleStat(event, "assists"));
+const goalAffectedCategories = ["goalsF", "goalsM", ...shared];
+const assistAffectedCategories = ["assistsF", "assistsM", ...shared];
+const dAffectedCategories = ["dsF", "dsM", ...shared];
 
-exports.handleDs = functions.firestore
-  .document("points/{pointId}")
-  .onWrite(event => handleStat(event, "ds"));
+exports.fantasyPts = {
+  handleFantasyGoals: functions.firestore
+    .document("points/{pointId}")
+    .onWrite((event) => handleFantasy(event, goalAffectedCategories)),
+
+  handleFantasyAssists: functions.firestore
+    .document("pointEvents/{pointEventsId}")
+    .onWrite((event) => handleFantasy(event, assistAffectedCategories)),
+
+  handleFantasyDs: functions.firestore
+    .document("matchEvents/{matchEventsId}")
+    .onWrite((event) => handleFantasy(event, dAffectedCategories)),
+};
+
+exports.statLeaders = {
+  handleGoals: functions.firestore
+    .document("points/{pointId}")
+    .onWrite((event) => handleStat(event, "goals")),
+
+  handleAssists: functions.firestore
+    .document("pointEvents/{pointEventsId}")
+    .onWrite((event) => handleStat(event, "assists")),
+
+  handleDs: functions.firestore
+    .document("matchEvents/{matchEventsId}")
+    .onWrite((event) => handleStat(event, "ds")),
+};

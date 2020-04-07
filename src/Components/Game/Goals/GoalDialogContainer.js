@@ -8,7 +8,7 @@ import {
   Box,
   DialogActions,
   AppBar,
-  Grid
+  Grid,
 } from "@material-ui/core";
 import DoubleRoster from "./DoubleRoster";
 import { KeyboardArrowLeft } from "@material-ui/icons";
@@ -37,12 +37,12 @@ export default function GoalDialogContainer(props) {
   const {
     name: homeTeam,
     roster: rosterHome,
-    colorPrimary: homeColor
+    colorPrimary: homeColor,
   } = MatchContext.matchData.homeTeamData;
   const {
     name: awayTeam,
     roster: rosterAway,
-    colorPrimary: awayColor
+    colorPrimary: awayColor,
   } = MatchContext.matchData.awayTeamData;
 
   const { onClose, open, pointIdToUpdate, assistIdToUpdate } = props;
@@ -54,7 +54,7 @@ export default function GoalDialogContainer(props) {
   const [playerGoalId, setPlayerGoalId] = React.useState(null);
   const [playerAssistId, setPlayerAssistId] = React.useState(null);
 
-  const handleTeamChoice = team => () => {
+  const handleTeamChoice = (team) => () => {
     setRoster(team === homeTeam ? rosterHome : rosterAway);
     setTeam(team === homeTeam ? homeTeam : awayTeam);
     setColor(team === homeTeam ? homeColor : awayColor);
@@ -69,62 +69,73 @@ export default function GoalDialogContainer(props) {
   };
   const handleConfirm = () => {
     const pointUIRef = firebase2.firestore().collection("pointsScorekeeper");
+    const pointDBRef = firebase2.firestore().collection("points");
+    const assistDBRef = firebase2.firestore().collection("pointEvents");
+
+    const matchId = MatchContext.matchData.id;
+    const timestamp = new Date();
+    const newData = {
+      matchId,
+      timestamp,
+    };
 
     //UI data
     const newPointUI = {
-      matchId: MatchContext.matchData.id,
+      ...newData,
       teamColor: color,
       Assist: assist,
       Goal: goal,
       playerGoalId,
       playerAssistId,
-      timestamp: new Date()
     };
     const updatePointUI = {
       playerGoalId,
       playerAssistId,
       teamColor: color,
       Assist: assist,
-      Goal: goal
+      Goal: goal,
     };
+
     //Database Data
     //Goals
-    const pointDBRef = firebase2.firestore().collection("points");
     const newPointDB = {
-      matchId: MatchContext.matchData.id,
+      ...newData,
       playerId: playerGoalId,
-      timestamp: new Date()
     };
     const updatePointDB = {
-      matchId: MatchContext.matchData.id,
-      playerId: playerGoalId
+      playerId: playerGoalId,
     };
-    //Assists
-    const assistDBRef = firebase2.firestore().collection("pointEvents");
 
     const updateAssistDB = {
-      playerId: playerAssistId
+      playerId: playerAssistId,
     };
+
     const addPoint = () => {
-      pointUIRef.add(newPointUI).then(docRef => {
+      pointUIRef.add(newPointUI).then((docRef) => {
+        //Assists
         const newAssistDB = {
+          ...newData,
           pointId: docRef.id,
           playerId: playerAssistId,
-          matchId: MatchContext.matchData.id,
           pointEventTypeId: "bUTPkFdC7KFTW7FfLOuh",
-          timestamp: new Date()
         };
         pointDBRef
           .doc(docRef.id)
           .set(newPointDB)
-          .catch(error => console.log(error));
+          .then(console.log("success adding point"))
+          .catch((error) => console.log(error));
 
         assistDBRef
+
           .add(newAssistDB)
-          .then(assistRef =>
-            pointUIRef.doc(docRef.id).update({ assistDBref: assistRef.id })
-          )
-          .catch(error => console.log(error));
+          .then((assistRef) => {
+            console.log("docref", docRef, "assistRef", assistRef);
+            return pointUIRef
+              .doc(docRef.id)
+              .update({ assistDBref: assistRef.id });
+          })
+          .then(console.log("successfully added assist"))
+          .catch((error) => console.log(error));
       });
     };
     const updatePoint = () => {
@@ -157,7 +168,7 @@ export default function GoalDialogContainer(props) {
             style={{
               padding: "2em 0",
               backgroundColor: homeColor + "66",
-              minWidth: "200px"
+              minWidth: "200px",
             }}
             onClick={handleTeamChoice(homeTeam)}
           >
@@ -167,7 +178,7 @@ export default function GoalDialogContainer(props) {
             style={{
               padding: "2em 0",
               backgroundColor: awayColor + "66",
-              minWidth: "200px"
+              minWidth: "200px",
             }}
             onClick={handleTeamChoice(awayTeam)}
           >
@@ -193,7 +204,7 @@ export default function GoalDialogContainer(props) {
             margin: 0,
             top: "auto",
             bottom: 0,
-            position: "fixed"
+            position: "fixed",
           }}
         >
           <DialogActions>
@@ -204,7 +215,7 @@ export default function GoalDialogContainer(props) {
               style={{
                 height: "80px",
                 backgroundColor: "#DF3E40",
-                color: "white"
+                color: "white",
               }}
             >
               Confirm
