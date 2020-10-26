@@ -1,26 +1,15 @@
 import React from "react";
-import {
-  Button,
-  Grid,
-  Paper,
-  Container,
-  TableContainer,
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody,
-  Fab,
-} from "@material-ui/core";
+import { Button, Grid, Paper, TableContainer, Fab } from "@material-ui/core";
 import DColumn from "./Ds/DColumn";
 import GoalColumns from "./Goals/GoalColumns";
 import DDialogContainer from "./Ds/DDialogContainer";
 import GoalDialogContainer from "./Goals/GoalDialogContainer";
 import Scoreboard from "./Scoreboard/Index.js";
-import UserSpeedDial from "../UserSpeedDial";
+
 import GameContext from "../../Assets/GameContext";
 import Firestore from "../../Utils/Firebase2";
-import { ArrowLeft, Add } from "@material-ui/icons";
+import { ArrowLeft, Add, ArrowRight } from "@material-ui/icons";
+import SubmissionConfirm from "./SubmissionConfirm";
 
 export default function GameContainer() {
   //Data
@@ -35,6 +24,7 @@ export default function GameContainer() {
   const [pointIdToUpdate, setPointIdToUpdate] = React.useState(null);
   const [assistIdToUpdate, setAssistIdToUpdate] = React.useState(null);
   const [dIdToUpdate, setDIdToUpdate] = React.useState(null);
+  const [isConfirming, toggleConfirmation] = React.useState(false);
 
   //Scoreboard Manipulation
   const [homeScore, setHomeScore] = React.useState(
@@ -47,6 +37,41 @@ export default function GameContainer() {
       (point) => point.teamColor === matchData.awayTeamData.colorPrimary
     ).length
   );
+
+  const handleGameSubmit = () => {
+    if (homeScore === awayScore) {
+      alert("Error: The score is tied");
+      toggleConfirmation(false);
+    } else {
+      const resultRef = Firestore.firestore()
+        .collection("results")
+        .doc(matchData.id);
+      const winner =
+        homeScore > awayScore
+          ? matchData.homeTeamData.id
+          : matchData.awayTeamData.id;
+      const loser =
+        homeScore < awayScore
+          ? matchData.homeTeamData.id
+          : matchData.awayTeamData.id;
+      const winningScore = homeScore > awayScore ? homeScore : awayScore;
+      const losingScore = homeScore < awayScore ? homeScore : awayScore;
+      resultRef.update({
+        winner,
+        loser,
+        isComplete: true,
+        timestamp: new Date(),
+      });
+      Firestore.firestore().collection("completedGames").doc(matchData.id).set({
+        winner,
+        winningScore,
+        loser,
+        losingScore,
+        timestamp: new Date(),
+      });
+      setPage("Schedule");
+    }
+  };
 
   //Firestore References
   const pointsRef = Firestore.firestore().collection("pointsScorekeeper");
@@ -91,9 +116,8 @@ export default function GameContainer() {
   };
 
   const handlePointDelete = (id, assistDBref) => () => {
-    console.log("trying to delete this record", assistDBref);
     Firestore.firestore().collection("pointEvents").doc(assistDBref).delete();
-    console.log("trying to delete this record", assistDBref);
+
     pointsRef.doc(id).delete();
     togglePointDialog(false);
     Firestore.firestore().collection("points").doc(id).delete();
@@ -141,18 +165,36 @@ export default function GameContainer() {
     >
       <Grid spacing={5} container direction="column" wrap="nowrap">
         <Grid item style={{ paddingBottom: 0 }}>
-          <Fab
-            variant="extended"
-            style={{
-              backgroundColor: "#DF3E40",
-              paddingBottom: 0,
-              marginBottom: 0,
-            }}
-            onClick={() => setPage("Schedule")}
-          >
-            <ArrowLeft />
-            Back to Schedule
-          </Fab>
+          <Grid container justify="space-between">
+            <Grid item>
+              <Fab
+                variant="extended"
+                style={{
+                  backgroundColor: "#DF3E40",
+                  paddingBottom: 0,
+                  marginBottom: 0,
+                }}
+                onClick={() => setPage("Schedule")}
+              >
+                <ArrowLeft />
+                Back to Schedule
+              </Fab>
+            </Grid>
+            <Grid item>
+              <Fab
+                variant="extended"
+                style={{
+                  backgroundColor: "#DF3E40",
+                  paddingBottom: 0,
+                  marginBottom: 0,
+                }}
+                onClick={() => toggleConfirmation(true)}
+              >
+                Submit Game
+                <ArrowRight />
+              </Fab>
+            </Grid>
+          </Grid>
         </Grid>
         <Grid item>
           <Scoreboard
@@ -257,6 +299,11 @@ export default function GameContainer() {
         onClose={handleClosePoint}
         pointIdToUpdate={pointIdToUpdate}
         assistIdToUpdate={assistIdToUpdate}
+      />
+      <SubmissionConfirm
+        open={isConfirming}
+        handleClose={() => toggleConfirmation(false)}
+        handleGameSubmit={handleGameSubmit}
       />
     </div>
   );

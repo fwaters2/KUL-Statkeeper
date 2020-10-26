@@ -17,9 +17,9 @@ export default function SchedTable(props) {
       .firestore()
       .collection(name)
       .get()
-      .then(docs => {
+      .then((docs) => {
         console.groupCollapsed(name);
-        docs.forEach(doc => {
+        docs.forEach((doc) => {
           newArray = [...newArray, { id: doc.id, ...doc.data() }];
           console.count(name);
         });
@@ -34,13 +34,14 @@ export default function SchedTable(props) {
       .firestore()
       .collection(name)
       .get()
-      .then(querySnapshot => {
+      .then((querySnapshot) => {
         console.groupCollapsed(name);
-        querySnapshot.forEach(doc => {
+        querySnapshot.forEach((doc) => {
           objectData = {
             ...objectData,
-            [doc.id]: doc.data()
+            [doc.id]: doc.data(),
           };
+          console.log(objectData);
           console.count(name);
         });
         console.groupEnd();
@@ -50,6 +51,8 @@ export default function SchedTable(props) {
 
   React.useEffect(() => {
     const getMatches = getFirebaseArray("matches");
+
+    const getResults = getFirebaseObject("results");
 
     const getTeams = getFirebaseObject("teams");
 
@@ -61,9 +64,9 @@ export default function SchedTable(props) {
       .firestore()
       .collection("players")
       .get()
-      .then(querySnapshot => {
+      .then((querySnapshot) => {
         console.groupCollapsed("Players");
-        querySnapshot.forEach(doc => {
+        querySnapshot.forEach((doc) => {
           playerData = {
             ...playerData,
             [doc.id]: {
@@ -73,8 +76,8 @@ export default function SchedTable(props) {
               jerseyBack: doc.data().jerseyBack,
               nickname: doc.data().nickname,
               photo: doc.data().photo,
-              chName: doc.data().ch_name
-            }
+              chName: doc.data().ch_name,
+            },
           };
           console.count("players");
         });
@@ -82,11 +85,11 @@ export default function SchedTable(props) {
         return playerData;
       });
 
-    Promise.all([getMatches, getTeams, getRosters, getPlayerData])
-      .then(values => {
+    Promise.all([getMatches, getTeams, getRosters, getPlayerData, getResults])
+      .then((values) => {
         let uniqueDates = Array.from(
           new Set(
-            values[0].map(x =>
+            values[0].map((x) =>
               moment(x.datetime.toDate()).format("MMMM Do YYYY")
             )
           )
@@ -96,21 +99,23 @@ export default function SchedTable(props) {
 
         let betterMatchData = values[0]
           .filter(
-            x =>
+            (x) =>
               moment(x.datetime.toDate()).format("MMMM Do YYYY") === dateIWant
           )
-          .map(game => ({
+          .map((game) => ({
             id: game.id,
             day: moment(game.datetime.toDate()).format("MMMM Do YYYY"),
             time: moment(game.datetime.toDate()).format("LT"),
+            homeScore: values[4][game.id] ? values[4][game.id].homePts : "",
+            awayScore: values[4][game.id] ? values[4][game.id].awayPts : "",
             homeTeamData: {
               id: game.team_home,
               name: values[1][game.team_home].name,
               colorPrimary: values[1][game.team_home].colorPrimary,
               colorSecondary: values[1][game.team_home].colorSecondary,
               roster: values[2]
-                .filter(x => x.team_id === game.team_home)
-                .map(y => values[3][y.player_id])
+                .filter((x) => x.team_id === game.team_home)
+                .map((y) => values[3][y.player_id]),
             },
             awayTeamData: {
               id: game.team_away,
@@ -118,9 +123,9 @@ export default function SchedTable(props) {
               colorPrimary: values[1][game.team_away].colorPrimary,
               colorSecondary: values[1][game.team_away].colorSecondary,
               roster: values[2]
-                .filter(x => x.team_id === game.team_away)
-                .map(y => values[3][y.player_id])
-            }
+                .filter((x) => x.team_id === game.team_away)
+                .map((y) => values[3][y.player_id]),
+            },
           }));
         //setUniqueDates(Array.from(new Set(betterMatchData.map(x => x.day))))
         //let uniqueDates = Array.from(new Set(betterMatchData.map(x => x.day)));
@@ -132,7 +137,7 @@ export default function SchedTable(props) {
           new Set(
             betterMatchData
               //.filter(y => y.day === dateIWant)
-              .map(x => x.time)
+              .map((x) => x.time)
           )
         ).sort();
         setCurrentTimes(uniqueTimes);
@@ -140,7 +145,7 @@ export default function SchedTable(props) {
         setData(betterMatchData);
         toggleLoading(false);
       })
-      .catch(x => console.log("error", x));
+      .catch((x) => console.log("error", x));
   }, [currentDate]);
 
   return (
@@ -148,21 +153,21 @@ export default function SchedTable(props) {
       <TableBody>
         {isLoading
           ? null
-          : currentTimes.map(time => (
+          : currentTimes.map((time) => (
               <TableRow key={time}>
                 <TableCell
                   style={{
                     borderBottom: "none",
                     paddingRight: 0,
-                    textAlign: "center"
+                    textAlign: "center",
                   }}
                 >
                   {time}
                 </TableCell>
 
                 {data
-                  .filter(x => x.day === currentDate.date && x.time === time)
-                  .map(match => (
+                  .filter((x) => x.day === currentDate.date && x.time === time)
+                  .map((match) => (
                     <TableCell
                       key={match.id}
                       style={{ width: "50%", borderBottom: "none" }}

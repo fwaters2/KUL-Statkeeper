@@ -138,6 +138,7 @@ export default function GoalDialogContainer(props) {
           .catch((error) => console.log(error));
       });
     };
+
     const updatePoint = () => {
       pointUIRef.doc(pointIdToUpdate).update(updatePointUI);
       pointDBRef.doc(pointIdToUpdate).update(updatePointDB);

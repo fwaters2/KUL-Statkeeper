@@ -152,10 +152,51 @@ function handleFantasy(event, categories) {
       });
   }
 }
-
+//event:
+//stat:"goals","assists","ds"
 function handleStat(event, stat) {
   const seasonTableRef = db.collection("seasonStats");
+  const resultsRef = db.collection("results");
 
+  //Handle result change
+  //First get the teamId (derived from playerId)
+  function getTeam(matchId, playerId) {
+    const matchesRef = db.collection("matches");
+    const playersRef = db.collection("players");
+    const getMatchData = matchesRef
+      .doc(matchId)
+      .get()
+      .then((doc) => {
+        return {
+          [doc.data().team_home]: "homePts",
+          [doc.data().team_away]: "awayPts",
+        };
+      });
+
+    const getTeamId = playersRef
+      .doc(playerId)
+      .get()
+      .then((doc) => {
+        console.log("checking for playerDoc", doc);
+        return doc.data().teamId;
+      });
+
+    return Promise.all([getMatchData, getTeamId]).then(([values1, values2]) => {
+      return values1[values2];
+    });
+  }
+
+  function updateResults(matchId, playerId, action) {
+    return getTeam(matchId, playerId).then((teamToChange) => {
+      console.log("teamData", teamToChange);
+
+      return resultsRef
+        .doc(matchId)
+        .set({ matchId, [teamToChange]: action }, { merge: true });
+    });
+  }
+
+  //get the current, basic player data (name, isRookie, gender, team) for season Stats
   function getPlayerData(player) {
     return db
       .collection("players")
@@ -198,28 +239,68 @@ function handleStat(event, stat) {
   //ADDING
   const weDidntHaveDataBefore = !event.before.exists;
   if (weDidntHaveDataBefore) {
-    const { playerId } = event.after.data();
+    const { playerId, matchId } = event.after.data();
 
-    return updatePlayersStats(playerId, increment)
-      .then(console.log(stat + " Added"))
-      .catch((error) => {
-        console.log("Error getting documents: ", error);
-      });
+    const resultsPromise =
+      stat === "goals"
+        ? updateResults(matchId, playerId, increment).then(
+            console.log("Point added to results")
+          )
+        : null;
+
+    const playerStatPromise = updatePlayersStats(playerId, increment).then(
+      console.log(stat + " Added")
+    );
+
+    return Promise.all([resultsPromise, playerStatPromise]).catch((error) => {
+      console.log("Error getting documents: ", error);
+    });
   }
+  //DELETING
   const newDataDoesntExist = !event.after.exists;
   if (newDataDoesntExist) {
-    const { playerId } = event.before.data();
-    return updatePlayersStats(playerId, decrement)
+    const { playerId, matchId } = event.before.data();
+
+    const resultsPromise =
+      stat === "goals"
+        ? updateResults(matchId, playerId, decrement).then(
+            console.log("Point added to results")
+          )
+        : null;
+
+    const playerStatPromise = updatePlayersStats(playerId, decrement)
       .then(console.log(stat + "  Deleted"))
       .catch((error) => {
         console.log("Error getting documents: ", error);
       });
+    return Promise.all([resultsPromise, playerStatPromise]).catch((error) => {
+      console.log("Error getting documents: ", error);
+    });
   } else {
+    //UPDATING
+    const matchPointToDeduct = event.before.data().matchId;
+    const matchPointToAdd = event.after.data().matchId;
     const playerToDeduct = event.before.data().playerId;
     const playerToAdd = event.after.data().playerId;
+
+    const resultsPromise1 =
+      stat === "goals"
+        ? updateResults(matchPointToAdd, playerToAdd, increment).then(
+            console.log("Point added to results")
+          )
+        : null;
+    const resultsPromise2 =
+      stat === "goals"
+        ? updateResults(matchPointToDeduct, playerToDeduct, decrement).then(
+            console.log("Point added to results")
+          )
+        : null;
+
     return Promise.all([
       updatePlayersStats(playerToDeduct, decrement),
       updatePlayersStats(playerToAdd, increment),
+      resultsPromise1,
+      resultsPromise2,
     ])
       .then(console.log("updated " + stat + " in Table"))
       .catch((error) => console.log(error));
@@ -258,3 +339,72 @@ exports.statLeaders = {
     .document("matchEvents/{matchEventsId}")
     .onWrite((event) => handleStat(event, "ds")),
 };
+
+exports.handleStandings = functions.firestore
+  .document("completedGames/{gameId}")
+  .onWrite(() => {
+    const teamPromise = db.collection("teams").get();
+    const matchPromise = db.collection("completedGames").get();
+    return Promise.all([teamPromise, matchPromise]).then(
+      ([teams, matchesSnapshot]) => {
+        let matches = [];
+        matchesSnapshot.forEach((doc) => {
+          matches = [...matches, { id: doc.id, ...doc.data() }];
+        });
+
+        let teamIdArray = [];
+        teams.forEach((doc) => {
+          teamIdArray = [...teamIdArray, { id: doc.id, name: doc.data().name }];
+        });
+
+        const standingsArray = teamIdArray.map((teamObject) => {
+          const team = teamObject.name;
+
+          const wins = matches.filter((x) => x.winner === teamObject.id).length;
+          const losses = matches.filter((x) => x.loser === teamObject.id)
+            .length;
+
+          const Pct = wins / (wins + losses);
+
+          const PF =
+            matches
+              .filter((x) => x.winner === teamObject.id)
+              .reduce((sum, newPoints) => {
+                return sum + newPoints.winningScore;
+              }, 0) +
+            matches
+              .filter((x) => x.loser === teamObject.id)
+              .reduce((sum, newPoints) => {
+                return sum + newPoints.losingScore;
+              }, 0);
+
+          const PA =
+            matches
+              .filter((x) => x.winner === teamObject.id)
+              .reduce((sum, newPoints) => {
+                return sum + newPoints.losingScore;
+              }, 0) +
+            matches
+              .filter((x) => x.loser === teamObject.id)
+              .reduce((sum, newPoints) => {
+                return sum + newPoints.winningScore;
+              }, 0);
+
+          const plusMinus = PF - PA;
+
+          return {
+            team,
+            wins,
+            losses,
+            Pct,
+            PF,
+            PA,
+            plusMinus,
+          };
+        });
+        standingsArray.map((team) =>
+          db.collection("standings").doc(team.team).set(team)
+        );
+      }
+    );
+  });
