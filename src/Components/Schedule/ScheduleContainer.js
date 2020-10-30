@@ -10,7 +10,7 @@ export default function ScheduleContainer() {
   const [uniqueDates, setUniqueDates] = React.useState([]);
   const [currentDate, setCurrentDate] = React.useState({
     weekNum: 1,
-    date: moment("3/28/2020").format("MMMM Do YYYY"),
+    date: moment("10/31/2020").format("MMMM Do YYYY"),
   });
   const handleFULLRESET = () => {
     const db = firebase2.firestore();
@@ -48,7 +48,7 @@ export default function ScheduleContainer() {
         flexDirection: "column",
       }}
     >
-      <Title currentSeason={"Spring 2020"} />
+      <Title currentSeason={"Fall 2020"} />
       <Paper
         style={{ margin: "0 2em 6em 2em", flex: 1, borderRadius: "16px" }}
         elevation={10}
@@ -57,7 +57,7 @@ export default function ScheduleContainer() {
           currentDate={currentDate}
           uniqueDates={uniqueDates}
           setCurrentDate={setCurrentDate}
-          currentSeason={"Spring 2020"}
+          currentSeason={"Fall 2020"}
           currentWeek={{
             week: `Week ${currentDate.weekNum}`,
             date: moment(currentDate.date).format("MMM Do"),

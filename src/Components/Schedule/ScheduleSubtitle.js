@@ -5,7 +5,7 @@ import {
   Grid,
   Typography,
   Menu,
-  MenuItem
+  MenuItem,
 } from "@material-ui/core";
 import moment from "moment";
 
@@ -13,14 +13,14 @@ export default function ScheduleSubtitle(props) {
   const { currentWeek, uniqueDates, setCurrentDate, currentDate } = props;
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleClick = e => {
+  const handleClick = (e) => {
     anchorEl ? setAnchorEl(null) : setAnchorEl(e.currentTarget);
   };
 
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const handleChangeDate = newDate => () => {
+  const handleChangeDate = (newDate) => () => {
     setCurrentDate(newDate);
     setAnchorEl(null);
   };
@@ -33,7 +33,7 @@ export default function ScheduleSubtitle(props) {
       <Toolbar>
         <Grid container alignItems="center" justify="space-between">
           <Grid item>
-            <Typography>Spring</Typography>
+            <Typography>Fall</Typography>
             <Typography variant="caption">2020</Typography>
           </Grid>
           <Grid item>

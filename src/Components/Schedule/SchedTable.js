@@ -89,11 +89,18 @@ export default function SchedTable(props) {
       .then((values) => {
         let uniqueDates = Array.from(
           new Set(
-            values[0].map((x) =>
-              moment(x.datetime.toDate()).format("MMMM Do YYYY")
-            )
+            values[0]
+              .sort((x, y) => {
+                if (moment(x.datetime.toDate()).isBefore(y.datetime.toDate())) {
+                  return -1;
+                } else {
+                  return 1;
+                }
+              })
+              .map((x) => moment(x.datetime.toDate()).format("MMMM Do YYYY"))
           )
         );
+
         setUniqueDates(uniqueDates);
         let dateIWant = currentDate.date;
 
