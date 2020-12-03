@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "kul-spring-20"
+  },
+  "targets": {
+    "kul-spring-20": {
+      "hosting": {
+        "statkeeper": [
+          "statkeeper"
+        ]
+      }
+    }
   }
 }
