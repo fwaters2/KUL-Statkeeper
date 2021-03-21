@@ -67,7 +67,6 @@ export default function GameContainer() {
         isComplete: true,
         timestamp: new Date(),
       });
-      console.log("madataID", matchData.id);
       completedGamesRef.doc(matchData.id).set({
         winner,
         winningScore,

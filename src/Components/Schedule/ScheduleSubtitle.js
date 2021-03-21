@@ -7,10 +7,9 @@ import {
   Menu,
   MenuItem,
 } from "@material-ui/core";
-import moment from "moment";
 
 export default function ScheduleSubtitle(props) {
-  const { currentWeek, uniqueDates, setCurrentDate, currentDate } = props;
+  const { uniqueDates, setCurrentDate, currentDate } = props;
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (e) => {

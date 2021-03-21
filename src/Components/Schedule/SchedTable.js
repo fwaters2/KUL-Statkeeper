@@ -119,7 +119,6 @@ export default function SchedTable(props) {
               moment(x.datetime.toDate()).format("MMMM Do YYYY") === dateIWant
           )
           .map((game) => {
-            console.log("valu", values[1][game.team_home]);
             const data = {
               id: game.id,
               day: moment(game.datetime.toDate()).format("MMMM Do YYYY"),

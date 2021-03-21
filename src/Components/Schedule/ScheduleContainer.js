@@ -40,11 +40,9 @@ export default function ScheduleContainer() {
 
   const getClosestDate = (dates) => {
     const now = moment();
-
     let closest = Infinity;
     let closestDate = null;
     let weekNum = 0;
-    console.log("dates", dates);
 
     dates.forEach((d, index) => {
       const date = moment(d, "MMMM Do YYYY");

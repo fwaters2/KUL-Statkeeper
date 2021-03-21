@@ -85,8 +85,6 @@ export default function DDialogContainer(props) {
     };
 
     const addData = () => {
-      console.log("dId on button press", newDDB.playerId);
-
       dBDRef
         .add(newDDB)
         .then((docRef) =>

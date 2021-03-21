@@ -10,7 +10,7 @@ export default function SchedButton(props) {
     setMatchData(data);
     setPage("Game");
   };
-  console.log("data", data.homeTeamData);
+
   return (
     <Button
       fullWidth

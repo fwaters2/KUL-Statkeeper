@@ -6,7 +6,6 @@ import {
   TableHead,
   TableCell,
   IconButton,
-  TableContainer,
 } from "@material-ui/core";
 import ClearIcon from "@material-ui/icons/Clear";
 import { Edit } from "@material-ui/icons";
