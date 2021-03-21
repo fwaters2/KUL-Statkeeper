@@ -10,6 +10,7 @@ export default function SchedButton(props) {
     setMatchData(data);
     setPage("Game");
   };
+  console.log("data", data.homeTeamData);
   return (
     <Button
       fullWidth
@@ -23,7 +24,9 @@ export default function SchedButton(props) {
         borderRadius: "16px",
         border: "2px lightgrey",
         boxShadow: "0 0 5px 3px black",
-        background: `linear-gradient(155deg, ${data.homeTeamData.colorPrimary}99  50%, ${data.awayTeamData.colorPrimary}99 50%)`,
+        background: `linear-gradient(155deg, ${
+          data.homeTeamData.colorPrimary || "#FFFFFF"
+        }99  50%, ${data.awayTeamData.colorPrimary || "#FFFFFF"}99 50%)`,
       }}
     >
       <Grid container style={{ height: "-webkit-fill-available" }}>

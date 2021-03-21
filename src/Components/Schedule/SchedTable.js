@@ -3,6 +3,13 @@ import { Table, TableBody, TableRow, TableCell } from "@material-ui/core";
 import SchedButton from "./SchedButton";
 import firebase2 from "../../Utils/Firebase2";
 import moment from "moment";
+import {
+  MATCHES_COL,
+  PLAYERS_COL,
+  RESULTS_COL,
+  ROSTERS_COL,
+  TEAMS_COL,
+} from "../../Assets/firestoreCollections";
 
 export default function SchedTable(props) {
   const { setUniqueDates, currentDate } = props;
@@ -50,23 +57,24 @@ export default function SchedTable(props) {
   }
 
   React.useEffect(() => {
-    const getMatches = getFirebaseArray("matches");
+    const getMatches = getFirebaseArray(MATCHES_COL);
 
-    const getResults = getFirebaseObject("results");
+    const getResults = getFirebaseObject(RESULTS_COL);
 
-    const getTeams = getFirebaseObject("teams");
+    const getTeams = getFirebaseObject(TEAMS_COL);
 
-    const getRosters = getFirebaseArray("rosters");
+    const getRosters = getFirebaseArray(ROSTERS_COL);
 
     let playerData = {};
 
     const getPlayerData = firebase2
       .firestore()
-      .collection("players")
+      .collection(PLAYERS_COL)
       .get()
       .then((querySnapshot) => {
         console.groupCollapsed("Players");
         querySnapshot.forEach((doc) => {
+          console.log("player: ", doc.data());
           playerData = {
             ...playerData,
             [doc.id]: {
@@ -87,6 +95,7 @@ export default function SchedTable(props) {
 
     Promise.all([getMatches, getTeams, getRosters, getPlayerData, getResults])
       .then((values) => {
+        console.log("val", values[0]);
         let uniqueDates = Array.from(
           new Set(
             values[0]
@@ -109,31 +118,36 @@ export default function SchedTable(props) {
             (x) =>
               moment(x.datetime.toDate()).format("MMMM Do YYYY") === dateIWant
           )
-          .map((game) => ({
-            id: game.id,
-            day: moment(game.datetime.toDate()).format("MMMM Do YYYY"),
-            time: moment(game.datetime.toDate()).format("LT"),
-            homeScore: values[4][game.id] ? values[4][game.id].homePts : "",
-            awayScore: values[4][game.id] ? values[4][game.id].awayPts : "",
-            homeTeamData: {
-              id: game.team_home,
-              name: values[1][game.team_home].name,
-              colorPrimary: values[1][game.team_home].colorPrimary,
-              colorSecondary: values[1][game.team_home].colorSecondary,
-              roster: values[2]
-                .filter((x) => x.team_id === game.team_home)
-                .map((y) => values[3][y.player_id]),
-            },
-            awayTeamData: {
-              id: game.team_away,
-              name: values[1][game.team_away].name,
-              colorPrimary: values[1][game.team_away].colorPrimary,
-              colorSecondary: values[1][game.team_away].colorSecondary,
-              roster: values[2]
-                .filter((x) => x.team_id === game.team_away)
-                .map((y) => values[3][y.player_id]),
-            },
-          }));
+          .map((game) => {
+            console.log("valu", values[1][game.team_home]);
+            const data = {
+              id: game.id,
+              day: moment(game.datetime.toDate()).format("MMMM Do YYYY"),
+              time: moment(game.datetime.toDate()).format("LT"),
+              homeScore: values[4][game.id] ? values[4][game.id].homePts : "",
+              awayScore: values[4][game.id] ? values[4][game.id].awayPts : "",
+              homeTeamData: {
+                id: game.team_home,
+                name: values[1][game.team_home].name,
+                colorPrimary: values[1][game.team_home].colorPrimary,
+                colorSecondary: values[1][game.team_home].colorSecondary,
+                roster: values[2]
+                  .filter((x) => x.team_id === game.team_home)
+                  .map((y) => values[3][y.player_id]),
+              },
+
+              awayTeamData: {
+                id: game.team_away,
+                name: values[1][game.team_away].name,
+                colorPrimary: values[1][game.team_away].colorPrimary,
+                colorSecondary: values[1][game.team_away].colorSecondary,
+                roster: values[2]
+                  .filter((x) => x.team_id === game.team_away)
+                  .map((y) => values[3][y.player_id]),
+              },
+            };
+            return data;
+          });
         //setUniqueDates(Array.from(new Set(betterMatchData.map(x => x.day))))
         //let uniqueDates = Array.from(new Set(betterMatchData.map(x => x.day)));
         // let uniqueDates = Array.from(new Set(betterMatchData.map(x => x.day)));

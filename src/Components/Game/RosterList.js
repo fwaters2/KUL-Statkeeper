@@ -5,7 +5,7 @@ import {
   ListItem,
   ListItemAvatar,
   Avatar,
-  ListItemText
+  ListItemText,
 } from "@material-ui/core";
 
 export default function RosterList(props) {
@@ -25,7 +25,7 @@ export default function RosterList(props) {
         {title}
       </Typography>
       <List>
-        {roster.sort(byJerseyNum).map(x => (
+        {roster.sort(byJerseyNum).map((x) => (
           <ListItem
             key={x.player}
             button

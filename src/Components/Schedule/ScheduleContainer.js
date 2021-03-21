@@ -10,21 +10,21 @@ export default function ScheduleContainer() {
   const [uniqueDates, setUniqueDates] = React.useState([]);
   const [currentDate, setCurrentDate] = React.useState({
     weekNum: 1,
-    date: moment("10/31/2020").format("MMMM Do YYYY"),
+    date: moment("3/13/2021").format("MMMM Do YYYY"),
   });
   const handleFULLRESET = () => {
     const db = firebase2.firestore();
     console.log("HandlingFULLRESET");
     const collectionsToDelete = [
-      "fantasyUsers",
-      "fantasySubscores",
-      "fantasyPicks",
-      "pointsScorekeeper",
-      "matchEvents",
-      "dsScorekeeper",
-      "pointEvents",
-      "points",
-      "seasonStats",
+      // "fantasyUsers",
+      // "fantasySubscores",
+      // "fantasyPicks",
+      // "pointsScorekeeper",
+      // "matchEvents",
+      // "dsScorekeeper",
+      // "pointEvents",
+      // "points",
+      // "seasonStats",
     ];
     const myPromises = collectionsToDelete.map((x) =>
       db

@@ -12,8 +12,12 @@ import {
 } from "@material-ui/core";
 import DoubleRoster from "./DoubleRoster";
 import { KeyboardArrowLeft } from "@material-ui/icons";
-import firebase2 from "../../../Utils/Firebase2";
 import GameContext from "../../../Assets/GameContext";
+import {
+  assistDBRef,
+  pointDBRef,
+  pointUIRef,
+} from "../../../Assets/firestoreCollections";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -68,10 +72,6 @@ export default function GoalDialogContainer(props) {
     setGoal("");
   };
   const handleConfirm = () => {
-    const pointUIRef = firebase2.firestore().collection("pointsScorekeeper");
-    const pointDBRef = firebase2.firestore().collection("points");
-    const assistDBRef = firebase2.firestore().collection("pointEvents");
-
     const matchId = MatchContext.matchData.id;
     const timestamp = new Date();
     const newData = {

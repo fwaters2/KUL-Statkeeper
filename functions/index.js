@@ -3,166 +3,178 @@ const admin = require("firebase-admin");
 admin.initializeApp();
 const functions = require("firebase-functions");
 
+const PLAYERS_COL = "21SpringPlayers";
+const MATCHES_COL = "21SpringMatches";
+const RESULTS_COL = "21SpringResults";
+const COMPLETED_GAMES_COL = "21SpringCompletedGames";
+const STANDINGS_COL = "21SpringStandings";
+const SEASON_STATS_COL = "21SpringSeasonStats";
+const TEAMS_COL = "teams";
+const ROSTERS_COL = "21SpringRosters";
+
+const POINTS_COL = "21SpringPoints";
+const POINT_EVENTS_COL = "21SpringPointEvents";
+const MATCH_EVENTS_COL = "21SpringMatchEvents";
+
 const db = admin.firestore();
 const increment = admin.firestore.FieldValue.increment(1);
 const decrement = admin.firestore.FieldValue.increment(-1);
 
-function deriveWeekId(grabWeekId) {
-  const week1Ids = [
-    "0JQoXVXV2vTZPdQe50H0",
-    "jR68oLSb074YDAuXBM4Z",
-    "UGxaVnYa6QNhyRiovNuX",
-    "sSkKLvF78J3Ak49quwGt",
-    "HQN2wMsA5ninTKNpCS5u",
-    "hDGLGUN6kODC1SDrMV89",
-    "11DSqA0DP4DB804maDI4",
-    "BfWIm7v0vV2Tn90eFRQk",
-    "3EHYJ5yPET7UuBw8KEkP",
-    "AFNQQw64zjzhSqxPEKl3",
-  ];
-  const week2Ids = [
-    "DJ4Mv3nC7PRdldmFkAEJ",
-    "fI1BmRta6b4aTfrISaAd",
-    "Z1TgnKHKkC1egpuIhOF6",
-    "cSeRusry0gIarRH9AD5P",
-    "19fdZdU35ahW6Dc8dyHa",
-    "jCygeVYUmaGpSwUBMlEo",
-    "fygc5J2UJ7YzeX6JhCQS",
-    "JTfFF2XLIdkjrx2K5I0x",
-    "xrWkzcM96gFqh56RoUow",
-    "AxsS1UlCLrxYFZEydemB",
-    "iZGGClk1uSA5nhy7rMXK",
-  ];
-  const week3Ids = [];
-  const week4Ids = [];
-  const finalsIds = ["hello"];
-  const theDifferentWeeks = [
-    { id: "eZ0gUhQIkfVrtlbQsHL0", matchIds: week1Ids },
-    { id: "bCfgLs0voveSpwrZNJYT", matchIds: week2Ids },
-    { id: "A34XCpBjQ3XKsaHXHVWL", matchIds: week3Ids },
-    { id: "lItofLYvkDj9THti2R60", matchIds: week4Ids },
-    { id: "chZebvikPqgLzF2OrxBZ", matchIds: finalsIds },
-  ];
-  const filterResult = theDifferentWeeks.filter((x) =>
-    x.matchIds.includes(grabWeekId)
-  );
-  return filterResult[0].id;
-}
+// function deriveWeekId(grabWeekId) {
+//   const week1Ids = [
+//     "0JQoXVXV2vTZPdQe50H0",
+//     "jR68oLSb074YDAuXBM4Z",
+//     "UGxaVnYa6QNhyRiovNuX",
+//     "sSkKLvF78J3Ak49quwGt",
+//     "HQN2wMsA5ninTKNpCS5u",
+//     "hDGLGUN6kODC1SDrMV89",
+//     "11DSqA0DP4DB804maDI4",
+//     "BfWIm7v0vV2Tn90eFRQk",
+//     "3EHYJ5yPET7UuBw8KEkP",
+//     "AFNQQw64zjzhSqxPEKl3",
+//   ];
+//   const week2Ids = [
+//     "DJ4Mv3nC7PRdldmFkAEJ",
+//     "fI1BmRta6b4aTfrISaAd",
+//     "Z1TgnKHKkC1egpuIhOF6",
+//     "cSeRusry0gIarRH9AD5P",
+//     "19fdZdU35ahW6Dc8dyHa",
+//     "jCygeVYUmaGpSwUBMlEo",
+//     "fygc5J2UJ7YzeX6JhCQS",
+//     "JTfFF2XLIdkjrx2K5I0x",
+//     "xrWkzcM96gFqh56RoUow",
+//     "AxsS1UlCLrxYFZEydemB",
+//     "iZGGClk1uSA5nhy7rMXK",
+//   ];
+//   const week3Ids = [];
+//   const week4Ids = [];
+//   const finalsIds = ["hello"];
+//   const theDifferentWeeks = [
+//     { id: "eZ0gUhQIkfVrtlbQsHL0", matchIds: week1Ids },
+//     { id: "bCfgLs0voveSpwrZNJYT", matchIds: week2Ids },
+//     { id: "A34XCpBjQ3XKsaHXHVWL", matchIds: week3Ids },
+//     { id: "lItofLYvkDj9THti2R60", matchIds: week4Ids },
+//     { id: "chZebvikPqgLzF2OrxBZ", matchIds: finalsIds },
+//   ];
+//   const filterResult = theDifferentWeeks.filter((x) =>
+//     x.matchIds.includes(grabWeekId)
+//   );
+//   return filterResult[0].id;
+// }
 
-function updateFantasyPoints(operation, userToUpdate, timeframe, thisCategory) {
-  const subscoreId = userToUpdate + timeframe;
-  const subscoreRef = db.collection("fantasySubscores").doc(subscoreId);
-  const userDocRef = db.collection("fantasyUsers").doc(userToUpdate);
-  const weekDocRef = userDocRef.collection("deadlines").doc(timeframe);
-  const categoryDocRef = weekDocRef.collection("picks").doc(thisCategory);
+// function updateFantasyPoints(operation, userToUpdate, timeframe, thisCategory) {
+//   const subscoreId = userToUpdate + timeframe;
+//   const subscoreRef = db.collection(FANTASY_SUBSCORES_COL).doc(subscoreId);
+//   const userDocRef = db.collection(FANTASY_USERS_COL).doc(userToUpdate);
+//   const weekDocRef = userDocRef.collection(DEADLINES_COL).doc(timeframe);
+//   const categoryDocRef = weekDocRef.collection(PICKS_COL).doc(thisCategory);
 
-  const setSubscore = subscoreRef.set(
-    { deadline: timeframe, subscore: operation, userToUpdate },
-    { merge: true }
-  );
+//   const setSubscore = subscoreRef.set(
+//     { deadline: timeframe, subscore: operation, userToUpdate },
+//     { merge: true }
+//   );
 
-  const setTotal = userDocRef.set({ total: operation }, { merge: true });
-  const setWeekTotal = weekDocRef.set({ subTotal: operation }, { merge: true });
-  const setCategoryTotal = categoryDocRef.set(
-    { pts: operation },
-    { merge: true }
-  );
-  return Promise.all([setSubscore, setTotal, setWeekTotal, setCategoryTotal])
-    .then(console.log("updated relevant scores"))
-    .catch((error) => console.log(error));
-}
+//   const setTotal = userDocRef.set({ total: operation }, { merge: true });
+//   const setWeekTotal = weekDocRef.set({ subTotal: operation }, { merge: true });
+//   const setCategoryTotal = categoryDocRef.set(
+//     { pts: operation },
+//     { merge: true }
+//   );
+//   return Promise.all([setSubscore, setTotal, setWeekTotal, setCategoryTotal])
+//     .then(console.log("updated relevant scores"))
+//     .catch((error) => console.log(error));
+// }
 
-function handleFantasy(event, categories) {
-  //defines how we'd go about getting the correct picks (to be used later)
-  function getPicksAffected(player, timeframe) {
-    const fantasyPicksQuery = db
-      .collection("fantasyPicks")
-      .where("playerId", "==", player)
-      .where("weekId", "==", timeframe);
+// function handleFantasy(event, categories) {
+//   //defines how we'd go about getting the correct picks (to be used later)
+//   function getPicksAffected(player, timeframe) {
+//     const fantasyPicksQuery = db
+//       .collection(FANTASY_PICKS_COL)
+//       .where("playerId", "==", player)
+//       .where("weekId", "==", timeframe);
 
-    return fantasyPicksQuery.where("category", "in", categories).get();
-  }
+//     return fantasyPicksQuery.where("category", "in", categories).get();
+//   }
 
-  //ADDING
-  const weDidntHaveDataBefore = !event.before.exists;
-  if (weDidntHaveDataBefore) {
-    //then this is a new document
-    const { playerId, matchId } = event.after.data();
-    const deadlineId = deriveWeekId(matchId);
+//   //ADDING
+//   const weDidntHaveDataBefore = !event.before.exists;
+//   if (weDidntHaveDataBefore) {
+//     //then this is a new document
+//     const { playerId, matchId } = event.after.data();
+//     const deadlineId = deriveWeekId(matchId);
 
-    return getPicksAffected(playerId, deadlineId)
-      .then((docs) => {
-        //now we need to increment each one of these docs
-        return docs.forEach((doc) => {
-          const { userId, category } = doc.data();
-          updateFantasyPoints(increment, userId, deadlineId, category);
-          //updating fantasyuser collections
-        });
-      })
-      .then(console.log("added a point to " + categories.join(", ")))
-      .catch(function (error) {
-        console.log("Error adding documents: ", error);
-      });
-  }
+//     return getPicksAffected(playerId, deadlineId)
+//       .then((docs) => {
+//         //now we need to increment each one of these docs
+//         return docs.forEach((doc) => {
+//           const { userId, category } = doc.data();
+//           updateFantasyPoints(increment, userId, deadlineId, category);
+//           //updating fantasyuser collections
+//         });
+//       })
+//       .then(console.log("added a point to " + categories.join(", ")))
+//       .catch(function (error) {
+//         console.log("Error adding documents: ", error);
+//       });
+//   }
 
-  //DELETING
-  const newDataDoesntExist = !event.after.exists;
-  console.log("delete boolean returns true", newDataDoesntExist);
-  if (newDataDoesntExist) {
-    //the statkeeper deleted that stat
-    const { matchId } = event.before.data();
-    const deadlineId = deriveWeekId(matchId);
-    const deletedPlayerId = event.before.data().playerId;
+//   //DELETING
+//   const newDataDoesntExist = !event.after.exists;
+//   console.log("delete boolean returns true", newDataDoesntExist);
+//   if (newDataDoesntExist) {
+//     //the statkeeper deleted that stat
+//     const { matchId } = event.before.data();
+//     const deadlineId = deriveWeekId(matchId);
+//     const deletedPlayerId = event.before.data().playerId;
 
-    return getPicksAffected(deletedPlayerId, deadlineId)
-      .then((docs) => {
-        //now we need to decrement each one of these docs
-        return docs.forEach((doc) => {
-          const { userId, category } = doc.data();
-          updateFantasyPoints(decrement, userId, deadlineId, category);
-        });
-      })
-      .then(console.log("took a point from " + categories.join(", ")))
-      .catch(function (error) {
-        console.log("Error deleting documents: ", error);
-      });
-  } else {
-    //UPDATING
-    const { playerId, matchId } = event.after.data();
-    const deadlineId = deriveWeekId(matchId);
-    const deletedPlayerId = event.before.data().playerId;
-    return Promise.all([
-      getPicksAffected(playerId, deadlineId),
-      getPicksAffected(deletedPlayerId, deadlineId),
-    ])
-      .then((docs) => {
-        //now we need to decrement each one of these docs
-        docs[0].forEach((doc) => {
-          const { userId, category } = doc.data();
-          updateFantasyPoints(increment, userId, deadlineId, category);
-        });
-        docs[1].forEach((doc) => {
-          const { userId, category } = doc.data();
-          updateFantasyPoints(decrement, userId, deadlineId, category);
-        });
-      })
-      .then(console.log("updated " + categories.join(", ")))
-      .catch(function (error) {
-        console.log("Error updating documents: ", error);
-      });
-  }
-}
+//     return getPicksAffected(deletedPlayerId, deadlineId)
+//       .then((docs) => {
+//         //now we need to decrement each one of these docs
+//         return docs.forEach((doc) => {
+//           const { userId, category } = doc.data();
+//           updateFantasyPoints(decrement, userId, deadlineId, category);
+//         });
+//       })
+//       .then(console.log("took a point from " + categories.join(", ")))
+//       .catch(function (error) {
+//         console.log("Error deleting documents: ", error);
+//       });
+//   } else {
+//     //UPDATING
+//     const { playerId, matchId } = event.after.data();
+//     const deadlineId = deriveWeekId(matchId);
+//     const deletedPlayerId = event.before.data().playerId;
+//     return Promise.all([
+//       getPicksAffected(playerId, deadlineId),
+//       getPicksAffected(deletedPlayerId, deadlineId),
+//     ])
+//       .then((docs) => {
+//         //now we need to decrement each one of these docs
+//         docs[0].forEach((doc) => {
+//           const { userId, category } = doc.data();
+//           updateFantasyPoints(increment, userId, deadlineId, category);
+//         });
+//         docs[1].forEach((doc) => {
+//           const { userId, category } = doc.data();
+//           updateFantasyPoints(decrement, userId, deadlineId, category);
+//         });
+//       })
+//       .then(console.log("updated " + categories.join(", ")))
+//       .catch(function (error) {
+//         console.log("Error updating documents: ", error);
+//       });
+//   }
+// }
 //event:
 //stat:"goals","assists","ds"
 function handleStat(event, stat) {
-  const seasonTableRef = db.collection("seasonStats");
-  const resultsRef = db.collection("results");
+  const seasonTableRef = db.collection(SEASON_STATS_COL);
 
   //Handle result change
   //First get the teamId (derived from playerId)
   function getTeam(matchId, playerId) {
-    const matchesRef = db.collection("matches");
-    const playersRef = db.collection("players");
+    const matchesRef = db.collection(MATCHES_COL);
+    const playersRef = db.collection(PLAYERS_COL);
     const getMatchData = matchesRef
       .doc(matchId)
       .get()
@@ -190,7 +202,7 @@ function handleStat(event, stat) {
     return getTeam(matchId, playerId).then((teamToChange) => {
       console.log("teamData", teamToChange);
 
-      return resultsRef
+      return resultRef
         .doc(matchId)
         .set({ matchId, [teamToChange]: action }, { merge: true });
     });
@@ -199,7 +211,7 @@ function handleStat(event, stat) {
   //get the current, basic player data (name, isRookie, gender, team) for season Stats
   function getPlayerData(player) {
     return db
-      .collection("players")
+      .collection(PLAYERS_COL)
       .doc(player)
       .get()
       .then((doc) => {
@@ -209,7 +221,7 @@ function handleStat(event, stat) {
       })
       .then((data) =>
         db
-          .collection("teams")
+          .collection(TEAMS_COL)
           .doc(data.teamId)
           .get()
           .then((doc) => {
@@ -306,45 +318,48 @@ function handleStat(event, stat) {
       .catch((error) => console.log(error));
   }
 }
-const shared = ["rookieF", "rookieM"];
+// const shared = ["rookieF", "rookieM"];
 
-const goalAffectedCategories = ["goalsF", "goalsM", ...shared];
-const assistAffectedCategories = ["assistsF", "assistsM", ...shared];
-const dAffectedCategories = ["dsF", "dsM", ...shared];
+// const goalAffectedCategories = ["goalsF", "goalsM", ...shared];
+// const assistAffectedCategories = ["assistsF", "assistsM", ...shared];
+// const dAffectedCategories = ["dsF", "dsM", ...shared];
 
-exports.fantasyPts = {
-  handleFantasyGoals: functions.firestore
-    .document("points/{pointId}")
-    .onWrite((event) => handleFantasy(event, goalAffectedCategories)),
+// exports.fantasyPts = {
+//   handleFantasyGoals: functions.firestore
+//     .document(`${POINTS_COL}/{pointId}`)
+//     .onWrite((event) => handleFantasy(event, goalAffectedCategories)),
 
-  handleFantasyAssists: functions.firestore
-    .document("pointEvents/{pointEventsId}")
-    .onWrite((event) => handleFantasy(event, assistAffectedCategories)),
+//   handleFantasyAssists: functions.firestore
+//     .document(`${POINT_EVENTS_COL}/{pointEventsId}`)
+//     .onWrite((event) => handleFantasy(event, assistAffectedCategories)),
 
-  handleFantasyDs: functions.firestore
-    .document("matchEvents/{matchEventsId}")
-    .onWrite((event) => handleFantasy(event, dAffectedCategories)),
-};
+//   handleFantasyDs: functions.firestore
+//     .document(`${MATCH_EVENTS_COL}/{matchEventsId}`)
+//     .onWrite((event) => handleFantasy(event, dAffectedCategories)),
+// };
 
 exports.statLeaders = {
   handleGoals: functions.firestore
-    .document("points/{pointId}")
+    .document(`${POINTS_COL}/{pointId}`)
     .onWrite((event) => handleStat(event, "goals")),
 
   handleAssists: functions.firestore
-    .document("pointEvents/{pointEventsId}")
+    .document(`${POINT_EVENTS_COL}/{pointEventsId}`)
     .onWrite((event) => handleStat(event, "assists")),
 
   handleDs: functions.firestore
-    .document("matchEvents/{matchEventsId}")
+    .document(`${MATCH_EVENTS_COL}/{matchEventsId}`)
     .onWrite((event) => handleStat(event, "ds")),
 };
 
 exports.handleStandings = functions.firestore
-  .document("completedGames/{gameId}")
+  .document(`${COMPLETED_GAMES_COL}/{gameId}`)
   .onWrite(() => {
-    const teamPromise = db.collection("teams").get();
-    const matchPromise = db.collection("completedGames").get();
+    const teamPromise = db
+      .collection(TEAMS_COL)
+      .where("seasons", "array-contains", "4s0LJvkm0KjHKQziof7a")
+      .get();
+    const matchPromise = db.collection(COMPLETED_GAMES_COL).get();
     return Promise.all([teamPromise, matchPromise]).then(
       ([teams, matchesSnapshot]) => {
         let matches = [];
@@ -403,7 +418,7 @@ exports.handleStandings = functions.firestore
           };
         });
         standingsArray.map((team) =>
-          db.collection("standings").doc(team.team).set(team)
+          db.collection(STANDINGS_COL).doc(team.team).set(team)
         );
       }
     );

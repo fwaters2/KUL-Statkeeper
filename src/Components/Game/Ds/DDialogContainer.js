@@ -8,12 +8,12 @@ import {
   Box,
   DialogActions,
   AppBar,
-  Grid
+  Grid,
 } from "@material-ui/core";
 import SingleRoster from "./SingleRoster";
 import { KeyboardArrowLeft } from "@material-ui/icons";
-import firebase2 from "../../../Utils/Firebase2";
 import GameContext from "../../../Assets/GameContext";
+import { dBDRef, dUIRef } from "../../../Assets/firestoreCollections";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -36,12 +36,12 @@ export default function DDialogContainer(props) {
   const {
     name: homeTeam,
     roster: rosterHome,
-    colorPrimary: homeColor
+    colorPrimary: homeColor,
   } = MatchContext.matchData.homeTeamData;
   const {
     name: awayTeam,
     roster: rosterAway,
-    colorPrimary: awayColor
+    colorPrimary: awayColor,
   } = MatchContext.matchData.awayTeamData;
 
   const { onClose, open, dIdToUpdate } = props;
@@ -51,7 +51,7 @@ export default function DDialogContainer(props) {
   const [color, setColor] = React.useState("");
   const [playerId, setPlayerId] = React.useState(null);
 
-  const handleTeamChoice = team => () => {
+  const handleTeamChoice = (team) => () => {
     setRoster(team === homeTeam ? rosterHome : rosterAway);
     setTeam(team === homeTeam ? homeTeam : awayTeam);
     setColor(team === homeTeam ? homeColor : awayColor);
@@ -64,46 +64,44 @@ export default function DDialogContainer(props) {
   };
 
   const handleConfirm = () => {
-    const dUIRef = firebase2.firestore().collection("dsScorekeeper");
     const newDUI = {
       matchId: MatchContext.matchData.id,
       teamColor: color,
       D: d,
       playerId,
-      timestamp: new Date()
+      timestamp: new Date(),
     };
     const updateDUI = { teamColor: color, D: d, playerId };
 
-    const dDBRef = firebase2.firestore().collection("matchEvents");
     const newDDB = {
       matchId: MatchContext.matchData.id,
       matchEventType: "CBW4Mh0k0BFqVK05WPjS",
       playerId,
-      timestamp: new Date()
+      timestamp: new Date(),
     };
 
     const updateDDB = {
-      playerId
+      playerId,
     };
 
     const addData = () => {
       console.log("dId on button press", newDDB.playerId);
 
-      dDBRef
+      dBDRef
         .add(newDDB)
-        .then(docRef =>
+        .then((docRef) =>
           dUIRef
             .doc(docRef.id)
             .set(newDUI)
             .then(console.log("Set dUI doc with same id as db doc"))
-            .catch(error => console.log(error))
+            .catch((error) => console.log(error))
         )
         .then(console.log("added db Ds doc"))
-        .catch(error => console.log(error));
+        .catch((error) => console.log(error));
     };
     const updateData = () => {
       dUIRef.doc(dIdToUpdate).update(updateDUI);
-      dDBRef.doc(dIdToUpdate).update(updateDDB);
+      dBDRef.doc(dIdToUpdate).update(updateDDB);
     };
 
     dIdToUpdate === null ? addData() : updateData();
@@ -130,7 +128,7 @@ export default function DDialogContainer(props) {
             style={{
               backgroundColor: homeColor + "66",
               minWidth: "200px",
-              padding: "2em 0"
+              padding: "2em 0",
             }}
             onClick={handleTeamChoice(homeTeam)}
           >
@@ -140,7 +138,7 @@ export default function DDialogContainer(props) {
             style={{
               backgroundColor: awayColor + "66",
               minWidth: "200px",
-              padding: "2em 0"
+              padding: "2em 0",
             }}
             onClick={handleTeamChoice(awayTeam)}
           >
@@ -162,7 +160,7 @@ export default function DDialogContainer(props) {
             margin: 0,
             top: "auto",
             bottom: 0,
-            position: "fixed"
+            position: "fixed",
           }}
         >
           <DialogActions>
@@ -173,7 +171,7 @@ export default function DDialogContainer(props) {
               style={{
                 height: "80px",
                 backgroundColor: "#DF3E40",
-                color: "white"
+                color: "white",
               }}
             >
               Confirm

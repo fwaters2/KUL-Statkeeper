@@ -7,9 +7,17 @@ import GoalDialogContainer from "./Goals/GoalDialogContainer";
 import Scoreboard from "./Scoreboard/Index.js";
 
 import GameContext from "../../Assets/GameContext";
-import Firestore from "../../Utils/Firebase2";
 import { ArrowLeft, Add, ArrowRight } from "@material-ui/icons";
 import SubmissionConfirm from "./SubmissionConfirm";
+import {
+  assistDBRef,
+  dUIRef,
+  matchEventsRef,
+  pointDBRef,
+  pointUIRef,
+  resultRef,
+  completedGamesRef,
+} from "../../Assets/firestoreCollections";
 
 export default function GameContainer() {
   //Data
@@ -43,9 +51,6 @@ export default function GameContainer() {
       alert("Error: The score is tied");
       toggleConfirmation(false);
     } else {
-      const resultRef = Firestore.firestore()
-        .collection("results")
-        .doc(matchData.id);
       const winner =
         homeScore > awayScore
           ? matchData.homeTeamData.id
@@ -56,13 +61,14 @@ export default function GameContainer() {
           : matchData.awayTeamData.id;
       const winningScore = homeScore > awayScore ? homeScore : awayScore;
       const losingScore = homeScore < awayScore ? homeScore : awayScore;
-      resultRef.update({
+      resultRef.doc(matchData.id).update({
         winner,
         loser,
         isComplete: true,
         timestamp: new Date(),
       });
-      Firestore.firestore().collection("completedGames").doc(matchData.id).set({
+      console.log("madataID", matchData.id);
+      completedGamesRef.doc(matchData.id).set({
         winner,
         winningScore,
         loser,
@@ -74,13 +80,12 @@ export default function GameContainer() {
   };
 
   //Firestore References
-  const pointsRef = Firestore.firestore().collection("pointsScorekeeper");
-  const dRef = Firestore.firestore().collection("dsScorekeeper");
+  const pointsRef = pointUIRef;
   const byTimestamp = (a, b) => a.timestamp.toDate() - b.timestamp.toDate();
   React.useEffect(() => {
     //Import Stats
 
-    dRef.where("matchId", "==", matchData.id).onSnapshot((querySnapshot) => {
+    dUIRef.where("matchId", "==", matchData.id).onSnapshot((querySnapshot) => {
       var dbDs = [];
       querySnapshot.forEach((doc) => {
         dbDs.push({ id: doc.id, ...doc.data() });
@@ -115,12 +120,12 @@ export default function GameContainer() {
     togglePointDialog(true);
   };
 
-  const handlePointDelete = (id, assistDBref) => () => {
-    Firestore.firestore().collection("pointEvents").doc(assistDBref).delete();
+  const handlePointDelete = (id, assistDBrefID) => () => {
+    assistDBRef.doc(assistDBrefID).delete();
 
     pointsRef.doc(id).delete();
     togglePointDialog(false);
-    Firestore.firestore().collection("points").doc(id).delete();
+    pointDBRef.doc(id).delete();
     pointsRef.doc(id).delete();
     togglePointDialog(false);
   };
@@ -132,13 +137,12 @@ export default function GameContainer() {
   };
 
   const handleDDelete = (id) => () => {
-    Firestore.firestore()
-      .collection("matchEvents")
+    matchEventsRef
       .doc(id)
       .delete()
       .then(console.log("matchEvents d delete"))
       .catch((error) => console.log(error));
-    dRef
+    dUIRef
       .doc(id)
       .delete()
       .then(console.log("ui d delete"))

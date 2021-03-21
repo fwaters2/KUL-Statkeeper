@@ -33,8 +33,8 @@ export default function ScheduleSubtitle(props) {
       <Toolbar>
         <Grid container alignItems="center" justify="space-between">
           <Grid item>
-            <Typography>Fall</Typography>
-            <Typography variant="caption">2020</Typography>
+            <Typography>Spring</Typography>
+            <Typography variant="caption">2021</Typography>
           </Grid>
           <Grid item>
             <Typography variant="h4" align="center">
