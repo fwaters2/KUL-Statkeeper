@@ -10,7 +10,7 @@ export default function ScheduleContainer() {
   const [uniqueDates, setUniqueDates] = useState([]);
   const [currentDate, setCurrentDate] = useState({
     weekNum: 1,
-    date: "Broken",
+    date: "Loading...",
   });
   const handleFULLRESET = () => {
     const db = firebase2.firestore();
@@ -38,25 +38,6 @@ export default function ScheduleContainer() {
       .catch((error) => console.log(error));
   };
 
-  const getClosestDate = (dates) => {
-    const now = moment();
-    let closest = Infinity;
-    let closestDate = null;
-    let weekNum = 0;
-
-    dates.forEach((d, index) => {
-      const date = moment(d, "MMMM Do YYYY");
-      if (Math.abs(now.diff(date, "days")) < closest) {
-        closest = now.diff(date, "days");
-        weekNum = index + 1;
-        closestDate = d;
-      }
-    });
-    const currentDate = { weekNum, date: closestDate };
-
-    return currentDate;
-  };
-
   return (
     <div
       id="root"
@@ -68,7 +49,7 @@ export default function ScheduleContainer() {
         flexDirection: "column",
       }}
     >
-      <Title currentSeason={"Fall 2020"} />
+      <Title currentSeason={"Spring 2021"} />
       <Paper
         style={{ margin: "0 2em 6em 2em", flex: 1, borderRadius: "16px" }}
         elevation={10}
@@ -88,7 +69,6 @@ export default function ScheduleContainer() {
             setCurrentDate={setCurrentDate}
             currentDate={currentDate}
             setUniqueDates={setUniqueDates}
-            getClosestDate={getClosestDate}
           />
         </Box>
       </Paper>

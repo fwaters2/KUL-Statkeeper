@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Button, Grid, Paper, TableContainer, Fab } from "@material-ui/core";
 import DColumn from "./Ds/DColumn";
 import GoalColumns from "./Goals/GoalColumns";
@@ -21,26 +21,26 @@ import {
 
 export default function GameContainer() {
   //Data
-  const gameData = React.useContext(GameContext);
+  const gameData = useContext(GameContext);
   const { setPage, matchData } = gameData;
-  const [points, setPoints] = React.useState([]);
-  const [ds, setDs] = React.useState([]);
+  const [points, setPoints] = useState([]);
+  const [ds, setDs] = useState([]);
 
   //Dialogs
-  const [isPointDialogOpen, togglePointDialog] = React.useState(false);
-  const [isDDialogOpen, toggleDDialog] = React.useState(false);
-  const [pointIdToUpdate, setPointIdToUpdate] = React.useState(null);
-  const [assistIdToUpdate, setAssistIdToUpdate] = React.useState(null);
-  const [dIdToUpdate, setDIdToUpdate] = React.useState(null);
-  const [isConfirming, toggleConfirmation] = React.useState(false);
+  const [isPointDialogOpen, togglePointDialog] = useState(false);
+  const [isDDialogOpen, toggleDDialog] = useState(false);
+  const [pointIdToUpdate, setPointIdToUpdate] = useState(null);
+  const [assistIdToUpdate, setAssistIdToUpdate] = useState(null);
+  const [dIdToUpdate, setDIdToUpdate] = useState(null);
+  const [isConfirming, toggleConfirmation] = useState(false);
 
   //Scoreboard Manipulation
-  const [homeScore, setHomeScore] = React.useState(
+  const [homeScore, setHomeScore] = useState(
     points.filter(
       (point) => point.teamColor === matchData.homeTeamData.colorPrimary
     ).length
   );
-  const [awayScore, setAwayScore] = React.useState(
+  const [awayScore, setAwayScore] = useState(
     points.filter(
       (point) => point.teamColor === matchData.awayTeamData.colorPrimary
     ).length
@@ -78,13 +78,14 @@ export default function GameContainer() {
     }
   };
 
-  //Firestore References
-  const pointsRef = pointUIRef;
+  // Sort by
   const byTimestamp = (a, b) => a.timestamp.toDate() - b.timestamp.toDate();
-  React.useEffect(() => {
-    //Import Stats
 
-    dUIRef.where("matchId", "==", matchData.id).onSnapshot((querySnapshot) => {
+  const { id, homeTeamData, awayTeamData } = matchData;
+
+  useEffect(() => {
+    //Import Stats
+    dUIRef.where("matchId", "==", id).onSnapshot((querySnapshot) => {
       var dbDs = [];
       querySnapshot.forEach((doc) => {
         dbDs.push({ id: doc.id, ...doc.data() });
@@ -92,25 +93,26 @@ export default function GameContainer() {
       });
       setDs(dbDs);
     });
-    pointsRef
-      .where("matchId", "==", matchData.id)
-      .onSnapshot((querySnapshot) => {
-        var dbPoints = [];
-        querySnapshot.forEach((doc) => {
-          dbPoints.push({ id: doc.id, ...doc.data() });
-        });
-        //update Scoreboard
-        const newHomeScore = dbPoints.filter(
-          (point) => point.teamColor === matchData.homeTeamData.colorPrimary
-        ).length;
-        const newAwayScore = dbPoints.filter(
-          (point) => point.teamColor === matchData.awayTeamData.colorPrimary
-        ).length;
-        setHomeScore(newHomeScore);
-        setAwayScore(newAwayScore);
-        setPoints(dbPoints);
+  }, [id]);
+
+  useEffect(() => {
+    pointUIRef.where("matchId", "==", id).onSnapshot((querySnapshot) => {
+      var dbPoints = [];
+      querySnapshot.forEach((doc) => {
+        dbPoints.push({ id: doc.id, ...doc.data() });
       });
-  }, []);
+      //update Scoreboard
+      const newHomeScore = dbPoints.filter(
+        (point) => point.teamColor === homeTeamData.colorPrimary
+      ).length;
+      const newAwayScore = dbPoints.filter(
+        (point) => point.teamColor === awayTeamData.colorPrimary
+      ).length;
+      setHomeScore(newHomeScore);
+      setAwayScore(newAwayScore);
+      setPoints(dbPoints);
+    });
+  }, [id, homeTeamData.colorPrimary, awayTeamData.colorPrimary]);
 
   //Point Manipulation
   const choosePointIdToUpdate = (goal) => {
@@ -122,10 +124,10 @@ export default function GameContainer() {
   const handlePointDelete = (id, assistDBrefID) => () => {
     assistDBRef.doc(assistDBrefID).delete();
 
-    pointsRef.doc(id).delete();
+    pointUIRef.doc(id).delete();
     togglePointDialog(false);
     pointDBRef.doc(id).delete();
-    pointsRef.doc(id).delete();
+    pointUIRef.doc(id).delete();
     togglePointDialog(false);
   };
 
