@@ -12,7 +12,7 @@ import {
 } from "../../Assets/firestoreCollections";
 
 export default function SchedTable(props) {
-  const { setUniqueDates, currentDate } = props;
+  const { setUniqueDates, currentDate, getClosestDate, setCurrentDate } = props;
   const [currentTimes, setCurrentTimes] = React.useState([]);
   const [data, setData] = React.useState([]);
   const [isLoading, toggleLoading] = React.useState(true);
@@ -95,7 +95,6 @@ export default function SchedTable(props) {
 
     Promise.all([getMatches, getTeams, getRosters, getPlayerData, getResults])
       .then((values) => {
-        console.log("val", values[0]);
         let uniqueDates = Array.from(
           new Set(
             values[0]
@@ -109,9 +108,10 @@ export default function SchedTable(props) {
               .map((x) => moment(x.datetime.toDate()).format("MMMM Do YYYY"))
           )
         );
-
+        const closestDate = getClosestDate(uniqueDates);
+        setCurrentDate(closestDate);
         setUniqueDates(uniqueDates);
-        let dateIWant = currentDate.date;
+        let dateIWant = closestDate.date;
 
         let betterMatchData = values[0]
           .filter(
@@ -167,7 +167,7 @@ export default function SchedTable(props) {
         toggleLoading(false);
       })
       .catch((x) => console.log("error", x));
-  }, [currentDate]);
+  }, []);
 
   return (
     <Table>
