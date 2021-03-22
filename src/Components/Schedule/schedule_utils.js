@@ -8,7 +8,7 @@ import {
   TEAMS_COL,
 } from "../../Assets/firestoreCollections";
 
-const getClosestDate = (dates) => {
+export const getClosestDate = (dates) => {
   const now = moment();
   let closest = Infinity;
   let closestDate = null;
@@ -26,8 +26,9 @@ const getClosestDate = (dates) => {
 
   return currentDate;
 };
-export function fetchData() {
-  const getMatches = getFirebaseArray(MATCHES_COL);
+export const getMatches = getFirebaseArray(MATCHES_COL);
+
+export function fetchData(currentDate) {
   const getResults = getFirebaseObject(RESULTS_COL);
   const getTeams = getFirebaseObject(TEAMS_COL);
   const getRosters = getFirebaseArray(ROSTERS_COL);
@@ -44,9 +45,9 @@ export function fetchData() {
       let dateArray = getDates(matches);
       let uniqueDates = getUnique(dateArray);
 
-      const closestDate = getClosestDate(uniqueDates);
+      // const closestDate = getClosestDate(uniqueDates);
 
-      const dateIWant = closestDate.date;
+      // const dateIWant = closestDate.date;
 
       let betterMatchData = parseMatchData(
         matches,
@@ -54,14 +55,13 @@ export function fetchData() {
         rosters,
         playerData,
         results,
-        dateIWant
+        currentDate
       );
       const allTimes = betterMatchData.map((x) => x.time);
 
       let uniqueTimes = getUnique(allTimes).sort();
 
       let data = {
-        closestDate,
         uniqueDates,
         uniqueTimes,
         betterMatchData,
@@ -193,7 +193,7 @@ export function parseMatchData(
   dateIWant
 ) {
   return matches
-    .filter((x) => getMatchDate(x.datetime) === dateIWant)
+    .filter((x) => getMatchDate(x.datetime) === dateIWant.date)
     .map((game) => {
       const { datetime, id, team_home, team_away } = game;
       const data = {
@@ -202,9 +202,7 @@ export function parseMatchData(
         time: getMatchTime(datetime),
         homeScore: getPoints(id, results, "homePts"),
         awayScore: getPoints(id, results, "awayPts"),
-
         homeTeamData: getTeamData(team_home, teams, rosters, playerData),
-
         awayTeamData: getTeamData(team_away, teams, rosters, playerData),
       };
       return data;

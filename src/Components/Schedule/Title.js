@@ -10,10 +10,10 @@ export default function Title() {
             padding: "2em",
             background:
               "radial-gradient(rgba(255,255,255,0.4), transparent 70%)",
-            borderRadius: "2em"
+            borderRadius: "2em",
           }}
         >
-          <img src={KUL_final} alt="logo" height="100px" />
+          <img src={KUL_final} alt="logo" height="70px" />
         </Box>
       </Grid>
     );
@@ -23,7 +23,7 @@ export default function Title() {
       <Grid container alignItems="center" justify="space-around">
         <Logo />
         <Grid item>
-          <Typography align="center" variant="h2">
+          <Typography align="center" variant="h3">
             Statkeeper
           </Typography>
         </Grid>

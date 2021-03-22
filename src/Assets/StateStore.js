@@ -10,7 +10,7 @@ export default function StateStore() {
     page,
     setPage,
     matchData,
-    setMatchData
+    setMatchData,
   };
 
   return (

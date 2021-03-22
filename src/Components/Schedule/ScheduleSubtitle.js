@@ -37,7 +37,7 @@ export default function ScheduleSubtitle(props) {
           </Grid>
           <Grid item>
             <Typography variant="h4" align="center">
-              Schedule
+              Choose Game
             </Typography>
           </Grid>
           <Grid item onClick={handleClick}>

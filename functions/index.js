@@ -202,7 +202,8 @@ function handleStat(event, stat) {
     return getTeam(matchId, playerId).then((teamToChange) => {
       console.log("teamData", teamToChange);
 
-      return resultRef
+      return db
+        .collection(RESULTS_COL)
         .doc(matchId)
         .set({ matchId, [teamToChange]: action }, { merge: true });
     });
