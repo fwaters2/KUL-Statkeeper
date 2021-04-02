@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -7,10 +7,18 @@ import {
   Menu,
   MenuItem,
 } from "@material-ui/core";
+import { ScheduleContext } from "../../Contexts/ScheduleContext";
+import { getMatchDate } from "../../Utils/schedule_utils";
 
-export default function ScheduleSubtitle(props) {
-  const { uniqueDates, setCurrentDate, currentDate } = props;
-  const [anchorEl, setAnchorEl] = React.useState(null);
+export default function ScheduleSubtitle() {
+  const { allDates = [], currentDate, setCurrentDate } = useContext(
+    ScheduleContext
+  );
+
+  const uniqueDates = allDates.map((date) => {
+    return getMatchDate(date);
+  });
+  const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (e) => {
     anchorEl ? setAnchorEl(null) : setAnchorEl(e.currentTarget);

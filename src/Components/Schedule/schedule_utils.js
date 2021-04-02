@@ -60,6 +60,7 @@ export function fetchData(currentDate) {
       const allTimes = betterMatchData.map((x) => x.time);
 
       let uniqueTimes = getUnique(allTimes).sort();
+      console.log("uniqTimes", uniqueTimes, allTimes);
 
       let data = {
         uniqueDates,

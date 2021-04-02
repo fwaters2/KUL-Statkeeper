@@ -7,45 +7,31 @@ import {
   Typography,
 } from "@material-ui/core";
 import GameContext from "../../Assets/GameContext";
-import firebase2 from "../../Utils/Firebase2";
+import { ScheduleContext } from "../../Contexts/ScheduleContext";
 
 export default function SchedButton({ data, finishedGameIds }) {
   const { setMatchData, setPage } = useContext(GameContext);
+  const { standings } = useContext(ScheduleContext);
   const { id, homeTeamData, homeScore = 0, awayTeamData, awayScore = 0 } = data;
-  const [homeRecord, setHomeRecord] = useState("0 - 0");
-  const [awayRecord, setAwayRecord] = useState("0 - 0");
 
-  useEffect(() => {
-    firebase2
-      .firestore()
-      .collection("21SpringStandings")
-      .doc(homeTeamData.name)
-      .get()
-      .then((doc) => {
-        const { wins, losses } = doc.data();
-        setHomeRecord(`${wins} - ${losses}`);
-      });
-  }, []);
-  useEffect(() => {
-    firebase2
-      .firestore()
-      .collection("21SpringStandings")
-      .doc(awayTeamData.name)
-      .get()
-      .then((doc) => {
-        const { wins, losses } = doc.data();
-        setAwayRecord(`${wins} - ${losses}`);
-      });
-  }, []);
+  const getTeamRecord = (id) => {
+    const idFound = Object.keys(standings).includes(id);
+    if (idFound) {
+      const { wins = 0, losses = 0 } = standings[id];
+      return `${wins} - ${losses}`;
+    }
+    return `Error`;
+  };
+
+  const homeRecord = getTeamRecord(homeTeamData.name);
+  const awayRecord = getTeamRecord(awayTeamData.name);
 
   const handleClick = () => {
-    setMatchData(data);
+    alert("clicking todo: add matchId to page");
+    //setMatchData(data);
     setPage("Game");
   };
-  const textStyle = {
-    color: "black",
-    fontWeight: "bolder",
-  };
+
   const arrow = {
     border: "solid black",
     borderWidth: "0 3px 3px 0",

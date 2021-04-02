@@ -3,18 +3,18 @@ import "./Scoreboard.css";
 import Title from "./Title";
 import GameContext from "../../../Assets/GameContext";
 import Timer from "./Timer";
-//import Timer2 from "../Statkeeper/Timer2";
 
-export default function ScoreboardContainer(props) {
-  const { stuff, title } = props;
-  const matchData = React.useContext(GameContext);
-  const homeTeam = matchData.matchData.homeTeamData.name;
-  const awayTeam = matchData.matchData.awayTeamData.name;
-  const homeScoreTens = Math.floor(stuff.homeScore / 10);
-  const homeScoreOnes = stuff.homeScore % 10;
-  const awayScoreTens = Math.floor(stuff.awayScore / 10);
-  const awayScoreOnes = stuff.awayScore % 10;
-  //const timeDigits = stuff.time.split("");
+export default function ScoreboardContainer({
+  title,
+  homeTeam = "Home error",
+  awayTeam = "Away Error",
+  homeScore = 0,
+  awayScore = 0,
+}) {
+  const homeScoreTens = Math.floor(homeScore / 10);
+  const homeScoreOnes = homeScore % 10;
+  const awayScoreTens = Math.floor(awayScore / 10);
+  const awayScoreOnes = awayScore % 10;
 
   return (
     <div className="Scoreboard">
