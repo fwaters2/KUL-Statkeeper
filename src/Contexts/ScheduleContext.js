@@ -13,7 +13,6 @@ import { getClosestDate } from "../Utils/schedule_utils";
 export const ScheduleContext = createContext();
 
 const ScheduleProvider = ({ children }) => {
-  const [loading, toggleLoading] = useState(false);
   const [finishedGames, setFinishedGames] = useState([]);
   const [results, setResults] = useState({});
   const [standings, setStandings] = useState({});

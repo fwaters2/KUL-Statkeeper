@@ -40,7 +40,6 @@ export default function SchedTable() {
             >
               <TableCellTime>{time}</TableCellTime>
               {filteredMatches.map((match) => {
-                console.log("match", match);
                 return (
                   <React.Fragment key={match.id}>
                     <TableCellMatchButton key={match.id}>

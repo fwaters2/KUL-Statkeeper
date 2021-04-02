@@ -25,25 +25,27 @@ export default function RosterList(props) {
         {title}
       </Typography>
       <List>
-        {roster.sort(byJerseyNum).map((x) => (
-          <ListItem
-            key={x.player}
-            button
-            selected={x.player === stat}
-            variant="contained"
-            onClick={handleStat(x)}
-          >
-            <ListItemAvatar>
-              <Avatar alt={x.player} src={x.photo} />
-            </ListItemAvatar>
-            <ListItemText
-              primary={x.player}
-              secondary={`${
-                x.jerseyNum !== undefined ? "#" + x.jerseyNum : ""
-              } ${x.jerseyBack}`}
-            />
-          </ListItem>
-        ))}
+        {roster.sort(byJerseyNum).map((x) => {
+          return (
+            <ListItem
+              key={x.player}
+              button
+              selected={x.player === stat}
+              variant="contained"
+              onClick={handleStat(x)}
+            >
+              <ListItemAvatar>
+                <Avatar alt={x.player} src={x.photo} />
+              </ListItemAvatar>
+              <ListItemText
+                primary={x.player}
+                secondary={`${
+                  x.jerseyNum !== undefined ? "#" + x.jerseyNum : ""
+                } ${x.jerseyBack}`}
+              />
+            </ListItem>
+          );
+        })}
         {title === "Assist" ? (
           <ListItem
             button

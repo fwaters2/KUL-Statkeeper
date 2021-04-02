@@ -16,7 +16,7 @@ export default function ScheduleContainer() {
         flexDirection: "column",
       }}
     >
-      <Title currentSeason={"Spring 2021"} />
+      <Title />
       <Paper
         style={{
           margin: "0 2em 6em 2em",

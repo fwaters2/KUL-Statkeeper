@@ -34,6 +34,7 @@ export const assistDBRef = firestore.collection(POINT_EVENTS_COL);
 export const dBDRef = firestore.collection(MATCH_EVENTS_COL);
 export const dUIRef = firestore.collection("21SpringDsScorekeeper");
 
+export const rosterRef = firestore.collection(ROSTERS_COL);
 export const playersRef = firestore.collection(PLAYERS_COL);
 export const matchesRef = firestore.collection(MATCHES_COL);
 export const teamsRef = firestore.collection(TEAMS_COL);

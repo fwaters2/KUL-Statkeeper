@@ -27,8 +27,7 @@ export default function SchedButton({ data, finishedGameIds }) {
   const awayRecord = getTeamRecord(awayTeamData.name);
 
   const handleClick = () => {
-    alert("clicking todo: add matchId to page");
-    //setMatchData(data);
+    setMatchData(data);
     setPage("Game");
   };
 

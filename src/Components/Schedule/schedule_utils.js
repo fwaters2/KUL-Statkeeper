@@ -45,10 +45,6 @@ export function fetchData(currentDate) {
       let dateArray = getDates(matches);
       let uniqueDates = getUnique(dateArray);
 
-      // const closestDate = getClosestDate(uniqueDates);
-
-      // const dateIWant = closestDate.date;
-
       let betterMatchData = parseMatchData(
         matches,
         teams,
@@ -58,9 +54,8 @@ export function fetchData(currentDate) {
         currentDate
       );
       const allTimes = betterMatchData.map((x) => x.time);
-
+      console.log("allTimes", allTimes);
       let uniqueTimes = getUnique(allTimes).sort();
-      console.log("uniqTimes", uniqueTimes, allTimes);
 
       let data = {
         uniqueDates,

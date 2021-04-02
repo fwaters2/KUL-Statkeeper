@@ -50,7 +50,7 @@ export function getUniqueTimes(matches, dateIWant) {
   const allTimes = getTodaysMatches(matches, dateIWant).map((match) =>
     getMatchTime(match.datetime.toDate())
   );
-  return getUnique(allTimes);
+  return getUnique(allTimes).sort();
 }
 
 export function parseMatchData(dateIWant, matches, teams, results) {

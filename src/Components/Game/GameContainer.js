@@ -21,146 +21,144 @@ import {
 import { MatchContext } from "../../Contexts/MatchContext";
 
 export default function GameContainer() {
-  //Data
   const gameData = useContext(GameContext);
-  const matchContextData = useContext(MatchContext);
-  console.log("matchContext", matchContextData);
-  // const { setPage, matchData } = gameData;
-  // const [points, setPoints] = useState([]);
-  // const [ds, setDs] = useState([]);
+  const matchData = useContext(MatchContext);
 
-  // //Dialogs
-  // const [isPointDialogOpen, togglePointDialog] = useState(false);
-  // const [isDDialogOpen, toggleDDialog] = useState(false);
-  // const [pointIdToUpdate, setPointIdToUpdate] = useState(null);
-  // const [assistIdToUpdate, setAssistIdToUpdate] = useState(null);
-  // const [dIdToUpdate, setDIdToUpdate] = useState(null);
-  // const [isConfirming, toggleConfirmation] = useState(false);
+  const { setPage } = gameData;
+  const [points, setPoints] = useState([]);
+  const [ds, setDs] = useState([]);
 
-  // //Scoreboard Manipulation
-  // const [homeScore, setHomeScore] = useState(
-  //   points.filter(
-  //     (point) => point.teamColor === matchData.homeTeamData.colorPrimary
-  //   ).length
-  // );
-  // const [awayScore, setAwayScore] = useState(
-  //   points.filter(
-  //     (point) => point.teamColor === matchData.awayTeamData.colorPrimary
-  //   ).length
-  // );
+  //Dialogs
+  const [isPointDialogOpen, togglePointDialog] = useState(false);
+  const [isDDialogOpen, toggleDDialog] = useState(false);
+  const [pointIdToUpdate, setPointIdToUpdate] = useState(null);
+  const [assistIdToUpdate, setAssistIdToUpdate] = useState(null);
+  const [dIdToUpdate, setDIdToUpdate] = useState(null);
+  const [isConfirming, toggleConfirmation] = useState(false);
 
-  // const handleGameSubmit = () => {
-  //   if (homeScore === awayScore) {
-  //     alert("Error: The score is tied");
-  //     toggleConfirmation(false);
-  //   } else {
-  //     const winner =
-  //       homeScore > awayScore
-  //         ? matchData.homeTeamData.id
-  //         : matchData.awayTeamData.id;
-  //     const loser =
-  //       homeScore < awayScore
-  //         ? matchData.homeTeamData.id
-  //         : matchData.awayTeamData.id;
-  //     const winningScore = homeScore > awayScore ? homeScore : awayScore;
-  //     const losingScore = homeScore < awayScore ? homeScore : awayScore;
-  //     resultRef.doc(matchData.id).update({
-  //       winner,
-  //       loser,
-  //       isComplete: true,
-  //       timestamp: new Date(),
-  //     });
-  //     completedGamesRef.doc(matchData.id).set({
-  //       winner,
-  //       winningScore,
-  //       loser,
-  //       losingScore,
-  //       timestamp: new Date(),
-  //     });
-  //     setPage("Schedule");
-  //   }
-  // };
+  //Scoreboard Manipulation›
+  const [homeScore, setHomeScore] = useState(
+    points.filter(
+      (point) => point.teamColor === matchData.homeTeamData.colorPrimary
+    ).length
+  );
+  const [awayScore, setAwayScore] = useState(
+    points.filter(
+      (point) => point.teamColor === matchData.awayTeamData.colorPrimary
+    ).length
+  );
 
-  // // Sort by
-  // const byTimestamp = (a, b) => a.timestamp.toDate() - b.timestamp.toDate();
+  const handleGameSubmit = () => {
+    if (homeScore === awayScore) {
+      alert("Error: The score is tied");
+      toggleConfirmation(false);
+    } else {
+      const winner =
+        homeScore > awayScore
+          ? matchData.homeTeamData.id
+          : matchData.awayTeamData.id;
+      const loser =
+        homeScore < awayScore
+          ? matchData.homeTeamData.id
+          : matchData.awayTeamData.id;
+      const winningScore = homeScore > awayScore ? homeScore : awayScore;
+      const losingScore = homeScore < awayScore ? homeScore : awayScore;
+      resultRef.doc(matchData.id).update({
+        winner,
+        loser,
+        isComplete: true,
+        timestamp: new Date(),
+      });
+      completedGamesRef.doc(matchData.id).set({
+        winner,
+        winningScore,
+        loser,
+        losingScore,
+        timestamp: new Date(),
+      });
+      setPage("Schedule");
+    }
+  };
 
-  // const { id, homeTeamData, awayTeamData } = matchData;
+  // Sort by
+  const byTimestamp = (a, b) => a.timestamp.toDate() - b.timestamp.toDate();
+  const { id, homeTeamData, awayTeamData } = matchData;
 
-  // useEffect(() => {
-  //   //Import Stats
-  //   dUIRef.where("matchId", "==", id).onSnapshot((querySnapshot) => {
-  //     var dbDs = [];
-  //     querySnapshot.forEach((doc) => {
-  //       dbDs.push({ id: doc.id, ...doc.data() });
-  //       //dbDs = dbDs.sort(byTimeStamp);
-  //     });
-  //     setDs(dbDs);
-  //   });
-  // }, [id]);
+  useEffect(() => {
+    //Import Stats
+    dUIRef.where("matchId", "==", id).onSnapshot((querySnapshot) => {
+      var dbDs = [];
+      querySnapshot.forEach((doc) => {
+        dbDs.push({ id: doc.id, ...doc.data() });
+        //dbDs = dbDs.sort(byTimeStamp);
+      });
+      setDs(dbDs);
+    });
+  }, [id]);
 
-  // useEffect(() => {
-  //   pointUIRef.where("matchId", "==", id).onSnapshot((querySnapshot) => {
-  //     var dbPoints = [];
-  //     querySnapshot.forEach((doc) => {
-  //       dbPoints.push({ id: doc.id, ...doc.data() });
-  //     });
-  //     //update Scoreboard
-  //     const newHomeScore = dbPoints.filter(
-  //       (point) => point.teamColor === homeTeamData.colorPrimary
-  //     ).length;
-  //     const newAwayScore = dbPoints.filter(
-  //       (point) => point.teamColor === awayTeamData.colorPrimary
-  //     ).length;
-  //     setHomeScore(newHomeScore);
-  //     setAwayScore(newAwayScore);
-  //     setPoints(dbPoints);
-  //   });
-  // }, [id, homeTeamData.colorPrimary, awayTeamData.colorPrimary]);
+  useEffect(() => {
+    pointUIRef.where("matchId", "==", id).onSnapshot((querySnapshot) => {
+      var dbPoints = [];
+      querySnapshot.forEach((doc) => {
+        dbPoints.push({ id: doc.id, ...doc.data() });
+      });
+      //update Scoreboard
+      const newHomeScore = dbPoints.filter(
+        (point) => point.teamColor === homeTeamData.colorPrimary
+      ).length;
+      const newAwayScore = dbPoints.filter(
+        (point) => point.teamColor === awayTeamData.colorPrimary
+      ).length;
+      setHomeScore(newHomeScore);
+      setAwayScore(newAwayScore);
+      setPoints(dbPoints);
+    });
+  }, [id, homeTeamData.colorPrimary, awayTeamData.colorPrimary]);
 
-  // //Point Manipulation
-  // const choosePointIdToUpdate = (goal) => {
-  //   setPointIdToUpdate(goal.id);
-  //   setAssistIdToUpdate(goal.assistDBref);
-  //   togglePointDialog(true);
-  // };
+  //Point Manipulation
+  const choosePointIdToUpdate = (goal) => {
+    setPointIdToUpdate(goal.id);
+    setAssistIdToUpdate(goal.assistDBref);
+    togglePointDialog(true);
+  };
 
-  // const handlePointDelete = (id, assistDBrefID) => () => {
-  //   assistDBRef.doc(assistDBrefID).delete();
+  const handlePointDelete = (id, assistDBrefID) => () => {
+    assistDBRef.doc(assistDBrefID).delete();
 
-  //   pointUIRef.doc(id).delete();
-  //   togglePointDialog(false);
-  //   pointDBRef.doc(id).delete();
-  //   pointUIRef.doc(id).delete();
-  //   togglePointDialog(false);
-  // };
+    pointUIRef.doc(id).delete();
+    togglePointDialog(false);
+    pointDBRef.doc(id).delete();
+    pointUIRef.doc(id).delete();
+    togglePointDialog(false);
+  };
 
-  // //D Manipulation
-  // const chooseDIdToUpdate = (id) => () => {
-  //   setDIdToUpdate(id);
-  //   toggleDDialog(true);
-  // };
+  //D Manipulation
+  const chooseDIdToUpdate = (id) => () => {
+    setDIdToUpdate(id);
+    toggleDDialog(true);
+  };
 
-  // const handleDDelete = (id) => () => {
-  //   matchEventsRef
-  //     .doc(id)
-  //     .delete()
-  //     .then(console.log("matchEvents d delete"))
-  //     .catch((error) => console.log(error));
-  //   dUIRef
-  //     .doc(id)
-  //     .delete()
-  //     .then(console.log("ui d delete"))
-  //     .catch((error) => console.log(error));
-  //   toggleDDialog(false);
-  // };
-  // const handleClosePoint = () => {
-  //   setPointIdToUpdate(null);
-  //   togglePointDialog(false);
-  // };
-  // const handleCloseD = () => {
-  //   setDIdToUpdate(null);
-  //   toggleDDialog(false);
-  // };
+  const handleDDelete = (id) => () => {
+    matchEventsRef
+      .doc(id)
+      .delete()
+      .then(() => console.log("matchEvents d delete"))
+      .catch((error) => console.log(error));
+    dUIRef
+      .doc(id)
+      .delete()
+      .then(console.log("ui d delete"))
+      .catch((error) => console.log(error));
+    toggleDDialog(false);
+  };
+  const handleClosePoint = () => {
+    setPointIdToUpdate(null);
+    togglePointDialog(false);
+  };
+  const handleCloseD = () => {
+    setDIdToUpdate(null);
+    toggleDDialog(false);
+  };
 
   return (
     <div
@@ -182,7 +180,7 @@ export default function GameContainer() {
                   paddingBottom: 0,
                   marginBottom: 0,
                 }}
-                // onClick={() => setPage("Schedule")}
+                onClick={() => setPage("Schedule")}
               >
                 <ArrowLeft />
                 Back to Schedule
@@ -196,7 +194,7 @@ export default function GameContainer() {
                   paddingBottom: 0,
                   marginBottom: 0,
                 }}
-                //onClick={() => toggleConfirmation(true)}
+                onClick={() => toggleConfirmation(true)}
               >
                 Submit Game
                 <ArrowRight />
@@ -208,8 +206,8 @@ export default function GameContainer() {
           <Scoreboard
             homeTeam={"Test Home"}
             awayTeam={"Away Test"}
-            homeScore={5} //homeScore,
-            awayScore={4} //awayScore,
+            homeScore={homeScore}
+            awayScore={awayScore}
           />
         </Grid>
         <Grid
@@ -235,11 +233,11 @@ export default function GameContainer() {
               }}
             >
               <TableContainer style={{ height: "100%" }}>
-                {/* <GoalColumns
+                <GoalColumns
                   points={points.sort(byTimestamp)}
                   handlePointDelete={handlePointDelete}
                   choosePointIdToUpdate={choosePointIdToUpdate}
-                /> */}
+                />
               </TableContainer>
             </Paper>
             <Button
@@ -250,7 +248,7 @@ export default function GameContainer() {
                 color: "white",
               }}
               size="large"
-              //onClick={() => togglePointDialog(true)}
+              onClick={() => togglePointDialog(true)}
               startIcon={<Add />}
             >
               Add Goal
@@ -273,11 +271,11 @@ export default function GameContainer() {
               }}
             >
               <TableContainer style={{ height: "100%" }}>
-                {/* <DColumn
-                  //ds={ds.sort(byTimestamp)}
-                  //handleDDelete={handleDDelete}
-                  //chooseDIdToUpdate={chooseDIdToUpdate}
-                /> */}
+                <DColumn
+                  ds={ds.sort(byTimestamp)}
+                  handleDDelete={handleDDelete}
+                  chooseDIdToUpdate={chooseDIdToUpdate}
+                />
               </TableContainer>
             </Paper>
             <Button
@@ -288,7 +286,7 @@ export default function GameContainer() {
                 color: "white",
               }}
               size="large"
-              //onClick={() => toggleDDialog(true)}
+              onClick={() => toggleDDialog(true)}
               startIcon={<Add />}
             >
               Add D
@@ -297,7 +295,7 @@ export default function GameContainer() {
         </Grid>
       </Grid>
 
-      {/* <DDialogContainer
+      <DDialogContainer
         open={isDDialogOpen}
         onClose={handleCloseD}
         dIdToUpdate={dIdToUpdate}
@@ -312,7 +310,7 @@ export default function GameContainer() {
         open={isConfirming}
         handleClose={() => toggleConfirmation(false)}
         handleGameSubmit={handleGameSubmit}
-      />  */}
+      />
     </div>
   );
 }
