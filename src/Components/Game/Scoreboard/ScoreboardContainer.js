@@ -1,7 +1,6 @@
 import React from "react";
 import "./Scoreboard.css";
 import Title from "./Title";
-import GameContext from "../../../Assets/GameContext";
 import Timer from "./Timer";
 
 export default function ScoreboardContainer({

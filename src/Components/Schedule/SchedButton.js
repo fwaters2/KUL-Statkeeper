@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import {
   Avatar,
   Card,
@@ -6,11 +6,11 @@ import {
   Grid,
   Typography,
 } from "@material-ui/core";
-import GameContext from "../../Assets/GameContext";
+import { AppContext } from "../../Contexts/AppContext";
 import { ScheduleContext } from "../../Contexts/ScheduleContext";
 
 export default function SchedButton({ data, finishedGameIds }) {
-  const { setMatchData, setPage } = useContext(GameContext);
+  const { setMatchData, setPage } = useContext(AppContext);
   const { standings } = useContext(ScheduleContext);
   const { id, homeTeamData, homeScore = 0, awayTeamData, awayScore = 0 } = data;
 

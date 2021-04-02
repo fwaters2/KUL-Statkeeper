@@ -10,6 +10,7 @@ import {
 } from "@material-ui/core";
 import ClearIcon from "@material-ui/icons/Clear";
 import { Edit } from "@material-ui/icons";
+import PlayerCell from "../components/PlayerCell";
 
 export default function DColumn(props) {
   const { ds, chooseDIdToUpdate, handleDDelete } = props;
@@ -27,7 +28,7 @@ export default function DColumn(props) {
         {ds.map((d, index) => (
           <TableRow key={index} style={{ backgroundColor: d.teamColor + "66" }}>
             <TableCell>{index + 1}</TableCell>
-            <TableCell>{d.D}</TableCell>
+            <PlayerCell id={d.playerId} />
             {index + 1 === ds.length ? (
               <TableCell padding="none">
                 <IconButton color="secondary" onClick={handleDDelete(d.id)}>

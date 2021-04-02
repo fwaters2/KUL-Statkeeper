@@ -6,7 +6,7 @@ import DDialogContainer from "./Ds/DDialogContainer";
 import GoalDialogContainer from "./Goals/GoalDialogContainer";
 import Scoreboard from "./Scoreboard/Index.js";
 
-import GameContext from "../../Assets/GameContext";
+import { AppContext } from "../../Contexts/AppContext";
 import { ArrowLeft, Add, ArrowRight } from "@material-ui/icons";
 import SubmissionConfirm from "./SubmissionConfirm";
 import {
@@ -21,10 +21,9 @@ import {
 import { MatchContext } from "../../Contexts/MatchContext";
 
 export default function GameContainer() {
-  const gameData = useContext(GameContext);
-  const matchData = useContext(MatchContext);
+  const { setPage } = useContext(AppContext);
+  const { id, homeTeamData, awayTeamData } = useContext(MatchContext);
 
-  const { setPage } = gameData;
   const [points, setPoints] = useState([]);
   const [ds, setDs] = useState([]);
 
@@ -38,14 +37,12 @@ export default function GameContainer() {
 
   //Scoreboard Manipulation›
   const [homeScore, setHomeScore] = useState(
-    points.filter(
-      (point) => point.teamColor === matchData.homeTeamData.colorPrimary
-    ).length
+    points.filter((point) => point.teamColor === homeTeamData.colorPrimary)
+      .length
   );
   const [awayScore, setAwayScore] = useState(
-    points.filter(
-      (point) => point.teamColor === matchData.awayTeamData.colorPrimary
-    ).length
+    points.filter((point) => point.teamColor === awayTeamData.colorPrimary)
+      .length
   );
 
   const handleGameSubmit = () => {
@@ -53,23 +50,17 @@ export default function GameContainer() {
       alert("Error: The score is tied");
       toggleConfirmation(false);
     } else {
-      const winner =
-        homeScore > awayScore
-          ? matchData.homeTeamData.id
-          : matchData.awayTeamData.id;
-      const loser =
-        homeScore < awayScore
-          ? matchData.homeTeamData.id
-          : matchData.awayTeamData.id;
+      const winner = homeScore > awayScore ? homeTeamData.id : awayTeamData.id;
+      const loser = homeScore < awayScore ? homeTeamData.id : awayTeamData.id;
       const winningScore = homeScore > awayScore ? homeScore : awayScore;
       const losingScore = homeScore < awayScore ? homeScore : awayScore;
-      resultRef.doc(matchData.id).update({
+      resultRef.doc(id).update({
         winner,
         loser,
         isComplete: true,
         timestamp: new Date(),
       });
-      completedGamesRef.doc(matchData.id).set({
+      completedGamesRef.doc(id).set({
         winner,
         winningScore,
         loser,
@@ -82,7 +73,6 @@ export default function GameContainer() {
 
   // Sort by
   const byTimestamp = (a, b) => a.timestamp.toDate() - b.timestamp.toDate();
-  const { id, homeTeamData, awayTeamData } = matchData;
 
   useEffect(() => {
     //Import Stats
