@@ -1,30 +1,39 @@
 import React from "react";
 import { Paper, Box } from "@material-ui/core";
-import Title from "./Title";
 import ScheduleSubtitle from "./ScheduleSubtitle";
 import SchedTable from "./SchedTable";
+import KUL_final from "./KUL_final.svg";
 
 export default function ScheduleContainer() {
   return (
     <div
       id="root"
       style={{
+        background: `#283895`,
         minHeight: "100vh",
-        background: "#283895",
         color: "white",
         display: "flex",
+        justifyContent: "center",
         flexDirection: "column",
       }}
     >
-      <Title />
+      <div
+        style={{
+          position: "fixed",
+          height: "100vh",
+          width: "100vw",
+          zIndex: 0,
+          background: `url(${KUL_final}) no-repeat center/40%`,
+        }}
+      />
       <Paper
         style={{
-          margin: "0 2em 6em 2em",
-          flex: 1,
+          margin: "2em",
           display: "flex",
           flexDirection: "column",
           borderRadius: "16px",
           backgroundColor: "#ffffff95",
+          zIndex: 1,
         }}
       >
         <ScheduleSubtitle />
